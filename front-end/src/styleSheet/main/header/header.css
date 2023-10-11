@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  padding: 2rem;
+  background-color: #062D73;
+  color: white;
+  font-size: 1.15rem;
+}
+.header .left-side {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-left: 2rem;
+}
+.header .left-side img {
+  width: 137px;
+  height: 58px;
+}
+.header .left-side .header-elements {
+  display: flex;
+  margin-left: 8rem;
+  gap: 1.5rem;
+}
+.header .left-side .header-elements .header-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.15rem;
+}
+.header .left-side .header-elements .header-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.header .right-side {
+  display: flex;
+  align-items: center;
+}
+.header .right-side .header-icons {
+  display: flex;
+}
+.header .right-side .header-icons .right-header-icon {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: transparent;
+  border: none;
+  border-right: solid 1px white;
+}
+.header .right-side .header-icons .right-header-icon:last-of-type {
+  border: none;
+}
+.header .right-side .header-icons .right-header-icon:last-of-type img {
+  width: 35px;
+  height: 35px;
+}
+.header .right-side .header-icons .right-header-icon:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=header.css.map */

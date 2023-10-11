@@ -1,10 +1,19 @@
-import './styleSheet/main/main.css';
+// Components
+import Header from './components/header.js'
+import MainSite from './components/main-site/main.js'
+
+
+// Styles
+import './styleSheet/main/app.css';
+import './styleSheet/main/main-site/main-site.css'
+import './styleSheet/main/header/header.css'
+
 
 function App() {
   return (
     <div className="App" class="body">
-          <div class="header">There will be our header</div>
-          <div class="main-page">There will be our main page</div>
+    	<Header/>
+		<MainSite/>       
     </div>
   );
 }

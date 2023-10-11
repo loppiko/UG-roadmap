@@ -1,0 +1,45 @@
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  line-height: 1.5;
+  margin-bottom: 7rem;
+}
+.content .box {
+  font-size: 1.5rem;
+  width: 1080px;
+}
+.content .box .title {
+  font-size: 4rem;
+  color: #062D73;
+  margin-bottom: 1rem;
+}
+.content .box .content-header {
+  margin-top: 5rem;
+  margin-bottom: 1.25rem;
+  color: #062D73;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.content .box .skills .content-header {
+  margin-bottom: 8rem;
+}
+.content .box .content-button-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  width: 100%;
+}
+.content .box .content-button-box .roadmap-button {
+  width: 50%;
+  padding: 1rem;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #062D73;
+  border-radius: 15px;
+}
+.content .box .content-button-box .roadmap-button:hover {
+  cursor: pointer;
+  background-color: #011946;
+}/*# sourceMappingURL=main-site.css.map */

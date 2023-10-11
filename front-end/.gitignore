@@ -66,3 +66,5 @@ packages/react-devtools-timeline/dist
 *.css.map
 *.sass.map
 *.scss.map
+
+temp.html

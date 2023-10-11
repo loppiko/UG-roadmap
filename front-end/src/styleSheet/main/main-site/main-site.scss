@@ -1,0 +1,78 @@
+// ---- colors ----
+$background-color: white;
+$main-color: #062D73;
+
+$white-text-color: white;
+$black-text-color: black;
+
+$active-roadmap-button-color: #011946;
+
+// ---- parameters ----
+$main-content-width: 1080px;
+$margin-top: 6rem;
+$main-font-size: 1.5rem;
+$title-margin-bottom: 1rem;
+$margin-content-header: 5rem;
+$font-size-content-header: 2rem;
+$roadmap-button-margin-top: 5rem;
+$roadmap-button-border-radius: 15px;
+$bottom-margin: 7rem;
+
+
+.content {
+    display: flex;
+    justify-content: center;
+
+    margin-top: $margin-top;
+    line-height: 1.5;
+
+    .box {
+        font-size: $main-font-size;
+        width: $main-content-width;
+
+        .title {
+            font-size: 4rem;
+            color: $main-color;
+            margin-bottom: $title-margin-bottom;
+        }
+
+        .content-header {
+            margin-top: $margin-content-header;
+            margin-bottom: calc($margin-content-header / 4);
+
+            color: $main-color;
+            font-size: $font-size-content-header;
+            font-weight: bold;
+        }
+
+        .skills {
+            .content-header {
+                margin-bottom: 8rem;
+            }
+        }
+
+        .content-button-box {
+            display: flex;
+            justify-content: center;
+
+            margin-top: $roadmap-button-margin-top;
+            width: 100%;
+            .roadmap-button {
+                width: 50%;
+                padding: 1rem;
+
+                border: none;
+                font-size: 1.5rem;
+                color: $white-text-color;
+                background-color: $main-color;
+                border-radius: $roadmap-button-border-radius;
+            }
+
+            .roadmap-button:hover {
+                cursor: pointer;
+                background-color: $active-roadmap-button-color;
+            }
+        }
+    }
+    margin-bottom: $bottom-margin;
+}

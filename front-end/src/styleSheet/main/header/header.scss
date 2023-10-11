@@ -1,0 +1,91 @@
+// ---- colors ----
+$background-color: white;
+$main-color: #062D73;
+
+$white-text-color: white;
+$black-text-color: black;
+
+// ---- parameters ----
+$header-height: 3rem;
+$UG-logo-width: 137px;
+$UG-logo-height: 58px;
+$UG-logo-margin-left: 2rem;
+$header-font-size: 1.15rem;
+$header-elements-gap: 1.5rem;
+$header-elements-margin: 8rem;
+$header-buttons-border: solid 1px $white-text-color;
+
+.header{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content:space-between;
+    
+    height: $header-height;
+    padding: 2rem;
+    
+    background-color: $main-color;
+    color: $white-text-color;
+    font-size: 1.15rem;
+
+    .left-side {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        margin-left: $UG-logo-margin-left;
+
+        img {
+            width: $UG-logo-width;
+            height: $UG-logo-height;
+        }
+
+        .header-elements {
+            display: flex;
+
+            margin-left: $header-elements-margin;
+            gap: $header-elements-gap;
+            
+            .header-button {
+                background-color: transparent;
+                border: none;
+                color: $white-text-color;
+                font-size: $header-font-size;
+            }
+
+            .header-button:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .right-side {
+        display: flex;
+        align-items: center;
+
+        .header-icons {
+            display: flex;
+            
+            .right-header-icon {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                background-color: transparent;
+                border: none;
+                border-right: $header-buttons-border;
+            }
+
+            .right-header-icon:last-of-type {
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+                border: none;
+            }
+
+            .right-header-icon:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
