@@ -61,3 +61,8 @@ packages/react-devtools-extensions/.tempUserDataDir
 packages/react-devtools-inline/dist
 packages/react-devtools-shell/dist
 packages/react-devtools-timeline/dist
+
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
