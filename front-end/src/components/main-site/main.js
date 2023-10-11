@@ -24,6 +24,16 @@ function MainSite() {
             </div>
             <div class="skills">
                 <div class="content-header">Skills:</div>
+                <div class="skill-button-box">
+                    <button class="skill-button">Programming and Software Development</button>
+                    <button class="skill-button">Cybersecurity</button>
+                    <button class="skill-button">Data Science and Analytics</button>
+                    <button class="skill-button">Internships and Practical Experience</button>
+                    <button class="skill-button">Database Management</button>
+                    <button class="skill-button">Project Management</button>
+                    <button class="skill-button">Human-Computer Interaction</button>
+                </div>
+                
             </div>
             <div class="career">
                 <div class="content-header">Career Prospects:</div>
