@@ -1,9 +1,4 @@
-// ---- colors ----
-$background-color: white;
-$main-color: #062D73;
-
-$white-text-color: white;
-$black-text-color: black;
+@import "../../../consts/consts.scss";
 
 $nav-bar-background-color: #062D731F;
 
@@ -13,6 +8,10 @@ $nav-bar-padding-left: 3rem;
 $nav-bar-buttons-gap: 2rem;
 $nav-bar-height: 4rem;
 $nav-bar-font-size: 1.25rem;
+$nav-bar-button-up-down-padding: 0.5rem;
+$nav-bar-button-side-padding: 3rem;
+$nav-bar-border-bottom: 1px solid $main-color;
+// $nav-bar-bottom-margin: 5rem;
 
 .nav-bar{
     display: flex;
@@ -23,17 +22,23 @@ $nav-bar-font-size: 1.25rem;
     padding-left: $nav-bar-padding-left;
     gap: $nav-bar-buttons-gap;
     background-color: $nav-bar-background-color;
-    
+    border-bottom: $nav-bar-border-bottom;
 
-    button {
-        border-radius: 15px;
-        
-        padding: 0.5rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        color: $white-text-color;
+    button {        
         border: none;
+        
+        border-radius: $main-border-radius;
+        padding: $nav-bar-button-up-down-padding;
+        padding-left: $nav-bar-button-side-padding;
+        padding-right: $nav-bar-button-side-padding;
+        color: $white-text-color;
         background-color: $main-color;
         font-size: $nav-bar-font-size;
     }
+
+    button:hover {
+        background-color: $main-color-active-button;
+    }
+
+    // margin-bottom: $nav-bar-bottom-margin;
 }

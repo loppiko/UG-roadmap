@@ -1,0 +1,48 @@
+button {
+  cursor: pointer;
+}
+
+.pick-semester {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pick-semester .semester-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1080px;
+  margin-top: 8rem;
+}
+.pick-semester .semester-content .semester-title {
+  font-size: 4rem;
+  color: #062D73;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+.pick-semester .semester-content button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #062D73;
+  background-color: #F0F5FF;
+  margin-bottom: 4rem;
+  border-radius: 15px;
+  color: #062D73;
+  font-size: 2.25rem;
+  width: 400px;
+  height: 170px;
+  padding: 32px 40px;
+}
+.pick-semester .semester-content button span {
+  align-self: stretch;
+}
+.pick-semester .semester-content button:hover {
+  background-color: #062D73;
+  color: white;
+}
+.pick-semester .semester-content .semester-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5rem;
+}/*# sourceMappingURL=pick-semester.css.map */

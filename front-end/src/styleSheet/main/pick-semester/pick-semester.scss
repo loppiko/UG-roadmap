@@ -1,0 +1,65 @@
+@import "../../consts/consts.scss";
+
+
+$semester-content-upper-margin: 8rem;
+$semester-buttton-background-color: #F0F5FF;
+$semester-title-margin-bottom: 4rem;
+$semester-button-font-size: 3rem;
+
+
+.pick-semester {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .semester-content {
+        display: flex;
+        flex-wrap: wrap;
+
+
+        width: $main-content-width;
+        margin-top: $semester-content-upper-margin;
+        .semester-title {
+            font-size: $main-title-font-size;
+            color: $main-color;
+            margin-bottom: $semester-title-margin-bottom;
+            width: 100%;
+        }
+
+        button {
+            display: flex;
+            // flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            border: $main-border;
+            background-color: $semester-buttton-background-color;
+            margin-bottom: 4rem;
+            
+
+            border-radius: $main-border-radius;
+            color: $main-color;
+            font-size: $semester-button-font-size * 3/4;
+            width: 400px;
+            height: 170px;
+            padding: 32px 40px;
+
+            span {
+                align-self: stretch; 
+            }
+        }
+
+        button:hover {
+            background-color: $main-color;
+            color: $white-text-color;
+        }
+
+        .semester-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            gap: 5rem;
+        }
+    }
+}

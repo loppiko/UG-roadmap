@@ -1,0 +1,26 @@
+// ---- colors ----
+$background-color: white;
+$main-color: #062D73;
+
+$white-text-color: white;
+$black-text-color: black;
+
+$main-color-active-button: #011946;
+
+
+// ---- fonts ----
+$main-title-font-size: 4rem;
+
+
+// ---- decorate ----
+$main-border: 1px solid $main-color;
+
+
+// ---- main properties ----
+$main-border-radius: 15px;
+$main-content-width: 1080px;
+
+
+button {
+    cursor: pointer;
+}

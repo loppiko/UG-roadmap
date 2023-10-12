@@ -1,3 +1,7 @@
+button {
+  cursor: pointer;
+}
+
 .nav-bar {
   display: flex;
   align-items: center;
@@ -6,14 +10,18 @@
   padding-left: 3rem;
   gap: 2rem;
   background-color: rgba(6, 45, 115, 0.1215686275);
+  border-bottom: 1px solid #062D73;
 }
 .nav-bar button {
+  border: none;
   border-radius: 15px;
   padding: 0.5rem;
   padding-left: 3rem;
   padding-right: 3rem;
   color: white;
-  border: none;
   background-color: #062D73;
   font-size: 1.25rem;
+}
+.nav-bar button:hover {
+  background-color: #011946;
 }/*# sourceMappingURL=nav-bar.css.map */
