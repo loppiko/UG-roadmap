@@ -1,0 +1,39 @@
+// ---- colors ----
+$background-color: white;
+$main-color: #062D73;
+
+$white-text-color: white;
+$black-text-color: black;
+
+$nav-bar-background-color: #062D731F;
+
+
+// ---- parameters ----
+$nav-bar-padding-left: 3rem;
+$nav-bar-buttons-gap: 2rem;
+$nav-bar-height: 4rem;
+$nav-bar-font-size: 1.25rem;
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+
+    height: $nav-bar-height;
+    width: 100%;
+    padding-left: $nav-bar-padding-left;
+    gap: $nav-bar-buttons-gap;
+    background-color: $nav-bar-background-color;
+    
+
+    button {
+        border-radius: 15px;
+        
+        padding: 0.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        color: $white-text-color;
+        border: none;
+        background-color: $main-color;
+        font-size: $nav-bar-font-size;
+    }
+}

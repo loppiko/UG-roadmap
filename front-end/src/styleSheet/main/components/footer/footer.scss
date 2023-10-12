@@ -1,0 +1,25 @@
+// ---- colors ----
+$background-color: white;
+$main-color: #062D73;
+
+$white-text-color: white;
+$black-text-color: black;
+
+
+// ---- parameters ----
+$footer-height: 7rem;
+$footer-margin-top: 4.5rem;
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin-top: $footer-margin-top;
+    height: $footer-height;
+    background-color: $main-color;
+    color: $white-text-color;
+    font-size: 1.5rem;
+}
