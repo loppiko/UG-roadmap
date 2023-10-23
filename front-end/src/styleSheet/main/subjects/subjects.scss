@@ -1,0 +1,12 @@
+@import "../../consts/consts.scss";
+
+
+.subjects-page {
+    // display: flex;
+    // // flex-wrap: wrap;
+    // justify-content: center;
+
+    .subjects-content {
+        width: $main-content-width;
+    }
+}
