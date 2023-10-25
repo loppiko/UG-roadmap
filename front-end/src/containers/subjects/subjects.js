@@ -82,6 +82,7 @@ function Subjects() {
                         <div class="title"></div>
                     </div>
                 </div>
+                <div class="subject-next-sem-name">Second Semester</div>
             </div>
         </div>
     );

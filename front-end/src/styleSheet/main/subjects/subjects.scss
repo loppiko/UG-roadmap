@@ -1,12 +1,196 @@
 @import "../../consts/consts.scss";
 
 
+$subjects-content-margin-top: 4rem;
+$subjects-sem-same-font-size: 5rem;
+$subjects-sem-name-margin-bottom: 5rem;
+$subjects-sem-number-of-frames-to-iterate: 4;
+$subjects-sem-frames-gap: 10rem;
+
+$subjects-info-boxes-gap: 1rem;
+$subjects-info-box-width: min-content;
+$subjects-info-box-height: 80px;
+$subjects-info-padding: 12px 24px;
+$subjects-info-border-radius: 24px;
+$subjects-info-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+$subjects-info-box-title: 1rem;
+$subjects-info-box-content: 1.5rem;
+
+$subjects-box-content-margin-top: 2rem;
+$subjects-subject-box-heigth: 142px;
+$subjects-subject-box-width: 2rem;
+$subjects-subject-border-radius: 20px;
+$subjects-subject-background-color: #F0F5FF;
+$subjects-subject-border: 3px solid $main-color;
+$subjects-subject-padding: 32px 40px;
+$subjects-subject-box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
+$subjects-subject-box-font-size: 2rem;
+$subjects-subject-active-background-color: #dce0e7;
+$subjects-subject-skill-box-padding: 16px;
+
+$subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79, 0.50) 100%);
+
+
 .subjects-page {
-    // display: flex;
-    // // flex-wrap: wrap;
-    // justify-content: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .subjects-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
         width: $main-content-width;
+        margin-top: $subjects-content-margin-top;
+
+        gap: $subjects-sem-frames-gap;
+
+        .subject-sem-name {
+            width: 100%;
+
+            // margin-bottom: $subjects-sem-name-margin-bottom;
+            text-align: center;
+            font-size: $subjects-sem-same-font-size;
+            color: $main-color;
+        }
+
+
+        .subject-frame {
+            width: 100%;
+
+            .box {
+                position: relative;
+
+                margin: auto;
+                width: min-content;
+
+                .subject-info {
+                    display: flex;
+                    gap: $subjects-info-boxes-gap;
+
+                    .info-box {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center; 
+
+                        width: $subjects-info-box-width;
+                        height: $subjects-info-box-height;
+                        padding: $subjects-info-padding;
+
+                        border-radius: $subjects-info-border-radius;
+                        color: $white-text-color;
+                        background: $main-color;
+                        box-shadow: $subjects-info-box-shadow;
+                        font-size: $subjects-info-box-content;
+                        font-weight: 900;
+
+                        span {
+                            font-size: $subjects-info-box-title;
+                            font-weight: normal;
+                        }
+                    } 
+                }
+                
+                .subject-box-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    margin-top: $subjects-box-content-margin-top;
+
+                    .subject-box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        height: $subjects-subject-box-heigth;
+                        padding: $subjects-subject-padding;
+
+                        border-radius: $subjects-info-border-radius;
+                        border: $subjects-subject-border;
+                        background: $subjects-subject-background-color;
+                        box-shadow: $subjects-subject-box-shadow;
+                        font-size: $subjects-subject-box-font-size; 
+                        text-align: center;
+                    }
+
+                    .subject-box:hover {
+                        cursor: pointer;
+                        background-color: $subjects-subject-active-background-color;
+                    }
+
+                    .skill-box {
+                        display: flex;
+                        align-items: center;
+
+                        position: absolute;
+
+                        width: min-content;
+                        height: min-content;
+
+                        padding: $subjects-subject-skill-box-padding;
+                        border-radius: 5px;
+                        border: 2px solid #062D73;
+                        background: rgba(255, 255, 255, 0.20);
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25); 
+                        text-align: center;
+                    }
+
+                    .skill-box:nth-of-type(2) {
+                        right: 400px;
+                        top: 180px;
+                    }
+                    .skill-box:nth-of-type(3) {
+                        left: 390px;
+                        top: 160px;
+                    }
+                    .skill-box:nth-of-type(4) {
+                        right: 370px;
+                        top: 380px;
+                    }
+                    .skill-box:nth-of-type(5) {
+                        left: 370px;
+                        top: 360px;
+                    }
+
+                    .skill-box:hover {
+                        cursor: pointer;
+                        background-color: $main-color;
+                        color: $white-text-color;
+                    }   
+                    
+                }
+            }
+        }
+
+        @for $frame-number from 1 through $subjects-sem-number-of-frames-to-iterate + 1 {
+            .subject-frame:nth-of-type(#{$frame-number}) {
+                @if $frame-number % 2 == 0 {
+                    .box {
+                        margin-left: 0;
+                    }
+                } @else {
+                    .box {
+                        margin-right: 0;
+                    }
+                }
+
+            }
+        }
+
+        .subject-next-sem-name {
+            width: 100%;
+
+            // margin-bottom: $subjects-sem-name-margin-bottom;
+            text-align: center;
+            font-size: $subjects-sem-same-font-size;
+            background: -webkit-linear-gradient($main-color, $white-text-color);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 }

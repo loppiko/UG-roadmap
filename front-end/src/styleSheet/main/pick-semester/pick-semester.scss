@@ -39,7 +39,7 @@ $semester-button-font-size: 3rem;
 
             border-radius: $main-border-radius;
             color: $main-color;
-            font-size: $semester-button-font-size * 3/4;
+            font-size: calc($semester-button-font-size * 3/4);
             width: 400px;
             height: 170px;
             padding: 32px 40px;

@@ -15,8 +15,10 @@ $nav-bar-border-bottom: 1px solid $main-color;
 
 .nav-bar{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
+    width: 100%;
     height: $nav-bar-height;
     padding-left: $nav-bar-padding-left;
     gap: $nav-bar-buttons-gap;
