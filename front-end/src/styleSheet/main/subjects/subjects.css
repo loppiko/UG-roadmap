@@ -22,6 +22,7 @@ button {
   color: #062D73;
 }
 .subjects-page .subjects-content .subject-frame {
+  position: relative;
   width: 100%;
 }
 .subjects-page .subjects-content .subject-frame .box {
@@ -113,20 +114,50 @@ button {
   background-color: #062D73;
   color: white;
 }
+.subjects-page .subjects-content .subject-frame .skill-description {
+  position: absolute;
+  font-size: 1.2rem;
+  width: 500px;
+}
+.subjects-page .subjects-content .subject-frame .skill-description .title {
+  color: #062D73;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 .subjects-page .subjects-content .subject-frame:nth-of-type(1) .box {
   margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(1) .skill-description {
+  left: 0;
+  bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(2) .box {
   margin-left: 0;
 }
+.subjects-page .subjects-content .subject-frame:nth-of-type(2) .skill-description {
+  right: 0;
+  bottom: 35px;
+}
 .subjects-page .subjects-content .subject-frame:nth-of-type(3) .box {
   margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(3) .skill-description {
+  left: 0;
+  bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(4) .box {
   margin-left: 0;
 }
+.subjects-page .subjects-content .subject-frame:nth-of-type(4) .skill-description {
+  right: 0;
+  bottom: 35px;
+}
 .subjects-page .subjects-content .subject-frame:nth-of-type(5) .box {
   margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(5) .skill-description {
+  left: 0;
+  bottom: 35px;
 }
 .subjects-page .subjects-content .subject-next-sem-name {
   width: 100%;

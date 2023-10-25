@@ -27,6 +27,16 @@ $subjects-subject-box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
 $subjects-subject-box-font-size: 2rem;
 $subjects-subject-active-background-color: #dce0e7;
 $subjects-subject-skill-box-padding: 16px;
+$subjects-subject-skill-box-border: 2px solid $main-color;
+$subjects-subject-skill-box-background: rgba(255, 255, 255, 0.20);
+$subjects-subject-skill-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
+$subjects-subject-skill-box-border-radius: 5px;
+
+$subjects-subject-decription-title-font-size: 1.5rem;
+$subjects-subject-decription-font-size: 1.2rem;
+$subjects-subject-decription-width: 500px;
+$subjects-subject-decription-title-margin-bottom: 1rem;
+
 
 $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79, 0.50) 100%);
 
@@ -58,6 +68,8 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
 
 
         .subject-frame {
+            position: relative;
+
             width: 100%;
 
             .box {
@@ -132,10 +144,10 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         height: min-content;
 
                         padding: $subjects-subject-skill-box-padding;
-                        border-radius: 5px;
-                        border: 2px solid #062D73;
-                        background: rgba(255, 255, 255, 0.20);
-                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25); 
+                        border-radius: $subjects-subject-skill-box-border-radius;
+                        border: $subjects-subject-skill-box-border;
+                        background: $subjects-subject-skill-box-background;
+                        box-shadow: $subjects-subject-skill-box-shadow; 
                         text-align: center;
                     }
 
@@ -164,6 +176,21 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                     
                 }
             }
+
+            .skill-description {
+                position: absolute;
+                
+                font-size: $subjects-subject-decription-font-size;
+                
+                width: $subjects-subject-decription-width;
+
+                .title {
+                    color: $main-color;
+                    font-size: $subjects-subject-decription-title-font-size;
+
+                    margin-bottom: $subjects-subject-decription-title-margin-bottom;
+                }
+            }
         }
 
         @for $frame-number from 1 through $subjects-sem-number-of-frames-to-iterate + 1 {
@@ -172,12 +199,19 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                     .box {
                         margin-left: 0;
                     }
+                    .skill-description {
+                        right: 0;
+                        bottom: 35px;
+                    }
                 } @else {
                     .box {
                         margin-right: 0;
                     }
+                    .skill-description {
+                        left: 0;
+                        bottom: 35px;
+                    }
                 }
-
             }
         }
 

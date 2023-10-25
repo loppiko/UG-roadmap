@@ -24,7 +24,7 @@ function Subjects() {
                             <div class="skill-box">logic</div>
                         </div>
                     </div>
-                    <div class="skill-descrition">
+                    <div class="skill-description">
                         <div class="title"></div>
                     </div>
                 </div>
@@ -42,8 +42,9 @@ function Subjects() {
                             <div class="skill-box">arythmeticcs</div>
                         </div>
                     </div>
-                    <div class="skill-descrition">
-                        <div class="title"></div>
+                    <div class="skill-description">
+                        <div class="title">Propability</div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </div>
                 </div>
                 <div class="subject-frame">
@@ -61,8 +62,9 @@ function Subjects() {
                             <div class="skill-box">linux</div>
                         </div>
                     </div>
-                    <div class="skill-descrition">
-                        <div class="title"></div>
+                    <div class="skill-description">
+                        <div class="title">Propability</div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </div>
                 </div>
                 <div class="subject-frame">
@@ -78,7 +80,7 @@ function Subjects() {
                             <div class="skill-box">python</div>
                         </div>
                     </div>
-                    <div class="skill-descrition">
+                    <div class="skill-description">
                         <div class="title"></div>
                     </div>
                 </div>
