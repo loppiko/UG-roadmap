@@ -5,6 +5,11 @@ $semester-content-upper-margin: 8rem;
 $semester-buttton-background-color: #F0F5FF;
 $semester-title-margin-bottom: 4rem;
 $semester-button-font-size: 3rem;
+$semester-button-width: 350px;
+$semester-button-height: 140px;
+$semester-button-padding: 32px 40px;
+
+$semester-year-name-color: #3371FD;
 
 
 .pick-semester {
@@ -13,12 +18,9 @@ $semester-button-font-size: 3rem;
     justify-content: center;
 
     .semester-content {
-        display: flex;
-        flex-wrap: wrap;
-
-
         width: $main-content-width;
         margin-top: $semester-content-upper-margin;
+        
         .semester-title {
             font-size: $main-title-font-size;
             color: $main-color;
@@ -26,30 +28,52 @@ $semester-button-font-size: 3rem;
             width: 100%;
         }
 
-        button {
+        .semester-section {
             display: flex;
-            // flex-direction: column;
+            flex-wrap: wrap;
+
+
+            .semester-box-1 {
+                position: relative;
+                
+
+                .path-1 {
+                    position: absolute;
+
+                    left: 200px;
+                }
+            }
+        }
+
+
+        .semester-year-name {
+            color: $semester-year-name-color;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .semester-button {
+            display: flex;
             align-items: center;
             justify-content: center;
 
             border: $main-border;
             background-color: $semester-buttton-background-color;
-            margin-bottom: 4rem;
-            
 
+            text-decoration: none;
             border-radius: $main-border-radius;
             color: $main-color;
             font-size: calc($semester-button-font-size * 3/4);
-            width: 400px;
-            height: 170px;
-            padding: 32px 40px;
+            width: $semester-button-width;
+            height: $semester-button-height;
+            padding: $semester-button-padding;
 
             span {
                 align-self: stretch; 
             }
         }
 
-        button:hover {
+        .semester-button:hover {
             background-color: $main-color;
             color: $white-text-color;
         }

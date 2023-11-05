@@ -8,8 +8,6 @@ button {
   justify-content: center;
 }
 .pick-semester .semester-content {
-  display: flex;
-  flex-wrap: wrap;
   width: 1080px;
   margin-top: 8rem;
 }
@@ -19,24 +17,40 @@ button {
   margin-bottom: 4rem;
   width: 100%;
 }
-.pick-semester .semester-content button {
+.pick-semester .semester-content .semester-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pick-semester .semester-content .semester-section .semester-box-1 {
+  position: relative;
+}
+.pick-semester .semester-content .semester-section .semester-box-1 .path-1 {
+  position: absolute;
+  left: 200px;
+}
+.pick-semester .semester-content .semester-year-name {
+  color: #3371FD;
+  font-size: 30px;
+  font-weight: bold;
+}
+.pick-semester .semester-content .semester-button {
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #062D73;
   background-color: #F0F5FF;
-  margin-bottom: 4rem;
+  text-decoration: none;
   border-radius: 15px;
   color: #062D73;
   font-size: 2.25rem;
-  width: 400px;
-  height: 170px;
+  width: 350px;
+  height: 140px;
   padding: 32px 40px;
 }
-.pick-semester .semester-content button span {
+.pick-semester .semester-content .semester-button span {
   align-self: stretch;
 }
-.pick-semester .semester-content button:hover {
+.pick-semester .semester-content .semester-button:hover {
   background-color: #062D73;
   color: white;
 }

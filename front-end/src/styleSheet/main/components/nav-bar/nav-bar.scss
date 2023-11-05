@@ -25,9 +25,10 @@ $nav-bar-border-bottom: 1px solid $main-color;
     background-color: $nav-bar-background-color;
     border-bottom: $nav-bar-border-bottom;
 
-    button {        
+    .main-page-button, .previous-site-button {        
         border: none;
         
+        text-decoration: none;
         border-radius: $main-border-radius;
         padding: $nav-bar-button-up-down-padding;
         padding-left: $nav-bar-button-side-padding;
@@ -37,7 +38,7 @@ $nav-bar-border-bottom: 1px solid $main-color;
         font-size: $nav-bar-font-size;
     }
 
-    button:hover {
+    .main-page-button:hover, .previous-site-button:hover {
         background-color: $main-color-active-button;
     }
 

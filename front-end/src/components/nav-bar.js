@@ -1,10 +1,33 @@
 import React from "react";
 
-function NavBar() {
+// React Router
+import { Outlet, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
+
+
+function NavBar() 
+{
+    let newLocation = "/";
+    console.log(useLocation().pathname);
+    switch (useLocation().pathname) {
+        case "/semester":
+            newLocation = "/";
+            break;
+        case "/semester/subjects":
+            newLocation = "/semester";
+            break;
+        default:
+            newLocation = "/";
+            break;
+    }
+
     return (
-        <div class="nav-bar">
-            <button class="previous-site-button">{"<-"}</button>
-            <button class="main-page-button">Main page</button>
+        
+        <div className="nav-bar">
+            <Link to={newLocation} className="previous-site-button">{"<-"}</Link>
+            <Link to="/" className="main-page-button">Main page</Link>
+            <Outlet/>
         </div>
     );
 }

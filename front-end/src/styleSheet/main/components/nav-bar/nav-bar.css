@@ -13,8 +13,9 @@ button {
   background-color: rgba(6, 45, 115, 0.1215686275);
   border-bottom: 1px solid #062D73;
 }
-.nav-bar button {
+.nav-bar .main-page-button, .nav-bar .previous-site-button {
   border: none;
+  text-decoration: none;
   border-radius: 15px;
   padding: 0.5rem;
   padding-left: 3rem;
@@ -23,6 +24,6 @@ button {
   background-color: #062D73;
   font-size: 1.25rem;
 }
-.nav-bar button:hover {
+.nav-bar .main-page-button:hover, .nav-bar .previous-site-button:hover {
   background-color: #011946;
 }/*# sourceMappingURL=nav-bar.css.map */
