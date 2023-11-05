@@ -5,7 +5,8 @@ $subjects-content-margin-top: 4rem;
 $subjects-sem-same-font-size: 5rem;
 $subjects-sem-name-margin-bottom: 5rem;
 $subjects-sem-number-of-frames-to-iterate: 4;
-$subjects-sem-frames-gap: 10rem;
+$subjects-starting-path-margin-right: 350px;
+$subjects-ending-path-margin-left: 300px;
 
 $subjects-info-boxes-gap: 1rem;
 $subjects-info-box-width: min-content;
@@ -55,7 +56,6 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
         width: $main-content-width;
         margin-top: $subjects-content-margin-top;
 
-        gap: $subjects-sem-frames-gap;
 
         .subject-sem-name {
             width: 100%;
@@ -66,6 +66,9 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             color: $main-color;
         }
 
+        .subject-path-starting {
+            margin-right: $subjects-starting-path-margin-right;
+        }
 
         .subject-frame {
             position: relative;
@@ -213,6 +216,10 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                     }
                 }
             }
+        }
+
+        .subject-path-ending {
+            margin-left: $subjects-ending-path-margin-left;
         }
 
         .subject-next-sem-name {

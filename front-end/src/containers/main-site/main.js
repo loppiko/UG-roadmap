@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { Outlet, Link } from "react-router-dom";
 
 
-
-
 function MainSite() {
     return (
     <div className="content">

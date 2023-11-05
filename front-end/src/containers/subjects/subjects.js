@@ -1,11 +1,22 @@
 import React from "react";
-import { motion} from "framer-motion";
-import  {useState} from 'react';   
+import {useState } from "react";
+import {motion} from "framer-motion";
+
 
 // ---- components ----
 import NavBar from "../../components/nav-bar";
+import SubjectDescription from "../../components/subject-description";
+
+// paths and icons
+import StartingPath from "../../media/paths/subjects/starting-path.svg";
+import RightPath from "../../media/paths/subjects/right-path.svg";
+import LeftPath from "../../media/paths/subjects/left-path.svg";
+import EndingPath from "../../media/paths/subjects/ending-path.svg";
 
 function Subjects() {
+
+    const [displaySubjectDescription, setIsVisable] = useState(false);
+    const handleSubjectOnClick = () => setIsVisable(true);
 
     const [isOpen1, setIsOpen1] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
@@ -40,9 +51,11 @@ function Subjects() {
 
     return (
         <div className="subjects-page">
+            {displaySubjectDescription && <SubjectDescription handleTransparentOnClick={() => setIsVisable(false)}/>}
             <NavBar/>
             <div className="subjects-content">
                 <div className="subject-sem-name">First Semester</div>
+                <img src={StartingPath} alt="starting-path" className="subject-path-starting"/>
                 <div className="subject-frame">
                     <div className="box">
                         <div className="subject-info">
@@ -51,7 +64,7 @@ function Subjects() {
                             <div className="info-box"><span>Practical</span>30h</div>
                         </div>
                         <div className="subject-box-content">
-                            <div className="subject-box">Elementary mathematics</div>
+                            <div className="subject-box" onClick={handleSubjectOnClick}>Elementary mathematics</div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">relations</motion.div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">analize</motion.div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">functions</motion.div>
@@ -69,6 +82,7 @@ function Subjects() {
                         XDLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </motion.div>}
                 </div>
+                <img src = {RightPath} alt="right-path" className="subjects-path-right"/>
                 <div className="subject-frame">
                     <div className="box">
                         <div className="subject-info">
@@ -77,8 +91,7 @@ function Subjects() {
                             <div className="info-box"><span>Practical</span>30h</div>
                         </div>
                         <div className="subject-box-content">
-                            <div className="subject-box">Discrete mathematics</div>
-
+                            <div className="subject-box" onClick={handleSubjectOnClick}>Discrete mathematics</div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">graph theory</motion.div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">propability</motion.div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">arythmeticcs</motion.div>
@@ -91,15 +104,17 @@ function Subjects() {
                         transition={dataTransition} 
                         className="skill-description">
                     <div className="title">Propability</div>
-
                             <div className="skill-box">graph theory</div>
                             <div className="skill-box">propability</div>
                             <div className="skill-box">arythmeticcs</div>
                         </div>
                     </div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
+                        Lorem ip
+Can’t automatically merge. Don’t worry, you can still create the pull request.
+sum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </motion.div> }
                 </div>
+                <img src = {LeftPath} alt="left-path" className="subjects-path-left"/>
                 <div className="subject-frame">
                     <div className="box">
                         <div className="subject-info">
@@ -108,7 +123,7 @@ function Subjects() {
                             <div className="info-box"><span>Practical</span>30h</div>
                         </div>
                         <div className="subject-box-content">
-                            <div className="subject-box">Developer Workshop</div>
+                            <div className="subject-box" onClick={handleSubjectOnClick}>Developer Workshop</div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">git</motion.div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">bash</motion.div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">terminal</motion.div>
@@ -127,6 +142,7 @@ function Subjects() {
                     </motion.div>}
 
                 </div>
+                <img src = {RightPath} alt="right-path" className="subjects-path-right"/>
                 <div className="subject-frame">
                     <div className="box">
                         <div className="subject-info">
@@ -135,7 +151,7 @@ function Subjects() {
                             <div className="info-box"><span>Practical</span>30h</div>
                         </div>
                         <div className="subject-box-content">
-                            <div className="subject-box">Discrete Mathematics</div>
+                            <div className="subject-box" onClick={handleSubjectOnClick}>Discrete Mathematics</div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen4, setIsOpen4)} className="skill-box">testing</motion.div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen4, setIsOpen4)} className="skill-box">python</motion.div>
                         </div>
@@ -151,6 +167,7 @@ function Subjects() {
                         XDLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </motion.div>}
                 </div>
+                <img src = {EndingPath} alt="ending-path" className="subject-path-ending"/>
                 <div className="subject-next-sem-name">Second Semester</div>
             </div>
         </div>
