@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 
 
 
@@ -46,9 +46,14 @@ function MainSite() {
                     program's practical orientation ensures that graduates are job-ready and capable of meeting the evolving
                     demands of the informatics industry.</span>
             </div>
-            <div class="content-button-box">
+            <motion.div
+                className="content-button-box"
+                whileHover={{ scale: 1.1 }}
+                onHoverStart={e => {}}
+                onHoverEnd={e => {}}
+                >
                 <button class="roadmap-button">Roadmap of the subject</button>
-            </div>
+            </motion.div>
         </div>
     </div>
     );

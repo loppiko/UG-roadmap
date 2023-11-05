@@ -1,3 +1,7 @@
+button {
+  cursor: pointer;
+}
+
 .header {
   display: flex;
   flex-wrap: nowrap;
