@@ -54,7 +54,6 @@ function MainSite() {
                 onHoverStart={e => {}}
                 onHoverEnd={e => {}}
                 >
-                <button class="roadmap-button" >Roadmap of the subject</button>
                 <Link to="semester" className="roadmap-button">Roadmap of the subject</Link>
             </motion.div>
         </div>

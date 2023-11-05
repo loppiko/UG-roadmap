@@ -37,7 +37,7 @@ function Subjects() {
     
     const openDescripeAndCheck = (isOpen, setIsOpen) => {
 
-        const reduceIsOpen = arrayIsOpen.reduce((_, curr) => {
+        arrayIsOpen.reduce((_, curr) => {
             if (curr[0] === true) {
                 curr[1](!curr[0])
             }
@@ -78,8 +78,8 @@ function Subjects() {
                         animate="visible" 
                         transition={dataTransition} 
                         className="skill-description">
-                    <div className="title">Propability1</div>
-                        XDLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
+                    <div className="title">Propability</div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </motion.div>}
                 </div>
                 <img src = {RightPath} alt="right-path" className="subjects-path-right"/>
@@ -104,14 +104,7 @@ function Subjects() {
                         transition={dataTransition} 
                         className="skill-description">
                     <div className="title">Propability</div>
-                            <div className="skill-box">graph theory</div>
-                            <div className="skill-box">propability</div>
-                            <div className="skill-box">arythmeticcs</div>
-                        </div>
-                    </div>
-                        Lorem ip
-Can’t automatically merge. Don’t worry, you can still create the pull request.
-sum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </motion.div> }
                 </div>
                 <img src = {LeftPath} alt="left-path" className="subjects-path-left"/>
@@ -137,8 +130,8 @@ sum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. 
                         animate="visible" 
                         transition={dataTransition} 
                         className="skill-description">
-                    <div className="title">Propability2</div>
-                        XDLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
+                    <div className="title">Propability</div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </motion.div>}
 
                 </div>
@@ -163,8 +156,8 @@ sum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. 
                         animate="visible" 
                         transition={dataTransition} 
                         className="skill-description">
-                    <div className="title">Propability2</div>
-                        XDLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
+                    <div className="title">Propability</div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </motion.div>}
                 </div>
                 <img src = {EndingPath} alt="ending-path" className="subject-path-ending"/>
