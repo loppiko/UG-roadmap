@@ -78,6 +78,7 @@ function Subjects() {
                         </div>
                         <div className="subject-box-content">
                             <div className="subject-box">Discrete mathematics</div>
+
                             <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">graph theory</motion.div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">propability</motion.div>
                             <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">arythmeticcs</motion.div>
@@ -90,6 +91,12 @@ function Subjects() {
                         transition={dataTransition} 
                         className="skill-description">
                     <div className="title">Propability</div>
+
+                            <div className="skill-box">graph theory</div>
+                            <div className="skill-box">propability</div>
+                            <div className="skill-box">arythmeticcs</div>
+                        </div>
+                    </div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </motion.div> }
                 </div>
@@ -118,6 +125,7 @@ function Subjects() {
                     <div className="title">Propability2</div>
                         XDLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                     </motion.div>}
+
                 </div>
                 <div className="subject-frame">
                     <div className="box">

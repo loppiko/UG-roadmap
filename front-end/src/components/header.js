@@ -10,25 +10,25 @@ import enIcon from './../media/icons/en-icon.svg';
 
 function Header() {
     return (
-    <div class="header">
-        <div class="left-side">
-            <div class="logo">
+    <div className="header">
+        <div className="left-side">
+            <div className="logo">
                 <img src={logoUG} alt="UG logo"/>
             </div>
-            <div class="header-elements">
-                <button class="header-button">Candidates</button>
-                <button class="header-button">Students</button>
-                <button class="header-button">Workers</button>
-                <button class="header-button">Graduates</button>
-                <button class="header-button">Media</button>
+            <div className="header-elements">
+                <button className="header-button">Candidates</button>
+                <button className="header-button">Students</button>
+                <button className="header-button">Workers</button>
+                <button className="header-button">Graduates</button>
+                <button className="header-button">Media</button>
             </div>
         </div>
-        <div class="right-side">
-            <div class="header-icons">
-                <button class="right-header-icon"><img src={radioIcon} alt="radioIcon"/></button>
-                <button class="right-header-icon"><img src={postIcon} alt="postIcon"/></button>
-                <button class="right-header-icon"><img src={disabilityIcon} alt="disabilityIcon"/></button>
-                <button class="right-header-icon"><img src={enIcon} alt="enIcon"/></button>
+        <div className="right-side">
+            <div className="header-icons">
+                <button className="right-header-icon"><img src={radioIcon} alt="radioIcon"/></button>
+                <button className="right-header-icon"><img src={postIcon} alt="postIcon"/></button>
+                <button className="right-header-icon"><img src={disabilityIcon} alt="disabilityIcon"/></button>
+                <button className="right-header-icon"><img src={enIcon} alt="enIcon"/></button>
             </div>
         </div>
     </div>

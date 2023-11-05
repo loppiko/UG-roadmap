@@ -21,7 +21,7 @@ import './styleSheet/main/subjects/subjects.css'
 
 function App() {
   return (
-    <div className="App" class="body">
+    <div className="App">
     	<Header/>
 		<Routes>
 			<Route path="/" element={<MainSite/>} />

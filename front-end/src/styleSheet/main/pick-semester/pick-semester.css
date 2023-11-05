@@ -8,8 +8,6 @@ button {
   justify-content: center;
 }
 .pick-semester .semester-content {
-  display: flex;
-  flex-wrap: wrap;
   width: 1080px;
   margin-top: 8rem;
 }
@@ -19,24 +17,180 @@ button {
   margin-bottom: 4rem;
   width: 100%;
 }
-.pick-semester .semester-content button {
+.pick-semester .semester-content .semester-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8rem;
+}
+.pick-semester .semester-content .semester-section .semester-box-1 {
+  position: relative;
+  margin-bottom: 280px;
+}
+.pick-semester .semester-content .semester-section .path-1 {
+  position: absolute;
+  z-index: -1;
+}
+.pick-semester .semester-content .semester-section .semester-box-2 {
+  position: relative;
+  margin-bottom: 280px;
+}
+.pick-semester .semester-content .semester-section .path-2 {
+  position: absolute;
+  z-index: -1;
+}
+.pick-semester .semester-content .semester-section .semester-box-3 {
+  position: relative;
+  margin-bottom: 280px;
+}
+.pick-semester .semester-content .semester-section .path-3 {
+  position: absolute;
+  z-index: -1;
+}
+.pick-semester .semester-content .semester-section .semester-box-4 {
+  position: relative;
+  margin-bottom: 280px;
+}
+.pick-semester .semester-content .semester-section .path-4 {
+  position: absolute;
+  z-index: -1;
+}
+.pick-semester .semester-content .semester-section .semester-box-5 {
+  position: relative;
+  margin-bottom: 280px;
+}
+.pick-semester .semester-content .semester-section .path-5 {
+  position: absolute;
+  z-index: -1;
+}
+.pick-semester .semester-content .semester-section .semester-box-6 {
+  position: relative;
+  margin-bottom: 280px;
+}
+.pick-semester .semester-content .semester-section .path-6 {
+  position: absolute;
+  z-index: -1;
+}
+.pick-semester .semester-content .semester-section .semester-box-7 {
+  position: relative;
+  margin-bottom: 280px;
+}
+.pick-semester .semester-content .semester-section .path-7 {
+  position: absolute;
+  z-index: -1;
+}
+.pick-semester .semester-content .semester-section .semester-box-8 {
+  position: relative;
+  margin-bottom: 280px;
+}
+.pick-semester .semester-content .semester-section .path-8 {
+  position: absolute;
+  z-index: -1;
+}
+.pick-semester .semester-content .semester-section .semester-box-9 {
+  position: relative;
+  margin-bottom: 280px;
+}
+.pick-semester .semester-content .semester-section .path-9 {
+  position: absolute;
+  z-index: -1;
+}
+.pick-semester .semester-content .semester-section .semester-year-box {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+.pick-semester .semester-content .semester-section .semester-box-1 .path-1 {
+  bottom: 182px;
+  left: 430px;
+}
+.pick-semester .semester-content .semester-section .semester-box-1 .semester-year-box {
+  bottom: 249px;
+}
+.pick-semester .semester-content .semester-section .semester-box-2 {
+  margin-top: 2.5rem;
+}
+.pick-semester .semester-content .semester-section .semester-box-2 .path-2 {
+  top: 172px;
+  left: 135px;
+}
+.pick-semester .semester-content .semester-section .semester-box-2 .semester-year-box {
+  top: 309px;
+  right: 350px;
+}
+.pick-semester .semester-content .semester-section .semester-box-3 .path-3 {
+  bottom: calc(204px + 10rem);
+  left: 125px;
+}
+.pick-semester .semester-content .semester-section .semester-box-3 .path-4 {
+  top: 204px;
+  left: 111px;
+}
+.pick-semester .semester-content .semester-section .semester-box-4 {
+  margin-top: 10rem;
+}
+.pick-semester .semester-content .semester-section .semester-box-4 .path-5 {
+  top: 204px;
+}
+.pick-semester .semester-content .semester-section .semester-box-4 .semester-year-box {
+  top: 345px;
+  right: 350px;
+}
+.pick-semester .semester-content .semester-section .semester-box-5 {
+  margin-top: -1rem;
+}
+.pick-semester .semester-content .semester-section .semester-box-5 .path-6 {
+  bottom: 424px;
+  left: 350px;
+}
+.pick-semester .semester-content .semester-section .semester-box-5 .path-7 {
+  bottom: 204px;
+  left: 430px;
+}
+.pick-semester .semester-content .semester-section .semester-box-6 {
+  margin-top: 204px;
+}
+.pick-semester .semester-content .semester-section .semester-box-6 .path-8 {
+  top: 32px;
+  right: 430px;
+}
+.pick-semester .semester-content .semester-section .semester-box-6 .semester-year-box {
+  bottom: -75px;
+  right: 630px;
+}
+.pick-semester .semester-content .semester-section .semester-box-6 .path-9 {
+  top: 289px;
+  right: 395px;
+}
+.pick-semester .semester-content .semester-year-name {
+  color: #3371FD;
+  font-size: 30px;
+  font-weight: bold;
+}
+.pick-semester .semester-content .semester-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #062D73;
+  border: #062D73 3px solid;
   background-color: #F0F5FF;
-  margin-bottom: 4rem;
+  z-index: 2;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
   border-radius: 15px;
   color: #062D73;
   font-size: 2.25rem;
-  width: 400px;
-  height: 170px;
-  padding: 32px 40px;
+  width: 350px;
+  height: 140px;
+  padding-inline: 40px;
+  padding-block: 32px;
 }
-.pick-semester .semester-content button span {
+.pick-semester .semester-content .semester-button span {
   align-self: stretch;
 }
-.pick-semester .semester-content button:hover {
+.pick-semester .semester-content .semester-button:hover {
   background-color: #062D73;
   color: white;
 }
@@ -45,4 +199,13 @@ button {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 5rem;
+}
+.pick-semester .semester-content .semester-bachelor-project {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 4rem;
+  background: -webkit-linear-gradient(#062D73, white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }/*# sourceMappingURL=pick-semester.css.map */
