@@ -9,7 +9,6 @@ import { useLocation } from "react-router-dom";
 function NavBar() 
 {
     let newLocation = "/";
-    console.log(useLocation().pathname);
     switch (useLocation().pathname) {
         case "/semester":
             newLocation = "/";
@@ -23,7 +22,6 @@ function NavBar()
     }
 
     return (
-        
         <div className="nav-bar">
             <Link to={newLocation} className="previous-site-button">{"<-"}</Link>
             <Link to="/" className="main-page-button">Main page</Link>

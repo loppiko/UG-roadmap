@@ -15,6 +15,7 @@ import Path5 from "../../media/paths/semester/5-path.svg";
 import Path6 from "../../media/paths/semester/6-path.svg";
 import Path7 from "../../media/paths/semester/7-path.svg";
 import Path8 from "../../media/paths/semester/8-path.svg";
+import Path9 from "../../media/paths/semester/9-path.svg";
 
 import BookIcon from "../../media/icons/semester/book.svg"
 import ConsoleIcon from "../../media/icons/semester/console.svg"
@@ -31,7 +32,7 @@ function Semester() {
                 </div>
                 <div className="semester-section">
                     <div className="semester-box-1">
-                        <div className="semester-first-year">
+                        <div className="semester-year-box">
                             <img src={BookIcon} alt="book"/>
                             <span className="semester-year-name">First semester</span>
                         </div>
@@ -40,37 +41,38 @@ function Semester() {
                     </div>
                     <div className="semester-box-2">
                         <Link to="/semester/subjects" className="semester-button">2 Semester</Link>
-                        <img src={Path2} alt="2-path"/>
-                        <div className="semester-second-year">
+                        <img src={Path2} alt="2-path" className="path-2"/>
+                        <div className="semester-year-box">
                             <img src={PointerIcon} alt="pointer"/>
                             <span className="semester-year-name">Second semester</span>
                         </div>                        
                     </div>
                     <div className="semester-box-3">
-                        <img src={Path3} alt="3-path"/>
+                        <img src={Path3} alt="3-path" className="path-3"/>
                         <Link to="/semester/subjects" className="semester-button">3 Semester</Link>
-                        <img src={Path4} alt="4-path"/>
+                        <img src={Path4} alt="4-path" className="path-4"/>
                     </div>
                     <div className="semester-box-4">
                         <Link to="/semester/subjects" className="semester-button">4 Semester</Link>
-                        <img src={Path5} alt="5-path"/>
-                        <div className="semester-third-year">
+                        <img src={Path5} alt="5-path" className="path-5"/>
+                        <div className="semester-year-box">
                             <img src={ConsoleIcon} alt="concole"/>
                             <span className="semester-year-name">Third semester</span>
                         </div>             
                     </div>
                     <div className="semester-box-5">
-                        <img src={Path6} alt="6-path"/>
+                        <img src={Path6} alt="6-path" className="path-6"/>
                         <Link to="/semester/subjects" className="semester-button">5 Semester</Link>
-                        <img src={Path7} alt="7-path"/>
+                        <img src={Path7} alt="7-path" className="path-7"/>
                     </div>
-                    <div className="semeseter-box-6">
-                        <Link to="/semester/subjects" className="semester-button">6 Semester</Link>
-                        <img src={Path8} alt="8-path"/>
-                        <div className="semester-project-year">
+                    <div className="semester-box-6">
+                        <Link className="semester-button">6 Semester</Link>
+                        <img src={Path8} alt="8-path" className="path-8"/>
+                        <div className="semester-year-box">
                             <img src={MergeIcon} alt="merge"/>
                             <span className="semester-year-name">Writing project</span>
                         </div> 
+                        <img src={Path9} alt="9-path" className="path-9"/>
                     </div>
                 </div>
                 <div className="semester-bachelor-project">Bachelor project</div>
