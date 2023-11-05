@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 // React Router
 import { Outlet, Link } from "react-router-dom";
@@ -49,11 +50,15 @@ function MainSite() {
                     program's practical orientation ensures that graduates are job-ready and capable of meeting the evolving
                     demands of the informatics industry.</span>
             </div>
-            <div className="content-button-box">
-                <Link to="semester" className="roadmap-button">
-                    Roadmap of the subject
-                </Link>
-            </div>
+            <motion.div
+                className="content-button-box"
+                whileHover={{ scale: 1.1 }}
+                onHoverStart={e => {}}
+                onHoverEnd={e => {}}
+                >
+                <button class="roadmap-button" >Roadmap of the subject</button>
+                <Link to="semester" className="roadmap-button">Roadmap of the subject</Link>
+            </motion.div>
         </div>
         
         <Outlet />

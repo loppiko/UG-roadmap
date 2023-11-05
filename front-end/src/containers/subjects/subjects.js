@@ -1,9 +1,43 @@
 import React from "react";
+import { motion} from "framer-motion";
+import  {useState} from 'react';   
 
 // ---- components ----
 import NavBar from "../../components/nav-bar";
 
 function Subjects() {
+
+    const [isOpen1, setIsOpen1] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
+    const [isOpen3, setIsOpen3] = useState(false);
+    const [isOpen4, setIsOpen4] = useState(false);
+
+    const arrayIsOpen = [
+        [isOpen1, setIsOpen1],
+        [isOpen2, setIsOpen2],
+        [isOpen3, setIsOpen3],
+        [isOpen4, setIsOpen4]
+    ]
+
+    const dataVariants = {
+        hidden: {opacity:0, y:25},
+        visible:{opacity:1, y:0},
+    }
+    
+    const openDescripeAndCheck = (isOpen, setIsOpen) => {
+
+        const reduceIsOpen = arrayIsOpen.reduce((_, curr) => {
+            if (curr[0] === true) {
+                curr[1](!curr[0])
+            }
+            return [];
+        }, [])
+
+        setIsOpen(!isOpen);
+    }
+
+    const dataTransition = {duration:0.5, delay:0.25}
+
     return (
         <div className="subjects-page">
             <NavBar/>
@@ -18,15 +52,22 @@ function Subjects() {
                         </div>
                         <div className="subject-box-content">
                             <div className="subject-box">Elementary mathematics</div>
-                            <div className="skill-box">relations</div>
-                            <div className="skill-box">analize</div>
-                            <div className="skill-box">functions</div>
-                            <div className="skill-box">logic</div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">relations</motion.div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">analize</motion.div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">functions</motion.div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">logic</motion.div>
                         </div>
                     </div>
-                    <div className="skill-description">
-                        <div className="title"></div>
-                    </div>
+                    {isOpen1 && 
+                    <motion.div 
+                        variants={dataVariants}
+                        initial="hidden" 
+                        animate="visible" 
+                        transition={dataTransition} 
+                        className="skill-description">
+                    <div className="title">Propability1</div>
+                        XDLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
+                    </motion.div>}
                 </div>
                 <div className="subject-frame">
                     <div className="box">
@@ -37,15 +78,27 @@ function Subjects() {
                         </div>
                         <div className="subject-box-content">
                             <div className="subject-box">Discrete mathematics</div>
+
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">graph theory</motion.div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">propability</motion.div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">arythmeticcs</motion.div>
+                        </div>
+                    </div>
+                    {isOpen2 && <motion.div 
+                        variants={dataVariants}
+                        initial="hidden" 
+                        animate="visible" 
+                        transition={dataTransition} 
+                        className="skill-description">
+                    <div className="title">Propability</div>
+
                             <div className="skill-box">graph theory</div>
                             <div className="skill-box">propability</div>
                             <div className="skill-box">arythmeticcs</div>
                         </div>
                     </div>
-                    <div className="skill-description">
-                        <div className="title">Propability</div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                    </div>
+                    </motion.div> }
                 </div>
                 <div className="subject-frame">
                     <div className="box">
@@ -56,16 +109,23 @@ function Subjects() {
                         </div>
                         <div className="subject-box-content">
                             <div className="subject-box">Developer Workshop</div>
-                            <div className="skill-box">git</div>
-                            <div className="skill-box">bash</div>
-                            <div className="skill-box">terminal</div>
-                            <div className="skill-box">linux</div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">git</motion.div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">bash</motion.div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">terminal</motion.div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">linux</motion.div>
                         </div>
                     </div>
-                    <div className="skill-description">
-                        <div className="title">Propability</div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                    </div>
+                    {isOpen3 && 
+                    <motion.div 
+                        variants={dataVariants}
+                        initial="hidden" 
+                        animate="visible" 
+                        transition={dataTransition} 
+                        className="skill-description">
+                    <div className="title">Propability2</div>
+                        XDLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
+                    </motion.div>}
+
                 </div>
                 <div className="subject-frame">
                     <div className="box">
@@ -76,13 +136,20 @@ function Subjects() {
                         </div>
                         <div className="subject-box-content">
                             <div className="subject-box">Discrete Mathematics</div>
-                            <div className="skill-box">testing</div>
-                            <div className="skill-box">python</div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen4, setIsOpen4)} className="skill-box">testing</motion.div>
+                            <motion.div onClick={() => openDescripeAndCheck(isOpen4, setIsOpen4)} className="skill-box">python</motion.div>
                         </div>
                     </div>
-                    <div className="skill-description">
-                        <div className="title"></div>
-                    </div>
+                    {isOpen4 && 
+                    <motion.div 
+                        variants={dataVariants}
+                        initial="hidden" 
+                        animate="visible" 
+                        transition={dataTransition} 
+                        className="skill-description">
+                    <div className="title">Propability2</div>
+                        XDLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
+                    </motion.div>}
                 </div>
                 <div className="subject-next-sem-name">Second Semester</div>
             </div>
