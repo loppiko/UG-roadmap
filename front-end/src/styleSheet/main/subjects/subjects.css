@@ -13,13 +13,15 @@ button {
   justify-content: center;
   width: 1080px;
   margin-top: 4rem;
-  gap: 10rem;
 }
 .subjects-page .subjects-content .subject-sem-name {
   width: 100%;
   text-align: center;
   font-size: 5rem;
   color: #062D73;
+}
+.subjects-page .subjects-content .subject-path-starting {
+  margin-right: 350px;
 }
 .subjects-page .subjects-content .subject-frame {
   position: relative;
@@ -158,6 +160,9 @@ button {
 .subjects-page .subjects-content .subject-frame:nth-of-type(5) .skill-description {
   left: 0;
   bottom: 35px;
+}
+.subjects-page .subjects-content .subject-path-ending {
+  margin-left: 300px;
 }
 .subjects-page .subjects-content .subject-next-sem-name {
   width: 100%;

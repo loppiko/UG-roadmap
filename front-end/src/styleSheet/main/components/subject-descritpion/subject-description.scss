@@ -1,0 +1,89 @@
+@import "../../../consts/consts.scss";
+
+$component-subject-description-transparent-background: rgba(78, 78, 78, 0.49);
+$component-subject-description-transparent-width: 65%;
+$component-subject-description-transparent-border-left: 3px solid $main-color; 
+$component-subject-description-transparent-padding: 4rem; 
+$component-subject-description-transparent-title-font-size: 60px;
+$component-subject-description-transparent-description-font-size: 25px;
+$component-subject-description-transparent-description-margin-top: 3rem;
+$component-subject-description-transparent-description-letter-spacing: 1.5px;
+$component-subject-description-transparent-description-line-height: 40px;
+$component-subject-description-transparent-subject-language-margin-top: 3.5rem;
+$component-subject-non-transparent-sylabus-border-radius: 20px;
+$component-subject-non-transparent-sylabus-margin-top: 4rem;
+$component-subject-non-transparent-sylabus-letter-spacing: 2px;
+$component-subject-non-transparent-sylabus-padding: 1rem;
+
+
+.component-subject-description {
+    display: flex;
+
+    position: absolute;
+    width: 100vw;
+    z-index: 5;
+
+    background-color: $component-subject-description-transparent-background;
+
+    .component-subject-transparent {
+        width: $component-subject-description-transparent-width;
+    }
+
+    .component-subject-non-transparent{
+        width: calc(100% - $component-subject-description-transparent-width);
+        height: 100vh;
+
+        position: sticky;
+        top: 0;
+
+        background-color: $background-color;
+        border-left: $component-subject-description-transparent-border-left;
+        padding: $component-subject-description-transparent-padding;
+
+        color: $black-text-color;
+        font-size: $component-subject-description-transparent-description-font-size;
+
+        .component-subject-non-transparent-title {
+            color: $main-color;
+            font-size: $component-subject-description-transparent-title-font-size;
+        }
+
+        .component-subject-non-transparent-description {
+            margin-top: $component-subject-description-transparent-description-margin-top;
+
+            line-height: $component-subject-description-transparent-description-line-height;
+            letter-spacing:
+            $component-subject-description-transparent-description-letter-spacing;
+        }
+
+        .component-subject-non-transparent-subject-language {
+            line-height: $component-subject-description-transparent-description-line-height;
+            letter-spacing:
+            $component-subject-description-transparent-description-letter-spacing;
+        }
+
+        .component-subject-non-transparent-subject-description-title {
+            margin-top: $component-subject-description-transparent-subject-language-margin-top;
+            font-weight: bold;
+        }
+
+        .component-subject-non-transparent-sylabus {
+            margin: auto;
+            margin-top: $component-subject-non-transparent-sylabus-margin-top;
+
+            width: 75%;
+            padding: $component-subject-non-transparent-sylabus-padding;
+            text-align: center;
+            border-radius: $component-subject-non-transparent-sylabus-border-radius;
+            background: $main-color; 
+            color: $white-text-color;
+            letter-spacing: $component-subject-non-transparent-sylabus-letter-spacing;
+            font-weight: bold;
+        }
+
+        .component-subject-non-transparent-sylabus:hover {
+            cursor: pointer;
+            background-color: $main-color-active-button;
+        }
+    }
+}

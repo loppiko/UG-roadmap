@@ -4,8 +4,6 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
 
-
-
 function MainSite() {
     return (
     <div className="content">

@@ -66,7 +66,7 @@ function Semester() {
                         <img src={Path7} alt="7-path" className="path-7"/>
                     </div>
                     <div className="semester-box-6">
-                        <Link className="semester-button">6 Semester</Link>
+                        <Link to="/semester/subjects" className="semester-button">6 Semester</Link>
                         <img src={Path8} alt="8-path" className="path-8"/>
                         <div className="semester-year-box">
                             <img src={MergeIcon} alt="merge"/>

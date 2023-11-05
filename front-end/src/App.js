@@ -15,6 +15,7 @@ import './styleSheet/main/main-site/main-site.css'
 import './styleSheet/main/components/header/header.css'
 import './styleSheet/main/components/footer/footer.css'
 import './styleSheet/main/components/nav-bar/nav-bar.css'
+import './styleSheet/main/components/subject-descritpion/subject-description.css'
 import './styleSheet/main/pick-semester/pick-semester.css'
 import './styleSheet/main/subjects/subjects.css'
 
