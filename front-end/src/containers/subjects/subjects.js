@@ -30,11 +30,6 @@ function Subjects() {
         [isOpen3, setIsOpen3],
         [isOpen4, setIsOpen4]
     ]
-
-    const dataVariants = {
-        hidden: {opacity:0, y:25},
-        visible:{opacity:1, y:0},
-    }
     
     const openDescripeAndCheck = (isOpen, setIsOpen) => {
 
@@ -49,6 +44,11 @@ function Subjects() {
     }
 
     const dataTransition = {duration:0.5, delay:0.25}
+
+    const dataVariants = {
+        hidden: {opacity:0, y:25},
+        visible:{opacity:1, y:0},
+    }
 
     return (
         <div className="subjects-page">

@@ -40,6 +40,12 @@ button {
   margin-top: 3.5rem;
   font-weight: bold;
 }
+.component-subject-description .component-subject-non-transparent .blue-link {
+  cursor: pointer;
+  color: #011946;
+  text-decoration: none;
+  font-weight: bold;
+}
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus {
   margin: auto;
   margin-top: 4rem;
@@ -51,6 +57,10 @@ button {
   color: white;
   letter-spacing: 2px;
   font-weight: bold;
+}
+.component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus .white-link {
+  color: white;
+  text-decoration: none;
 }
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus:hover {
   cursor: pointer;
