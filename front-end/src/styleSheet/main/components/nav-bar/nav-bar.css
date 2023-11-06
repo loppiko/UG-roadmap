@@ -6,14 +6,16 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 4rem;
   padding-left: 3rem;
   padding-top: 2rem;
   gap: 2rem;
 }
-.nav-bar .main-page-button, .nav-bar .previous-site-button {
+.nav-bar .main-page-button, .nav-bar .previous-site-button, .nav-bar .next-site-button {
   border: none;
+  margin-right: 4rem;
   text-decoration: none;
   border-radius: 15px;
   padding: 0.5rem;

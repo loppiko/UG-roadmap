@@ -23,9 +23,13 @@ function NavBar()
 
     return (
         <div className="nav-bar">
-            <Link to={newLocation} className="previous-site-button"> {`Change semester`}</Link>
-            <Link to="/" className="main-page-button">Main page</Link>
-            <Link to="/" className="main-page-button">Next semester</Link>
+            <div className="nav-bar-left-side">
+                <Link to={newLocation} className="previous-site-button"> {`Change semester`}</Link>
+                <Link to="/" className="main-page-button">Main page</Link>
+            </div>
+            <div className="nav-bar-right-side">
+                <Link to="/" className="main-page-button">Next semester</Link>
+            </div>
             <Outlet/>
         </div>
     );

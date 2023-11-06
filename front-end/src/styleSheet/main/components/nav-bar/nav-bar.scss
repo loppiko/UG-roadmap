@@ -12,12 +12,14 @@ $nav-bar-font-size: 1.25rem;
 $nav-bar-button-up-down-padding: 0.5rem;
 $nav-bar-button-side-padding: 3rem;
 $nav-bar-border-bottom: 1px solid $main-color;
+$nav-bar-buttons-margin-right: 4rem;
 // $nav-bar-bottom-margin: 5rem;
 
 .nav-bar{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 
     width: 100%;
     height: $nav-bar-height;
@@ -27,9 +29,11 @@ $nav-bar-border-bottom: 1px solid $main-color;
     // background-color: $nav-bar-background-color;
     // border-bottom: $nav-bar-border-bottom;
 
-    .main-page-button, .previous-site-button {        
+
+    .main-page-button, .previous-site-button, .next-site-button {        
         border: none;
         
+        margin-right: $nav-bar-buttons-margin-right;
         text-decoration: none;
         border-radius: $main-border-radius;
         padding: $nav-bar-button-up-down-padding;
