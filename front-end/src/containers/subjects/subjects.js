@@ -8,6 +8,7 @@ import NavBar from "../../components/nav-bar";
 import SubjectDescription from "../../components/subject-description";
 
 // paths and icons
+import Underline from "../../media/underline.svg"
 import StartingPath from "../../media/paths/subjects/starting-path.svg";
 import RightPath from "../../media/paths/subjects/right-path.svg";
 import LeftPath from "../../media/paths/subjects/left-path.svg";
@@ -52,6 +53,11 @@ function Subjects() {
     return (
         <div className="subjects-page">
             {displaySubjectDescription && <SubjectDescription handleTransparentOnClick={() => setIsVisable(false)}/>}
+            <div className="subjects-main-introduction">
+                <div className="subjects-main-introduction-title">Practical informatics</div>
+                <img className="subjects-main-introduction-title-underline" src={Underline}/>
+                <div className="subjects-main-introduction-description">Roadmap of Practical Informatics faculty in Gdansk University</div>
+            </div>
             <NavBar/>
             <div className="subjects-content">
                 <div className="subject-sem-name">First Semester</div>

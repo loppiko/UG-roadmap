@@ -5,6 +5,7 @@ $nav-bar-background-color: #062D731F;
 
 // ---- parameters ----
 $nav-bar-padding-left: 3rem;
+$nav-bar-padding-top: 2rem;
 $nav-bar-buttons-gap: 2rem;
 $nav-bar-height: 4rem;
 $nav-bar-font-size: 1.25rem;
@@ -21,9 +22,10 @@ $nav-bar-border-bottom: 1px solid $main-color;
     width: 100%;
     height: $nav-bar-height;
     padding-left: $nav-bar-padding-left;
+    padding-top: $nav-bar-padding-top;
     gap: $nav-bar-buttons-gap;
-    background-color: $nav-bar-background-color;
-    border-bottom: $nav-bar-border-bottom;
+    // background-color: $nav-bar-background-color;
+    // border-bottom: $nav-bar-border-bottom;
 
     .main-page-button, .previous-site-button {        
         border: none;

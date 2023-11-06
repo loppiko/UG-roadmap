@@ -7,12 +7,28 @@ button {
   flex-wrap: wrap;
   justify-content: center;
 }
+.subjects-page .subjects-main-introduction {
+  margin-top: 4rem;
+  margin-left: 3rem;
+  width: 100%;
+}
+.subjects-page .subjects-main-introduction .subjects-main-introduction-title {
+  font-size: 5rem;
+}
+.subjects-page .subjects-main-introduction .subjects-main-introduction-title-underline {
+  color: #062D73;
+}
+.subjects-page .subjects-main-introduction .subjects-main-introduction-description {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  color: #909090;
+}
 .subjects-page .subjects-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 1080px;
-  margin-top: 4rem;
+  margin-top: 7rem;
 }
 .subjects-page .subjects-content .subject-sem-name {
   width: 100%;

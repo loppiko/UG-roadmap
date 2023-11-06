@@ -9,9 +9,8 @@ button {
   width: 100%;
   height: 4rem;
   padding-left: 3rem;
+  padding-top: 2rem;
   gap: 2rem;
-  background-color: rgba(6, 45, 115, 0.1215686275);
-  border-bottom: 1px solid #062D73;
 }
 .nav-bar .main-page-button, .nav-bar .previous-site-button {
   border: none;

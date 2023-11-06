@@ -1,7 +1,14 @@
 @import "../../consts/consts.scss";
 
 
-$subjects-content-margin-top: 4rem;
+$subjects-main-margin-top: 4rem;
+$subjects-main-introduction-margin-left: 3rem;
+$subjects-main-introduction-title-font-size: 5rem;
+$subjects-main-introduction-description-margin-top: 1.5rem;
+$subjects-main-introduction-description-font-size: 2rem;
+$subjects-main-introduction-description-color: #909090;
+
+$subjects-content-margin-top: 7rem;
 $subjects-sem-same-font-size: 5rem;
 $subjects-sem-name-margin-bottom: 5rem;
 $subjects-sem-number-of-frames-to-iterate: 4;
@@ -47,6 +54,27 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    .subjects-main-introduction {
+        margin-top: $subjects-main-margin-top;
+        margin-left: $subjects-main-introduction-margin-left;
+        width: 100%;
+
+        .subjects-main-introduction-title {
+            font-size: $subjects-main-introduction-title-font-size;   
+        }
+
+        .subjects-main-introduction-title-underline {
+            // width: 400px;
+            color: $main-color;
+        }
+
+        .subjects-main-introduction-description {
+            margin-top: $subjects-main-introduction-description-margin-top;
+            font-size: $subjects-main-introduction-description-font-size;
+            color: $subjects-main-introduction-description-color;
+        }
+    }
 
     .subjects-content {
         display: flex;

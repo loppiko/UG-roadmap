@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="80.5" height="3" viewBox="0 0 80.5 3"><defs><style>.a{fill:none;stroke:#0041d2;stroke-width:3px;}</style></defs><g transform="translate(-876 -2208)"><line class="a" x2="51" transform="translate(876 2209.5)"/><line class="a" x2="3.5" transform="translate(933.75 2209.5)"/><line class="a" x2="3.5" transform="translate(943.5 2209.5)"/><line class="a" x2="3.5" transform="translate(953 2209.5)"/></g></svg>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  width="1000px" 
+  height="3px" 
+  viewBox="0 0 1000 3"  
+  preserveAspectRatio="xMidYMid meet" 
+>
+  <defs>
+    <style>.a{fill:none;stroke:#062D73;stroke-width:3px;}</style>
+  </defs>
+  <g transform="translate(-876 -2208)">
+    <line class="a" x2="350" transform="translate(876 2209.5)"/>
+    <line class="a" x2="50" transform="translate(1276.75 2209.5)"/> 21 * 10 = 210
+    <line class="a" x2="50" transform="translate(1376.75 2209.5)"/> 21 * 10 = 210, zmieniamy odstęp
+    <line class="a" x2="50" transform="translate(1476.75 2209.5)"/> 21 * 10 = 210, zmieniamy odstęp
+  </g>
+</svg>

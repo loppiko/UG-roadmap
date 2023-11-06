@@ -23,8 +23,9 @@ function NavBar()
 
     return (
         <div className="nav-bar">
-            <Link to={newLocation} className="previous-site-button">{"<-"}</Link>
+            <Link to={newLocation} className="previous-site-button"> {`Change semester`}</Link>
             <Link to="/" className="main-page-button">Main page</Link>
+            <Link to="/" className="main-page-button">Next semester</Link>
             <Outlet/>
         </div>
     );
