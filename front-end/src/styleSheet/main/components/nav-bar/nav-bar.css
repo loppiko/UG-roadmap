@@ -25,6 +25,6 @@ button {
   background-color: #062D73;
   font-size: 1.25rem;
 }
-.nav-bar .main-page-button:hover, .nav-bar .previous-site-button:hover {
+.nav-bar .main-page-button:hover, .nav-bar .previous-site-button:hover, .nav-bar .next-site-button {
   background-color: #011946;
 }/*# sourceMappingURL=nav-bar.css.map */

@@ -28,7 +28,7 @@ function NavBar()
                 <Link to="/" className="main-page-button">Main page</Link>
             </div>
             <div className="nav-bar-right-side">
-                <Link to="/" className="main-page-button">Next semester</Link>
+                <Link to="/" className="next-site-button">Next semester</Link>
             </div>
             <Outlet/>
         </div>
