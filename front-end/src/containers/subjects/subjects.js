@@ -55,7 +55,7 @@ function Subjects() {
             {displaySubjectDescription && <SubjectDescription handleTransparentOnClick={() => setIsVisable(false)}/>}
             <div className="subjects-main-introduction">
                 <div className="subjects-main-introduction-title">Practical informatics</div>
-                <img className="subjects-main-introduction-title-underline" src={Underline}/>
+                <img className="subjects-main-introduction-title-underline" src={Underline} alt="title-underline"/>
                 <div className="subjects-main-introduction-description">Roadmap of Practical Informatics faculty in Gdansk University</div>
             </div>
             <NavBar/>

@@ -66,7 +66,8 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
             margin-top: $component-subject-description-transparent-subject-language-margin-top;
             font-weight: bold;
         }
-        .blue-link {
+
+        .component-subject-non-transparent-subject-description-professor-site {
             cursor: pointer;
             color:$main-color-active-button;
             text-decoration: none;
@@ -85,8 +86,9 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
             color: $white-text-color;
             letter-spacing: $component-subject-non-transparent-sylabus-letter-spacing;
             font-weight: bold;
-            .white-link {
-                color:$white-text-color;
+
+            .component-subject-non-transparent-sylabus-link {
+                color: $white-text-color;
                 text-decoration: none;
             }
         }

@@ -30,13 +30,13 @@ function SubjectDescription({handleTransparentOnClick}) {
                 </div>
                 <div className="component-subject-non-transparent-subject-professor"></div>
                     <div className="component-subject-non-transparent-subject-description-title">Leading professor:</div>
-                    <a href="https://old.mfi.ug.edu.pl/pracownik/51540/mateusz_miotk" className="blue-link">Dr. Mateusz Miotk</a>
+                    <a href="https://old.mfi.ug.edu.pl/pracownik/51540/mateusz_miotk" className="component-subject-non-transparent-subject-description-professor-site">Dr. Mateusz Miotk</a>
                 <motion.div 
                 whileHover={{ scale: 1.1 }}
                 onHoverStart={e => {}}
                 onHoverEnd={e => {}}
                 className="component-subject-non-transparent-sylabus">
-                    <a href="https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf" className="white-link" >Link to sylabus</a>
+                    <a href="https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf" className="component-subject-non-transparent-sylabus-link" >Link to sylabus</a>
                     </motion.div>
             </motion.div>
         </div>

@@ -40,7 +40,7 @@ button {
   margin-top: 3.5rem;
   font-weight: bold;
 }
-.component-subject-description .component-subject-non-transparent .blue-link {
+.component-subject-description .component-subject-non-transparent .component-subject-non-transparent-subject-description-professor-site {
   cursor: pointer;
   color: #011946;
   text-decoration: none;
@@ -58,7 +58,7 @@ button {
   letter-spacing: 2px;
   font-weight: bold;
 }
-.component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus .white-link {
+.component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus .component-subject-non-transparent-sylabus-link {
   color: white;
   text-decoration: none;
 }
