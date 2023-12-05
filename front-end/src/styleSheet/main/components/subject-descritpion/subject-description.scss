@@ -2,7 +2,8 @@
 
 $component-subject-description-transparent-background: rgba(78, 78, 78, 0.49);
 $component-subject-description-transparent-width: 65%;
-$component-subject-description-transparent-border-left: 3px solid $main-color; 
+$component-subject-description-transparent-border-left-width: 3px;
+$component-subject-description-transparent-border-left: $component-subject-description-transparent-border-left-width solid $main-color; 
 $component-subject-description-transparent-padding: 4rem; 
 $component-subject-description-transparent-title-font-size: 60px;
 $component-subject-description-transparent-description-font-size: 25px;
@@ -18,10 +19,10 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
 
 .component-subject-description {
     display: flex;
-
     position: absolute;
-    width: 100vw;
     z-index: 5;
+
+    width: 100%;
 
     background-color: $component-subject-description-transparent-background;
 
@@ -30,7 +31,9 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
     }
 
     .component-subject-non-transparent{
-        width: calc(100% - $component-subject-description-transparent-width);
+        justify-self: end;
+
+        width: calc(100% - $component-subject-description-transparent-width - $component-subject-description-transparent-border-left-width);
         height: 100vh;
 
         position: sticky;

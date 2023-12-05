@@ -5,15 +5,16 @@ button {
 .component-subject-description {
   display: flex;
   position: absolute;
-  width: 100vw;
   z-index: 5;
+  width: 100%;
   background-color: rgba(78, 78, 78, 0.49);
 }
 .component-subject-description .component-subject-transparent {
   width: 65%;
 }
 .component-subject-description .component-subject-non-transparent {
-  width: 35%;
+  justify-self: end;
+  width: calc(35% - 3px);
   height: 100vh;
   position: sticky;
   top: 0;
