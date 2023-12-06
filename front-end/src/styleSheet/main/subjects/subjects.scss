@@ -155,6 +155,8 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         height: $subjects-subject-box-heigth;
                         padding: $subjects-subject-padding;
 
+                        text-decoration: none;
+                        color: $black-text-color;
                         border-radius: $subjects-info-border-radius;
                         border: $subjects-subject-border;
                         background: $subjects-subject-background-color;
@@ -185,19 +187,19 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         text-align: center;
                     }
 
-                    .skill-box:nth-of-type(2) {
+                    .skill-box:nth-of-type(1) {
                         right: 400px;
                         top: 150px;
                     }
-                    .skill-box:nth-of-type(3) {
+                    .skill-box:nth-of-type(2) {
                         left: 390px;
                         top: 160px;
                     }
-                    .skill-box:nth-of-type(4) {
+                    .skill-box:nth-of-type(3) {
                         right: 390px;
                         top: 360px;
                     }
-                    .skill-box:nth-of-type(5) {
+                    .skill-box:nth-of-type(4) {
                         left: 380px;
                         top: 325px;
                     }

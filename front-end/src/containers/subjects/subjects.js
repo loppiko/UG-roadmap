@@ -16,6 +16,7 @@ import RightPath from "../../media/paths/subjects/right-path.svg";
 import LeftPath from "../../media/paths/subjects/left-path.svg";
 import EndingPath from "../../media/paths/subjects/ending-path.svg";
 import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
+import { Link } from "react-router-dom";
 
 function Subjects() {
 
@@ -99,9 +100,11 @@ function Subjects() {
                                     { returnPracticalComponent(subject["laboratory"]) }
                                 </div>
                                 <div className="subject-box-content">
-                                    <div className="subject-box" onClick={handleSubjectOnClick}>{subject["subject-name"]}</div>
-                                    {subject["skills"].map(skill => <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">{skill["skill-name"]}</motion.div>
-                                    )}
+                                    <Link to={`/roadmap-enter/${semesterId}/${subject["subject-name"].split(" ").join("-")}`} className="subject-box" onClick={handleSubjectOnClick}> { subject["subject-name"] }</Link>
+                                    {
+                                    subject["skills"].map(skill => <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">{skill["skill-name"]}</motion.div>
+                                    )
+                                    }
                                 </div>
                             </div>
                             {

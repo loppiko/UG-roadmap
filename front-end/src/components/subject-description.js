@@ -1,10 +1,15 @@
 import React from "react";
 import {motion} from "framer-motion";
+import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
+
+// database
+import database from "../main.json";
 
 
 // 112 - footer size
 
 function SubjectDescription({handleTransparentOnClick}) {
+    const {semesterId, subjectName} = useParams();
 
     const dataTransition = {duration:0.5, delay:0.25}
 
