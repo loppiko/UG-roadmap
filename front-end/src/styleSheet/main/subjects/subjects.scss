@@ -112,6 +112,8 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                 .subject-info {
                     display: flex;
                     gap: $subjects-info-boxes-gap;
+                    width: min-content;
+                    margin: auto;
 
                     .info-box {
                         display: flex;

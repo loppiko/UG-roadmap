@@ -52,6 +52,9 @@ button {
 .subjects-page .subjects-content .subject-frame .box .subject-info {
   display: flex;
   gap: 1rem;
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-info .info-box {
   display: flex;

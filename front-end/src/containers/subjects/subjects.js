@@ -33,6 +33,17 @@ function Subjects() {
         else return <img src = {LeftPath} alt="left-path" className="subjects-path-left"/>;
     }
 
+    // Return lecture and practical components
+    const returnLectureComponent = (content) => {
+        if (content) return <div className="info-box"><span>Lecture</span>{content}</div>;
+        else return
+    }
+
+    const returnPracticalComponent = (content) => {
+        if (content) return <div className="info-box"><span>Practical</span>{content}</div>;
+        else return
+    }
+
     // Animations
     const [isOpen1, setIsOpen1] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
@@ -84,8 +95,8 @@ function Subjects() {
                             <div className="box">
                                 <div className="subject-info">
                                     <div className="info-box"><span>ECTS</span>{subject["ECTS"]}</div>
-                                    <div className="info-box"><span>Lecture</span>{subject["lecture"]}</div>
-                                    <div className="info-box"><span>Practical</span>{subject["laboratory"]}</div>
+                                    { returnLectureComponent(subject["lecture"]) }
+                                    { returnPracticalComponent(subject["laboratory"]) }
                                 </div>
                                 <div className="subject-box-content">
                                     <div className="subject-box" onClick={handleSubjectOnClick}>{subject["subject-name"]}</div>
