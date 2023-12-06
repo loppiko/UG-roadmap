@@ -36,11 +36,11 @@ function Semester() {
                             <img src={BookIcon} alt="book"/>
                             <span className="semester-year-name">First semester</span>
                         </div>
-                        <Link to="/semester/subjects" className="semester-button">1 Semester</Link>
+                        <Link to={`/roadmap-enter/semester-${1}`} className="semester-button">1 Semester</Link>
                         <img src={Path1} alt="1-path" className="path-1"/>
                     </div>
                     <div className="semester-box-2">
-                        <Link to="/semester/subjects" className="semester-button">2 Semester</Link>
+                        <Link to="/roadmap-enter/semester-:2" className="semester-button">2 Semester</Link>
                         <img src={Path2} alt="2-path" className="path-2"/>
                         <div className="semester-year-box">
                             <img src={PointerIcon} alt="pointer"/>
@@ -49,11 +49,11 @@ function Semester() {
                     </div>
                     <div className="semester-box-3">
                         <img src={Path3} alt="3-path" className="path-3"/>
-                        <Link to="/semester/subjects" className="semester-button">3 Semester</Link>
+                        <Link to="/roadmap-enter/semester-:3" className="semester-button">3 Semester</Link>
                         <img src={Path4} alt="4-path" className="path-4"/>
                     </div>
                     <div className="semester-box-4">
-                        <Link to="/semester/subjects" className="semester-button">4 Semester</Link>
+                        <Link to="/roadmap-enter/semester-:4" className="semester-button">4 Semester</Link>
                         <img src={Path5} alt="5-path" className="path-5"/>
                         <div className="semester-year-box">
                             <img src={ConsoleIcon} alt="concole"/>
@@ -62,11 +62,11 @@ function Semester() {
                     </div>
                     <div className="semester-box-5">
                         <img src={Path6} alt="6-path" className="path-6"/>
-                        <Link to="/semester/subjects" className="semester-button">5 Semester</Link>
+                        <Link to="/roadmap-enter/semester-:5" className="semester-button">5 Semester</Link>
                         <img src={Path7} alt="7-path" className="path-7"/>
                     </div>
                     <div className="semester-box-6">
-                        <Link to="/semester/subjects" className="semester-button">6 Semester</Link>
+                        <Link to="/roadmap-enter/semester-:6" className="semester-button">6 Semester</Link>
                         <img src={Path8} alt="8-path" className="path-8"/>
                         <div className="semester-year-box">
                             <img src={MergeIcon} alt="merge"/>

@@ -2,7 +2,6 @@ import React from "react";
 import {useState } from "react";
 import {motion} from "framer-motion";
 
-
 // ---- components ----
 import NavBar from "../../components/nav-bar";
 import SubjectDescription from "../../components/subject-description";
