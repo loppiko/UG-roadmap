@@ -61,4 +61,48 @@ button {
 }
 .header .right-side .header-icons .right-header-icon:hover {
   cursor: pointer;
+}
+.header .center-side {
+  display: none;
+}
+.header .center-side .header-one-icon {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: transparent;
+  border: none;
+}
+.header .center-side .header-one-icon:hover {
+  cursor: pointer;
+}
+.header .center-side .center-box {
+  display: none;
+}
+.header .center-side .center-box .center-header-icons {
+  display: flex;
+}
+
+@media only screen and (max-width: 1100px) {
+  .header {
+    padding: 20px;
+    font-size: 2px;
+  }
+  .header .left-side {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 8px;
+  }
+  .header .left-side .header-elements {
+    display: none;
+  }
+  .header .right-side {
+    display: flex;
+    align-items: center;
+  }
+  .header .right-side .header-icons {
+    display: none;
+  }
+  .header .center-side {
+    display: flex;
+  }
 }/*# sourceMappingURL=header.css.map */

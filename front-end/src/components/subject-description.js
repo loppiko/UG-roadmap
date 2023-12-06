@@ -31,7 +31,7 @@ function SubjectDescription({handleTransparentOnClick}) {
                 <div className="component-subject-non-transparent-subject-professor"></div>
                     <div className="component-subject-non-transparent-subject-description-title">Leading professor:</div>
                     <a href="https://old.mfi.ug.edu.pl/pracownik/51540/mateusz_miotk" className="component-subject-non-transparent-subject-description-professor-site">Dr. Mateusz Miotk</a>
-                <motion.div 
+                <motion.div
                 whileHover={{ scale: 1.1 }}
                 onHoverStart={e => {}}
                 onHoverEnd={e => {}}
