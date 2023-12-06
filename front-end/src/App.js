@@ -29,7 +29,7 @@ function App() {
 		<Routes>
 			<Route path="/" element={<MainSite/>} />
 			<Route path="roadmap-enter" element={<Semester/>} />
-			<Route path={`roadmap-enter/semester-:1`} element={<Subjects/>} />
+			<Route path="roadmap-enter/:semesterId" element={<Subjects/>} />
 		</Routes>
 		<Footer/>
     </div>

@@ -11,7 +11,7 @@ $subjects-main-introduction-description-color: #909090;
 $subjects-content-margin-top: 7rem;
 $subjects-sem-same-font-size: 5rem;
 $subjects-sem-name-margin-bottom: 5rem;
-$subjects-sem-number-of-frames-to-iterate: 4;
+$subjects-sem-number-of-frames-to-iterate: 20;
 $subjects-starting-path-margin-right: 350px;
 $subjects-ending-path-margin-left: 300px;
 
@@ -26,7 +26,7 @@ $subjects-info-box-content: 1.5rem;
 
 $subjects-box-content-margin-top: 2rem;
 $subjects-subject-box-heigth: 142px;
-$subjects-subject-box-width: 2rem;
+$subjects-subject-box-width: 250px;
 $subjects-subject-border-radius: 20px;
 $subjects-subject-background-color: #F0F5FF;
 $subjects-subject-border: 3px solid $main-color;
@@ -149,6 +149,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         align-items: center;
                         justify-content: center;
 
+                        min-width: $subjects-subject-box-width;
                         height: $subjects-subject-box-heigth;
                         padding: $subjects-subject-padding;
 
@@ -222,8 +223,11 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                     margin-bottom: $subjects-subject-decription-title-margin-bottom;
                 }
             }
+            .subjects-path-right, .subjects-path-left {
+                margin-left: calc(0.5 * ($subjects-subject-box-width) + 30px);
+            }
         }
-
+        
         @for $frame-number from 1 through $subjects-sem-number-of-frames-to-iterate + 1 {
             .subject-frame:nth-of-type(#{$frame-number}) {
                 @if $frame-number % 2 == 0 {

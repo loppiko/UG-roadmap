@@ -6,18 +6,34 @@ import {motion} from "framer-motion";
 import NavBar from "../../components/nav-bar";
 import SubjectDescription from "../../components/subject-description";
 
+// database
+import database from "../../main.json";
+
 // paths and icons
 import Underline from "../../media/underline.svg"
 import StartingPath from "../../media/paths/subjects/starting-path.svg";
 import RightPath from "../../media/paths/subjects/right-path.svg";
 import LeftPath from "../../media/paths/subjects/left-path.svg";
 import EndingPath from "../../media/paths/subjects/ending-path.svg";
+import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
 
 function Subjects() {
+
+    const { semesterId } = useParams();
+    // const semesterNumber = parseInt(semesterId.split("-")[1]);
 
     const [displaySubjectDescription, setIsVisable] = useState(false);
     const handleSubjectOnClick = () => setIsVisable(true);
 
+
+    // Returning paths
+    function returnPath(index, arrayLength) {
+        if (index === arrayLength - 1) return
+        else if (index % 2 === 0) return <img src = {RightPath} alt="right-path" className="subjects-path-right" />;
+        else return <img src = {LeftPath} alt="left-path" className="subjects-path-left"/>;
+    }
+
+    // Animations
     const [isOpen1, setIsOpen1] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
     const [isOpen3, setIsOpen3] = useState(false);
@@ -61,110 +77,36 @@ function Subjects() {
             <div className="subjects-content">
                 <div className="subject-sem-name">First Semester</div>
                 <img src={StartingPath} alt="starting-path" className="subject-path-starting"/>
-                <div className="subject-frame">
-                    <div className="box">
-                        <div className="subject-info">
-                            <div className="info-box"><span>ECTS</span> 4</div>
-                            <div className="info-box"><span>Lecture</span>30h</div>
-                            <div className="info-box"><span>Practical</span>30h</div>
+                {
+                    database["semesters"][semesterId].map((subject, index) => {
+                        return(
+                        <div className="subject-frame">
+                            <div className="box">
+                                <div className="subject-info">
+                                    <div className="info-box"><span>ECTS</span>{subject["ECTS"]}</div>
+                                    <div className="info-box"><span>Lecture</span>{subject["lecture"]}</div>
+                                    <div className="info-box"><span>Practical</span>{subject["laboratory"]}</div>
+                                </div>
+                                <div className="subject-box-content">
+                                    <div className="subject-box" onClick={handleSubjectOnClick}>{subject["subject-name"]}</div>
+                                    {subject["skills"].map(skill => <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">{skill["skill-name"]}</motion.div>
+                                    )}
+                                </div>
+                            </div>
+                            {
+                                isOpen1 && <motion.div 
+                                    variants={dataVariants}
+                                    initial="hidden" 
+                                    animate="visible" 
+                                    transition={dataTransition} 
+                                    className="skill-description">
+                                <div className="title">Propability</div>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
+                                </motion.div>
+                            } { returnPath(index, database["semesters"][semesterId].length) }
                         </div>
-                        <div className="subject-box-content">
-                            <div className="subject-box" onClick={handleSubjectOnClick}>Elementary mathematics</div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">relations</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">analize</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">functions</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">logic</motion.div>
-                        </div>
-                    </div>
-                    {isOpen1 && 
-                    <motion.div 
-                        variants={dataVariants}
-                        initial="hidden" 
-                        animate="visible" 
-                        transition={dataTransition} 
-                        className="skill-description">
-                    <div className="title">Propability</div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                    </motion.div>}
-                </div>
-                <img src = {RightPath} alt="right-path" className="subjects-path-right"/>
-                <div className="subject-frame">
-                    <div className="box">
-                        <div className="subject-info">
-                            <div className="info-box"><span>ECTS</span> 4</div>
-                            <div className="info-box"><span>Lecture</span>30h</div>
-                            <div className="info-box"><span>Practical</span>30h</div>
-                        </div>
-                        <div className="subject-box-content">
-                            <div className="subject-box" onClick={handleSubjectOnClick}>Discrete mathematics</div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">graph theory</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">propability</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">arythmeticcs</motion.div>
-                        </div>
-                    </div>
-                    {isOpen2 && <motion.div 
-                        variants={dataVariants}
-                        initial="hidden" 
-                        animate="visible" 
-                        transition={dataTransition} 
-                        className="skill-description">
-                    <div className="title">Propability</div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                    </motion.div> }
-                </div>
-                <img src = {LeftPath} alt="left-path" className="subjects-path-left"/>
-                <div className="subject-frame">
-                    <div className="box">
-                        <div className="subject-info">
-                            <div className="info-box"><span>ECTS</span> 4</div>
-                            <div className="info-box"><span>Lecture</span>30h</div>
-                            <div className="info-box"><span>Practical</span>30h</div>
-                        </div>
-                        <div className="subject-box-content">
-                            <div className="subject-box" onClick={handleSubjectOnClick}>Developer Workshop</div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">git</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">bash</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">terminal</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">linux</motion.div>
-                        </div>
-                    </div>
-                    {isOpen3 && 
-                    <motion.div 
-                        variants={dataVariants}
-                        initial="hidden" 
-                        animate="visible" 
-                        transition={dataTransition} 
-                        className="skill-description">
-                    <div className="title">Propability</div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                    </motion.div>}
-
-                </div>
-                <img src = {RightPath} alt="right-path" className="subjects-path-right"/>
-                <div className="subject-frame">
-                    <div className="box">
-                        <div className="subject-info">
-                            <div className="info-box"><span>ECTS</span> 4</div>
-                            <div className="info-box"><span>Lecture</span>30h</div>
-                            <div className="info-box"><span>Practical</span>30h</div>
-                        </div>
-                        <div className="subject-box-content">
-                            <div className="subject-box" onClick={handleSubjectOnClick}>Discrete Mathematics</div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen4, setIsOpen4)} className="skill-box">testing</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen4, setIsOpen4)} className="skill-box">python</motion.div>
-                        </div>
-                    </div>
-                    {isOpen4 && 
-                    <motion.div 
-                        variants={dataVariants}
-                        initial="hidden" 
-                        animate="visible" 
-                        transition={dataTransition} 
-                        className="skill-description">
-                    <div className="title">Propability</div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                    </motion.div>}
-                </div>
+                    )})
+                }
                 <img src = {EndingPath} alt="ending-path" className="subject-path-ending"/>
                 <div className="subject-next-sem-name">Second Semester</div>
             </div>
