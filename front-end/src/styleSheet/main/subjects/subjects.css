@@ -114,19 +114,19 @@ button {
 }
 .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
   right: 400px;
-  top: 180px;
+  top: 150px;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
   left: 390px;
   top: 160px;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
-  right: 370px;
-  top: 380px;
+  right: 390px;
+  top: 360px;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(5) {
-  left: 370px;
-  top: 360px;
+  left: 380px;
+  top: 325px;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:hover {
   cursor: pointer;
