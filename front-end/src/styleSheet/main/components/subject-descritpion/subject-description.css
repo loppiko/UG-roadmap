@@ -22,7 +22,7 @@ button {
   border-left: 3px solid #062D73;
   padding: 4rem;
   color: black;
-  font-size: 25px;
+  font-size: 22px;
 }
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-title {
   color: #062D73;
@@ -30,11 +30,11 @@ button {
 }
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-description {
   margin-top: 3rem;
-  line-height: 40px;
+  line-height: 33px;
   letter-spacing: 1.5px;
 }
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-subject-language {
-  line-height: 40px;
+  line-height: 33px;
   letter-spacing: 1.5px;
 }
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-subject-description-title {
