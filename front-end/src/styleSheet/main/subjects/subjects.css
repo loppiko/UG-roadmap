@@ -298,8 +298,11 @@ button {
   left: 0;
   bottom: 35px;
 }
-.subjects-page .subjects-content .subject-path-ending {
+.subjects-page .subjects-content .subject-path-ending-left {
   margin-left: 300px;
+}
+.subjects-page .subjects-content .subject-path-ending-right {
+  margin-right: 300px;
 }
 .subjects-page .subjects-content .subject-next-sem-name {
   width: 100%;

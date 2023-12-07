@@ -14,7 +14,8 @@ import Underline from "../../media/underline.svg"
 import StartingPath from "../../media/paths/subjects/starting-path.svg";
 import RightPath from "../../media/paths/subjects/right-path.svg";
 import LeftPath from "../../media/paths/subjects/left-path.svg";
-import EndingPath from "../../media/paths/subjects/ending-path.svg";
+import EndingRightPath from "../../media/paths/subjects/ending-right-path.svg";
+import EndingLeftPath from "../../media/paths/subjects/ending-left-path.svg";
 import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
 import { Link } from "react-router-dom";
 
@@ -28,7 +29,7 @@ function Subjects() {
 
 
     // Returning paths
-    function returnPath(index, arrayLength) {
+    function returnTurningPath(index, arrayLength) {
         if (index === arrayLength - 1) return
         else if (index % 2 === 0) return <img src = {RightPath} alt="right-path" className="subjects-path-right" />;
         else return <img src = {LeftPath} alt="left-path" className="subjects-path-left"/>;
@@ -37,13 +38,15 @@ function Subjects() {
     // Return lecture and practical components
     const returnLectureComponent = (content) => {
         if (content) return <div className="info-box"><span>Lecture</span>{content}</div>;
-        else return
+        else return;
     }
 
     const returnPracticalComponent = (content) => {
         if (content) return <div className="info-box"><span>Practical</span>{content}</div>;
-        else return
+        else return;
     }
+
+    const returnEndingPath = (numberOfSubjects) => (numberOfSubjects % 2 === 0) ? <img src = {EndingRightPath} alt="ending-path" className="subject-path-ending-right"/> : <img src = {EndingLeftPath} alt="ending-path" className="subject-path-ending-left"/>;
 
     // Animations
     const [isOpen1, setIsOpen1] = useState(false);
@@ -117,11 +120,13 @@ function Subjects() {
                                 <div className="title">Propability</div>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
                                 </motion.div>
-                            } { returnPath(index, database["semesters"][semesterId].length) }
+                            } { returnTurningPath(index, database["semesters"][semesterId].length) }
                         </div>
                     )})
                 }
-                <img src = {EndingPath} alt="ending-path" className="subject-path-ending"/>
+                {
+                    returnEndingPath(database["semesters"][semesterId].length + 1)
+                }
                 <div className="subject-next-sem-name">Second Semester</div>
             </div>
         </div>

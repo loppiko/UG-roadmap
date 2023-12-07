@@ -254,8 +254,11 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             }
         }
 
-        .subject-path-ending {
+        .subject-path-ending-left {
             margin-left: $subjects-ending-path-margin-left;
+        }
+        .subject-path-ending-right {
+            margin-right: $subjects-ending-path-margin-left;
         }
 
         .subject-next-sem-name {
