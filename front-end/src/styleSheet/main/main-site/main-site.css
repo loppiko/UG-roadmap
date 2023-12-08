@@ -68,4 +68,28 @@ button {
 .content .box .content-button-box .roadmap-button:hover {
   cursor: pointer;
   background-color: #011946;
+}
+
+@media only screen and (max-width: 1100px) {
+  .content {
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .content .box {
+    font-size: 1.1em;
+    width: 100vh;
+  }
+  .content .box .title {
+    font-size: 2.3em;
+  }
+  .content .box .skills .skill-button-box .skill-button {
+    font-size: 0.8em;
+  }
+  .content .box .skills .skill-button-box .skill-button:first-of-type {
+    margin-left: 0;
+  }
+  .content .box .content-button-box .roadmap-button {
+    font-size: 1em;
+  }
 }/*# sourceMappingURL=main-site.css.map */
