@@ -1,9 +1,6 @@
 import React from "react";
 import {useState} from "react";
 
- //---- components ----
-//  import HeaderCenter from "./header-center";
-
 // media
 import logoUG from './../media/UG-logo-white.webp';
 import radioIcon from './../media/icons/radio-icon.svg';
