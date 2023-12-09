@@ -51,48 +51,43 @@ function Subjects() {
     const returnEndingPath = (numberOfSubjects) => (numberOfSubjects % 2 === 1) ? <img src = {EndingRightPath} alt="ending-path" className="subject-path-ending-right"/> : <img src = {EndingLeftPath} alt="ending-path" className="subject-path-ending-left"/>;
 
     // Animations
-    const returnSkillBoxes = (isOpen, skillTitle, skillDescription) => {
-        return (isOpen && <motion.div 
-            variants={dataVariants}
-            initial="hidden" 
-            animate="visible" 
-            transition={dataTransition} 
-            className="skill-description">
-            <div className="title">{ skillTitle }</div>
-                { skillDescription }
-        </motion.div>)
-    }
+    const [idVisibleSkill, setIdVisable] = useState(null);
 
-
-    // let skillArray = database["semesters"][semesterId]
-    //     .map((subject, subjectIndex) => subject["skills"]
-    //         .map(skill => 
-    //         Object.assign(
-    //             {}, 
-    //             {
-    //                 "skill-name": skill["skill-name"],
-    //                 "subjectIndex": subjectIndex,
-    //                 "isOpen": false
-    //             }
-    //             )
-    //         )
-    //     )
-    //     .flat();
-
-    let skillArray = database["semesters"][semesterId]
-        .reduce((acc, curr) => [...acc, ...curr["skills"].map(({name, description}) => {
+    const skillArray = database["semesters"][semesterId]
+        .map((subject) => {
+            return subject["skills"].map((skill) => {
+                return {
+                    "skill": skill
+                }
+            })
+        })
+        .flat()
+        .map(({skill}, index) => {
             return {
-                name,
-                description,
-                "isVisible": false
+                "id": index,
+                skill
             }
-        })], [])
+        })
 
 
+    const doesSkillMatchActiveId = (skillArray, idVisibleSkill, skill) => {
+        const res = skillArray.find(elem => elem["id"] === idVisibleSkill)
+        return (!res) ? false : _.isEqual(res["skill"], skill)
+    }
+    
     // const handleSkillOnClick = (skillToOpen) => skillArray = skillArray.map(skill => (_.isEqual(skillToOpen, skill)) ? Object.assign({}, skill, {"isOpen": true}) : Object.assign({}, skill, {"isOpen": false}));
-    const handleSkillOnClick = ({openName, openDescription}) => skillArray = skillArray.map(({name, description, vis}) => _.isEqual({openName, openDescription}, {name, description}) ? {name, description, "isVisible": !vis} : {name, description, "isVisible": false})
+    const handleSkillOnClick = (skillArray, activeSkill) => {
+        setIdVisable(null);
+        console.log(idVisibleSkill);
 
-    const isSkillBoxActive = (renderedSkill) => skillArray.reduce((acc, {name, description, vis}) => _.isEqual(renderedSkill, {name, description}) ? console.log("super") : console.log("nie-super"), false)
+        skillArray.forEach((elem) => {
+            if (_.isEqual(activeSkill, elem["skill"])) {
+              setIdVisable(elem["id"]);
+            }
+          });
+        console.log(idVisibleSkill);
+        console.log(doesSkillMatchActiveId(skillArray, idVisibleSkill, activeSkill))
+    }
 
     const dataTransition = {duration:0.5, delay:0.25}
 
@@ -132,14 +127,26 @@ function Subjects() {
                                     {
                                     subject["skills"].map(skill => 
                                         <motion.div 
-                                            onClick={() => handleSkillOnClick(skill)} 
+                                            onClick={() => handleSkillOnClick(skillArray, skill)} 
                                             className="skill-box">{ skill["skill-name"] }
                                         </motion.div>
                                     )
                                     }
                                 </div>
                             </div>
-                            { subject["skills"].map(skill => returnSkillBoxes(isSkillBoxActive(skill), skill["skill-name"], skill["description"])) } 
+                            { subject["skills"].map(skill => {
+                                return (
+                                    doesSkillMatchActiveId(skillArray, idVisibleSkill, skill) && <motion.div 
+                                        variants={dataVariants}
+                                        initial="hidden" 
+                                        animate="visible" 
+                                        transition={dataTransition} 
+                                        className="skill-description">
+                                        <div className="title">{ skill["skill-name"] }</div>
+                                            { skill["description"] }
+                                    </motion.div>)
+                                }) 
+                            } 
                             { returnTurningPath(index, database["semesters"][semesterId].length) }
                         </div>
                     )})

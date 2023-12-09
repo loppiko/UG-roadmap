@@ -127,7 +127,7 @@ button {
 }
 .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
   right: 390px;
-  top: 360px;
+  top: 350px;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
   left: 380px;
@@ -140,13 +140,18 @@ button {
 }
 .subjects-page .subjects-content .subject-frame .skill-description {
   position: absolute;
+  margin-bottom: 220px;
   font-size: 1.2rem;
+  text-align: justify;
   width: 500px;
 }
 .subjects-page .subjects-content .subject-frame .skill-description .title {
   color: #062D73;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
+}
+.subjects-page .subjects-content .subject-frame .skill-description:last-child {
+  margin-bottom: 0;
 }
 .subjects-page .subjects-content .subject-frame .subjects-path-right, .subjects-page .subjects-content .subject-frame .subjects-path-left {
   margin-left: 155px;

@@ -40,10 +40,13 @@ $subjects-subject-skill-box-background: rgba(255, 255, 255, 0.20);
 $subjects-subject-skill-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
 $subjects-subject-skill-box-border-radius: 5px;
 
-$subjects-subject-decription-title-font-size: 1.5rem;
+
+$subjects-subject-decription-title-font-size: 1.8rem;
 $subjects-subject-decription-font-size: 1.2rem;
 $subjects-subject-decription-width: 500px;
 $subjects-subject-decription-title-margin-bottom: 1rem;
+$subjects-subject-decription-main-margin-bottom: 220px;
+
 
 
 $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79, 0.50) 100%);
@@ -197,7 +200,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                     }
                     .skill-box:nth-of-type(3) {
                         right: 390px;
-                        top: 360px;
+                        top: 350px;
                     }
                     .skill-box:nth-of-type(4) {
                         left: 380px;
@@ -215,8 +218,10 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
 
             .skill-description {
                 position: absolute;
+                margin-bottom: $subjects-subject-decription-main-margin-bottom;
                 
                 font-size: $subjects-subject-decription-font-size;
+                text-align: justify;
                 
                 width: $subjects-subject-decription-width;
 
@@ -227,6 +232,12 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                     margin-bottom: $subjects-subject-decription-title-margin-bottom;
                 }
             }
+
+            .skill-description:last-child {
+                margin-bottom: 0;
+            }
+
+
             .subjects-path-right, .subjects-path-left {
                 margin-left: calc(0.5 * ($subjects-subject-box-width) + 30px);
             }
