@@ -83,4 +83,112 @@ $header-buttons-border: solid 1px $white-text-color;
             }
         }
     }
+    
+    .center-side {
+        display: none;
+        .header-one-icon {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            background-color: transparent;
+            border: none;
+        }
+        .header-one-icon:hover {
+            cursor: pointer;
+        }
+        .center-box {
+            display: none;
+            position: absolute;
+            top: 44em;
+            left: 0;
+            right: 0;
+            background-color: $main-color;
+            height: 120%;
+            bottom: 50%;
+            .center-header-icons {
+                display: flex;
+                flex:1;
+                height: 20em;
+                
+                
+                .center-header-icon {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    background-color: transparent;
+                    border: none;
+                    border-right: $header-buttons-border;
+                    width: 100%;
+                    flex-direction: row;
+                }
+            }
+
+            .center-header-icon:last-of-type {
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+                border: none;
+            }
+
+            .center-header-elements {
+                display: flex;
+                margin-left: $header-elements-margin;
+                gap: 5em;
+                // width: 100%;
+                flex-direction: column;
+                margin-left: 5em;
+
+                .center-header-button {
+                    background-color: transparent;
+                    border: none;
+                    color: $white-text-color;
+                    font-size: $header-font-size;
+                    border-bottom: $header-buttons-border;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    text-align: left;
+
+                }
+    
+                .center-header-button:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .header {
+        padding: 20px;
+        font-size: 2px;
+
+        .left-side {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin-left: 8px;
+    
+            .header-elements {
+                display: none;
+            }
+        }
+    
+        .right-side {
+            display: flex;
+            align-items: center;
+    
+            .header-icons {
+                display: none;
+            }
+        }
+
+        .center-side {
+            display: flex;
+
+            .center-box {
+                display: block;
+            }
+        }
+    }
 }
