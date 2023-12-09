@@ -28,12 +28,14 @@ function App() {
     	<Header/>
 		<Routes>
 			<Route path="/" element={<MainSite/>} />
-			<Route path="semester" element={<Semester/>} />
-			<Route path="semester/subjects" element={<Subjects/>} />
+			<Route path="roadmap-enter" element={<Semester/>} />
+			<Route path="roadmap-enter/:semesterId" element={<Subjects/>} />
+			<Route path="roadmap-enter/:semesterId/:subjectName" element={<Subjects/>} />
 		</Routes>
 		<Footer/>
     </div>
   );
 }
+
 
 export default App;

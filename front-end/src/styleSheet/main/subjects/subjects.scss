@@ -11,7 +11,7 @@ $subjects-main-introduction-description-color: #909090;
 $subjects-content-margin-top: 7rem;
 $subjects-sem-same-font-size: 5rem;
 $subjects-sem-name-margin-bottom: 5rem;
-$subjects-sem-number-of-frames-to-iterate: 4;
+$subjects-sem-number-of-frames-to-iterate: 20;
 $subjects-starting-path-margin-right: 350px;
 $subjects-ending-path-margin-left: 300px;
 
@@ -26,7 +26,7 @@ $subjects-info-box-content: 1.5rem;
 
 $subjects-box-content-margin-top: 2rem;
 $subjects-subject-box-heigth: 142px;
-$subjects-subject-box-width: 2rem;
+$subjects-subject-box-width: 250px;
 $subjects-subject-border-radius: 20px;
 $subjects-subject-background-color: #F0F5FF;
 $subjects-subject-border: 3px solid $main-color;
@@ -40,10 +40,13 @@ $subjects-subject-skill-box-background: rgba(255, 255, 255, 0.20);
 $subjects-subject-skill-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
 $subjects-subject-skill-box-border-radius: 5px;
 
-$subjects-subject-decription-title-font-size: 1.5rem;
+
+$subjects-subject-decription-title-font-size: 1.8rem;
 $subjects-subject-decription-font-size: 1.2rem;
 $subjects-subject-decription-width: 500px;
 $subjects-subject-decription-title-margin-bottom: 1rem;
+$subjects-subject-decription-main-margin-bottom: 220px;
+
 
 
 $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79, 0.50) 100%);
@@ -112,6 +115,8 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                 .subject-info {
                     display: flex;
                     gap: $subjects-info-boxes-gap;
+                    width: min-content;
+                    margin: auto;
 
                     .info-box {
                         display: flex;
@@ -149,9 +154,12 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         align-items: center;
                         justify-content: center;
 
+                        min-width: $subjects-subject-box-width;
                         height: $subjects-subject-box-heigth;
                         padding: $subjects-subject-padding;
 
+                        text-decoration: none;
+                        color: $black-text-color;
                         border-radius: $subjects-info-border-radius;
                         border: $subjects-subject-border;
                         background: $subjects-subject-background-color;
@@ -182,21 +190,21 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         text-align: center;
                     }
 
-                    .skill-box:nth-of-type(2) {
+                    .skill-box:nth-of-type(1) {
                         right: 400px;
-                        top: 180px;
+                        top: 150px;
                     }
-                    .skill-box:nth-of-type(3) {
+                    .skill-box:nth-of-type(2) {
                         left: 390px;
                         top: 160px;
                     }
-                    .skill-box:nth-of-type(4) {
-                        right: 370px;
-                        top: 380px;
+                    .skill-box:nth-of-type(3) {
+                        right: 390px;
+                        top: 350px;
                     }
-                    .skill-box:nth-of-type(5) {
-                        left: 370px;
-                        top: 360px;
+                    .skill-box:nth-of-type(4) {
+                        left: 380px;
+                        top: 325px;
                     }
 
                     .skill-box:hover {
@@ -210,8 +218,10 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
 
             .skill-description {
                 position: absolute;
+                margin-bottom: $subjects-subject-decription-main-margin-bottom;
                 
                 font-size: $subjects-subject-decription-font-size;
+                text-align: justify;
                 
                 width: $subjects-subject-decription-width;
 
@@ -222,8 +232,17 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                     margin-bottom: $subjects-subject-decription-title-margin-bottom;
                 }
             }
-        }
 
+            .skill-description:last-child {
+                margin-bottom: 0;
+            }
+
+
+            .subjects-path-right, .subjects-path-left {
+                margin-left: calc(0.5 * ($subjects-subject-box-width) + 30px);
+            }
+        }
+        
         @for $frame-number from 1 through $subjects-sem-number-of-frames-to-iterate + 1 {
             .subject-frame:nth-of-type(#{$frame-number}) {
                 @if $frame-number % 2 == 0 {
@@ -246,8 +265,11 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             }
         }
 
-        .subject-path-ending {
+        .subject-path-ending-left {
             margin-left: $subjects-ending-path-margin-left;
+        }
+        .subject-path-ending-right {
+            margin-right: $subjects-ending-path-margin-left;
         }
 
         .subject-next-sem-name {

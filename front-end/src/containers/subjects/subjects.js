@@ -2,45 +2,91 @@ import React from "react";
 import {useState } from "react";
 import {motion} from "framer-motion";
 
-
 // ---- components ----
 import NavBar from "../../components/nav-bar";
 import SubjectDescription from "../../components/subject-description";
+
+// database
+import database from "../../main.json";
 
 // paths and icons
 import Underline from "../../media/underline.svg"
 import StartingPath from "../../media/paths/subjects/starting-path.svg";
 import RightPath from "../../media/paths/subjects/right-path.svg";
 import LeftPath from "../../media/paths/subjects/left-path.svg";
-import EndingPath from "../../media/paths/subjects/ending-path.svg";
+import EndingRightPath from "../../media/paths/subjects/ending-right-path.svg";
+import EndingLeftPath from "../../media/paths/subjects/ending-left-path.svg";
+import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
+import { Link } from "react-router-dom";
 
 function Subjects() {
+    // lodash
+    const _ = require('lodash');
+
+    const { semesterId } = useParams();
+    // const semesterNumber = parseInt(semesterId.split("-")[1]);
 
     const [displaySubjectDescription, setIsVisable] = useState(false);
     const handleSubjectOnClick = () => setIsVisable(true);
 
-    const [isOpen1, setIsOpen1] = useState(false);
-    const [isOpen2, setIsOpen2] = useState(false);
-    const [isOpen3, setIsOpen3] = useState(false);
-    const [isOpen4, setIsOpen4] = useState(false);
 
-    const arrayIsOpen = [
-        [isOpen1, setIsOpen1],
-        [isOpen2, setIsOpen2],
-        [isOpen3, setIsOpen3],
-        [isOpen4, setIsOpen4]
-    ]
-    
-    const openDescripeAndCheck = (isOpen, setIsOpen) => {
+    // Returning paths
+    function returnTurningPath(index, arrayLength) {
+        if (index === arrayLength - 1) return
+        else if (index % 2 === 0) return <img src = {RightPath} alt="right-path" className="subjects-path-right" />;
+        else return <img src = {LeftPath} alt="left-path" className="subjects-path-left"/>;
+    }
 
-        arrayIsOpen.reduce((_, curr) => {
-            if (curr[0] === true) {
-                curr[1](!curr[0])
+    // Return lecture and practical components
+    const returnLectureComponent = (content) => {
+        if (content) return <div className="info-box"><span>Lecture</span>{content}</div>;
+        else return;
+    }
+
+    const returnPracticalComponent = (content) => {
+        if (content) return <div className="info-box"><span>Practical</span>{content}</div>;
+        else return;
+    }
+
+    const returnEndingPath = (numberOfSubjects) => (numberOfSubjects % 2 === 1) ? <img src = {EndingRightPath} alt="ending-path" className="subject-path-ending-right"/> : <img src = {EndingLeftPath} alt="ending-path" className="subject-path-ending-left"/>;
+
+    // Animations
+    const [idVisibleSkill, setIdVisable] = useState(null);
+
+    const skillArray = database["semesters"][semesterId]
+        .map((subject) => {
+            return subject["skills"].map((skill) => {
+                return {
+                    "skill": skill
+                }
+            })
+        })
+        .flat()
+        .map(({skill}, index) => {
+            return {
+                "id": index,
+                skill
             }
-            return [];
-        }, [])
+        })
 
-        setIsOpen(!isOpen);
+
+    const doesSkillMatchActiveId = (skillArray, idVisibleSkill, skill) => {
+        const res = skillArray.find(elem => elem["id"] === idVisibleSkill)
+        return (!res) ? false : _.isEqual(res["skill"], skill)
+    }
+    
+    // const handleSkillOnClick = (skillToOpen) => skillArray = skillArray.map(skill => (_.isEqual(skillToOpen, skill)) ? Object.assign({}, skill, {"isOpen": true}) : Object.assign({}, skill, {"isOpen": false}));
+    const handleSkillOnClick = (skillArray, activeSkill) => {
+        setIdVisable(null);
+        console.log(idVisibleSkill);
+
+        skillArray.forEach((elem) => {
+            if (_.isEqual(activeSkill, elem["skill"])) {
+              setIdVisable(elem["id"]);
+            }
+          });
+        console.log(idVisibleSkill);
+        console.log(doesSkillMatchActiveId(skillArray, idVisibleSkill, activeSkill))
     }
 
     const dataTransition = {duration:0.5, delay:0.25}
@@ -62,111 +108,50 @@ function Subjects() {
             <div className="subjects-content">
                 <div className="subject-sem-name">First Semester</div>
                 <img src={StartingPath} alt="starting-path" className="subject-path-starting"/>
-                <div className="subject-frame">
-                    <div className="box">
-                        <div className="subject-info">
-                            <div className="info-box"><span>ECTS</span> 4</div>
-                            <div className="info-box"><span>Lecture</span>30h</div>
-                            <div className="info-box"><span>Practical</span>30h</div>
+                {
+                    database["semesters"][semesterId].map((subject, index) => {
+                        return(
+                        <div className="subject-frame">
+                            <div className="box">
+                                <div className="subject-info">
+                                    <div className="info-box"><span>ECTS</span>{subject["ECTS"]}</div>
+                                    { returnLectureComponent(subject["lecture"]) }
+                                    { returnPracticalComponent(subject["laboratory"]) }
+                                </div>
+                                <div className="subject-box-content">
+                                    <Link 
+                                        to={`/roadmap-enter/${semesterId}/${subject["subject-name"].split(" ").join("-")}`} 
+                                        className="subject-box" 
+                                        onClick={ handleSubjectOnClick }>{ subject["subject-name"] }
+                                    </Link>
+                                    {
+                                    subject["skills"].map(skill => 
+                                        <motion.div 
+                                            onClick={() => handleSkillOnClick(skillArray, skill)} 
+                                            className="skill-box">{ skill["skill-name"] }
+                                        </motion.div>
+                                    )
+                                    }
+                                </div>
+                            </div>
+                            { subject["skills"].map(skill => {
+                                return (
+                                    doesSkillMatchActiveId(skillArray, idVisibleSkill, skill) && <motion.div 
+                                        variants={dataVariants}
+                                        initial="hidden" 
+                                        animate="visible" 
+                                        transition={dataTransition} 
+                                        className="skill-description">
+                                        <div className="title">{ skill["skill-name"] }</div>
+                                            { skill["description"] }
+                                    </motion.div>)
+                                }) 
+                            } 
+                            { returnTurningPath(index, database["semesters"][semesterId].length) }
                         </div>
-                        <div className="subject-box-content">
-                            <div className="subject-box" onClick={handleSubjectOnClick}>Elementary mathematics</div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">relations</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">analize</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">functions</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">logic</motion.div>
-                        </div>
-                    </div>
-                    {isOpen1 && 
-                    <motion.div 
-                        variants={dataVariants}
-                        initial="hidden" 
-                        animate="visible" 
-                        transition={dataTransition} 
-                        className="skill-description">
-                    <div className="title">Propability</div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                    </motion.div>}
-                </div>
-                <img src = {RightPath} alt="right-path" className="subjects-path-right"/>
-                <div className="subject-frame">
-                    <div className="box">
-                        <div className="subject-info">
-                            <div className="info-box"><span>ECTS</span> 4</div>
-                            <div className="info-box"><span>Lecture</span>30h</div>
-                            <div className="info-box"><span>Practical</span>30h</div>
-                        </div>
-                        <div className="subject-box-content">
-                            <div className="subject-box" onClick={handleSubjectOnClick}>Discrete mathematics</div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">graph theory</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">propability</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen2, setIsOpen2)} className="skill-box">arythmeticcs</motion.div>
-                        </div>
-                    </div>
-                    {isOpen2 && <motion.div 
-                        variants={dataVariants}
-                        initial="hidden" 
-                        animate="visible" 
-                        transition={dataTransition} 
-                        className="skill-description">
-                    <div className="title">Propability</div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                    </motion.div> }
-                </div>
-                <img src = {LeftPath} alt="left-path" className="subjects-path-left"/>
-                <div className="subject-frame">
-                    <div className="box">
-                        <div className="subject-info">
-                            <div className="info-box"><span>ECTS</span> 4</div>
-                            <div className="info-box"><span>Lecture</span>30h</div>
-                            <div className="info-box"><span>Practical</span>30h</div>
-                        </div>
-                        <div className="subject-box-content">
-                            <div className="subject-box" onClick={handleSubjectOnClick}>Developer Workshop</div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">git</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">bash</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">terminal</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen3, setIsOpen3)} className="skill-box">linux</motion.div>
-                        </div>
-                    </div>
-                    {isOpen3 && 
-                    <motion.div 
-                        variants={dataVariants}
-                        initial="hidden" 
-                        animate="visible" 
-                        transition={dataTransition} 
-                        className="skill-description">
-                    <div className="title">Propability</div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                    </motion.div>}
-
-                </div>
-                <img src = {RightPath} alt="right-path" className="subjects-path-right"/>
-                <div className="subject-frame">
-                    <div className="box">
-                        <div className="subject-info">
-                            <div className="info-box"><span>ECTS</span> 4</div>
-                            <div className="info-box"><span>Lecture</span>30h</div>
-                            <div className="info-box"><span>Practical</span>30h</div>
-                        </div>
-                        <div className="subject-box-content">
-                            <div className="subject-box" onClick={handleSubjectOnClick}>Discrete Mathematics</div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen4, setIsOpen4)} className="skill-box">testing</motion.div>
-                            <motion.div onClick={() => openDescripeAndCheck(isOpen4, setIsOpen4)} className="skill-box">python</motion.div>
-                        </div>
-                    </div>
-                    {isOpen4 && 
-                    <motion.div 
-                        variants={dataVariants}
-                        initial="hidden" 
-                        animate="visible" 
-                        transition={dataTransition} 
-                        className="skill-description">
-                    <div className="title">Propability</div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                    </motion.div>}
-                </div>
-                <img src = {EndingPath} alt="ending-path" className="subject-path-ending"/>
+                    )})
+                }
+                { returnEndingPath(database["semesters"][semesterId].length) }
                 <div className="subject-next-sem-name">Second Semester</div>
             </div>
         </div>

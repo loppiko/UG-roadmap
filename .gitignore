@@ -1,5 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+#local files
+front-end/src/temp.html
+back-end/node_modules
+
 # dependencies
 /node_modules
 /.pnp
@@ -66,5 +70,3 @@ packages/react-devtools-timeline/dist
 *.css.map
 *.sass.map
 *.scss.map
-
-temp.html
