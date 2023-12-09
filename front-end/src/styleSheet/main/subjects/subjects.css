@@ -52,6 +52,9 @@ button {
 .subjects-page .subjects-content .subject-frame .box .subject-info {
   display: flex;
   gap: 1rem;
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-info .info-box {
   display: flex;
@@ -83,8 +86,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 250px;
   height: 142px;
   padding: 32px 40px;
+  text-decoration: none;
+  color: black;
   border-radius: 24px;
   border: 3px solid #062D73;
   background: #F0F5FF;
@@ -111,21 +117,21 @@ button {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
   text-align: center;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(1) {
   right: 400px;
-  top: 180px;
+  top: 150px;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
   left: 390px;
   top: 160px;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
-  right: 370px;
-  top: 380px;
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
+  right: 390px;
+  top: 350px;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(5) {
-  left: 370px;
-  top: 360px;
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
+  left: 380px;
+  top: 325px;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:hover {
   cursor: pointer;
@@ -134,13 +140,21 @@ button {
 }
 .subjects-page .subjects-content .subject-frame .skill-description {
   position: absolute;
+  margin-bottom: 220px;
   font-size: 1.2rem;
+  text-align: justify;
   width: 500px;
 }
 .subjects-page .subjects-content .subject-frame .skill-description .title {
   color: #062D73;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
+}
+.subjects-page .subjects-content .subject-frame .skill-description:last-child {
+  margin-bottom: 0;
+}
+.subjects-page .subjects-content .subject-frame .subjects-path-right, .subjects-page .subjects-content .subject-frame .subjects-path-left {
+  margin-left: 155px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(1) .box {
   margin-right: 0;
@@ -177,8 +191,123 @@ button {
   left: 0;
   bottom: 35px;
 }
-.subjects-page .subjects-content .subject-path-ending {
+.subjects-page .subjects-content .subject-frame:nth-of-type(6) .box {
+  margin-left: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(6) .skill-description {
+  right: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(7) .box {
+  margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(7) .skill-description {
+  left: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(8) .box {
+  margin-left: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(8) .skill-description {
+  right: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(9) .box {
+  margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(9) .skill-description {
+  left: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(10) .box {
+  margin-left: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(10) .skill-description {
+  right: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(11) .box {
+  margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(11) .skill-description {
+  left: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(12) .box {
+  margin-left: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(12) .skill-description {
+  right: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(13) .box {
+  margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(13) .skill-description {
+  left: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(14) .box {
+  margin-left: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(14) .skill-description {
+  right: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(15) .box {
+  margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(15) .skill-description {
+  left: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(16) .box {
+  margin-left: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(16) .skill-description {
+  right: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(17) .box {
+  margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(17) .skill-description {
+  left: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(18) .box {
+  margin-left: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(18) .skill-description {
+  right: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(19) .box {
+  margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(19) .skill-description {
+  left: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(20) .box {
+  margin-left: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(20) .skill-description {
+  right: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(21) .box {
+  margin-right: 0;
+}
+.subjects-page .subjects-content .subject-frame:nth-of-type(21) .skill-description {
+  left: 0;
+  bottom: 35px;
+}
+.subjects-page .subjects-content .subject-path-ending-left {
   margin-left: 300px;
+}
+.subjects-page .subjects-content .subject-path-ending-right {
+  margin-right: 300px;
 }
 .subjects-page .subjects-content .subject-next-sem-name {
   width: 100%;
