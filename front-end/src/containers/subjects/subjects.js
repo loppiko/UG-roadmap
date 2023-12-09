@@ -20,6 +20,8 @@ import { useParams } from "react-router-dom/dist/umd/react-router-dom.developmen
 import { Link } from "react-router-dom";
 
 function Subjects() {
+    // lodash
+    const _ = require('lodash');
 
     const { semesterId } = useParams();
     // const semesterNumber = parseInt(semesterId.split("-")[1]);
@@ -46,32 +48,51 @@ function Subjects() {
         else return;
     }
 
-    const returnEndingPath = (numberOfSubjects) => (numberOfSubjects % 2 === 0) ? <img src = {EndingRightPath} alt="ending-path" className="subject-path-ending-right"/> : <img src = {EndingLeftPath} alt="ending-path" className="subject-path-ending-left"/>;
+    const returnEndingPath = (numberOfSubjects) => (numberOfSubjects % 2 === 1) ? <img src = {EndingRightPath} alt="ending-path" className="subject-path-ending-right"/> : <img src = {EndingLeftPath} alt="ending-path" className="subject-path-ending-left"/>;
 
     // Animations
-    const [isOpen1, setIsOpen1] = useState(false);
-    const [isOpen2, setIsOpen2] = useState(false);
-    const [isOpen3, setIsOpen3] = useState(false);
-    const [isOpen4, setIsOpen4] = useState(false);
-
-    const arrayIsOpen = [
-        [isOpen1, setIsOpen1],
-        [isOpen2, setIsOpen2],
-        [isOpen3, setIsOpen3],
-        [isOpen4, setIsOpen4]
-    ]
-    
-    const openDescripeAndCheck = (isOpen, setIsOpen) => {
-
-        arrayIsOpen.reduce((_, curr) => {
-            if (curr[0] === true) {
-                curr[1](!curr[0])
-            }
-            return [];
-        }, [])
-
-        setIsOpen(!isOpen);
+    const returnSkillBoxes = (isOpen, skillTitle, skillDescription) => {
+        return (isOpen && <motion.div 
+            variants={dataVariants}
+            initial="hidden" 
+            animate="visible" 
+            transition={dataTransition} 
+            className="skill-description">
+            <div className="title">{ skillTitle }</div>
+                { skillDescription }
+        </motion.div>)
     }
+
+
+    // let skillArray = database["semesters"][semesterId]
+    //     .map((subject, subjectIndex) => subject["skills"]
+    //         .map(skill => 
+    //         Object.assign(
+    //             {}, 
+    //             {
+    //                 "skill-name": skill["skill-name"],
+    //                 "subjectIndex": subjectIndex,
+    //                 "isOpen": false
+    //             }
+    //             )
+    //         )
+    //     )
+    //     .flat();
+
+    let skillArray = database["semesters"][semesterId]
+        .reduce((acc, curr) => [...acc, ...curr["skills"].map(({name, description}) => {
+            return {
+                name,
+                description,
+                "isVisible": false
+            }
+        })], [])
+
+
+    // const handleSkillOnClick = (skillToOpen) => skillArray = skillArray.map(skill => (_.isEqual(skillToOpen, skill)) ? Object.assign({}, skill, {"isOpen": true}) : Object.assign({}, skill, {"isOpen": false}));
+    const handleSkillOnClick = ({openName, openDescription}) => skillArray = skillArray.map(({name, description, vis}) => _.isEqual({openName, openDescription}, {name, description}) ? {name, description, "isVisible": !vis} : {name, description, "isVisible": false})
+
+    const isSkillBoxActive = (renderedSkill) => skillArray.reduce((acc, {name, description, vis}) => _.isEqual(renderedSkill, {name, description}) ? console.log("super") : console.log("nie-super"), false)
 
     const dataTransition = {duration:0.5, delay:0.25}
 
@@ -103,30 +124,27 @@ function Subjects() {
                                     { returnPracticalComponent(subject["laboratory"]) }
                                 </div>
                                 <div className="subject-box-content">
-                                    <Link to={`/roadmap-enter/${semesterId}/${subject["subject-name"].split(" ").join("-")}`} className="subject-box" onClick={handleSubjectOnClick}> { subject["subject-name"] }</Link>
+                                    <Link 
+                                        to={`/roadmap-enter/${semesterId}/${subject["subject-name"].split(" ").join("-")}`} 
+                                        className="subject-box" 
+                                        onClick={ handleSubjectOnClick }>{ subject["subject-name"] }
+                                    </Link>
                                     {
-                                    subject["skills"].map(skill => <motion.div onClick={() => openDescripeAndCheck(isOpen1, setIsOpen1)} className="skill-box">{skill["skill-name"]}</motion.div>
+                                    subject["skills"].map(skill => 
+                                        <motion.div 
+                                            onClick={() => handleSkillOnClick(skill)} 
+                                            className="skill-box">{ skill["skill-name"] }
+                                        </motion.div>
                                     )
                                     }
                                 </div>
                             </div>
-                            {
-                                isOpen1 && <motion.div 
-                                    variants={dataVariants}
-                                    initial="hidden" 
-                                    animate="visible" 
-                                    transition={dataTransition} 
-                                    className="skill-description">
-                                <div className="title">Propability</div>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus ultricies semper. Pellentesque vitae sodales mauris. Nunc at turpis fermentum, ornare dolor at, malesuada massa. Etiam volutpat imperdiet felis, tincidunt pulvinar velit congue sit amet. 
-                                </motion.div>
-                            } { returnTurningPath(index, database["semesters"][semesterId].length) }
+                            { subject["skills"].map(skill => returnSkillBoxes(isSkillBoxActive(skill), skill["skill-name"], skill["description"])) } 
+                            { returnTurningPath(index, database["semesters"][semesterId].length) }
                         </div>
                     )})
                 }
-                {
-                    returnEndingPath(database["semesters"][semesterId].length + 1)
-                }
+                { returnEndingPath(database["semesters"][semesterId].length) }
                 <div className="subject-next-sem-name">Second Semester</div>
             </div>
         </div>

@@ -466,36 +466,6 @@
                 "professor-lecture" : "",
                 "professor-laboratories" : "Dr. Prof. Mazurkiewicz",
                 "link" : "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110313/files/syl_jezyk_angielski_2022-1654500148980.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
             }
         ],
         "semester-3": [
