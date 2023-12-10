@@ -34,13 +34,25 @@ function Header() {
       <div className="right-side">
         <div className="header-icons">
           <button className="right-header-icon">
-            <img src={radioIcon} alt="radioIcon" />
+            <a
+              href="http://player.mors.ug.edu.pl/sites/all/modules/jplayer/mors_popup.html"
+              title="HTML link"
+            >
+              <img alt="logo" src={radioIcon} />
+            </a>
           </button>
           <button className="right-header-icon">
-            <img src={postIcon} alt="postIcon" />
+            <a
+              href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=3a1c55ce-0981-ac47-76c0-8d9a3064fb0a&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&domain_hint=ug.edu.pl&nonce=638378222377496610.8ec53ba1-c866-4d48-b754-2e428cfa2aa7&state=Dcs5EoAgDEBR0N6bsIWQxOOERRtntHG8vhTvd98aY9ZpmWycMUxZMgsAZGbciVL0MlrJVZNrQuSwo7jKBR0MBGmHgirb-W7h_jS8px_99c_1Aw"
+              title="HTML link"
+            >
+              <img alt="logo" src={postIcon} />
+            </a>
           </button>
           <button className="right-header-icon">
-            <img src={disabilityIcon} alt="disabilityIcon" />
+            <a href="https://bon.ug.edu.pl" title="HTML link">
+              <img alt="logo" src={disabilityIcon} />
+            </a>
           </button>
           <button className="right-header-icon">
             <img src={enIcon} alt="enIcon" />
