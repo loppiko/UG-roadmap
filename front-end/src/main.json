@@ -1,1385 +1,1306 @@
-{   
-    "main": {
-        "fieldfOfStudy" : "Practical - Informatics",
-        "subject-description" : "The Practical Informatics program at the University of Gdansk is a cutting-edge and comprehensive academic offering that bridges the gap between theoretical computer science and real-world applications. This program is designed to equip students with the knowledge, skills, and practical experience needed to excel in the dynamic field of informatics.",
-        "program-overview" : "Practical Informatics at the University of Gdansk is an interdisciplinary program that integrates computer science, mathematics, and practical problem-solving. It is tailored to prepare students for careers in various sectors, including software development, data analysis, information technology management, and more.",
+{
+  "main": {
+    "fieldfOfStudy": "Practical - Informatics",
+    "subject-description": "The Practical Informatics program at the University of Gdansk is a cutting-edge and comprehensive academic offering that bridges the gap between theoretical computer science and real-world applications. This program is designed to equip students with the knowledge, skills, and practical experience needed to excel in the dynamic field of informatics.",
+    "program-overview": "Practical Informatics at the University of Gdansk is an interdisciplinary program that integrates computer science, mathematics, and practical problem-solving. It is tailored to prepare students for careers in various sectors, including software development, data analysis, information technology management, and more.",
+    "skills": [
+      "Programming and Software Development",
+      "Cybersecurity",
+      "Data Science and Analytics",
+      "Internships and Practical Experience",
+      "Database Management",
+      "Project Management",
+      "Human-Computer Interaction"
+    ],
+    "career-prospects": "Graduates of the Practical Informatics program at the University of Gdansk are well-prepared for a variety of careers in both the public and private sectors. They can pursue roles as software developers, data analysts, IT consultants, cybersecurity specialists, database administrators, and more. The program's practical orientation ensures that graduates are job-ready and capable of meeting the evolving demands of the informatics industry."
+  },
+
+  "semesters": {
+    "semester-1": [
+      {
+        "subject-name": "Elementary mathematics",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
         "skills": [
-            "Programming and Software Development", "Cybersecurity", "Data Science and Analytics", "Internships and Practical Experience", "Database Management", "Project Management", "Human-Computer Interaction"
+          {
+            "skill-name": "analize",
+            "description": "Analysis in elementary mathematics involves breaking down complex problems into simpler components. It encompasses the study of patterns, trends, and properties within numerical and algebraic structures."
+          },
+          {
+            "skill-name": "logic",
+            "description": "Logic is the study of reasoning and the principles of valid argumentation. In elementary mathematics, it helps in constructing sound mathematical arguments and proofs."
+          },
+          {
+            "skill-name": "functions",
+            "description": "Functions represent relationships between variables. In elementary mathematics, understanding functions involves recognizing input-output mappings and exploring how different mathematical operations affect these relationships."
+          },
+          {
+            "skill-name": "relations",
+            "description": "Relations describe connections between sets of elements. In elementary mathematics, relations involve understanding how elements in one set relate to elements in another set."
+          }
         ],
-        "career-prospects" : "Graduates of the Practical Informatics program at the University of Gdansk are well-prepared for a variety of careers in both the public and private sectors. They can pursue roles as software developers, data analysts, IT consultants, cybersecurity specialists, database administrators, and more. The program's practical orientation ensures that graduates are job-ready and capable of meeting the evolving demands of the informatics industry."
-    },
+        "subject-description": "Elementary mathematics is the foundational branch of mathematics that covers basic concepts such as numbers, arithmetic operations, algebra, geometry, and basic statistics. It provides the fundamental building blocks for more advanced mathematical studies and is essential for understanding and solving everyday quantitative problems.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Czarnowska",
+        "professor-laboratories": "Dr. Prof. Rosicka",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_matematyka_elementarna_2022-1654498830429.pdf"
+      },
 
-    "semesters": {
-        "semester-1": [
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                    {
-                        "skill-name": "analize",
-                        "description": "Analysis in elementary mathematics involves breaking down complex problems into simpler components. It encompasses the study of patterns, trends, and properties within numerical and algebraic structures."
-                    },
-                    {
-                        "skill-name": "logic",
-                        "description": "Logic is the study of reasoning and the principles of valid argumentation. In elementary mathematics, it helps in constructing sound mathematical arguments and proofs."
-                    },
-                    {
-                        "skill-name": "functions",
-                        "description": "Functions represent relationships between variables. In elementary mathematics, understanding functions involves recognizing input-output mappings and exploring how different mathematical operations affect these relationships."
-                    },
-                    {
-                        "skill-name": "relations",
-                        "description":"Relations describe connections between sets of elements. In elementary mathematics, relations involve understanding how elements in one set relate to elements in another set."
-                    }
-
-                ],
-                "subject-description" : "Elementary mathematics is the foundational branch of mathematics that covers basic concepts such as numbers, arithmetic operations, algebra, geometry, and basic statistics. It provides the fundamental building blocks for more advanced mathematical studies and is essential for understanding and solving everyday quantitative problems.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Czarnowska",
-                "professor-laboratories" : "Dr. Prof. Rosicka",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_matematyka_elementarna_2022-1654498830429.pdf"
-            },
-
-            {
-                "subject-name" : "Discrete mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                    {
-                        "skill-name": "graph theory",
-                        "description": "Graph theory studies the relationships and connections between discrete objects represented as vertices and edges. In discrete mathematics, it is used to model and analyze networks, relationships, and structures."
-                    },
-                    {
-                        "skill-name": "propability",
-                        "description": "Probability in discrete mathematics deals with the likelihood of events occurring within a set of possible outcomes. It provides a mathematical framework for uncertainty and randomness."
-                    },
-                    {
-                        "skill-name": "arythmetics",
-                        "description": "Arithmetic in the context of discrete mathematics involves the study of whole numbers and their properties, including divisibility, prime numbers, and modular arithmetic."
-                    }
-                ],
-                "subject-description" : "Discrete mathematics focuses on mathematical structures and objects that are distinct and separated, rather than continuous. It includes topics such as graph theory, combinatorics, number theory, and logic. Discrete mathematics plays a vital role in computer science, cryptography, and various other fields where discrete structures and decision-making processes are essential.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Żeliński",
-                "professor-laboratories" : "Dr. Prof. Stankiecz",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_matematyka_dyskretna_2022-1654498823998.pdf"
-            },
-            {
-                "subject-name" : "Programming workshop",
-                "ECTS" : 2,
-                "lecture" :"",
-                "laboratory" : "30h",
-                "skills" : [
-                    {
-                        "skill-name": "git",
-                        "description": "Git is a distributed version control system used for tracking changes in source code during software development. It enables collaboration among multiple developers by managing different versions of a project and facilitates branching, merging, and tracking changes over time."
-                    },
-                    {
-                        "skill-name": "bash",
-                        "description": "Bash, or the Bourne Again Shell, is a command-line interpreter for Unix-like operating systems. It provides a text-based interface to interact with the system, execute commands, and automate tasks through scripting. Bash is a powerful tool for system administration and development workflows."
-                    },
-                    {
-                        "skill-name": "linux",
-                        "description": "Linux is an open-source operating system kernel that serves as the foundation for various Unix-like operating systems. It is widely used in servers, embedded systems, and development environments. Understanding Linux is crucial for system administration, software development, and working with server-based applications."
-                    },
-                    {
-                        "skill-name": "terminal",
-                        "description":"The terminal, or command-line interface, is a text-based interface to interact with the computer's operating system. It provides a powerful way to execute commands, manage files, and perform various tasks without a graphical user interface. Terminals are commonly used in programming, system administration, and development workflows."
-                    }
-                ],
-                "subject-description" : "A Programming Workshop is an interactive learning session designed to impart practical skills and knowledge related to programming and software development. It typically involves hands-on activities, coding exercises, and collaborative projects to reinforce theoretical concepts. Workshops cater to participants with varying levels of programming experience, providing a supportive environment for skill development and problem-solving.",
-                "language" : "Polish",
-                "professor-lecture" : "",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110314/files/syl_warsztat_programisty_2021-1641278023108.pdf"
-            },
-            {
-                "subject-name" : "Introduction to programming",
-                "ECTS" : 4,
-                "lecture" :"15h",
-                "laboratory" : "45h",
-                "skills" : [
-                    {
-                        "skill-name": "simple algorythms",
-                        "description": "Participants are introduced to basic algorithms, step-by-step procedures for solving problems. Emphasis is on understanding algorithmic thinking and translating logical steps into executable code."
-                    },
-                    {
-                        "skill-name": "programming concepts",
-                        "description": "Core programming concepts are covered, including variables, control flow (if statements, loops), functions, and error handling. Participants learn to write structured and modular code."
-                    },
-                    {
-                        "skill-name": "simple data structures",
-                        "description": "The basics of data structures are explored, focusing on essential types such as lists, dictionaries, and sets. Participants understand how to organize and manipulate data efficiently."
-                    }
-                ],
-                "subject-description" : "An Introduction to Programming using Python is designed to provide beginners with a foundational understanding of key programming concepts, simple algorithms, and fundamental data structures. Python, known for its readability and versatility, serves as an accessible language for newcomers to the world of coding.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Ziemann",
-                "professor-laboratories" : "Dr. Prof. Sołtys",
-                "link" : "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/108752/files/syl_wstep_do_programowania_2021-1649053859466.pdf"
-            },
-            {
-                "subject-name" : "Computer Networks",
-                "ECTS" : 5,
-                "lecture" : "30h",
-                "laboratory" : "30h",
-                "skills" : [
-                    {
-                        "skill-name": "network basics",
-                        "description": "Participants delve into the basics of computer networks, learning about different types of networks (Local Area Networks - LANs, Wide Area Networks - WANs), network devices, and the principles of data transmission across networks."
-                    },
-                    {
-                        "skill-name": "protocols",
-                        "description": "Understanding network protocols is essential. Participants explore the rules and conventions that govern data communication, including the TCP/IP suite. Protocols such as HTTP, FTP, and SMTP are discussed, emphasizing their roles in enabling different network services."
-                    },
-                    {
-                        "skill-name": "internet achitecture",
-                        "description": "The architecture of the internet is explored, covering the interconnected web of networks globally. Topics include the client-server model, the Domain Name System (DNS), and the role of Internet Service Providers (ISPs) in facilitating connectivity."
-                    },
-                    {
-                        "skill-name": "routing and switching",
-                        "description":"Routing and switching form the backbone of network functionality. Participants learn about routers and switches, the mechanisms behind data packet forwarding, and the protocols (e.g., RIP, OSPF) that determine optimal paths for data to travel through a network."
-                    }
-                ],
-                "subject-description" : "The study of Computer Networks encompasses various aspects, including fundamental network concepts, communication protocols, internet architecture, and the critical processes of routing and switching.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Czechlewski",
-                "professor-laboratories" : "Dr. Prof. Czechlewski",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/98218/files/syl_sieci_komputerowe_2022-1654680906459.pdf"
-            },
-            {
-                "subject-name" : "Web introduction",
-                "ECTS" : 3,
-                "lecture" :"15h",
-                "laboratory" : "15h",
-                "skills" : [
-                    {
-                        "skill-name": "html",
-                        "description": "HTML serves as the backbone of web content. Participants learn the structure of web pages, understanding how to create and organize content using HTML elements. Topics include headings, paragraphs, links, lists, and basic forms."
-                    },
-                    {
-                        "skill-name": "css",
-                        "description": "CSS is introduced for styling and layout purposes. Participants explore the styling of HTML elements, including text formatting, color schemes, layout models, and responsive design principles. The concept of selectors and specificity is emphasized."
-                    },
-                    {
-                        "skill-name": "sass",
-                        "description": "Building on CSS, participants are introduced to SASS, a preprocessor scripting language. SASS enhances the capabilities of CSS by introducing variables, nesting, mixins, and other features that streamline the styling process."
-                    }
-
-                ],
-                "subject-description" : "A Web Introduction course provides foundational knowledge for individuals interested in web development. It covers essential technologies such as HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and introduces more advanced styling with SASS (Syntactically Awesome Stylesheets)",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Tejszerska",
-                "professor-laboratories" : "Dr. Prof. Tejszerska",
-                "link" : "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110314/files/syl_wstep_do_technologii_web_2021-1641278055889.pdf"
-            },
-            {
-                "subject-name" : "Databases 1",
-                "ECTS" : 4,
-                "lecture" :"15h",
-                "laboratory" : "30h",
-                "skills" : [
-                    {
-                        "skill-name": "database design",
-                        "description": "Participants learn the principles of designing efficient and normalized databases. Topics include entity-relationship modeling, defining tables, establishing relationships, and ensuring data integrity through normalization."
-                    },
-                    {
-                        "skill-name": "administration",
-                        "description": "The course covers the basics of database administration, including installation, configuration, and management of database systems. Participants gain insights into security measures, backup and recovery procedures, and performance optimization."
-                    },
-                    {
-                        "skill-name": "data modeling",
-                        "description": "Data modeling is introduced as a crucial step in the database design process. Participants explore conceptual, logical, and physical data modeling, emphasizing the importance of accurately representing real-world scenarios within the database structure."
-                    },
-                    {
-                        "skill-name": "t-sql",
-                        "description":"T-SQL, the extension of SQL for Microsoft SQL Server, is introduced for querying and manipulating data. Participants learn the syntax for creating and managing database objects, writing queries, and performing common data manipulation tasks."
-                    }
-
-                ],
-                "subject-description" : "Databases 1 is an introductory course that provides a comprehensive understanding of fundamental database concepts, encompassing database design, administration, data modeling, and T-SQL (Transact-SQL).",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Mirakowski",
-                "professor-laboratories" : "Dr. Prof. Mirakowski",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/106870/files/syl_bazy_danych_2022-1654505917226.pdf"
-            },
-            {
-                "subject-name" : "English",
-                "ECTS" : 4,
-                "lecture" :"",
-                "laboratory" : "60h",
-                "skills" : [
-                    {
-                        "skill-name": "technical terminology",
-                        "description": "Participants learn and practice the specific technical vocabulary used in informatics, including terms related to programming languages, algorithms, data structures, and system architecture."
-                    },
-                    {
-                        "skill-name": "communication strategies",
-                        "description": "The course emphasizes effective communication strategies in both written and verbal forms. Participants learn to convey complex technical concepts clearly and concisely, fostering efficient collaboration within the informatics community."
-                    },
-                    {
-                        "skill-name": "writing skills",
-                        "description": "Writing skills are honed with a focus on various genres relevant to informatics, such as technical documentation, research papers, and project reports. Participants develop the ability to articulate ideas logically and persuasively."
-                    },
-                    {
-                        "skill-name": "professional communication",
-                        "description":"The course addresses the nuances of professional communication within the informatics context. This includes email etiquette, presentation skills, and effective communication in meetings and discussions."
-                    }
-
-                ],
-                "subject-description" : "Participants exit the course with enhanced English language skills specifically tailored for the informatics domain, enabling them to communicate effectively in professional settings, write technical documents with clarity, and navigate various communication challenges within the field of informatics.",
-                "language" : "Polish",
-                "professor-lecture" : "",
-                "professor-laboratories" : "Dr. Prof. Mazurkiewicz",
-                "link" : "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110313/files/syl_jezyk_angielski_2022-1654500148980.pdf"
-            }
+      {
+        "subject-name": "Discrete mathematics",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "graph theory",
+            "description": "Graph theory studies the relationships and connections between discrete objects represented as vertices and edges. In discrete mathematics, it is used to model and analyze networks, relationships, and structures."
+          },
+          {
+            "skill-name": "propability",
+            "description": "Probability in discrete mathematics deals with the likelihood of events occurring within a set of possible outcomes. It provides a mathematical framework for uncertainty and randomness."
+          },
+          {
+            "skill-name": "arythmetics",
+            "description": "Arithmetic in the context of discrete mathematics involves the study of whole numbers and their properties, including divisibility, prime numbers, and modular arithmetic."
+          }
         ],
-        "semester-2": [
-            {
-                "subject-name" : "Mathematical fundamental of informatics",
-                "ECTS" : 2,
-                "lecture" : "15h",
-                "laboratory" : "15h",
-                "skills" : [
-                    {
-                        "skill-name": "regular expressions",
-                        "description": "Regular expressions are a powerful tool for pattern matching and text processing. They are a concise way to describe sets of strings based on specific patterns."
-                    },
-                    {
-                        "skill-name": "touring machines (automats)",
-                        "description": "Turing machines and automata are abstract mathematical models of computation. They consist of states, transitions, and an input tape and help analyze the capabilities and limitations of algorithms."
-                    },
-                    {
-                        "skill-name": "context-free grammars",
-                        "description":"Are used to describe context-free languages. A context-free grammar is a set of recursive rules used to generate patterns of strings. A context-free grammar can describe all regular languages and more, but they cannot describe all possible languages."
-                    }
-
-                ],
-                "subject-description" : "These mathematical concepts form the backbone of theoretical computer science and informatics. They provide a formal and abstract framework for understanding and analyzing computational processes, algorithms, and the structure of information. A solid grasp of these fundamentals is essential for anyone involved in computer science, software development, and related fields.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Dziemiańczuk",
-                "professor-laboratories" : "Dr. Prof. Dziemiańczuk",
-                "link" : "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110314/files/syl_matematyczne_podstawy_informatyki_2021-1641278136983.pdf "
-            },
-
-            {
-                "subject-name" : "Linear Algebra",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                        {
-                            "skill-name": "operations on matrices",
-                            "description": "Participants learn the basic operations involving matrices, including addition, subtraction, scalar multiplication, and matrix multiplication. These operations lay the foundation for more advanced linear algebra concepts."
-                        },
-                        {
-                            "skill-name": "systems of linear equations",
-                            "description": "The course addresses the representation and solution of systems of linear equations. Participants learn techniques such as Gaussian elimination and matrix inverses to solve systems of equations and analyze the properties of solutions."
-                        },
-                        {
-                            "skill-name": "dot product",
-                            "description": "The dot product (also known as the inner product) is introduced as a fundamental operation in linear algebra. Participants explore its geometric interpretation, properties, and applications in vector spaces."
-                        },
-                        {
-                            "skill-name": "matrix vectors",
-                            "description":"Matrix-vector multiplication is covered, emphasizing its role in transforming vectors and solving systems of linear equations. Participants learn to represent linear transformations using matrices and understand their impact on vector spaces."
-                        }
-
-                ],
-                "subject-description" : "Linear Algebra is a mathematical discipline that explores vector spaces and linear mappings between these spaces. The course covers fundamental concepts such as operations on matrices, systems of linear equations, the dot product, and matrix-vector multiplication.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Detlaff",
-                "professor-laboratories" : "Dr. Prof. Detlaff",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110316/files/syl_algebra_liniowa_2022-1654506482016.pdf"
-            },
-            {
-                "subject-name" : "Algorithms and data structures",
-                "ECTS" : 5,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                    {
-                        "skill-name": "algorythms",
-                        "description": "Participants study specific sorting algorithms, including Heapsort and Quicksort. Emphasis is placed on understanding their principles, implementation, and analyzing their efficiency in different scenarios."
-                    },
-                    {
-                        "skill-name": "time analysis",
-                        "description": "The course delves into the analysis of algorithmic efficiency, considering semantic correctness, pessimistic time complexity, and lower bounds of pessimistic and expected time complexity. Participants explore mathematical models for evaluating algorithm performance."
-                    },
-                    {
-                        "skill-name": "data structures",
-                        "description": "The course covers essential data structures, including stacks, queues, and linked structures. Participants learn how to implement and utilize these structures to efficiently manage and organize data."
-                    }
-
-                ],
-                "subject-description" : "The course on Algorithms and Data Structures provides an in-depth understanding of fundamental algorithms, various data structures, and techniques for analyzing their time complexity.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Pączkowski",
-                "professor-laboratories" : "Dr. Prof. Pączkowski",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/108752/files/syl_algorytmy_i_struktury_danych_i_2021-1654680383183.pdf"
-            },
-            {
-                "subject-name" : "Programing laguages 1",
-                "ECTS" : 5,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                    {
-                        "skill-name": "Asynchronus programming",
-                        "description": "Participants explore asynchronous programming, understanding the principles behind concurrent execution, non-blocking operations, and event-driven architectures. Concepts such as callbacks, promises, and async/await patterns are covered."
-                    },
-                    {
-                        "skill-name": "Scala",
-                        "description": "Scala, a versatile programming language, is introduced. Participants learn the language syntax, its object-oriented and functional features, and how to leverage Scala for building scalable and concise code."
-                    },
-                    {
-                        "skill-name": "Objecting and functional programming",
-                        "description": "The course delves into the principles of object-oriented programming (OOP) and functional programming (FP). Participants understand how to combine these paradigms for effective code design and readability."
-                    },
-                    {
-                        "skill-name": "collection mechanisms",
-                        "description":"The course covers the collection mechanisms available in the chosen programming language(s), emphasizing data structures like lists, maps, and sets. Participants learn to manipulate and process collections using both imperative and functional styles."
-                    }
-
-                ],
-                "subject-description" : "The Programming Languages 1 course provides an introduction to advanced programming concepts, including asynchronous programming, Scala programming language, and a blend of object-oriented and functional programming paradigms, with a focus on collection mechanisms.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Pawłowski",
-                "professor-laboratories" : "Dr. Prof. Pawłowski",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl-jezyki-programowania-1-2022-1669414431828.pdf"
-            },
-            {
-                "subject-name" : "Programing laguages 2",
-                "ECTS" : 5,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                    {
-                        "skill-name": "JavaScript",
-                        "description": "Participants deepen their understanding of JavaScript, a versatile and widely used programming language. The course covers advanced language features, functional programming concepts, and best practices for writing clean and maintainable code."
-                    },
-                    {
-                        "skill-name": "NodeJS",
-                        "description": "Node.js is introduced as a server-side runtime for JavaScript. Participants learn how to build scalable and high-performance applications using Node.js, including setting up servers, handling HTTP requests, and leveraging the event-driven architecture."
-                    },
-                    {
-                        "skill-name": "Asynchronus programming",
-                        "description": "The course explores asynchronous programming patterns in JavaScript, including the event loop, callbacks, promises, and async/await. Participants gain a deep understanding of managing asynchronous operations in both client-side and server-side code."
-                    },
-                    {
-                        "skill-name": "yarn",
-                        "description":"Yarn, a package manager for JavaScript, is introduced for managing project dependencies efficiently. Participants learn how to use Yarn to install, manage, and update packages in their JavaScript projects."
-                    }
-
-                ],
-                "subject-description" : "Programming Languages 2 is a continuation of language exploration, focusing on JavaScript and Node.js. The course covers asynchronous programming in the context of JavaScript, and the use of Yarn as a package manager.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Tejszerska",
-                "professor-laboratories" : "Dr. Prof. Tejszerska",
-                "link" : "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110314/files/syl_jezyki_programowania_2_2021-1641278118078.pdf"
-            },
-            {
-                "subject-name" : "Contemporary applications of computer science",
-                "ECTS" : 3,
-                "lecture" :"30h",
-                "laboratory" : "15h",
-                "skills" : [
-                    {
-                        "skill-name": "discutions and lectures with Pro-s",
-                        "description": "The course features discussions and lectures led by industry professionals and experts. Participants engage with practitioners who share insights, experiences, and real-world applications of computer science in diverse industries."
-                    },
-                    {
-                        "skill-name": "discovering innovations",
-                        "description": "Participants explore recent innovations and emerging technologies in the field of computer science. This may include discussions on artificial intelligence, machine learning, blockchain, quantum computing, and other contemporary areas."
-                    },
-                    {
-                        "skill-name": "various areas of the industry",
-                        "description": "The course delves into the diverse applications of computer science across industries such as healthcare, finance, entertainment, transportation, and more. Participants gain an understanding of how computer science is driving innovation and transforming different sectors."
-                    }
-
-                ],
-                "subject-description" : "The course on Contemporary Applications of Computer Science provides an overview of the latest developments, innovations, and applications within the field. It includes discussions and lectures with industry professionals, exploration of cutting-edge technologies, and an examination of various areas where computer science is making a significant impact.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Neumann",
-                "professor-laboratories" : "Dr. Prof. Neumann",
-                "link" : "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110314/files/syl_wspolczesne_zastosowania_informatyki_2021-1641278161869.pdf"
-            },
-            {
-                "subject-name" : "Social and legal aspects of IT",
-                "ECTS" : 1,
-                "lecture" :"15h",
-                "laboratory" : "",
-                "skills" : [
-                    {
-                        "skill-name": "Copyright protection",
-                        "description": "Participants study the legal principles surrounding copyright protection for digital content. This includes understanding the scope of protection, fair use, licensing, and the challenges posed by digital reproduction and distribution."
-                    },
-                    {
-                        "skill-name": "Electronic signatures",
-                        "description": "The course delves into the legal recognition and use of electronic signatures. Participants learn about the legal frameworks and standards governing the validity and enforceability of electronic signatures in various jurisdictions."
-                    },
-                    {
-                        "skill-name": "Electronic legal transactions",
-                        "description": "Participants explore the legal landscape of electronic transactions, including contracts and agreements conducted in the digital realm. Topics include the legal validity of online contracts, electronic records, and dispute resolution."
-                    },
-                    {
-                        "skill-name": "\"Computer\" criminal law",
-                        "description":"The course covers the legal aspects of computer-related criminal activities. This includes offenses such as hacking, identity theft, cyber fraud, and the legal frameworks for investigating and prosecuting computer crimes."
-                    }
-
-                ],
-                "subject-description" : "The course on Social and Legal Aspects of IT explores the intersection between information technology and the legal and social frameworks that govern its use. It covers topics such as copyright protection, electronic signatures, legal transactions in the electronic realm, and the legal aspects of computer-related criminal activities.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Prof. Wierczyński",
-                "professor-laboratories" : "Dr. Prof. Wierczyński",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_spoleczne_i_prawne_aspekty_informatyki_2022-1654498882353.pdf"
-            },
-            {
-                "subject-name" : "English",
-                "ECTS" : 4,
-                "lecture" :"",
-                "laboratory" : "60h",
-                "skills" : [
-                    {
-                        "skill-name": "technical terminology",
-                        "description": "Participants learn and practice the specific technical vocabulary used in informatics, including terms related to programming languages, algorithms, data structures, and system architecture."
-                    },
-                    {
-                        "skill-name": "communication strategies",
-                        "description": "The course emphasizes effective communication strategies in both written and verbal forms. Participants learn to convey complex technical concepts clearly and concisely, fostering efficient collaboration within the informatics community."
-                    },
-                    {
-                        "skill-name": "writing skills",
-                        "description": "Writing skills are honed with a focus on various genres relevant to informatics, such as technical documentation, research papers, and project reports. Participants develop the ability to articulate ideas logically and persuasively."
-                    },
-                    {
-                        "skill-name": "professional communication",
-                        "description":"The course addresses the nuances of professional communication within the informatics context. This includes email etiquette, presentation skills, and effective communication in meetings and discussions."
-                    }
-
-                ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "",
-                "professor-laboratories" : "Dr. Prof. Mazurkiewicz",
-                "link" : "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110313/files/syl_jezyk_angielski_2022-1654500148980.pdf"
-            }
+        "subject-description": "Discrete mathematics focuses on mathematical structures and objects that are distinct and separated, rather than continuous. It includes topics such as graph theory, combinatorics, number theory, and logic. Discrete mathematics plays a vital role in computer science, cryptography, and various other fields where discrete structures and decision-making processes are essential.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Żeliński",
+        "professor-laboratories": "Dr. Prof. Stankiecz",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_matematyka_dyskretna_2022-1654498823998.pdf"
+      },
+      {
+        "subject-name": "Programming workshop",
+        "ECTS": 2,
+        "lecture": "",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "git",
+            "description": "Git is a distributed version control system used for tracking changes in source code during software development. It enables collaboration among multiple developers by managing different versions of a project and facilitates branching, merging, and tracking changes over time."
+          },
+          {
+            "skill-name": "bash",
+            "description": "Bash, or the Bourne Again Shell, is a command-line interpreter for Unix-like operating systems. It provides a text-based interface to interact with the system, execute commands, and automate tasks through scripting. Bash is a powerful tool for system administration and development workflows."
+          },
+          {
+            "skill-name": "linux",
+            "description": "Linux is an open-source operating system kernel that serves as the foundation for various Unix-like operating systems. It is widely used in servers, embedded systems, and development environments. Understanding Linux is crucial for system administration, software development, and working with server-based applications."
+          },
+          {
+            "skill-name": "terminal",
+            "description": "The terminal, or command-line interface, is a text-based interface to interact with the computer's operating system. It provides a powerful way to execute commands, manage files, and perform various tasks without a graphical user interface. Terminals are commonly used in programming, system administration, and development workflows."
+          }
         ],
-        "semester-3": [
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-
-            {
-                "subject-name" : "Discrete mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
+        "subject-description": "A Programming Workshop is an interactive learning session designed to impart practical skills and knowledge related to programming and software development. It typically involves hands-on activities, coding exercises, and collaborative projects to reinforce theoretical concepts. Workshops cater to participants with varying levels of programming experience, providing a supportive environment for skill development and problem-solving.",
+        "language": "Polish",
+        "professor-lecture": "",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110314/files/syl_warsztat_programisty_2021-1641278023108.pdf"
+      },
+      {
+        "subject-name": "Introduction to programming",
+        "ECTS": 4,
+        "lecture": "15h",
+        "laboratory": "45h",
+        "skills": [
+          {
+            "skill-name": "simple algorythms",
+            "description": "Participants are introduced to basic algorithms, step-by-step procedures for solving problems. Emphasis is on understanding algorithmic thinking and translating logical steps into executable code."
+          },
+          {
+            "skill-name": "programming concepts",
+            "description": "Core programming concepts are covered, including variables, control flow (if statements, loops), functions, and error handling. Participants learn to write structured and modular code."
+          },
+          {
+            "skill-name": "simple data structures",
+            "description": "The basics of data structures are explored, focusing on essential types such as lists, dictionaries, and sets. Participants understand how to organize and manipulate data efficiently."
+          }
         ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            }
+        "subject-description": "An Introduction to Programming using Python is designed to provide beginners with a foundational understanding of key programming concepts, simple algorithms, and fundamental data structures. Python, known for its readability and versatility, serves as an accessible language for newcomers to the world of coding.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Ziemann",
+        "professor-laboratories": "Dr. Prof. Sołtys",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/108752/files/syl_wstep_do_programowania_2021-1649053859466.pdf"
+      },
+      {
+        "subject-name": "Computer Networks",
+        "ECTS": 5,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "network basics",
+            "description": "Participants delve into the basics of computer networks, learning about different types of networks (Local Area Networks - LANs, Wide Area Networks - WANs), network devices, and the principles of data transmission across networks."
+          },
+          {
+            "skill-name": "protocols",
+            "description": "Understanding network protocols is essential. Participants explore the rules and conventions that govern data communication, including the TCP/IP suite. Protocols such as HTTP, FTP, and SMTP are discussed, emphasizing their roles in enabling different network services."
+          },
+          {
+            "skill-name": "internet achitecture",
+            "description": "The architecture of the internet is explored, covering the interconnected web of networks globally. Topics include the client-server model, the Domain Name System (DNS), and the role of Internet Service Providers (ISPs) in facilitating connectivity."
+          },
+          {
+            "skill-name": "routing and switching",
+            "description": "Routing and switching form the backbone of network functionality. Participants learn about routers and switches, the mechanisms behind data packet forwarding, and the protocols (e.g., RIP, OSPF) that determine optimal paths for data to travel through a network."
+          }
         ],
-        "semester-4": [
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-
-            {
-                "subject-name" : "Discrete mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
+        "subject-description": "The study of Computer Networks encompasses various aspects, including fundamental network concepts, communication protocols, internet architecture, and the critical processes of routing and switching.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Czechlewski",
+        "professor-laboratories": "Dr. Prof. Czechlewski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/98218/files/syl_sieci_komputerowe_2022-1654680906459.pdf"
+      },
+      {
+        "subject-name": "Web introduction",
+        "ECTS": 3,
+        "lecture": "15h",
+        "laboratory": "15h",
+        "skills": [
+          {
+            "skill-name": "html",
+            "description": "HTML serves as the backbone of web content. Participants learn the structure of web pages, understanding how to create and organize content using HTML elements. Topics include headings, paragraphs, links, lists, and basic forms."
+          },
+          {
+            "skill-name": "css",
+            "description": "CSS is introduced for styling and layout purposes. Participants explore the styling of HTML elements, including text formatting, color schemes, layout models, and responsive design principles. The concept of selectors and specificity is emphasized."
+          },
+          {
+            "skill-name": "sass",
+            "description": "Building on CSS, participants are introduced to SASS, a preprocessor scripting language. SASS enhances the capabilities of CSS by introducing variables, nesting, mixins, and other features that streamline the styling process."
+          }
         ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            }
+        "subject-description": "A Web Introduction course provides foundational knowledge for individuals interested in web development. It covers essential technologies such as HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and introduces more advanced styling with SASS (Syntactically Awesome Stylesheets)",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Tejszerska",
+        "professor-laboratories": "Dr. Prof. Tejszerska",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110314/files/syl_wstep_do_technologii_web_2021-1641278055889.pdf"
+      },
+      {
+        "subject-name": "Databases 1",
+        "ECTS": 4,
+        "lecture": "15h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "database design",
+            "description": "Participants learn the principles of designing efficient and normalized databases. Topics include entity-relationship modeling, defining tables, establishing relationships, and ensuring data integrity through normalization."
+          },
+          {
+            "skill-name": "administration",
+            "description": "The course covers the basics of database administration, including installation, configuration, and management of database systems. Participants gain insights into security measures, backup and recovery procedures, and performance optimization."
+          },
+          {
+            "skill-name": "data modeling",
+            "description": "Data modeling is introduced as a crucial step in the database design process. Participants explore conceptual, logical, and physical data modeling, emphasizing the importance of accurately representing real-world scenarios within the database structure."
+          },
+          {
+            "skill-name": "t-sql",
+            "description": "T-SQL, the extension of SQL for Microsoft SQL Server, is introduced for querying and manipulating data. Participants learn the syntax for creating and managing database objects, writing queries, and performing common data manipulation tasks."
+          }
         ],
-        "semester-5": [
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-
-            {
-                "subject-name" : "Discrete mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
+        "subject-description": "Databases 1 is an introductory course that provides a comprehensive understanding of fundamental database concepts, encompassing database design, administration, data modeling, and T-SQL (Transact-SQL).",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Mirakowski",
+        "professor-laboratories": "Dr. Prof. Mirakowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/106870/files/syl_bazy_danych_2022-1654505917226.pdf"
+      },
+      {
+        "subject-name": "English",
+        "ECTS": 4,
+        "lecture": "",
+        "laboratory": "60h",
+        "skills": [
+          {
+            "skill-name": "technical terminology",
+            "description": "Participants learn and practice the specific technical vocabulary used in informatics, including terms related to programming languages, algorithms, data structures, and system architecture."
+          },
+          {
+            "skill-name": "communication strategies",
+            "description": "The course emphasizes effective communication strategies in both written and verbal forms. Participants learn to convey complex technical concepts clearly and concisely, fostering efficient collaboration within the informatics community."
+          },
+          {
+            "skill-name": "writing skills",
+            "description": "Writing skills are honed with a focus on various genres relevant to informatics, such as technical documentation, research papers, and project reports. Participants develop the ability to articulate ideas logically and persuasively."
+          },
+          {
+            "skill-name": "professional communication",
+            "description": "The course addresses the nuances of professional communication within the informatics context. This includes email etiquette, presentation skills, and effective communication in meetings and discussions."
+          }
         ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            }
+        "subject-description": "Participants exit the course with enhanced English language skills specifically tailored for the informatics domain, enabling them to communicate effectively in professional settings, write technical documents with clarity, and navigate various communication challenges within the field of informatics.",
+        "language": "Polish",
+        "professor-lecture": "",
+        "professor-laboratories": "Dr. Prof. Mazurkiewicz",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110313/files/syl_jezyk_angielski_2022-1654500148980.pdf"
+      }
+    ],
+    "semester-2": [
+      {
+        "subject-name": "Mathematical fundamental of informatics",
+        "ECTS": 2,
+        "lecture": "15h",
+        "laboratory": "15h",
+        "skills": [
+          {
+            "skill-name": "regular expressions",
+            "description": "Regular expressions are a powerful tool for pattern matching and text processing. They are a concise way to describe sets of strings based on specific patterns."
+          },
+          {
+            "skill-name": "touring machines (automats)",
+            "description": "Turing machines and automata are abstract mathematical models of computation. They consist of states, transitions, and an input tape and help analyze the capabilities and limitations of algorithms."
+          },
+          {
+            "skill-name": "context-free grammars",
+            "description": "Are used to describe context-free languages. A context-free grammar is a set of recursive rules used to generate patterns of strings. A context-free grammar can describe all regular languages and more, but they cannot describe all possible languages."
+          }
         ],
-        "semester-6": [
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
+        "subject-description": "These mathematical concepts form the backbone of theoretical computer science and informatics. They provide a formal and abstract framework for understanding and analyzing computational processes, algorithms, and the structure of information. A solid grasp of these fundamentals is essential for anyone involved in computer science, software development, and related fields.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Dziemiańczuk",
+        "professor-laboratories": "Dr. Prof. Dziemiańczuk",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110314/files/syl_matematyczne_podstawy_informatyki_2021-1641278136983.pdf "
+      },
 
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-
-            {
-                "subject-name" : "Discrete mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
-
+      {
+        "subject-name": "Linear Algebra",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "operations on matrices",
+            "description": "Participants learn the basic operations involving matrices, including addition, subtraction, scalar multiplication, and matrix multiplication. These operations lay the foundation for more advanced linear algebra concepts."
+          },
+          {
+            "skill-name": "systems of linear equations",
+            "description": "The course addresses the representation and solution of systems of linear equations. Participants learn techniques such as Gaussian elimination and matrix inverses to solve systems of equations and analyze the properties of solutions."
+          },
+          {
+            "skill-name": "dot product",
+            "description": "The dot product (also known as the inner product) is introduced as a fundamental operation in linear algebra. Participants explore its geometric interpretation, properties, and applications in vector spaces."
+          },
+          {
+            "skill-name": "matrix vectors",
+            "description": "Matrix-vector multiplication is covered, emphasizing its role in transforming vectors and solving systems of linear equations. Participants learn to represent linear transformations using matrices and understand their impact on vector spaces."
+          }
         ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            },
-            
-            {
-                "subject-name" : "Elementary mathematics",
-                "ECTS" : 4,
-                "lecture" :"30h",
-                "laboratory" : "30h",
-                "skills" : [
-                {
-                    "skill-name": "analize",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "logic",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "functions",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                },
-                {
-                    "skill-name": "relations",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-                }
+        "subject-description": "Linear Algebra is a mathematical discipline that explores vector spaces and linear mappings between these spaces. The course covers fundamental concepts such as operations on matrices, systems of linear equations, the dot product, and matrix-vector multiplication.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Detlaff",
+        "professor-laboratories": "Dr. Prof. Detlaff",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110316/files/syl_algebra_liniowa_2022-1654506482016.pdf"
+      },
+      {
+        "subject-name": "Algorithms and data structures",
+        "ECTS": 5,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "algorythms",
+            "description": "Participants study specific sorting algorithms, including Heapsort and Quicksort. Emphasis is placed on understanding their principles, implementation, and analyzing their efficiency in different scenarios."
+          },
+          {
+            "skill-name": "time analysis",
+            "description": "The course delves into the analysis of algorithmic efficiency, considering semantic correctness, pessimistic time complexity, and lower bounds of pessimistic and expected time complexity. Participants explore mathematical models for evaluating algorithm performance."
+          },
+          {
+            "skill-name": "data structures",
+            "description": "The course covers essential data structures, including stacks, queues, and linked structures. Participants learn how to implement and utilize these structures to efficiently manage and organize data."
+          }
+        ],
+        "subject-description": "The course on Algorithms and Data Structures provides an in-depth understanding of fundamental algorithms, various data structures, and techniques for analyzing their time complexity.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Pączkowski",
+        "professor-laboratories": "Dr. Prof. Pączkowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/108752/files/syl_algorytmy_i_struktury_danych_i_2021-1654680383183.pdf"
+      },
+      {
+        "subject-name": "Programing laguages 1",
+        "ECTS": 5,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Asynchronus programming",
+            "description": "Participants explore asynchronous programming, understanding the principles behind concurrent execution, non-blocking operations, and event-driven architectures. Concepts such as callbacks, promises, and async/await patterns are covered."
+          },
+          {
+            "skill-name": "Scala",
+            "description": "Scala, a versatile programming language, is introduced. Participants learn the language syntax, its object-oriented and functional features, and how to leverage Scala for building scalable and concise code."
+          },
+          {
+            "skill-name": "Objecting and functional programming",
+            "description": "The course delves into the principles of object-oriented programming (OOP) and functional programming (FP). Participants understand how to combine these paradigms for effective code design and readability."
+          },
+          {
+            "skill-name": "collection mechanisms",
+            "description": "The course covers the collection mechanisms available in the chosen programming language(s), emphasizing data structures like lists, maps, and sets. Participants learn to manipulate and process collections using both imperative and functional styles."
+          }
+        ],
+        "subject-description": "The Programming Languages 1 course provides an introduction to advanced programming concepts, including asynchronous programming, Scala programming language, and a blend of object-oriented and functional programming paradigms, with a focus on collection mechanisms.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Pawłowski",
+        "professor-laboratories": "Dr. Prof. Pawłowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl-jezyki-programowania-1-2022-1669414431828.pdf"
+      },
+      {
+        "subject-name": "Programing laguages 2",
+        "ECTS": 5,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "JavaScript",
+            "description": "Participants deepen their understanding of JavaScript, a versatile and widely used programming language. The course covers advanced language features, functional programming concepts, and best practices for writing clean and maintainable code."
+          },
+          {
+            "skill-name": "NodeJS",
+            "description": "Node.js is introduced as a server-side runtime for JavaScript. Participants learn how to build scalable and high-performance applications using Node.js, including setting up servers, handling HTTP requests, and leveraging the event-driven architecture."
+          },
+          {
+            "skill-name": "Asynchronus programming",
+            "description": "The course explores asynchronous programming patterns in JavaScript, including the event loop, callbacks, promises, and async/await. Participants gain a deep understanding of managing asynchronous operations in both client-side and server-side code."
+          },
+          {
+            "skill-name": "yarn",
+            "description": "Yarn, a package manager for JavaScript, is introduced for managing project dependencies efficiently. Participants learn how to use Yarn to install, manage, and update packages in their JavaScript projects."
+          }
+        ],
+        "subject-description": "Programming Languages 2 is a continuation of language exploration, focusing on JavaScript and Node.js. The course covers asynchronous programming in the context of JavaScript, and the use of Yarn as a package manager.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Tejszerska",
+        "professor-laboratories": "Dr. Prof. Tejszerska",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110314/files/syl_jezyki_programowania_2_2021-1641278118078.pdf"
+      },
+      {
+        "subject-name": "Contemporary applications of computer science",
+        "ECTS": 3,
+        "lecture": "30h",
+        "laboratory": "15h",
+        "skills": [
+          {
+            "skill-name": "discutions and lectures with Pro-s",
+            "description": "The course features discussions and lectures led by industry professionals and experts. Participants engage with practitioners who share insights, experiences, and real-world applications of computer science in diverse industries."
+          },
+          {
+            "skill-name": "discovering innovations",
+            "description": "Participants explore recent innovations and emerging technologies in the field of computer science. This may include discussions on artificial intelligence, machine learning, blockchain, quantum computing, and other contemporary areas."
+          },
+          {
+            "skill-name": "various areas of the industry",
+            "description": "The course delves into the diverse applications of computer science across industries such as healthcare, finance, entertainment, transportation, and more. Participants gain an understanding of how computer science is driving innovation and transforming different sectors."
+          }
+        ],
+        "subject-description": "The course on Contemporary Applications of Computer Science provides an overview of the latest developments, innovations, and applications within the field. It includes discussions and lectures with industry professionals, exploration of cutting-edge technologies, and an examination of various areas where computer science is making a significant impact.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Neumann",
+        "professor-laboratories": "Dr. Prof. Neumann",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110314/files/syl_wspolczesne_zastosowania_informatyki_2021-1641278161869.pdf"
+      },
+      {
+        "subject-name": "Social and legal aspects of IT",
+        "ECTS": 1,
+        "lecture": "15h",
+        "laboratory": "",
+        "skills": [
+          {
+            "skill-name": "Copyright protection",
+            "description": "Participants study the legal principles surrounding copyright protection for digital content. This includes understanding the scope of protection, fair use, licensing, and the challenges posed by digital reproduction and distribution."
+          },
+          {
+            "skill-name": "Electronic signatures",
+            "description": "The course delves into the legal recognition and use of electronic signatures. Participants learn about the legal frameworks and standards governing the validity and enforceability of electronic signatures in various jurisdictions."
+          },
+          {
+            "skill-name": "Electronic legal transactions",
+            "description": "Participants explore the legal landscape of electronic transactions, including contracts and agreements conducted in the digital realm. Topics include the legal validity of online contracts, electronic records, and dispute resolution."
+          },
+          {
+            "skill-name": "\"Computer\" criminal law",
+            "description": "The course covers the legal aspects of computer-related criminal activities. This includes offenses such as hacking, identity theft, cyber fraud, and the legal frameworks for investigating and prosecuting computer crimes."
+          }
+        ],
+        "subject-description": "The course on Social and Legal Aspects of IT explores the intersection between information technology and the legal and social frameworks that govern its use. It covers topics such as copyright protection, electronic signatures, legal transactions in the electronic realm, and the legal aspects of computer-related criminal activities.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Prof. Wierczyński",
+        "professor-laboratories": "Dr. Prof. Wierczyński",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_spoleczne_i_prawne_aspekty_informatyki_2022-1654498882353.pdf"
+      },
+      {
+        "subject-name": "English",
+        "ECTS": 4,
+        "lecture": "",
+        "laboratory": "60h",
+        "skills": [
+          {
+            "skill-name": "technical terminology",
+            "description": "Participants learn and practice the specific technical vocabulary used in informatics, including terms related to programming languages, algorithms, data structures, and system architecture."
+          },
+          {
+            "skill-name": "communication strategies",
+            "description": "The course emphasizes effective communication strategies in both written and verbal forms. Participants learn to convey complex technical concepts clearly and concisely, fostering efficient collaboration within the informatics community."
+          },
+          {
+            "skill-name": "writing skills",
+            "description": "Writing skills are honed with a focus on various genres relevant to informatics, such as technical documentation, research papers, and project reports. Participants develop the ability to articulate ideas logically and persuasively."
+          },
+          {
+            "skill-name": "professional communication",
+            "description": "The course addresses the nuances of professional communication within the informatics context. This includes email etiquette, presentation skills, and effective communication in meetings and discussions."
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "",
+        "professor-laboratories": "Dr. Prof. Mazurkiewicz",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110313/files/syl_jezyk_angielski_2022-1654500148980.pdf"
+      }
+    ],
+    "semester-3": [
+      {
+        "subject-name": "Databases 2",
+        "ECTS": 3,
+        "lecture": "15h",
+        "laboratory": "15h",
+        "skills": [
+          {
+            "skill-name": "Query optimization",
+            "description": "Query optimization in databases involves the ability to enhance the efficiency of database queries. This skill requires understanding indexing strategies, execution plans, and utilizing database optimization techniques to retrieve data in the most effective way, minimizing response times."
+          },
+          {
+            "skill-name": "Database security",
+            "description": "Database security is the practice of safeguarding data from unauthorized access and ensuring the integrity of information. In Databases 2, students develop skills in implementing access controls, encryption, and auditing mechanisms to protect sensitive data stored in databases."
+          },
+          {
+            "skill-name": "Advanced data modeling",
+            "description": "Advanced data modeling entails designing complex database structures that accurately represent real-world scenarios. In this skill, students learn to create comprehensive entity-relationship diagrams, normalize data, and employ techniques such as denormalization when necessary for optimizing database performance."
+          },
+          {
+            "skill-name": "Distributed databases",
+            "description": " Distributed databases involve managing and querying data across multiple interconnected databases. This skill requires understanding the challenges of distributed systems, mastering data distribution strategies, and ensuring consistency, availability, and partition tolerance in distributed database environments."
+          }
+        ],
+        "subject-description": "Databases 2 builds upon the foundational knowledge acquired in Databases 1, delving deeper into the intricacies of database management systems. This advanced course focuses on refining students' expertise in database design, optimization, and security. Topics covered include query optimization techniques, advanced data modeling principles, and the complexities of managing distributed databases. Students explore practical applications of these concepts, gaining hands-on experience in tackling real-world database challenges. By the end of the course, students are equipped with the skills needed to design, secure, and optimize sophisticated database systems that can efficiently handle large-scale and distributed data environments.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Wiesław Pawłowski",
+        "professor-laboratories": "Dr. Andrzej Borzyszkowski and Dr. Tomasz Borzyszkowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_bazy_danych_2_2022-1654680636078.pdf"
+      },
 
-            ],
-                "subject-description" : "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-                "language" : "Polish",
-                "professor-lecture" : "Dr. Mateusz Miotk",
-                "professor-laboratories" : "Dr. Mateusz Miotk",
-                "link" : "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-            }
-        ]
-    }
+      {
+        "subject-name": "Web protocols",
+        "ECTS": 4,
+        "lecture": "15h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Protocol analysis",
+            "description": "Protocol analysis in the context of web protocols involves the ability to scrutinize and understand the intricacies of communication protocols used in web development. This skill requires dissecting HTTP, HTTPS, and other relevant protocols to comprehend their structure, functions, and how they facilitate data exchange between web servers and clients."
+          },
+          {
+            "skill-name": "Web Security Protocols",
+            "description": "Description about skill 2: Web security protocols encompass the implementation and understanding of security measures within web communications. In this skill, students learn to work with protocols like TLS/SSL, exploring encryption, digital certificates, and secure handshake processes to ensure the confidentiality and integrity of data transmitted over the web."
+          },
+          {
+            "skill-name": "RESTful API design",
+            "description": "Designing RESTful APIs involves creating scalable and efficient interfaces for web applications. In this skill, students learn to structure endpoints, manage resources, and employ HTTP methods to develop RESTful APIs that enable seamless communication between different components of a web system."
+          },
+          {
+            "skill-name": "WebSocket implementation",
+            "description": "WebSocket implementation revolves around understanding and utilizing the WebSocket protocol for real-time, bidirectional communication in web applications. Students develop skills in implementing WebSocket connections, handling events, and ensuring efficient data exchange, enabling the creation of interactive and dynamic web applications."
+          }
+        ],
+        "subject-description": "Web Protocols is a focused course exploring essential internet standards. Students learn to analyze and implement web protocols like HTTP and HTTPS, emphasizing security practices such as TLS/SSL. The curriculum covers RESTful API design principles and introduces WebSocket technology for real-time communication. Through hands-on projects, students gain practical skills in designing secure and efficient web interactions.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Wiesław Pawłowski",
+        "professor-laboratories": "Dr. Jakub Neumann",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_protokoly_sieci_web_2022-1654680666357.pdf"
+      },
+      {
+        "subject-name": "Frontend development",
+        "ECTS": 4,
+        "lecture": "15h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Responsive design",
+            "description": "Responsive design involves creating web interfaces that adapt seamlessly to various devices and screen sizes. In Frontend Development, students learn to employ HTML, CSS, and media queries to build responsive and user-friendly websites, ensuring a consistent user experience across desktops, tablets, and mobile devices."
+          },
+          {
+            "skill-name": "JavaScript frameworks",
+            "description": "Proficiency in JavaScript frameworks is crucial for dynamic and interactive web applications. In this skill, students explore frameworks like React or Vue.js, mastering the creation of reusable components and the management of application state to enhance frontend development efficiency."
+          },
+          {
+            "skill-name": "Cross-Browser compatibility",
+            "description": "Cross-browser compatibility involves ensuring that web applications function consistently across different browsers. In Frontend Development, students acquire skills in identifying and resolving compatibility issues, optimizing code for various browsers, and ensuring a uniform user experience."
+          },
+          {
+            "skill-name": "Performance optimization",
+            "description": "Performance optimization in frontend development focuses on enhancing the speed and efficiency of web applications. This skill requires students to understand techniques such as code splitting, lazy loading, and image optimization to create fast-loading and responsive user interfaces."
+          }
+        ],
+        "subject-description": "Frontend Development focuses on creating responsive and visually appealing web interfaces. Students learn essential skills, including responsive design with HTML and CSS, JavaScript frameworks for interactivity, ensuring cross-browser compatibility, and optimizing performance for fast-loading applications. Through hands-on projects, students gain practical expertise in building user-friendly web interfaces.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Jakub Neumann",
+        "professor-laboratories": "Dr. Andrzej Borzyszkowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_frontend_development_2022-1654680649411.pdf"
+      },
+      {
+        "subject-name": "Automatic testing",
+        "ECTS": 4,
+        "lecture": "15h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Test automation frameworks",
+            "description": "Proficiency in test automation frameworks is essential for systematic and efficient testing. In Automatic Testing, students learn to utilize frameworks like Selenium or Cypress, enabling the creation of automated tests for web applications, ensuring reliability and repeatability in the testing process."
+          },
+          {
+            "skill-name": "Unit testing",
+            "description": "Unit testing involves evaluating individual components or functions of a software application. In this skill, students learn to write and execute unit tests using tools like JUnit or NUnit, ensuring the isolated testing of code units for functionality and correctness."
+          },
+          {
+            "skill-name": "Continuous integration",
+            "description": "Continuous Integration (CI) is the practice of automating the integration of code changes into a shared repository. In Automatic Testing, students gain skills in setting up and configuring CI pipelines with tools such as Jenkins or GitLab CI, ensuring that automated tests run consistently with every code change."
+          },
+          {
+            "skill-name": "Test data management",
+            "description": "Test data management involves creating and maintaining datasets for testing purposes. Students in this skill learn to generate realistic and diverse test data, ensuring comprehensive test coverage and accuracy in evaluating the functionality and performance of software applications."
+          }
+        ],
+        "subject-description": "Automatic Testing is a hands-on course where students learn to automate software testing using frameworks like Selenium. Topics include unit testing, Continuous Integration (CI) setup with tools like Jenkins, and effective test data management for comprehensive coverage. Students gain practical skills in improving software quality through automated testing techniques.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Tomasz Borzyszkowski",
+        "professor-laboratories": "Dr. Jakub Neumann",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_testowanie_automatyczne_2022-1654680670529.pdf"
+      },
+      {
+        "subject-name": "Operating Systems",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Process management",
+            "description": "Process management involves overseeing the execution of tasks within an operating system. In Operating Systems, students learn to create, schedule, and terminate processes, gaining insights into process synchronization and communication mechanisms for efficient resource utilization."
+          },
+          {
+            "skill-name": "Memory management",
+            "description": "Memory management focuses on optimizing the use of computer memory. In this skill, students explore concepts like virtual memory, memory allocation, and deallocation, ensuring effective utilization of RAM and minimizing the risk of system crashes due to memory issues."
+          },
+          {
+            "skill-name": "File system implementation",
+            "description": "File system implementation involves designing and managing the storage and retrieval of data on a computer. In Operating Systems, students develop skills in creating file systems, understanding file organization, and implementing mechanisms for data storage, retrieval, and protection."
+          },
+          {
+            "skill-name": "Security and access control",
+            "description": "Security and access control in operating systems revolve around protecting system resources from unauthorized access. Students acquire skills in implementing access control policies, encryption, and authentication measures to enhance the security of an operating system."
+          }
+        ],
+        "subject-description": "Operating Systems is a foundational course covering essential concepts in managing computer systems. Students learn process and memory management, file system implementation, and security measures. The course provides insights into the core principles governing the efficient functioning and security of computer operating systems.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Mateusz Miotk",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      },
+      {
+        "subject-name": "IT Project Management",
+        "ECTS": 3,
+        "lecture": "15h",
+        "laboratory": "15h",
+        "skills": [
+          {
+            "skill-name": "Project Planning",
+            "description": "Creating roadmaps for tasks, timelines, and resources. Defining scope, setting milestones, and creating realistic schedules for effective project execution."
+          },
+          {
+            "skill-name": "Risk Management",
+            "description": "Identifying and mitigating potential challenges. Assessing risks, developing contingency plans, and implementing strategies to minimize uncertainties throughout the project lifecycle."
+          },
+          {
+            "skill-name": "Team Collaboration",
+            "description": "Emphasizing effective communication and coordination. Acquiring skills in fostering collaboration, resolving conflicts, and ensuring seamless information flow for enhanced project efficiency."
+          },
+          {
+            "skill-name": "Project Monitoring and Control",
+            "description": "Tracking project progress, identifying deviations, and implementing corrective actions. Learning to use tools and metrics for monitoring to ensure projects meet objectives within specified constraints."
+          }
+        ],
+        "subject-description": "Comprehensive course covering key skills essential for successful project execution, from planning to delivery.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Monika Woźniak",
+        "professor-laboratories": "Dr. Monika Woźniak",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_zarzadzanie_projektem_informatycznym_2022-1654680676437.pdf"
+      },
+
+      {
+        "subject-name": "Mathematical Modeling",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Problem Formulation",
+            "description": "Articulating real-world problems into mathematical models. Developing the ability to express complex situations in mathematical terms for analysis and solution."
+          },
+          {
+            "skill-name": "Model Validation",
+            "description": "Evaluating and validating mathematical models. Acquiring skills to assess the accuracy and reliability of models in representing real-world phenomena."
+          },
+          {
+            "skill-name": "Simulation Techniques",
+            "description": "Applying simulation techniques to solve mathematical models. Gaining proficiency in using computational tools to simulate and analyze dynamic systems."
+          },
+          {
+            "skill-name": "Interpreting Results",
+            "description": "Interpreting and communicating results. Developing the ability to draw meaningful conclusions and effectively communicate findings from mathematical models to diverse audiences."
+          }
+        ],
+        "subject-description": "The course focuses on presenting detailed information regarding mathematical modeling, including problem formulation, model validation, simulation techniques, and result interpretation.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Joanna Czarnowska",
+        "professor-laboratories": "Dr. Andrzej Borzyszkowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_modelowanie_matematyczne_2022-1654680654245.pdf"
+      },
+      {
+        "subject-name": "Physical education NOT FINISH!!!!",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "analize",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "logic",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "functions",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "relations",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Mateusz Miotk",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      },
+      {
+        "subject-name": "English",
+        "ECTS": 4,
+        "lecture": "",
+        "laboratory": "60h",
+        "skills": [
+          {
+            "skill-name": "technical terminology",
+            "description": "Participants learn and practice the specific technical vocabulary used in informatics, including terms related to programming languages, algorithms, data structures, and system architecture."
+          },
+          {
+            "skill-name": "communication strategies",
+            "description": "The course emphasizes effective communication strategies in both written and verbal forms. Participants learn to convey complex technical concepts clearly and concisely, fostering efficient collaboration within the informatics community."
+          },
+          {
+            "skill-name": "writing skills",
+            "description": "Writing skills are honed with a focus on various genres relevant to informatics, such as technical documentation, research papers, and project reports. Participants develop the ability to articulate ideas logically and persuasively."
+          },
+          {
+            "skill-name": "professional communication",
+            "description": "The course addresses the nuances of professional communication within the informatics context. This includes email etiquette, presentation skills, and effective communication in meetings and discussions."
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "",
+        "professor-laboratories": "Dr. Prof. Mazurkiewicz",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110313/files/syl_jezyk_angielski_2022-1654500148980.pdf"
+      }
+    ],
+    "semester-4": [
+      {
+        "subject-name": "Computational Intelligence",
+        "ECTS": 5,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Algorithmic Problem Solving",
+            "description": "Developing skills in algorithmic problem solving. Applying computational techniques to address complex problems and optimize solutions using heuristic methods."
+          },
+          {
+            "skill-name": "Machine Learning Concepts",
+            "description": "Understanding foundational machine learning concepts. Exploring supervised and unsupervised learning, classification, regression, and clustering algorithms for intelligent data analysis."
+          },
+          {
+            "skill-name": "Evolutionary Computing",
+            "description": "Exploring evolutionary computing techniques. Understanding genetic algorithms, evolutionary strategies, and genetic programming for optimization and problem-solving in diverse domains."
+          },
+          {
+            "skill-name": "Fuzzy Logic Applications",
+            "description": "Applying fuzzy logic to real-world problems. Developing skills in modeling uncertainty, decision-making, and control systems using fuzzy logic principles."
+          }
+        ],
+        "subject-description": "Computational Intelligence focuses on algorithmic problem solving, machine learning concepts, evolutionary computing, and fuzzy logic applications, providing students with essential skills in intelligent computational techniques.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Tomasz Dzido",
+        "professor-laboratories": "Dr. Michał Kassjański",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/105487/files/syl_inteligencja_obliczeniowa_2022-1654680776833.pdf"
+      },
+      {
+        "subject-name": "Cloud Technologies",
+        "ECTS": 4,
+        "lecture": "15h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Cloud Infrastructure",
+            "description": "Understanding cloud infrastructure components. Learning about virtualization, storage, networking, and compute resources in cloud environments like AWS, Azure, or Google Cloud."
+          },
+          {
+            "skill-name": "Scalability and Elasticity",
+            "description": "Developing skills in designing scalable and elastic systems. Exploring techniques to ensure applications can efficiently handle varying workloads and demands in cloud environments."
+          },
+          {
+            "skill-name": "Cloud Security",
+            "description": "Ensuring cloud security best practices. Learning to implement security measures, access controls, encryption, and compliance to protect data and applications in cloud-based solutions."
+          },
+          {
+            "skill-name": "Serverless Computing",
+            "description": "Exploring serverless computing concepts. Understanding the benefits of serverless architecture and developing skills in deploying applications without managing traditional servers."
+          }
+        ],
+        "subject-description": "The Cloud Technologies course covers cloud infrastructure, scalability, elasticity, security best practices, and serverless computing. Students gain practical skills in deploying and managing applications in cloud environments.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Jakub Neumann",
+        "professor-laboratories": "Dr. Andrzej Borzyszkowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_technologie_chmurowe_2020-1599637509694.pdf"
+      },
+
+      {
+        "subject-name": "Web Application Security",
+        "ECTS": 3,
+        "lecture": "20h",
+        "laboratory": "15h",
+        "skills": [
+          {
+            "skill-name": "Vulnerability Assessment",
+            "description": "Conducting vulnerability assessments for web applications. Learning to identify and analyze potential security weaknesses and threats in web-based systems."
+          },
+          {
+            "skill-name": "Secure Coding Practices",
+            "description": "Implementing secure coding practices. Developing skills to write secure and resilient code, emphasizing protection against common web application vulnerabilities."
+          },
+          {
+            "skill-name": "Web Application Firewalls",
+            "description": "Understanding and configuring Web Application Firewalls (WAFs). Learning to deploy and manage WAFs to protect web applications from various cyber threats and attacks."
+          },
+          {
+            "skill-name": "Incident Response",
+            "description": "Developing incident response skills for web security. Understanding the process of detecting, responding to, and recovering from security incidents in web applications."
+          }
+        ],
+        "subject-description": "Web Application Security focuses on vulnerability assessment, secure coding practices, Web Application Firewalls (WAFs), and incident response, equipping students with skills to safeguard web applications against cyber threats.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Wiesław Pawłowski",
+        "professor-laboratories": "Dr. Andrzej Borzyszkowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_bezpieczenstwo_aplikacji_webowych_2020-1599637491748.pdf"
+      },
+      {
+        "subject-name": "Object-Oriented and Functional Programming",
+        "ECTS": 4,
+        "lecture": "15h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Object-Oriented Programming",
+            "description": "Mastering Object-Oriented Programming (OOP) principles. Developing skills in encapsulation, inheritance, and polymorphism for designing and implementing modular and reusable code."
+          },
+          {
+            "skill-name": "Functional Programming Concepts",
+            "description": "Understanding foundational concepts of functional programming. Exploring immutability, higher-order functions, and lambda expressions for creating expressive and concise code."
+          },
+          {
+            "skill-name": "Design Patterns",
+            "description": "Applying design patterns in software development. Learning to implement and recognize common design patterns to solve recurring design problems in object-oriented systems."
+          },
+          {
+            "skill-name": "Concurrency and Parallelism",
+            "description": "Developing skills in concurrent and parallel programming. Understanding techniques to design and implement scalable and efficient programs that leverage multiple threads or processes."
+          }
+        ],
+        "subject-description": "The Object-Oriented and Functional Programming course covers Object-Oriented Programming (OOP), functional programming concepts, design patterns, and concurrent/parallel programming. Students gain versatile programming skills for building robust and efficient software.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Wiesław Pawłowski",
+        "professor-laboratories": "Dr. Andrzej Borzyszkowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_programowanie_obiektowo-funkcyjne_2020-1599637507278.pdf"
+      },
+      {
+        "subject-name": "Elementary mathematics",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "analize",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "logic",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "functions",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "relations",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Mateusz Miotk",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      },
+      {
+        "subject-name": "Elementary mathematics",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "analize",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "logic",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "functions",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "relations",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Mateusz Miotk",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      },
+      {
+        "subject-name": "Elementary mathematics",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "analize",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "logic",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "functions",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "relations",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Mateusz Miotk",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      },
+      {
+        "subject-name": "ABC of Entrepreneurship",
+        "ECTS": 2,
+        "lecture": "15h",
+        "laboratory": "15h",
+        "skills": [
+          {
+            "skill-name": "Business Idea Development",
+            "description": "Developing skills in generating and refining business ideas. Understanding the process of ideation, market research, and identifying opportunities for entrepreneurial ventures."
+          },
+          {
+            "skill-name": "Business Planning",
+            "description": "Creating comprehensive business plans. Learning to outline business objectives, marketing strategies, financial projections, and operational plans for successful entrepreneurship."
+          },
+          {
+            "skill-name": "Financial Literacy",
+            "description": "Enhancing financial literacy for entrepreneurship. Acquiring skills in budgeting, financial analysis, and understanding key financial metrics for effective business decision-making."
+          },
+          {
+            "skill-name": "Pitching and Networking",
+            "description": "Developing effective pitching and networking skills. Learning to present business ideas persuasively and building professional networks to support entrepreneurial endeavors."
+          }
+        ],
+        "subject-description": "ABC of Entrepreneurship covers business idea development, business planning, financial literacy, and pitching/networking skills. Students gain essential knowledge and skills to embark on entrepreneurial ventures successfully.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Ewa Ignaciuk",
+        "professor-laboratories": "Dr. Ewa Ignaciuk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/110314/files/syl_abc_przedsiebiorczosci_2020-1599633485171.pdf"
+      }
+    ],
+    "semester-5": [
+      {
+        "subject-name": "Industrial Applications",
+        "ECTS": 3,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Process Optimization",
+            "description": "Developing skills in optimizing industrial processes. Understanding methodologies and tools for enhancing efficiency, reducing costs, and improving overall performance."
+          },
+          {
+            "skill-name": "Quality Control",
+            "description": "Implementing quality control measures in industrial settings. Acquiring skills in monitoring and maintaining high-quality standards in manufacturing and production processes."
+          },
+          {
+            "skill-name": "Supply Chain Management",
+            "description": "Understanding and managing industrial supply chains. Learning to optimize the flow of materials, information, and finances for efficient and effective production."
+          },
+          {
+            "skill-name": "Industrial Automation",
+            "description": "Developing skills in industrial automation technologies. Understanding and implementing automated systems for increased productivity and reduced manual intervention."
+          }
+        ],
+        "subject-description": "Industrial Applications covers process optimization, quality control, supply chain management, and industrial automation. Students gain practical skills for enhancing efficiency and maintaining high standards in industrial processes.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Jakub Neumann",
+        "professor-laboratories": "Dr. Andrzej Borzyszkowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/98214/files/syl_aplikacje_przemyslowe_2020-1654680837364.pdf"
+      },
+      {
+        "subject-name": "Analysis and Design of IT Systems",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "20h",
+        "skills": [
+          {
+            "skill-name": "System Requirements Analysis",
+            "description": "Developing skills in analyzing and documenting system requirements. Understanding techniques for gathering, validating, and prioritizing functional and non-functional requirements."
+          },
+          {
+            "skill-name": "System Design Principles",
+            "description": "Applying system design principles. Learning to create robust and scalable system architectures, considering factors such as modularity, performance, and security."
+          },
+          {
+            "skill-name": "Database Design",
+            "description": "Developing skills in database design. Understanding the process of defining data structures, relationships, and normalization to ensure efficient and organized data storage and retrieval."
+          },
+          {
+            "skill-name": "User Interface Design",
+            "description": "Creating effective user interfaces. Acquiring skills in designing user-friendly interfaces that enhance user experience and usability in IT systems."
+          }
+        ],
+        "subject-description": "Analysis and Design of IT Systems covers system requirements analysis, system design principles, database design, and user interface design. Students gain comprehensive skills for developing efficient and user-friendly IT systems.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Bartosz Marcinkowski",
+        "professor-laboratories": "Dr. Bartosz Marcinkowski",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/98214/files/syl_analiza_i_projektowanie_systemow_informatycznych_2020-1654680832854.pdf"
+      },
+      {
+        "subject-name": "Team Project",
+        "ECTS": 3,
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "Project Collaboration",
+            "description": "Developing collaboration skills in a team environment. Learning effective communication, task delegation, and conflict resolution for successful project outcomes."
+          },
+          {
+            "skill-name": "Project Planning and Management",
+            "description": "Applying project planning and management skills. Understanding the project lifecycle, setting milestones, and managing resources and timelines for project success."
+          },
+          {
+            "skill-name": "Problem Solving",
+            "description": "Enhancing problem-solving skills. Addressing challenges and obstacles that arise during the project, applying critical thinking and creative solutions for effective outcomes."
+          },
+          {
+            "skill-name": "Presentation and Reporting",
+            "description": "Developing skills in presenting and reporting project outcomes. Learning to communicate project achievements, challenges, and recommendations to diverse stakeholders."
+          }
+        ],
+        "subject-description": "Team Project focuses on project collaboration, planning, management, problem-solving, and presentation skills. Students work collaboratively on real-world projects, applying acquired skills for successful project outcomes.",
+        "language": "Polish",
+        "professor-lecture": "Dr. [Professor Name]",
+        "professor-laboratories": "Dr. [Professor Name]",
+        "link": "[Link to Course Syllabus]"
+      },
+      {
+        "subject-name": "Elementary mathematics",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "analize",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "logic",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "functions",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "relations",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Mateusz Miotk",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      },
+      {
+        "subject-name": "Elementary mathematics",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "analize",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "logic",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "functions",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "relations",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Mateusz Miotk",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      },
+      {
+        "subject-name": "Elementary mathematics",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "analize",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "logic",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "functions",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "relations",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Mateusz Miotk",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      },
+      {
+        "subject-name": "Elementary mathematics",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "analize",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "logic",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "functions",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "relations",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Mateusz Miotk",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      },
+      {
+        "subject-name": "Elementary mathematics",
+        "ECTS": 4,
+        "lecture": "30h",
+        "laboratory": "30h",
+        "skills": [
+          {
+            "skill-name": "analize",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "logic",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "functions",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          },
+          {
+            "skill-name": "relations",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+          }
+        ],
+        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Mateusz Miotk",
+        "professor-laboratories": "Dr. Mateusz Miotk",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      },
+      {
+        "subject-name": "University Wide Lecture",
+        "ECTS": 2,
+        "lecture": "30h",
+        "skills": [
+          {
+            "skill-name": "Critical Thinking",
+            "description": "Developing critical thinking skills. Engaging with diverse topics, analyzing information, and forming well-reasoned arguments and perspectives."
+          },
+          {
+            "skill-name": "Effective Communication",
+            "description": "Enhancing effective communication. Practicing verbal and written communication skills to articulate thoughts clearly and engage in meaningful discussions."
+          },
+          {
+            "skill-name": "Research and Inquiry",
+            "description": "Building research and inquiry skills. Learning to explore and investigate topics, gather information, and apply evidence-based approaches to understanding complex issues."
+          },
+          {
+            "skill-name": "Interdisciplinary Understanding",
+            "description": "Fostering interdisciplinary understanding. Exploring connections between different fields of study and gaining a holistic perspective on various academic subjects."
+          }
+        ],
+        "subject-description": "The University-Wide Lecture provides a platform for developing critical thinking, effective communication, research and inquiry, and interdisciplinary understanding. Students engage with diverse topics to broaden their intellectual horizons.",
+        "language": "Polish",
+        "professor-lecture": "Dr. [Professor Name]",
+        "professor-laboratories": "N/A",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+      }
+    ],
+    "semester-6": [
+      {
+        "subject-name": "Professional Practice 6 Months",
+        "ECTS": 30,
+        "skills": [
+          {
+            "skill-name": "Workplace Adaptability",
+            "description": "Developing adaptability in a professional environment. Adapting to workplace dynamics, culture, and expectations to thrive in diverse professional settings."
+          },
+          {
+            "skill-name": "Practical Application of Knowledge",
+            "description": "Applying theoretical knowledge to practical scenarios. Gaining hands-on experience and integrating classroom learning into real-world professional situations."
+          },
+          {
+            "skill-name": "Professional Networking",
+            "description": "Building professional networks. Establishing connections with industry professionals, mentors, and colleagues to enhance career opportunities and professional growth."
+          },
+          {
+            "skill-name": "Project Management",
+            "description": "Developing project management skills. Handling responsibilities, meeting deadlines, and contributing effectively to projects within the professional work environment."
+          }
+        ],
+        "subject-description": "Professional Practice - 6 Months provides students with an extended period of practical experience in a professional setting. It focuses on workplace adaptability, practical application of knowledge, professional networking, and project management.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Jakub Neumann",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/98214/files/syl-praktyka-zawodowa-p-2020-1695013053563.pdf"
+      },
+      {
+        "subject-name": "Undergraduate Seminar",
+        "ECTS": 4,
+        "lecture": "30h",
+        "skills": [
+          {
+            "skill-name": "Research Presentation",
+            "description": "Developing skills in presenting research findings. Crafting and delivering clear, concise, and engaging presentations to effectively communicate research outcomes."
+          },
+          {
+            "skill-name": "Critical Analysis",
+            "description": "Enhancing critical analysis skills. Engaging in discussions, analyzing research papers, and evaluating information to form well-informed perspectives on academic topics."
+          },
+          {
+            "skill-name": "Peer Collaboration",
+            "description": "Fostering peer collaboration. Working collaboratively with fellow students to exchange ideas, provide constructive feedback, and enhance collective learning."
+          },
+          {
+            "skill-name": "Academic Writing",
+            "description": "Improving academic writing skills. Learning to articulate ideas effectively, follow academic writing conventions, and produce well-structured written documents."
+          }
+        ],
+        "subject-description": "The Undergraduate Seminar focuses on research presentation, critical analysis, peer collaboration, and academic writing. It provides a platform for students to engage in academic discourse, refine presentation skills, and collaborate with peers.",
+        "language": "Polish",
+        "professor-lecture": "Dr. Tomasz Dzido",
+        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/98214/files/syl-seminarium-licencjackie-2020-1695013058384.pdf"
+      },
+      {
+        "subject-name": "Bachelor's Exam",
+        "ECTS": 2,
+        "skills": [
+          {
+            "skill-name": "Comprehensive Knowledge",
+            "description": "Demonstrating comprehensive knowledge. Applying acquired knowledge and skills across various subjects covered during the undergraduate program."
+          },
+          {
+            "skill-name": "Critical Thinking",
+            "description": "Applying critical thinking skills. Analyzing complex problems, forming well-reasoned arguments, and demonstrating a deep understanding of academic concepts."
+          },
+          {
+            "skill-name": "Communication Skills",
+            "description": "Showcasing effective communication skills. Presenting thoughts clearly, articulating ideas persuasively, and engaging in meaningful discussions on diverse academic topics."
+          },
+          {
+            "skill-name": "Problem Solving",
+            "description": "Demonstrating problem-solving abilities. Applying analytical skills to solve complex problems and showcasing the ability to approach challenges with creativity and ingenuity."
+          }
+        ],
+        "subject-description": "The Bachelor's Exam assesses students' comprehensive knowledge, critical thinking, communication skills, and problem-solving abilities. It serves as a culmination of the undergraduate program, evaluating students' readiness for graduation.",
+        "language": "Polish"
+      }
+    ]
+  }
 }
