@@ -1,4 +1,21 @@
 {
+  "header": {
+      "UG-logo-link": "https://www.mfi.ug.edu.pl/",
+      "header-inscryptions": [
+        {"name": "Candidates", "link": "https://www.ug.edu.pl/kandydaci"},
+        {"name": "Students", "link": "https://www.ug.edu.pl/studenci"},
+        {"name": "Workers", "link": "https://www.ug.edu.pl/pracownicy"},
+        {"name": "Graduates", "link": "https://www.ug.edu.pl/absolwenci"},
+        {"name": "Media", "link": "https://www.ug.edu.pl/absolwenci"}
+      ],
+      "icons-links": {
+        "radioIcon": "http://player.mors.ug.edu.pl/sites/all/modules/jplayer/mors_popup.html",
+        "postIcon": "https://outlook.office365.com/mail/",
+        "disabilityIcon": "https://bon.ug.edu.pl/",
+        "enIcon": "https://en.ug.edu.pl"
+      }
+  },
+
   "main": {
     "fieldfOfStudy": "Practical - Informatics",
     "subject-description": "The Practical Informatics program at the University of Gdansk is a cutting-edge and comprehensive academic offering that bridges the gap between theoretical computer science and real-world applications. This program is designed to equip students with the knowledge, skills, and practical experience needed to excel in the dynamic field of informatics.",

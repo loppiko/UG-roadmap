@@ -10,6 +10,8 @@ $header-elements-gap: 1.5rem;
 $header-elements-margin: 8rem;
 $header-buttons-border: solid 1px $white-text-color;
 
+
+
 .header{
     display: flex;
     flex-wrap: nowrap;
@@ -42,6 +44,7 @@ $header-buttons-border: solid 1px $white-text-color;
             gap: $header-elements-gap;
             
             .header-button {
+                text-decoration: none;
                 background-color: transparent;
                 border: none;
                 color: $white-text-color;
@@ -61,8 +64,11 @@ $header-buttons-border: solid 1px $white-text-color;
 
         .header-icons {
             display: flex;
+            align-items: center;
             
             .right-header-icon {
+                height: min-content;
+
                 padding-left: 1rem;
                 padding-right: 1rem;
                 background-color: transparent;
@@ -111,6 +117,9 @@ $header-buttons-border: solid 1px $white-text-color;
                 
                 
                 .center-header-icon {
+                    display: flex;
+                    justify-content: center;
+
                     padding-left: 1rem;
                     padding-right: 1rem;
                     background-color: transparent;
@@ -118,6 +127,10 @@ $header-buttons-border: solid 1px $white-text-color;
                     border-right: $header-buttons-border;
                     width: 100%;
                     flex-direction: row;
+                    font-size: 0.5rem;
+                    img {
+                        height: min-content;
+                    }
                 }
             }
 
@@ -139,6 +152,7 @@ $header-buttons-border: solid 1px $white-text-color;
 
                 .center-header-button {
                     background-color: transparent;
+                    text-decoration: none;
                     border: none;
                     color: $white-text-color;
                     font-size: $header-font-size;
