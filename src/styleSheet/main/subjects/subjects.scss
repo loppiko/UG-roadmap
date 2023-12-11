@@ -190,6 +190,11 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         text-align: center;
                     }
 
+                    .subject-skill-path {
+                        position: absolute;
+                        z-index: -10;
+                    }
+
                     .skill-box:nth-of-type(1) {
                         right: 400px;
                         top: 150px;
@@ -205,6 +210,23 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                     .skill-box:nth-of-type(4) {
                         left: 380px;
                         top: 325px;
+                    }
+
+                    .subject-skill-path:nth-of-type(1) {
+                        right: 330px;
+                        top: 180px;
+                    }
+                    .subject-skill-path:nth-of-type(2) {
+                        left: 335px;
+                        top: 190px;
+                    }
+                    .subject-skill-path:nth-of-type(3) {
+                        right: 335px;
+                        top: 320px;
+                    }
+                    .subject-skill-path:nth-of-type(4) {
+                        left: 325px;
+                        top: 340px;
                     }
 
                     .skill-box:hover {
