@@ -11,17 +11,27 @@ import database from "../../main.json";
 
 // paths and icons
 import Underline from "../../media/underline.svg"
+
 import StartingPath from "../../media/paths/subjects/starting-path.svg";
 import RightPath from "../../media/paths/subjects/right-path.svg";
 import LeftPath from "../../media/paths/subjects/left-path.svg";
 import EndingRightPath from "../../media/paths/subjects/ending-right-path.svg";
 import EndingLeftPath from "../../media/paths/subjects/ending-left-path.svg";
+
+import SkillPath1 from "../../media/paths/subjects/skill-path-1.svg"
+import SkillPath2 from "../../media/paths/subjects/skill-path-2.svg"
+import SkillPath3 from "../../media/paths/subjects/skill-path-3.svg"
+import SkillPath4 from "../../media/paths/subjects/skill-path-4.svg"
+
 import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
 import { Link } from "react-router-dom";
 
 function Subjects() {
     // lodash
     const _ = require('lodash');
+
+    // Display skill Paths
+    const displaySkillPaths = true;
 
     const { semesterId } = useParams();
     // const semesterNumber = parseInt(semesterId.split("-")[1]);
@@ -141,6 +151,10 @@ function Subjects() {
                                         </motion.div>
                                     )
                                     }
+                                    { displaySkillPaths && <img src={ SkillPath1 } alt="SkillPath1" className="subject-skill-path"/>}
+                                    { displaySkillPaths && <img src={ SkillPath2 } alt="SkillPath1" className="subject-skill-path"/>}
+                                    { displaySkillPaths && <img src={ SkillPath3 } alt="SkillPath1" className="subject-skill-path"/>}
+                                    { displaySkillPaths && <img src={ SkillPath4 } alt="SkillPath1" className="subject-skill-path"/>}
                                 </div>
                             </div>
                             { subject["skills"].map(skill => {
