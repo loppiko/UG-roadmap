@@ -39,12 +39,12 @@ function Subjects() {
 
     // Return lecture and practical components
     const returnLectureComponent = (content) => {
-        if (content) return <div className="info-box"><span>Lecture</span>{content}</div>;
+        if (content) return <div className="info-box" key={"lecture-" + content}><span>Lecture</span>{content}</div>;
         else return;
     }
 
     const returnPracticalComponent = (content) => {
-        if (content) return <div className="info-box"><span>Practical</span>{content}</div>;
+        if (content) return <div className="info-box" key={"practical-" + content}><span>Practical</span>{content}</div>;
         else return;
     }
 
@@ -77,16 +77,12 @@ function Subjects() {
     
     // const handleSkillOnClick = (skillToOpen) => skillArray = skillArray.map(skill => (_.isEqual(skillToOpen, skill)) ? Object.assign({}, skill, {"isOpen": true}) : Object.assign({}, skill, {"isOpen": false}));
     const handleSkillOnClick = (skillArray, activeSkill) => {
-        setIdVisable(null);
-        console.log(idVisibleSkill);
 
         skillArray.forEach((elem) => {
             if (_.isEqual(activeSkill, elem["skill"])) {
               setIdVisable(elem["id"]);
             }
           });
-        console.log(idVisibleSkill);
-        console.log(doesSkillMatchActiveId(skillArray, idVisibleSkill, activeSkill))
     }
 
     const dataTransition = {duration:0.5, delay:0.25}
@@ -111,7 +107,7 @@ function Subjects() {
                 {
                     database["semesters"][semesterId].map((subject, index) => {
                         return(
-                        <div className="subject-frame">
+                        <div className="subject-frame" key={ subject["subject-name"] }>
                             <div className="box">
                                 <div className="subject-info">
                                     <div className="info-box"><span>ECTS</span>{subject["ECTS"]}</div>
@@ -127,6 +123,7 @@ function Subjects() {
                                     {
                                     subject["skills"].map(skill => 
                                         <motion.div 
+                                            key={"skill-box-" + skill["skill-name"]}
                                             onClick={() => handleSkillOnClick(skillArray, skill)} 
                                             className="skill-box">{ skill["skill-name"] }
                                         </motion.div>
@@ -141,8 +138,10 @@ function Subjects() {
                                         initial="hidden" 
                                         animate="visible" 
                                         transition={dataTransition} 
-                                        className="skill-description">
-                                        <div className="title">{ skill["skill-name"] }</div>
+                                        className="skill-description"
+                                        key={ "skill-description-" + skill}
+                                        >
+                                        <div className="title" key={ `title-${subject["skills"][skill]}` }>{ skill["skill-name"] }</div>
                                             { skill["description"] }
                                     </motion.div>)
                                 }) 

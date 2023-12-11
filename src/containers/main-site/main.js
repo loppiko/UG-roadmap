@@ -25,7 +25,7 @@ function MainSite() {
             <div className="skills">
                 <div className="content-header">Skills:</div>
                 <div className="skill-button-box">
-                    {database["main"]["skills"].map(content => <button className="skill-button">{content}</button>
+                    {database["main"]["skills"].map(content => <button className="skill-button" key={`main-site-button-${content}`}>{content}</button>
                     )}
                 </div>
                 
