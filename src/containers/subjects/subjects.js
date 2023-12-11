@@ -50,6 +50,18 @@ function Subjects() {
 
     const returnEndingPath = (numberOfSubjects) => (numberOfSubjects % 2 === 1) ? <img src = {EndingRightPath} alt="ending-path" className="subject-path-ending-right"/> : <img src = {EndingLeftPath} alt="ending-path" className="subject-path-ending-left"/>;
 
+
+    // Resolving Sem-name
+
+    const semName = (shift = 0) => {
+        const numberArray = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"];
+        const index = parseInt(semesterId.split("-")[1]) + shift - 1;
+        if (index < numberArray.length) return `${numberArray[index]} semester`;
+        else return `Bachelor project`;
+    }
+
+
+
     // Animations
     const [idVisibleSkill, setIdVisable] = useState(null);
 
@@ -75,7 +87,7 @@ function Subjects() {
         return (!res) ? false : _.isEqual(res["skill"], skill)
     }
     
-    // const handleSkillOnClick = (skillToOpen) => skillArray = skillArray.map(skill => (_.isEqual(skillToOpen, skill)) ? Object.assign({}, skill, {"isOpen": true}) : Object.assign({}, skill, {"isOpen": false}));
+
     const handleSkillOnClick = (skillArray, activeSkill) => {
         setIdVisable(null);
         console.log(idVisibleSkill);
@@ -106,7 +118,7 @@ function Subjects() {
             </div>
             <NavBar/>
             <div className="subjects-content">
-                <div className="subject-sem-name">First Semester</div>
+                <div className="subject-sem-name">{ semName() }</div>
                 <img src={StartingPath} alt="starting-path" className="subject-path-starting"/>
                 {
                     database["semesters"][semesterId].map((subject, index) => {
@@ -152,7 +164,7 @@ function Subjects() {
                     )})
                 }
                 { returnEndingPath(database["semesters"][semesterId].length) }
-                <div className="subject-next-sem-name">Second Semester</div>
+                <div className="subject-next-sem-name">{ semName(1) }</div>
             </div>
         </div>
     );
