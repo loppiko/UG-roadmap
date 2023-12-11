@@ -153,8 +153,8 @@ function Subjects() {
                                     }
                                     { displaySkillPaths && <img src={ SkillPath1 } alt="SkillPath1" className="subject-skill-path"/>}
                                     { displaySkillPaths && <img src={ SkillPath2 } alt="SkillPath1" className="subject-skill-path"/>}
-                                    { displaySkillPaths && <img src={ SkillPath3 } alt="SkillPath1" className="subject-skill-path"/>}
-                                    { displaySkillPaths && <img src={ SkillPath4 } alt="SkillPath1" className="subject-skill-path"/>}
+                                    { displaySkillPaths && (subject["skills"].length > 2) && <img src={ SkillPath3 } alt="SkillPath1" className="subject-skill-path"/>}
+                                    { displaySkillPaths && (subject["skills"].length > 3) && <img src={ SkillPath4 } alt="SkillPath1" className="subject-skill-path"/>}
                                 </div>
                             </div>
                             { subject["skills"].map(skill => {
