@@ -9,6 +9,7 @@ import logoUG from './../media/UG-logo-white.webp';
 import radioIcon from './../media/icons/radio-icon.svg';
 import postIcon from './../media/icons/post-icon.svg';
 import disabilityIcon from './../media/icons/disability-icon.svg';
+import menuIcon from './../media/icons/menu-icon.svg'
 import enIcon from './../media/icons/en-icon.svg';
 
 // database
@@ -49,7 +50,7 @@ function Header() {
             </div>
         </div>
         <div className="center-side">
-            <button className="header-one-icon" onClick={handleButtonClick}><img src={radioIcon} alt="radioIcon"/></button>
+            <button className="header-one-icon" onClick={handleButtonClick}><img src={menuIcon} alt="menuIcon"/></button>
             {isBoxOpen && (
                 <div className="center-box">
                     <div className="center-header-icons">

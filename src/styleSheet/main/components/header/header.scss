@@ -97,6 +97,10 @@ $header-buttons-border: solid 1px $white-text-color;
             padding-right: 1rem;
             background-color: transparent;
             border: none;
+            img {
+                color: $white-text-color;
+                height: 45px;
+            }
         }
         .header-one-icon:hover {
             cursor: pointer;

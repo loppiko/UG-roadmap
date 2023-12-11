@@ -75,6 +75,10 @@ button {
   background-color: transparent;
   border: none;
 }
+.header .center-side .header-one-icon img {
+  color: white;
+  height: 45px;
+}
 .header .center-side .header-one-icon:hover {
   cursor: pointer;
 }
