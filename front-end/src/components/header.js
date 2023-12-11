@@ -24,11 +24,21 @@ function Header() {
           </a>
         </div>
         <div className="header-elements">
-          <button className="header-button">Candidates</button>
-          <button className="header-button">Students</button>
-          <button className="header-button">Workers</button>
-          <button className="header-button">Graduates</button>
-          <button className="header-button">Media</button>
+          <a href="https://www.ug.edu.pl/kandydaci">
+            <button className="header-button">Candidates</button>
+          </a>
+          <a href="https://www.ug.edu.pl/studenci">
+            <button className="header-button">Students</button>
+          </a>
+          <a href="https://www.ug.edu.pl/pracownicy">
+            <button className="header-button">Workers</button>
+          </a>
+          <a href="https://www.ug.edu.pl/absolwenci">
+            <button className="header-button">Graduates</button>
+          </a>
+          <a href="https://www.ug.edu.pl/absolwenci">
+            <button className="header-button">Media</button>
+          </a>
         </div>
       </div>
       <div className="right-side">
