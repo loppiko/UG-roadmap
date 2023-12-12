@@ -62,15 +62,19 @@ function Subjects() {
 
 
     // Resolving Sem-name
+    const numberArray = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"];
 
     const semName = (shift = 0) => {
-        const numberArray = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"];
         const index = parseInt(semesterId.split("-")[1]) + shift - 1;
         if (index < numberArray.length) return `${numberArray[index]} semester`;
         else return `Bachelor project`;
     }
 
-
+    const newSemPath = (shift = 0) => {
+        const index = parseInt(semesterId.split("-")[1]) + shift;
+        if (index <= numberArray.length && index > 0) return `/roadmap-enter/semester-${index}`;
+        else return `/roadmap-enter/${semesterId}`;
+    } 
 
     // Animations
     const [idVisibleSkill, setIdVisable] = useState(null);
@@ -124,7 +128,7 @@ function Subjects() {
             </div>
             <NavBar/>
             <div className="subjects-content">
-                <div className="subject-sem-name">{ semName() }</div>
+                <Link to={newSemPath(-1)} className="subject-sem-name">{ semName() }</Link>
                 <img src={StartingPath} alt="starting-path" className="subject-path-starting"/>
                 {
                     database["semesters"][semesterId].map((subject, index) => {
@@ -177,7 +181,7 @@ function Subjects() {
                     )})
                 }
                 { returnEndingPath(database["semesters"][semesterId].length) }
-                <div className="subject-next-sem-name">{ semName(1) }</div>
+                <Link to={newSemPath(1)} className="subject-next-sem-name">{ semName(1) }</Link>
             </div>
         </div>
     );

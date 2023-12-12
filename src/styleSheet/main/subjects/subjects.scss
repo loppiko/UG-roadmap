@@ -92,6 +92,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             width: 100%;
 
             // margin-bottom: $subjects-sem-name-margin-bottom;
+            text-decoration: none;
             text-align: center;
             font-size: $subjects-sem-same-font-size;
             color: $main-color;
@@ -269,18 +270,18 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             .subject-frame:nth-of-type(#{$frame-number}) {
                 @if $frame-number % 2 == 0 {
                     .box {
-                        margin-left: 0;
-                    }
-                    .skill-description {
-                        right: 0;
-                        bottom: 35px;
-                    }
-                } @else {
-                    .box {
                         margin-right: 0;
                     }
                     .skill-description {
                         left: 0;
+                        bottom: 35px;
+                    }
+                } @else {
+                    .box {
+                        margin-left: 0;
+                    }
+                    .skill-description {
+                        right: 0;
                         bottom: 35px;
                     }
                 }
@@ -298,6 +299,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             width: 100%;
 
             // margin-bottom: $subjects-sem-name-margin-bottom;
+            text-decoration: none;
             text-align: center;
             font-size: $subjects-sem-same-font-size;
             background: -webkit-linear-gradient($main-color, $white-text-color);
