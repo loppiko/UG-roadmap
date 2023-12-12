@@ -688,6 +688,8 @@
       {
         "subject-name": "Physical Education",
         "ECTS": 0,
+        "lecture": "",
+        "laboratory": "30h",
         "skills": [
           {
             "skill-name": "Physical Fitness",
@@ -859,6 +861,8 @@
       {
         "subject-name": "Physical Education",
         "ECTS": 0,
+        "lecture": "",
+        "laboratory": "30h",
         "skills": [
           {
             "skill-name": "Physical Fitness",
@@ -971,6 +975,7 @@
       {
         "subject-name": "Team Project",
         "ECTS": 3,
+        "lecture": "",
         "laboratory": "30h",
         "skills": [
           {
@@ -992,159 +997,61 @@
         ],
         "subject-description": "Team Project focuses on project collaboration, planning, management, problem-solving, and presentation skills. Students work collaboratively on real-world projects, applying acquired skills for successful project outcomes.",
         "language": "Polish",
-        "professor-lecture": "Dr. [Professor Name]",
-        "professor-laboratories": "Dr. [Professor Name]",
+        "professor-lecture": "Dr. Prof. Furmańczyk",
+        "professor-laboratories": "Dr. Prof. Furmańczyk",
         "link": "[Link to Course Syllabus]"
       },
       {
-        "subject-name": "Elementary mathematics",
-        "ECTS": 4,
+        "subject-name": "Main facultative lectures",
+        "ECTS": 5,
         "lecture": "30h",
         "laboratory": "30h",
         "skills": [
           {
-            "skill-name": "analize",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+            "skill-name": "Declarative programming",
+            "description": "This course equips students with the skills to design software using a declarative paradigm. Learn to express the \"what\" of a program rather than the \"how\", emphasizing concise and readable code. Explore languages and frameworks that embrace this approach, fostering a deeper understanding of declarative programming principles."
           },
           {
-            "skill-name": "logic",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+            "skill-name": "Golang",
+            "description": "This course introduces students to the Go programming language, renowned for its simplicity, concurrency support, and rapid compilation. Gain hands-on experience in developing robust and scalable applications, while understanding the unique features that make Golang a preferred choice for cloud-native development and system-level programming."
           },
           {
-            "skill-name": "functions",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "relations",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+            "skill-name": "Numerical algorithms",
+            "description": "This course delves into the development and implementation of algorithms for numerical computation. Explore methods for solving equations, interpolation, optimization, and more. Acquire the tools to tackle complex problems in fields such as engineering, physics, and finance by mastering the numerical techniques that underpin a wide range of scientific and computational applications."
           }
         ],
-        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "subject-description": "In this course, students have the freedom to choose one of these three subjects, each providing a distinct and enriching learning experience. \"Declarative Programming\" explores the art of crafting concise and expressive code, while \"Golang\" introduces students to the efficiency and simplicity of the Go programming language. On the other hand, \"Numerical Algorithms\" guides students through the intricate world of mathematical algorithms and their applications.",
         "language": "Polish",
-        "professor-lecture": "Dr. Mateusz Miotk",
-        "professor-laboratories": "Dr. Mateusz Miotk",
-        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+        "professor-lecture": "Dr. Prof. Arłukowicz",
+        "professor-laboratories": "Dr. Prof. Arłukowicz",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/108752/files/syl_jezyki_programowania_2021-1649053879756.pdf"
       },
       {
-        "subject-name": "Elementary mathematics",
-        "ECTS": 4,
-        "lecture": "30h",
-        "laboratory": "30h",
+        "subject-name": "Minor facultative lectures",
+        "ECTS": 2,
+        "lecture": "15h",
+        "laboratory": "15h",
         "skills": [
           {
-            "skill-name": "analize",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+            "skill-name": "cryptography",
+            "description": "Students will explore the principles and techniques of encryption and decryption, learning how to design and implement secure cryptographic systems. From classical ciphers to modern algorithms, this course provides a comprehensive understanding of the mathematical foundations and practical applications of cryptography in the digital age."
           },
           {
-            "skill-name": "logic",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "functions",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "relations",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
+            "skill-name": "C++",
+            "description": "This course covers the fundamentals and advanced features of C++. From object-oriented programming to memory management, participants will gain hands-on experience in building robust and scalable software applications. Whether aspiring to develop system-level software or create complex algorithms, this course equips students with the skills needed to excel in the world of C++ programming."
           }
         ],
-        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
+        "subject-description": "Encourages students to explore their specific interests and deepen their expertise in either the realm of secure communication and data protection or high-performance programming. This elective offers a valuable opportunity for a more specialized and focused learning experience, aligning with individual academic and career aspirations. Students can seize the chance to expand their skill set and knowledge in a targeted area, enhancing their overall academic and professional profile.",
         "language": "Polish",
-        "professor-lecture": "Dr. Mateusz Miotk",
-        "professor-laboratories": "Dr. Mateusz Miotk",
-        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-      },
-      {
-        "subject-name": "Elementary mathematics",
-        "ECTS": 4,
-        "lecture": "30h",
-        "laboratory": "30h",
-        "skills": [
-          {
-            "skill-name": "analize",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "logic",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "functions",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "relations",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          }
-        ],
-        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-        "language": "Polish",
-        "professor-lecture": "Dr. Mateusz Miotk",
-        "professor-laboratories": "Dr. Mateusz Miotk",
-        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-      },
-      {
-        "subject-name": "Elementary mathematics",
-        "ECTS": 4,
-        "lecture": "30h",
-        "laboratory": "30h",
-        "skills": [
-          {
-            "skill-name": "analize",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "logic",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "functions",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "relations",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          }
-        ],
-        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-        "language": "Polish",
-        "professor-lecture": "Dr. Mateusz Miotk",
-        "professor-laboratories": "Dr. Mateusz Miotk",
-        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
-      },
-      {
-        "subject-name": "Elementary mathematics",
-        "ECTS": 4,
-        "lecture": "30h",
-        "laboratory": "30h",
-        "skills": [
-          {
-            "skill-name": "analize",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "logic",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "functions",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          },
-          {
-            "skill-name": "relations",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vero totam? Tenetur dolorum ducimus quasi sed est fuga distinctio dolores, nemo, pariatur id aut illo aliquam laboriosam libero quam delectus!"
-          }
-        ],
-        "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
-        "language": "Polish",
-        "professor-lecture": "Dr. Mateusz Miotk",
-        "professor-laboratories": "Dr. Mateusz Miotk",
-        "link": "https://mfi.ug.edu.pl/sites/mfi.ug.edu.pl/files/_nodes/strona/111793/files/syl-matematyka-dyskretna-2023-1694085765501.pdf"
+        "professor-lecture": "Dr. Prof. Borzyszkowski",
+        "professor-laboratories": "Dr. Prof. Borzyszkowski",
+        "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/80054/files/syl_podstawy_kryptografii_2020-1611642968561.pdf"
       },
       {
         "subject-name": "University Wide Lecture",
         "ECTS": 2,
         "lecture": "30h",
+        "laboratory": "",
         "skills": [
           {
             "skill-name": "Critical Thinking",
