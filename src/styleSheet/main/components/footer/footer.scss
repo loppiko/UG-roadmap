@@ -11,9 +11,21 @@ $footer-margin-top: 4.5rem;
     align-items: center;
 
     width: 100%;
-    margin-top: $footer-margin-top;
-    height: $footer-height;
+    // margin-top: $footer-margin-top;
+    // height: $footer-height;
     background-color: $main-color;
     color: $white-text-color;
-    font-size: 1.5rem;
+    // font-size: 1.5em;
+    height: 40em;
+    .first-column {
+        display: inline;
+        padding: 13em;
+        padding-bottom: 4em;
+        .footer-icon {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            background-color: transparent;
+            border: none;
+        }
+    }
 }
