@@ -1397,13 +1397,13 @@
             "link": "https://www.facebook.com/profile.php?id=100063871575315",
             "inscription": "Facebook Dziekanatu WMFI"
         },
-        "informacion about": [
+        "information about": [
             {
-                "link": "https://ug.edu.pl/o-uczelni/wydzialy",
+                "link": "https://old-en.ug.edu.pl/university/faculties_and_other_units",
                 "inscription": "Faculties"
             },
             {
-                "link": "https://sd.ug.edu.pl/",
+                "link": "https://sd.ug.edu.pl/en",
                 "inscription": "Doctoral Schools"
             },
             {
@@ -1411,11 +1411,11 @@
                 "inscription": "International Research Centres"
             },
             {
-                "link": "https://bg.ug.edu.pl/",
+                "link": "https://en.bg.ug.edu.pl/",
                 "inscription": "Library"
             },
             {
-                "link": "https://cjo.ug.edu.pl/",
+                "link": "https://en.cjo.ug.edu.pl/en/",
                 "inscription": "Foreign Languages Centre"
             },
             {
@@ -1443,15 +1443,15 @@
                 "inscription": "Current projects"
             },
             {
-                "link": "https://old.ug.edu.pl/o_uczelni/struktura_ug",
+                "link": "https://old-en.ug.edu.pl/staff/organisational_structure",
                 "inscription": "Academic units and organisations"
             },
             {
-                "link": "https://old.ug.edu.pl/pracownicy/szukaj",
+                "link": "https://old-en.ug.edu.pl/staff/search",
                 "inscription": "Find an employee"
             },
             {
-                "link":"https://faru.edu.pl/",
+                "link":"https://faru.edu.pl/en",
                 "inscription": "Fahrenheit Universities"
             },
             {
@@ -1459,7 +1459,7 @@
                 "inscription": "EZD Competence Centre"
             }
         ],
-        "informacion for": [
+        "information for": [
             {
                 "link":"https://en.ug.edu.pl/incoming-students",
                 "inscription": "Candidates"

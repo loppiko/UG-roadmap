@@ -5,18 +5,19 @@ import radioIcon from './../media/icons/radio-icon.svg';
 
 // database
 import database from "./../main.json";
+import { Link } from "react-router-dom";
 
 function Footer() {
-    const informacionAbout = database["footer"]["informacion about"].map( (informacion ) => {
-        return <a href={informacion.link}>{informacion.inscription}</a>
+    const informationAbout = database["footer"]["information about"].map( (information ) => {
+        return <Link to={information.link} className="footer-information-about-inscriptions-link">{information.inscription}</Link>
     });
 
-    const informacionFor = database["footer"]["informacion for"].map( (informacion ) => {
-        return <a href={informacion.link}>{informacion.inscription}</a>
+    const informationFor = database["footer"]["information for"].map( (information ) => {
+        return <Link to={information.link} className="footer-information-for-inscriptions-link">{information.inscription}</Link>
     })
 
     const other = database["footer"]["other"].map( (information ) => {
-        return <a href={information.link}>{information.inscription}</a>
+        return <Link to={information.link} className="footer-other-inscriptions-link">{information.inscription}</Link>
     })
 
     return (
@@ -35,26 +36,26 @@ function Footer() {
             <div className="facebook">
                 <div className="faculty-facebook">
                     <button className="faculty-facebook-icon"><img src={radioIcon} alt="radioIcon"/></button>
-                    <a href={database["footer"]["faculty facebook"]["link"]}>
+                    <Link to={database["footer"]["faculty facebook"]["link"]} className="footer-faculty-facebook-icon-link">
                         {database["footer"]["faculty facebook"]["inscription"]}
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="office-facebook">
                     <button className="office-facebook-icon"><img src={radioIcon} alt="radioIcon"/></button>
-                    <a href={database["footer"]["office facebook"]["link"]}>
+                    <Link to={database["footer"]["office facebook"]["link"]} className="footer-office-facebook-icon-link">
                         {database["footer"]["office facebook"]["inscription"]}
-                    </a>
+                    </Link>
                 </div>     
             </div>
         </div>
-        <div className="informacion-about">
-            <div className="informaction-about-inscription">Informacion about</div>
-            <div className="informaction-about-inscriptions">{informacionAbout}</div>
+        <div className="information-about">
+            <div className="information-about-inscription">Information about</div>
+            <div className="information-about-inscriptions">{informationAbout}</div>
         </div>
-        <div className="informacion-for">
-            <div className="informaction-for-inscription">Informacion about</div>
-            <div className="informaction-about-inscriptions">{informacionFor}</div>
+        <div className="information-for">
+            <div className="information-for-inscription">Information about</div>
+            <div className="information-for-inscriptions">{informationFor}</div>
         </div>
         <div className="other">
             <div className="other-inscription">Other</div>

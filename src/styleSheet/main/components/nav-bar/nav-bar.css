@@ -27,4 +27,17 @@ button {
 }
 .nav-bar .main-page-button:hover, .nav-bar .previous-site-button:hover, .nav-bar .next-site-button:hover {
   background-color: #011946;
+}
+
+@media only screen and ((max-width: 430px) and (max-height: 1300px)) {
+  .nav-bar {
+    padding-left: 1em;
+    width: 30em;
+  }
+  .nav-bar .main-page-button, .nav-bar .previous-site-button, .nav-bar .next-site-button {
+    font-size: 0.7em;
+    padding-left: 1.7em;
+    padding-right: 1.7em;
+    margin-right: 4em;
+  }
 }/*# sourceMappingURL=nav-bar.css.map */
