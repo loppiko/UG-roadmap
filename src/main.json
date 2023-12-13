@@ -41,19 +41,19 @@
         "laboratory": "30h",
         "skills": [
           {
-            "skill-name": "analize",
+            "skill-name": "Analize",
             "description": "Analysis in elementary mathematics involves breaking down complex problems into simpler components. It encompasses the study of patterns, trends, and properties within numerical and algebraic structures."
           },
           {
-            "skill-name": "logic",
+            "skill-name": "Logic",
             "description": "Logic is the study of reasoning and the principles of valid argumentation. In elementary mathematics, it helps in constructing sound mathematical arguments and proofs."
           },
           {
-            "skill-name": "functions",
+            "skill-name": "Functions",
             "description": "Functions represent relationships between variables. In elementary mathematics, understanding functions involves recognizing input-output mappings and exploring how different mathematical operations affect these relationships."
           },
           {
-            "skill-name": "relations",
+            "skill-name": "Relations",
             "description": "Relations describe connections between sets of elements. In elementary mathematics, relations involve understanding how elements in one set relate to elements in another set."
           }
         ],
@@ -71,15 +71,15 @@
         "laboratory": "30h",
         "skills": [
           {
-            "skill-name": "graph theory",
+            "skill-name": "Graph theory",
             "description": "Graph theory studies the relationships and connections between discrete objects represented as vertices and edges. In discrete mathematics, it is used to model and analyze networks, relationships, and structures."
           },
           {
-            "skill-name": "propability",
+            "skill-name": "Propability",
             "description": "Probability in discrete mathematics deals with the likelihood of events occurring within a set of possible outcomes. It provides a mathematical framework for uncertainty and randomness."
           },
           {
-            "skill-name": "arythmetics",
+            "skill-name": "Arythmetics",
             "description": "Arithmetic in the context of discrete mathematics involves the study of whole numbers and their properties, including divisibility, prime numbers, and modular arithmetic."
           }
         ],
@@ -96,19 +96,19 @@
         "laboratory": "30h",
         "skills": [
           {
-            "skill-name": "git",
+            "skill-name": "Git",
             "description": "Git is a distributed version control system used for tracking changes in source code during software development. It enables collaboration among multiple developers by managing different versions of a project and facilitates branching, merging, and tracking changes over time."
           },
           {
-            "skill-name": "bash",
+            "skill-name": "Bash",
             "description": "Bash, or the Bourne Again Shell, is a command-line interpreter for Unix-like operating systems. It provides a text-based interface to interact with the system, execute commands, and automate tasks through scripting. Bash is a powerful tool for system administration and development workflows."
           },
           {
-            "skill-name": "linux",
+            "skill-name": "Linux",
             "description": "Linux is an open-source operating system kernel that serves as the foundation for various Unix-like operating systems. It is widely used in servers, embedded systems, and development environments. Understanding Linux is crucial for system administration, software development, and working with server-based applications."
           },
           {
-            "skill-name": "terminal",
+            "skill-name": "Terminal",
             "description": "The terminal, or command-line interface, is a text-based interface to interact with the computer's operating system. It provides a powerful way to execute commands, manage files, and perform various tasks without a graphical user interface. Terminals are commonly used in programming, system administration, and development workflows."
           }
         ],
@@ -125,15 +125,15 @@
         "laboratory": "45h",
         "skills": [
           {
-            "skill-name": "simple algorythms",
+            "skill-name": "Simple algorythms",
             "description": "Participants are introduced to basic algorithms, step-by-step procedures for solving problems. Emphasis is on understanding algorithmic thinking and translating logical steps into executable code."
           },
           {
-            "skill-name": "programming concepts",
+            "skill-name": "Programming concepts",
             "description": "Core programming concepts are covered, including variables, control flow (if statements, loops), functions, and error handling. Participants learn to write structured and modular code."
           },
           {
-            "skill-name": "simple data structures",
+            "skill-name": "Simple data structures",
             "description": "The basics of data structures are explored, focusing on essential types such as lists, dictionaries, and sets. Participants understand how to organize and manipulate data efficiently."
           }
         ],
@@ -150,19 +150,19 @@
         "laboratory": "30h",
         "skills": [
           {
-            "skill-name": "network basics",
+            "skill-name": "Network basics",
             "description": "Participants delve into the basics of computer networks, learning about different types of networks (Local Area Networks - LANs, Wide Area Networks - WANs), network devices, and the principles of data transmission across networks."
           },
           {
-            "skill-name": "protocols",
+            "skill-name": "Protocols",
             "description": "Understanding network protocols is essential. Participants explore the rules and conventions that govern data communication, including the TCP/IP suite. Protocols such as HTTP, FTP, and SMTP are discussed, emphasizing their roles in enabling different network services."
           },
           {
-            "skill-name": "internet achitecture",
+            "skill-name": "Internet achitecture",
             "description": "The architecture of the internet is explored, covering the interconnected web of networks globally. Topics include the client-server model, the Domain Name System (DNS), and the role of Internet Service Providers (ISPs) in facilitating connectivity."
           },
           {
-            "skill-name": "routing and switching",
+            "skill-name": "Routing and switching",
             "description": "Routing and switching form the backbone of network functionality. Participants learn about routers and switches, the mechanisms behind data packet forwarding, and the protocols (e.g., RIP, OSPF) that determine optimal paths for data to travel through a network."
           }
         ],
@@ -179,15 +179,15 @@
         "laboratory": "15h",
         "skills": [
           {
-            "skill-name": "html",
+            "skill-name": "Html",
             "description": "HTML serves as the backbone of web content. Participants learn the structure of web pages, understanding how to create and organize content using HTML elements. Topics include headings, paragraphs, links, lists, and basic forms."
           },
           {
-            "skill-name": "css",
+            "skill-name": "Css",
             "description": "CSS is introduced for styling and layout purposes. Participants explore the styling of HTML elements, including text formatting, color schemes, layout models, and responsive design principles. The concept of selectors and specificity is emphasized."
           },
           {
-            "skill-name": "sass",
+            "skill-name": "Sass",
             "description": "Building on CSS, participants are introduced to SASS, a preprocessor scripting language. SASS enhances the capabilities of CSS by introducing variables, nesting, mixins, and other features that streamline the styling process."
           }
         ],
@@ -204,19 +204,19 @@
         "laboratory": "30h",
         "skills": [
           {
-            "skill-name": "database design",
+            "skill-name": "Database design",
             "description": "Participants learn the principles of designing efficient and normalized databases. Topics include entity-relationship modeling, defining tables, establishing relationships, and ensuring data integrity through normalization."
           },
           {
-            "skill-name": "administration",
+            "skill-name": "Administration",
             "description": "The course covers the basics of database administration, including installation, configuration, and management of database systems. Participants gain insights into security measures, backup and recovery procedures, and performance optimization."
           },
           {
-            "skill-name": "data modeling",
+            "skill-name": "Data modeling",
             "description": "Data modeling is introduced as a crucial step in the database design process. Participants explore conceptual, logical, and physical data modeling, emphasizing the importance of accurately representing real-world scenarios within the database structure."
           },
           {
-            "skill-name": "t-sql",
+            "skill-name": "T-sql",
             "description": "T-SQL, the extension of SQL for Microsoft SQL Server, is introduced for querying and manipulating data. Participants learn the syntax for creating and managing database objects, writing queries, and performing common data manipulation tasks."
           }
         ],
@@ -233,19 +233,19 @@
         "laboratory": "60h",
         "skills": [
           {
-            "skill-name": "technical terminology",
+            "skill-name": "Technical terminology",
             "description": "Participants learn and practice the specific technical vocabulary used in informatics, including terms related to programming languages, algorithms, data structures, and system architecture."
           },
           {
-            "skill-name": "communication strategies",
+            "skill-name": "Communication strategies",
             "description": "The course emphasizes effective communication strategies in both written and verbal forms. Participants learn to convey complex technical concepts clearly and concisely, fostering efficient collaboration within the informatics community."
           },
           {
-            "skill-name": "writing skills",
+            "skill-name": "Writing skills",
             "description": "Writing skills are honed with a focus on various genres relevant to informatics, such as technical documentation, research papers, and project reports. Participants develop the ability to articulate ideas logically and persuasively."
           },
           {
-            "skill-name": "professional communication",
+            "skill-name": "Professional communication",
             "description": "The course addresses the nuances of professional communication within the informatics context. This includes email etiquette, presentation skills, and effective communication in meetings and discussions."
           }
         ],
@@ -264,15 +264,15 @@
         "laboratory": "15h",
         "skills": [
           {
-            "skill-name": "regular expressions",
+            "skill-name": "Regular expressions",
             "description": "Regular expressions are a powerful tool for pattern matching and text processing. They are a concise way to describe sets of strings based on specific patterns."
           },
           {
-            "skill-name": "touring machines (automats)",
+            "skill-name": "Touring machines (automats)",
             "description": "Turing machines and automata are abstract mathematical models of computation. They consist of states, transitions, and an input tape and help analyze the capabilities and limitations of algorithms."
           },
           {
-            "skill-name": "context-free grammars",
+            "skill-name": "Context-free grammars",
             "description": "Are used to describe context-free languages. A context-free grammar is a set of recursive rules used to generate patterns of strings. A context-free grammar can describe all regular languages and more, but they cannot describe all possible languages."
           }
         ],
@@ -290,19 +290,19 @@
         "laboratory": "30h",
         "skills": [
           {
-            "skill-name": "operations on matrices",
+            "skill-name": "Operations on matrices",
             "description": "Participants learn the basic operations involving matrices, including addition, subtraction, scalar multiplication, and matrix multiplication. These operations lay the foundation for more advanced linear algebra concepts."
           },
           {
-            "skill-name": "systems of linear equations",
+            "skill-name": "Systems of linear equations",
             "description": "The course addresses the representation and solution of systems of linear equations. Participants learn techniques such as Gaussian elimination and matrix inverses to solve systems of equations and analyze the properties of solutions."
           },
           {
-            "skill-name": "dot product",
+            "skill-name": "Dot product",
             "description": "The dot product (also known as the inner product) is introduced as a fundamental operation in linear algebra. Participants explore its geometric interpretation, properties, and applications in vector spaces."
           },
           {
-            "skill-name": "matrix vectors",
+            "skill-name": "Matrix vectors",
             "description": "Matrix-vector multiplication is covered, emphasizing its role in transforming vectors and solving systems of linear equations. Participants learn to represent linear transformations using matrices and understand their impact on vector spaces."
           }
         ],
@@ -319,15 +319,15 @@
         "laboratory": "30h",
         "skills": [
           {
-            "skill-name": "algorythms",
+            "skill-name": "Algorythms",
             "description": "Participants study specific sorting algorithms, including Heapsort and Quicksort. Emphasis is placed on understanding their principles, implementation, and analyzing their efficiency in different scenarios."
           },
           {
-            "skill-name": "time analysis",
+            "skill-name": "Time analysis",
             "description": "The course delves into the analysis of algorithmic efficiency, considering semantic correctness, pessimistic time complexity, and lower bounds of pessimistic and expected time complexity. Participants explore mathematical models for evaluating algorithm performance."
           },
           {
-            "skill-name": "data structures",
+            "skill-name": "Data structures",
             "description": "The course covers essential data structures, including stacks, queues, and linked structures. Participants learn how to implement and utilize these structures to efficiently manage and organize data."
           }
         ],
@@ -356,7 +356,7 @@
             "description": "The course delves into the principles of object-oriented programming (OOP) and functional programming (FP). Participants understand how to combine these paradigms for effective code design and readability."
           },
           {
-            "skill-name": "collection mechanisms",
+            "skill-name": "Collection mechanisms",
             "description": "The course covers the collection mechanisms available in the chosen programming language(s), emphasizing data structures like lists, maps, and sets. Participants learn to manipulate and process collections using both imperative and functional styles."
           }
         ],
@@ -385,7 +385,7 @@
             "description": "The course explores asynchronous programming patterns in JavaScript, including the event loop, callbacks, promises, and async/await. Participants gain a deep understanding of managing asynchronous operations in both client-side and server-side code."
           },
           {
-            "skill-name": "yarn",
+            "skill-name": "Yarn",
             "description": "Yarn, a package manager for JavaScript, is introduced for managing project dependencies efficiently. Participants learn how to use Yarn to install, manage, and update packages in their JavaScript projects."
           }
         ],
@@ -402,15 +402,15 @@
         "laboratory": "15h",
         "skills": [
           {
-            "skill-name": "discutions and lectures with Pro-s",
+            "skill-name": "Discutions and lectures with Pro-s",
             "description": "The course features discussions and lectures led by industry professionals and experts. Participants engage with practitioners who share insights, experiences, and real-world applications of computer science in diverse industries."
           },
           {
-            "skill-name": "discovering innovations",
+            "skill-name": "Discovering innovations",
             "description": "Participants explore recent innovations and emerging technologies in the field of computer science. This may include discussions on artificial intelligence, machine learning, blockchain, quantum computing, and other contemporary areas."
           },
           {
-            "skill-name": "various areas of the industry",
+            "skill-name": "Various areas of the industry",
             "description": "The course delves into the diverse applications of computer science across industries such as healthcare, finance, entertainment, transportation, and more. Participants gain an understanding of how computer science is driving innovation and transforming different sectors."
           }
         ],
@@ -456,19 +456,19 @@
         "laboratory": "60h",
         "skills": [
           {
-            "skill-name": "technical terminology",
+            "skill-name": "Technical terminology",
             "description": "Participants learn and practice the specific technical vocabulary used in informatics, including terms related to programming languages, algorithms, data structures, and system architecture."
           },
           {
-            "skill-name": "communication strategies",
+            "skill-name": "Communication strategies",
             "description": "The course emphasizes effective communication strategies in both written and verbal forms. Participants learn to convey complex technical concepts clearly and concisely, fostering efficient collaboration within the informatics community."
           },
           {
-            "skill-name": "writing skills",
+            "skill-name": "Writing skills",
             "description": "Writing skills are honed with a focus on various genres relevant to informatics, such as technical documentation, research papers, and project reports. Participants develop the ability to articulate ideas logically and persuasively."
           },
           {
-            "skill-name": "professional communication",
+            "skill-name": "Professional communication",
             "description": "The course addresses the nuances of professional communication within the informatics context. This includes email etiquette, presentation skills, and effective communication in meetings and discussions."
           }
         ],
@@ -503,7 +503,7 @@
             "description": " Distributed databases involve managing and querying data across multiple interconnected databases. This skill requires understanding the challenges of distributed systems, mastering data distribution strategies, and ensuring consistency, availability, and partition tolerance in distributed database environments."
           }
         ],
-        "subject-description": "Databases 2 builds upon the foundational knowledge acquired in Databases 1, delving deeper into the intricacies of database management systems. This advanced course focuses on refining students' expertise in database design, optimization, and security. Topics covered include query optimization techniques, advanced data modeling principles, and the complexities of managing distributed databases. Students explore practical applications of these concepts, gaining hands-on experience in tackling real-world database challenges. By the end of the course, students are equipped with the skills needed to design, secure, and optimize sophisticated database systems that can efficiently handle large-scale and distributed data environments.",
+        "subject-description": "Databases 2 builds upon the foundational knowledge acquired in Databases 1, delving deeper into the intricacies of database management systems. This advanced course focuses on refining students' expertise in database design, optimization, and security. Topics covered include query optimization techniques, advanced data modeling principles, and the complexities of managing distributed databases. Students explore practical applications of these concepts, gaining hands-on experience in tackling real-world database challenges.",
         "language": "Polish",
         "professor-lecture": "Dr. Wiesław Pawłowski",
         "professor-laboratories": "Dr. Andrzej Borzyszkowski and Dr. Tomasz Borzyszkowski",
@@ -717,25 +717,25 @@
         "laboratory": "60h",
         "skills": [
           {
-            "skill-name": "technical terminology",
+            "skill-name": "Technical terminology",
             "description": "Participants learn and practice the specific technical vocabulary used in informatics, including terms related to programming languages, algorithms, data structures, and system architecture."
           },
           {
-            "skill-name": "communication strategies",
+            "skill-name": "Communication strategies",
             "description": "The course emphasizes effective communication strategies in both written and verbal forms. Participants learn to convey complex technical concepts clearly and concisely, fostering efficient collaboration within the informatics community."
           },
           {
-            "skill-name": "writing skills",
+            "skill-name": "Writing skills",
             "description": "Writing skills are honed with a focus on various genres relevant to informatics, such as technical documentation, research papers, and project reports. Participants develop the ability to articulate ideas logically and persuasively."
           },
           {
-            "skill-name": "professional communication",
+            "skill-name": "Professional communication",
             "description": "The course addresses the nuances of professional communication within the informatics context. This includes email etiquette, presentation skills, and effective communication in meetings and discussions."
           }
         ],
         "subject-description": "The subject is focuses on presenting detailed information regarding the covering scope basics, algebra, discrete (elements of logic and set theory, combinatorics and graph theory) and probabilistic methods.",
         "language": "Polish",
-        "professor-lecture": "",
+        "professor-lecture": "Dr. Prof. Mazurkiewicz",
         "professor-laboratories": "Dr. Prof. Mazurkiewicz",
         "link": "https://mfi.ug.edu.pl/sites/default/files/_nodes/strona-mfi/110313/files/syl_jezyk_angielski_2022-1654500148980.pdf"
       }
@@ -1033,7 +1033,7 @@
         "laboratory": "15h",
         "skills": [
           {
-            "skill-name": "cryptography",
+            "skill-name": "Cryptography",
             "description": "Students will explore the principles and techniques of encryption and decryption, learning how to design and implement secure cryptographic systems. From classical ciphers to modern algorithms, this course provides a comprehensive understanding of the mathematical foundations and practical applications of cryptography in the digital age."
           },
           {
