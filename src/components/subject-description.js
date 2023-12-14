@@ -1,6 +1,8 @@
 import React from "react";
 import {motion} from "framer-motion";
 import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
+import { Link } from "react-router-dom";
+
 
 // database
 import database from "../main.json";
@@ -36,13 +38,13 @@ function SubjectDescription({handleTransparentOnClick}) {
                 </div>
                 <div className="component-subject-non-transparent-subject-professor"></div>
                 <div className="component-subject-non-transparent-subject-description-title">Lecture leading professor:</div>
-                <a href="https://old.mfi.ug.edu.pl/pracownik/51540/mateusz_miotk" className="component-subject-non-transparent-subject-description-professor-site">{currentSubject["professor-lecture"]}</a>
+                <Link to="https://old.mfi.ug.edu.pl/pracownik/51540/mateusz_miotk" className="component-subject-non-transparent-subject-description-professor-site">{currentSubject["professor-lecture"]}</Link>
                 <motion.div 
                 whileHover={{ scale: 1.1 }}
                 onHoverStart={e => {}}
                 onHoverEnd={e => {}}
                 className="component-subject-non-transparent-sylabus">
-                    <a href={currentSubject["link"]} className="component-subject-non-transparent-sylabus-link" >Link to sylabus</a>
+                    <Link to={currentSubject["link"]} className="component-subject-non-transparent-sylabus-link" >Link to sylabus</Link>
                     </motion.div>
             </motion.div>
         </div>

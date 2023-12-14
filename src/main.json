@@ -1156,149 +1156,149 @@
         "language": "Polish"
       }
     ]
-  }
-}
+  },
 
-"footer": {
-        "faculty": "Faculty of Mathematics, Physic and Informatics of the University of Gdansk",
-        "address": "ul. Wita Stwosza 57, 80-308 Gdańsk",
-        "telephone": "tel.: + 48 58 523 20 27",
-        "mail": "dziekmf@ug.edu.pl",
-        "reception": "Portiernia: + 48 58 523 21 02",
-        "faculty facebook": {
-            "link": "https://www.facebook.com/mfiug/",
-            "inscription": "Facebook WMFI"
+  "footer": {
+    "faculty": "Faculty of Mathematics, Physic and Informatics of the University of Gdansk",
+    "address": "ul. Wita Stwosza 57, 80-308 Gdańsk",
+    "telephone": "tel.: + 48 58 523 20 27",
+    "mail": "dziekmf@ug.edu.pl",
+    "reception": "Portiernia: + 48 58 523 21 02",
+    "faculty facebook": {
+        "link": "https://www.facebook.com/mfiug/",
+        "inscription": "Facebook WMFI"
+    },
+    "office facebook": {
+        "link": "https://www.facebook.com/profile.php?id=100063871575315",
+        "inscription": "Facebook Dziekanatu WMFI"
+    },
+    "information about": [
+        {
+            "link": "https://old-en.ug.edu.pl/university/faculties_and_other_units",
+            "inscription": "Faculties"
         },
-        "office facebook": {
-            "link": "https://www.facebook.com/profile.php?id=100063871575315",
-            "inscription": "Facebook Dziekanatu WMFI"
+        {
+            "link": "https://sd.ug.edu.pl/en",
+            "inscription": "Doctoral Schools"
         },
-        "information about": [
-            {
-                "link": "https://old-en.ug.edu.pl/university/faculties_and_other_units",
-                "inscription": "Faculties"
-            },
-            {
-                "link": "https://sd.ug.edu.pl/en",
-                "inscription": "Doctoral Schools"
-            },
-            {
-                "link": "https://ug.edu.pl/o-uczelni/miedzynarodowe-centra-badawcze",
-                "inscription": "International Research Centres"
-            },
-            {
-                "link": "https://en.bg.ug.edu.pl/",
-                "inscription": "Library"
-            },
-            {
-                "link": "https://en.cjo.ug.edu.pl/en/",
-                "inscription": "Foreign Languages Centre"
-            },
-            {
-                "link": "https://sport.ug.edu.pl/",
-                "inscription": "Centre for Physical Education and Sport"
-            },
-            {
-                "link": "https://wydawnictwo.ug.edu.pl/",
-                "inscription": "Publishing House"
-            },
-            {
-                "link": "https://ug.edu.pl/zycie-studenckie/samorzad-studentow",
-                "inscription": "Student Council"
-            },
-            {
-                "link": "https://ug.edu.pl/studenci/studia-trzeciego-stopnia/organizacje/samorzad-doktorantow-rada-doktorantow",
-                "inscription": "Doctoral Student Council"
-            },
-            {
-                "link": "https://ug.edu.pl/nauka/inicjatywa-doskonalosci-uczelnia-badawcza",
-                "inscription": "Scientific excellence programmes"
-            },
-            {
-                "link": "https://ug.edu.pl/nauka/biuro-wsparcia-przygotowania-projektow-inkubator-projektowy/realizowane-projekty-rozwojowe",
-                "inscription": "Current projects"
-            },
-            {
-                "link": "https://old-en.ug.edu.pl/staff/organisational_structure",
-                "inscription": "Academic units and organisations"
-            },
-            {
-                "link": "https://old-en.ug.edu.pl/staff/search",
-                "inscription": "Find an employee"
-            },
-            {
-                "link":"https://faru.edu.pl/en",
-                "inscription": "Fahrenheit Universities"
-            },
-            {
-                "link":"https://ug.edu.pl/ck-ezd",
-                "inscription": "EZD Competence Centre"
-            }
-        ],
-        "information for": [
-            {
-                "link":"https://en.ug.edu.pl/incoming-students",
-                "inscription": "Candidates"
-            },
-            {
-                "link":"https://en.ug.edu.pl/study",
-                "inscription": "Students"
-            },
-            {
-                "link":"https://ug.edu.pl/studenci/studia-trzeciego-stopnia",
-                "inscription": "PhD Students"
-            },
-            {
-                "link":"https://ug.edu.pl/absolwenci",
-                "inscription": "Alumni"
-            },
-            {
-                "link":"https://en.ug.edu.pl/staff",
-                "inscription": "Employees"
-            },
-            {
-                "link":"https://ug.edu.pl/wspolpraca/otoczenie-spoleczno-gospodarcze",
-                "inscription": "Socio-economic environment"
-            },
-            {
-                "link":"https://ug.edu.pl/media",
-                "inscription": "Media"
-            }
-        ],
-        "other": [
-            {
-                "link":"https://ug.edu.pl/pracownicy/strony_jednostek/biuro_ksztalcenia/organizacja_roku_akademickiego",
-                "inscription": "Academic Year Calendar"
-            },
-            {
-                "link":"",
-                "inscription": "Helpdesk"
-            },
-            {
-                "link":"https://gazeta.ug.edu.pl/",
-                "inscription": "University magazine"
-            },
-            {
-                "link":"https://bip.ug.edu.pl/",
-                "inscription": "BIP"
-            },
-            {
-                "link":"https://ug.edu.pl/o_uczelni/mapa_ug/mapy_kampusow",
-                "inscription": "UG campuses"
-            },
-            {
-                "link":"https://biuro-karier.ug.edu.pl/pl/",
-                "inscription": "Career Services"
-            },
-            {
-                "link":"https://bip.ug.edu.pl/ogloszenia_i_komunikaty/praca_na_ug",
-                "inscription": "Job vacancies"
-            },
-            {
-                "link":"https://en.ug.edu.pl/strona/104452/declaration_accessibility_-_enugedupl",
-                "inscription": "Accessibility declaration"
-            }
-        ]
+        {
+            "link": "https://ug.edu.pl/o-uczelni/miedzynarodowe-centra-badawcze",
+            "inscription": "International Research Centres"
+        },
+        {
+            "link": "https://en.bg.ug.edu.pl/",
+            "inscription": "Library"
+        },
+        {
+            "link": "https://en.cjo.ug.edu.pl/en/",
+            "inscription": "Foreign Languages Centre"
+        },
+        {
+            "link": "https://sport.ug.edu.pl/",
+            "inscription": "Centre for Physical Education and Sport"
+        },
+        {
+            "link": "https://wydawnictwo.ug.edu.pl/",
+            "inscription": "Publishing House"
+        },
+        {
+            "link": "https://ug.edu.pl/zycie-studenckie/samorzad-studentow",
+            "inscription": "Student Council"
+        },
+        {
+            "link": "https://ug.edu.pl/studenci/studia-trzeciego-stopnia/organizacje/samorzad-doktorantow-rada-doktorantow",
+            "inscription": "Doctoral Student Council"
+        },
+        {
+            "link": "https://ug.edu.pl/nauka/inicjatywa-doskonalosci-uczelnia-badawcza",
+            "inscription": "Scientific excellence programmes"
+        },
+        {
+            "link": "https://ug.edu.pl/nauka/biuro-wsparcia-przygotowania-projektow-inkubator-projektowy/realizowane-projekty-rozwojowe",
+            "inscription": "Current projects"
+        },
+        {
+            "link": "https://old-en.ug.edu.pl/staff/organisational_structure",
+            "inscription": "Academic units and organisations"
+        },
+        {
+            "link": "https://old-en.ug.edu.pl/staff/search",
+            "inscription": "Find an employee"
+        },
+        {
+            "link":"https://faru.edu.pl/en",
+            "inscription": "Fahrenheit Universities"
+        },
+        {
+            "link":"https://ug.edu.pl/ck-ezd",
+            "inscription": "EZD Competence Centre"
+        }
+    ],
+    "information for": [
+        {
+            "link":"https://en.ug.edu.pl/incoming-students",
+            "inscription": "Candidates"
+        },
+        {
+            "link":"https://en.ug.edu.pl/study",
+            "inscription": "Students"
+        },
+        {
+            "link":"https://ug.edu.pl/studenci/studia-trzeciego-stopnia",
+            "inscription": "PhD Students"
+        },
+        {
+            "link":"https://ug.edu.pl/absolwenci",
+            "inscription": "Alumni"
+        },
+        {
+            "link":"https://en.ug.edu.pl/staff",
+            "inscription": "Employees"
+        },
+        {
+            "link":"https://ug.edu.pl/wspolpraca/otoczenie-spoleczno-gospodarcze",
+            "inscription": "Socio-economic environment"
+        },
+        {
+            "link":"https://ug.edu.pl/media",
+            "inscription": "Media"
+        }
+    ],
+    
+    "other": [
+        {
+            "link":"https://ug.edu.pl/pracownicy/strony_jednostek/biuro_ksztalcenia/organizacja_roku_akademickiego",
+            "inscription": "Academic Year Calendar"
+        },
+        {
+            "link":"",
+            "inscription": "Helpdesk"
+        },
+        {
+            "link":"https://gazeta.ug.edu.pl/",
+            "inscription": "University magazine"
+        },
+        {
+            "link":"https://bip.ug.edu.pl/",
+            "inscription": "BIP"
+        },
+        {
+            "link":"https://ug.edu.pl/o_uczelni/mapa_ug/mapy_kampusow",
+            "inscription": "UG campuses"
+        },
+        {
+            "link":"https://biuro-karier.ug.edu.pl/pl/",
+            "inscription": "Career Services"
+        },
+        {
+            "link":"https://bip.ug.edu.pl/ogloszenia_i_komunikaty/praca_na_ug",
+            "inscription": "Job vacancies"
+        },
+        {
+            "link":"https://en.ug.edu.pl/strona/104452/declaration_accessibility_-_enugedupl",
+            "inscription": "Accessibility declaration"
+        }
+    ]
 
     }
 }
