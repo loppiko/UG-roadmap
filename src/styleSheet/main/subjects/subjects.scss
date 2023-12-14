@@ -92,6 +92,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             width: 100%;
 
             // margin-bottom: $subjects-sem-name-margin-bottom;
+            text-decoration: none;
             text-align: center;
             font-size: $subjects-sem-same-font-size;
             color: $main-color;
@@ -190,6 +191,11 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         text-align: center;
                     }
 
+                    .subject-skill-path {
+                        position: absolute;
+                        z-index: -10;
+                    }
+
                     .skill-box:nth-of-type(1) {
                         right: 400px;
                         top: 150px;
@@ -204,7 +210,24 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                     }
                     .skill-box:nth-of-type(4) {
                         left: 380px;
-                        top: 325px;
+                        top: 312px;
+                    }
+
+                    .subject-skill-path:nth-of-type(1) {
+                        right: 330px;
+                        top: 180px;
+                    }
+                    .subject-skill-path:nth-of-type(2) {
+                        left: 335px;
+                        top: 190px;
+                    }
+                    .subject-skill-path:nth-of-type(3) {
+                        right: 335px;
+                        top: 320px;
+                    }
+                    .subject-skill-path:nth-of-type(4) {
+                        left: 325px;
+                        top: 340px;
                     }
 
                     .skill-box:hover {
@@ -247,18 +270,18 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             .subject-frame:nth-of-type(#{$frame-number}) {
                 @if $frame-number % 2 == 0 {
                     .box {
-                        margin-left: 0;
-                    }
-                    .skill-description {
-                        right: 0;
-                        bottom: 35px;
-                    }
-                } @else {
-                    .box {
                         margin-right: 0;
                     }
                     .skill-description {
                         left: 0;
+                        bottom: 35px;
+                    }
+                } @else {
+                    .box {
+                        margin-left: 0;
+                    }
+                    .skill-description {
+                        right: 0;
                         bottom: 35px;
                     }
                 }
@@ -276,6 +299,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             width: 100%;
 
             // margin-bottom: $subjects-sem-name-margin-bottom;
+            text-decoration: none;
             text-align: center;
             font-size: $subjects-sem-same-font-size;
             background: -webkit-linear-gradient($main-color, $white-text-color);

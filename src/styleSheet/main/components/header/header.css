@@ -29,6 +29,7 @@ button {
   gap: 1.5rem;
 }
 .header .left-side .header-elements .header-button {
+  text-decoration: none;
   background-color: transparent;
   border: none;
   color: white;
@@ -44,8 +45,11 @@ button {
 }
 .header .right-side .header-icons {
   display: flex;
+  align-items: center;
 }
 .header .right-side .header-icons .right-header-icon {
+  height: -moz-min-content;
+  height: min-content;
   padding-left: 1rem;
   padding-right: 1rem;
   background-color: transparent;
@@ -71,6 +75,10 @@ button {
   background-color: transparent;
   border: none;
 }
+.header .center-side .header-one-icon img {
+  color: white;
+  height: 45px;
+}
 .header .center-side .header-one-icon:hover {
   cursor: pointer;
 }
@@ -90,6 +98,8 @@ button {
   height: 20em;
 }
 .header .center-side .center-box .center-header-icons .center-header-icon {
+  display: flex;
+  justify-content: center;
   padding-left: 1rem;
   padding-right: 1rem;
   background-color: transparent;
@@ -97,6 +107,11 @@ button {
   border-right: solid 1px white;
   width: 100%;
   flex-direction: row;
+  font-size: 0.5rem;
+}
+.header .center-side .center-box .center-header-icons .center-header-icon img {
+  height: -moz-min-content;
+  height: min-content;
 }
 .header .center-side .center-box .center-header-icon:last-of-type {
   border: none;
@@ -114,6 +129,7 @@ button {
 }
 .header .center-side .center-box .center-header-elements .center-header-button {
   background-color: transparent;
+  text-decoration: none;
   border: none;
   color: white;
   font-size: 1.15rem;

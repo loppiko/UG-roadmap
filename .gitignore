@@ -67,6 +67,5 @@ packages/react-devtools-shell/dist
 packages/react-devtools-timeline/dist
 
 .sass-cache/
-*.css.map
 *.sass.map
 *.scss.map
