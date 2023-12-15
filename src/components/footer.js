@@ -2,6 +2,8 @@ import React from "react";
 
 // media 
 import radioIcon from './../media/icons/radio-icon.svg';
+import facebookIcon from './../media/icons/facebook-icon.svg';
+
 
 // database
 import database from "./../main.json";
@@ -35,14 +37,14 @@ function Footer() {
             </div>
             <div className="facebook">
                 <div className="faculty-facebook">
-                    <button className="faculty-facebook-icon"><img src={radioIcon} alt="radioIcon"/></button>
+                    <button className="faculty-facebook-icon"><img src={facebookIcon} alt="radioIcon"/></button>
                     <Link to={database["footer"]["faculty facebook"]["link"]} className="footer-faculty-facebook-icon-link">
                         {database["footer"]["faculty facebook"]["inscription"]}
                     </Link>
                 </div>
 
                 <div className="office-facebook">
-                    <button className="office-facebook-icon"><img src={radioIcon} alt="radioIcon"/></button>
+                    <button className="office-facebook-icon"><img src={facebookIcon} alt="radioIcon"/></button>
                     <Link to={database["footer"]["office facebook"]["link"]} className="footer-office-facebook-icon-link">
                         {database["footer"]["office facebook"]["inscription"]}
                     </Link>

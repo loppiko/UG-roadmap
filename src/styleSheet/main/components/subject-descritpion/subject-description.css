@@ -3,17 +3,19 @@ button {
 }
 
 .component-subject-description {
+  transform: none !important;
   display: flex;
   position: absolute;
   z-index: 5;
   width: 100%;
   background-color: rgba(78, 78, 78, 0.49);
+  transform: none !important;
 }
 .component-subject-description .component-subject-transparent {
   width: 65%;
 }
 .component-subject-description .component-subject-non-transparent {
-  justify-self: end;
+  transform: tranlateX(0px);
   width: calc(35% - 3px);
   height: 100vh;
   position: sticky;
@@ -66,4 +68,38 @@ button {
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus:hover {
   cursor: pointer;
   background-color: #011946;
+}
+
+@media only screen and (max-width: 930px) {
+  .component-subject-description {
+    display: flex;
+    gap: 0;
+    justify-content: space-around;
+    width: auto;
+  }
+  .component-subject-description .component-subject-non-transparent {
+    width: 70%;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-title {
+    margin-top: 2rem;
+    font-size: 2.2rem;
+  }
+  .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-description {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+    line-height: 21px;
+    width: auto;
+  }
+  .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-subject-description {
+    font-size: 1.4rem;
+  }
+  .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-subject-description-title {
+    margin-top: 1rem;
+  }
+  .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus {
+    margin-top: 3rem;
+  }
 }/*# sourceMappingURL=subject-description.css.map */

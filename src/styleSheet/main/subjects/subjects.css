@@ -341,7 +341,7 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1080px) {
   .subjects-page .subjects-main-introduction {
     margin-top: 2rem;
     margin-left: 1.5rem;
@@ -351,8 +351,7 @@ button {
     padding-right: 0.5em;
   }
   .subjects-page .subjects-main-introduction .subjects-main-introduction-title-underline {
-    width: 32em;
-    margin-right: 5em;
+    width: 50%;
   }
   .subjects-page .subjects-main-introduction .subjects-main-introduction-description {
     margin-top: 0.75rem;
@@ -360,11 +359,13 @@ button {
     padding-right: 0.5em;
   }
   .subjects-page .subjects-content {
-    display: inline;
+    margin-inline: 0.7rem;
     width: 540px;
-    margin-top: 3.5rem;
+    margin-top: 7rem;
   }
   .subjects-page .subjects-content .subject-sem-name {
+    width: 100%;
+    text-align: center;
     font-size: 2.5rem;
   }
   .subjects-page .subjects-content .subject-path-starting {
@@ -372,8 +373,12 @@ button {
     margin-right: 175px;
   }
   .subjects-page .subjects-content .subject-frame {
+    display: flex;
+    justify-content: center;
     right: 0;
     bottom: 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
   .subjects-page .subjects-content .subject-frame .box {
     font-size: 0.5em;
@@ -382,23 +387,27 @@ button {
     gap: 0.5rem;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-info .info-box {
-    width: min-content/2;
+    width: 40px;
     height: 40px;
-    padding: 12px 24px/2;
+    padding: 10px;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
     font-size: 0.75rem;
-    font-weight: 900/2;
+    font-weight: bold;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-info .info-box span {
     font-size: 0.6666666667rem;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content {
-    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-box {
-    min-width: 125px;
+    min-width: 0;
     height: 71px;
+    width: 80px;
     padding: 32px 40px/2;
+    margin-bottom: 1.5rem;
     text-decoration: none;
     color: black;
     border-radius: 24px;
@@ -408,29 +417,35 @@ button {
     font-size: 1rem;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box {
+    margin-top: 0.5rem;
+    width: -moz-max-content;
+    width: max-content;
+    height: 20px;
+    text-align: center;
+    position: static;
     padding: 8px;
     border-radius: 5px;
     border: 2px solid #062D73;
   }
   .subjects-page .subjects-content .subject-frame .skill-description {
-    margin-bottom: 110px;
-    font-size: 0.6rem;
+    align-self: center;
+    max-width: 40%;
+    top: 20%;
+    font-size: 10px;
     width: 250px;
   }
   .subjects-page .subjects-content .subject-frame .skill-description .title {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
-  .subjects-page .subjects-content .subject-frame .subjects-path-right, .subjects-page .subjects-content .subject-frame .subjects-path-left {
-    display: none;
-  }
-  .subjects-page .subjects-content .subject-path-ending-left {
-    display: none;
-  }
-  .subjects-page .subjects-content .subject-path-ending-right {
+  .subjects-page .subjects-content .subject-path-ending-left, .subjects-page .subjects-content .subject-path-ending-right, .subjects-page .subjects-content .subjects-path-right, .subjects-page .subjects-content .subjects-path-left {
     display: none;
   }
   .subjects-page .subjects-content .subject-next-sem-name {
+    margin-top: 4rem;
     font-size: 2.5rem;
+  }
+  .subject-skill-path {
+    display: none;
   }
 }/*# sourceMappingURL=subjects.css.map */

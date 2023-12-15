@@ -32,9 +32,9 @@ function Semester() {
                 </div>
                 <div className="semester-section">
                     <div className="semester-box-1">
-                        <div className="semester-year-box">
+                        <div className="semester-year-box-1">
                             <img src={BookIcon} alt="book"/>
-                            <span className="semester-year-name">First semester</span>
+                            <span className="semester-year-name">First year</span>
                         </div>
                         <Link to={`/roadmap-enter/semester-1`} className="semester-button">1 Semester</Link>
                         <img src={Path1} alt="1-path" className="path-1"/>
@@ -42,9 +42,9 @@ function Semester() {
                     <div className="semester-box-2">
                         <Link to="/roadmap-enter/semester-2" className="semester-button">2 Semester</Link>
                         <img src={Path2} alt="2-path" className="path-2"/>
-                        <div className="semester-year-box">
+                        <div className="semester-year-box-2">
                             <img src={PointerIcon} alt="pointer" className="icon"/>
-                            <span className="semester-year-name">Second semester</span>
+                            <span className="semester-year-name">Second year</span>
                         </div>                        
                     </div>
                     <div className="semester-box-3">
@@ -55,9 +55,9 @@ function Semester() {
                     <div className="semester-box-4">
                         <Link to="/roadmap-enter/semester-4" className="semester-button">4 Semester</Link>
                         <img src={Path5} alt="5-path" className="path-5"/>
-                        <div className="semester-year-box">
+                        <div className="semester-year-box-3">
                             <img src={ConsoleIcon} alt="concole" className="icon"/>
-                            <span className="semester-year-name">Third semester</span>
+                            <span className="semester-year-name">Third year</span>
                         </div>             
                     </div>
                     <div className="semester-box-5">
@@ -68,7 +68,7 @@ function Semester() {
                     <div className="semester-box-6">
                         <Link to="/roadmap-enter/semester-6" className="semester-button">6 Semester</Link>
                         <img src={Path8} alt="8-path" className="path-8"/>
-                        <div className="semester-year-box">
+                        <div className="semester-year-box-4">
                             <img src={MergeIcon} alt="merge"/>
                             <span className="semester-year-name">Writing project</span>
                         </div> 

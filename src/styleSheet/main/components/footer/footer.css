@@ -17,7 +17,7 @@ button {
 .footer .first-column {
   display: flex;
   flex-direction: column;
-  width: 20em;
+  width: 100%;
   padding-left: 1.5em;
   padding-right: 5em;
 }
@@ -177,7 +177,8 @@ button {
     padding-bottom: 4em;
   }
   .footer .first-column {
-    padding-left: 2em;
+    width: auto;
+    padding-inline: 1rem;
   }
   .footer .first-column .footer-icon {
     margin-top: 0em;

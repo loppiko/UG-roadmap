@@ -19,7 +19,7 @@ $footer-margin-top: 4.5rem;
     .first-column {
         display: flex;
         flex-direction: column;
-        width: 20em;
+        width: 100%;
         padding-left: 1.5em;
         padding-right: 5em;
         .footer-icon {
@@ -187,11 +187,13 @@ $footer-margin-top: 4.5rem;
 
 @media only screen and ((max-width: 810px)) {
     .footer {
+        // width: 50%;
         flex-direction: column;
         height: 230vh;
         padding-bottom: 4em;
         .first-column {
-            padding-left: 2em;
+            width: auto;
+            padding-inline: 1rem;
             .footer-icon {
                 margin-top: 0em;
             }

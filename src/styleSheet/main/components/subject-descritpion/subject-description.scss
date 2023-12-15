@@ -18,6 +18,7 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
 
 
 .component-subject-description {
+    transform: none !important;
     display: flex;
     position: absolute;
     z-index: 5;
@@ -31,7 +32,7 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
     }
 
     .component-subject-non-transparent{
-        justify-self: end;
+        transform: tranlateX(0px);
 
         width: calc(100% - $component-subject-description-transparent-width - $component-subject-description-transparent-border-left-width);
         height: 100vh;
@@ -101,4 +102,48 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
             background-color: $main-color-active-button;
         }
     }
+        transform: none !important;
+}   
+
+@media only screen and (max-width: 930px) {
+    
+    .component-subject-description {
+        display: flex;
+        gap: 0;
+        justify-content: space-around;
+        width: auto;
+
+
+        .component-subject-non-transparent {
+            width: 70%;
+            padding: 1.5rem;
+            font-size: 1rem;
+
+            .component-subject-non-transparent-title {
+                margin-top: 2rem;
+                font-size: 2.2rem;
+            }
+
+            .component-subject-non-transparent-description {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                font-size: 0.8rem;
+                line-height: 21px;
+                width: auto;
+            }
+
+            .component-subject-non-transparent-subject-description {
+                font-size: 1.4rem;
+            }
+
+            .component-subject-non-transparent-subject-description-title {
+                margin-top: 1rem;
+            }
+
+            .component-subject-non-transparent-sylabus {
+                margin-top: 3rem;
+            }
+        }
+    }
 }
+

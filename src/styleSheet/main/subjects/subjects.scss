@@ -311,76 +311,91 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
 }
 
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1080px) {
     .subjects-page {
-
+        // width: min-content;
         .subjects-main-introduction {
-            margin-top: $subjects-main-margin-top/2;
-            margin-left: $subjects-main-introduction-margin-left/2;
+            margin-top: calc($subjects-main-margin-top/2);
+            margin-left: calc($subjects-main-introduction-margin-left/2);
 
             .subjects-main-introduction-title {
-                font-size: $subjects-main-introduction-title-font-size/2; 
+                font-size: calc($subjects-main-introduction-title-font-size/2); 
                 padding-right: 0.5em;  
             }
 
             .subjects-main-introduction-title-underline {
-                width: 32em;
-                margin-right: 5em;
+                width: 50%;
             }
 
             .subjects-main-introduction-description {
-                margin-top: $subjects-main-introduction-description-margin-top/2;
-                font-size: $subjects-main-introduction-description-font-size/2;
+                margin-top: calc($subjects-main-introduction-description-margin-top / 2);
+                font-size: calc($subjects-main-introduction-description-font-size / 2);
                 padding-right: 0.5em;
             }
         }
 
         .subjects-content {
-            display: inline;
-            width: $main-content-width/2;
-            margin-top: $subjects-content-margin-top/2;
+            margin-inline: 0.7rem;
+            width: calc($main-content-width/2);
+            margin-top: $subjects-content-margin-top;
 
             .subject-sem-name {
                 // width: 100%;
-                font-size: $subjects-sem-same-font-size/2;
+                width: 100%;
+                text-align: center;
+                font-size: calc($subjects-sem-same-font-size/2);
             }
 
             .subject-path-starting {
                 display: none;
-                margin-right: $subjects-starting-path-margin-right/2;
+                margin-right: calc($subjects-starting-path-margin-right/2);
             }
 
             .subject-frame {
+                display: flex;
+                justify-content: center;
                 right: 0;
                 bottom: 0;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+
 
                 .box {
                     font-size: 0.5em;
+                    // margin: 0;
 
                     .subject-info {
-                        gap:$subjects-info-boxes-gap/2;
+                        gap: calc($subjects-info-boxes-gap/2);
+                        
 
                         .info-box {
-                            width: $subjects-info-box-width/2;
-                            height: $subjects-info-box-height/2;
-                            padding: $subjects-info-padding/2;
+                            
+                            // width: 100px;
+                            width: 40px;
+                            height: 40px;
+                            padding: 10px;
                             box-shadow: $subjects-info-box-shadow;
-                            font-size: $subjects-info-box-content/2;
-                            font-weight: 900/2;
+                            font-size: calc($subjects-info-box-content/2);
+                            font-weight: bold;
 
                             span {
-                                font-size: $subjects-info-box-title/1.5;
+                                font-size: calc($subjects-info-box-title/1.5);
                             }
                         }
                     }
 
                     .subject-box-content {
-                        margin-top: $subjects-box-content-margin-top/2;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+                        // margin-top: $subjects-box-content-margin-top/2;
 
                         .subject-box {
-                            min-width: $subjects-subject-box-width/2;
-                            height: $subjects-subject-box-heigth/2;
+                            min-width: 0;
+                            height: calc($subjects-subject-box-heigth/2);
+                            width: 80px;
                             padding: $subjects-subject-padding/2;
+                            margin-bottom: 1.5rem;
 
                             text-decoration: none;
                             color: $black-text-color;
@@ -388,11 +403,17 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                             border: $subjects-subject-border;
                             background: $subjects-subject-background-color;
                             box-shadow: $subjects-subject-box-shadow;
-                            font-size: $subjects-subject-box-font-size/2; 
+                            font-size: calc($subjects-subject-box-font-size/2); 
                         }
 
                         .skill-box {
-                            padding: $subjects-subject-skill-box-padding/2;
+                            margin-top: 0.5rem;
+                            // margin-inline: 1rem;
+                            width: max-content;
+                            height: 20px;
+                            text-align: center;
+                            position: static;
+                            padding: calc($subjects-subject-skill-box-padding/2);
                             border-radius: $subjects-subject-skill-box-border-radius;
                             border: $subjects-subject-skill-box-border;
                         }
@@ -402,33 +423,33 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                 }
 
                 .skill-description {
-                    margin-bottom: $subjects-subject-decription-main-margin-bottom/2;
-                    font-size: $subjects-subject-decription-font-size/2;
-                    width: $subjects-subject-decription-width/2;
+                    align-self: center;
+                    max-width: 40%;
+                    top: 20%;
+                    font-size: 10px;
+                    width: calc($subjects-subject-decription-width/2);
 
                     .title {
-                        font-size: $subjects-subject-decription-title-font-size/2;
-                        margin-bottom: $subjects-subject-decription-title-margin-bottom/2;
+                        font-size: calc($subjects-subject-decription-title-font-size/2);
+                        margin-bottom: calc($subjects-subject-decription-title-margin-bottom/2);
                     }
                 }
 
-                .subjects-path-right, .subjects-path-left {
-                    display: none;
-                }
+
             }
 
-            .subject-path-ending-left {
+            .subject-path-ending-left, .subject-path-ending-right, .subjects-path-right, .subjects-path-left {
                 display: none;
             }
-            .subject-path-ending-right {
-                display: none;
-            }
+
 
             .subject-next-sem-name {
-                // display: relative;
-                // padding-right: 1em;
-                font-size: $subjects-sem-same-font-size/2;
+                margin-top: 4rem;
+                font-size: calc($subjects-sem-same-font-size/2);
             }
         }
+    }
+    .subject-skill-path {
+        display: none;
     }
 }
