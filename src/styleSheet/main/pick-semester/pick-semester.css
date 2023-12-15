@@ -210,7 +210,7 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-@media only screen and ((max-width: 930px) and (max-height: 1300px)) {
+@media only screen and (max-width: 930px) {
   .pick-semester .semester-content {
     padding-left: 4em;
     margin-top: 1em;
@@ -293,34 +293,32 @@ button {
     position: none;
     z-index: -1;
   }
-  .pick-semester .semester-content .semester-section .semester-year-box {
-    display: flex;
-    align-items: center;
-    width: -moz-max-content;
-    width: max-content;
-    height: -moz-min-content;
-    height: min-content;
+  .pick-semester .semester-content .semester-section .semester-box-1 .semester-year-box {
+    display: absolute;
+    bottom: 10em;
   }
   .pick-semester .semester-content .semester-section .semester-box-1 .path-1 {
     display: none;
     bottom: 0;
     left: 0;
   }
-  .pick-semester .semester-content .semester-section .semester-box-1 .semester-year-box {
-    display: absolute;
-    margin-top: 10em;
-  }
   .pick-semester .semester-content .semester-section .semester-box-2 {
     margin-top: 0;
+  }
+  .pick-semester .semester-content .semester-section .semester-box-2 .semester-year-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 9em;
+    right: 2em;
+  }
+  .pick-semester .semester-content .semester-section .semester-box-2 .semester-year-box .icon {
+    height: 5em;
   }
   .pick-semester .semester-content .semester-section .semester-box-2 .path-2 {
     display: none;
     top: 0;
     left: 0;
-  }
-  .pick-semester .semester-content .semester-section .semester-box-2 .semester-year-box {
-    top: 309px;
-    right: 0;
   }
   .pick-semester .semester-content .semester-section .semester-box-3 .path-3 {
     display: none;
@@ -340,8 +338,11 @@ button {
     top: 0;
   }
   .pick-semester .semester-content .semester-section .semester-box-4 .semester-year-box {
-    top: 345px;
-    right: 0;
+    top: 10em;
+    right: 2em;
+  }
+  .pick-semester .semester-content .semester-section .semester-box-4 .semester-year-box .icon {
+    width: 4em;
   }
   .pick-semester .semester-content .semester-section .semester-box-5 {
     margin-top: 0;

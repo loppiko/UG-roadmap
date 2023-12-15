@@ -185,17 +185,25 @@ $footer-margin-top: 4.5rem;
     }
 }
 
-@media only screen and ((max-width: 810px)and (max-height: 1300px)) {
+@media only screen and ((max-width: 810px)) {
     .footer {
         flex-direction: column;
         height: 230vh;
-        padding-left: 2em;
         padding-bottom: 4em;
         .first-column {
-            padding-left: 0em;
+            padding-left: 2em;
             .footer-icon {
                 margin-top: 0em;
             }
+        }
+        .information-about {
+            padding-left: 2em;
+        }
+        .information-for {
+            padding-left: 2em;
+        }
+        .other {
+            padding-left: 2em;
         }
     }
 }
@@ -213,6 +221,15 @@ $footer-margin-top: 4.5rem;
             .footer-icon {
                 margin-top: 0em;
             }
+        }
+        .information-about {
+            padding-left: 2em;
+        }
+        .information-for {
+            padding-left: 2em;
+        }
+        .other {
+            padding-left: 2em;
         }
     }
 }

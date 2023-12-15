@@ -170,18 +170,26 @@ button {
   text-decoration: underline;
 }
 
-@media only screen and ((max-width: 810px) and (max-height: 1300px)) {
+@media only screen and ((max-width: 810px)) {
   .footer {
     flex-direction: column;
     height: 230vh;
-    padding-left: 2em;
     padding-bottom: 4em;
   }
   .footer .first-column {
-    padding-left: 0em;
+    padding-left: 2em;
   }
   .footer .first-column .footer-icon {
     margin-top: 0em;
+  }
+  .footer .information-about {
+    padding-left: 2em;
+  }
+  .footer .information-for {
+    padding-left: 2em;
+  }
+  .footer .other {
+    padding-left: 2em;
   }
 }
 @media only screen and ((min-width: 420px) and (max-height: 800px)) {
@@ -196,5 +204,14 @@ button {
   }
   .footer .first-column .footer-icon {
     margin-top: 0em;
+  }
+  .footer .information-about {
+    padding-left: 2em;
+  }
+  .footer .information-for {
+    padding-left: 2em;
+  }
+  .footer .other {
+    padding-left: 2em;
   }
 }/*# sourceMappingURL=footer.css.map */

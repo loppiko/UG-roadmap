@@ -112,8 +112,9 @@ $header-buttons-border: solid 1px $white-text-color;
             left: 0;
             right: 0;
             background-color: $main-color;
-            height: 120%;
-            bottom: 50%;
+            // height: 120%;
+            height: 1000%;
+            // bottom: 50%;
             .center-header-icons {
                 display: flex;
                 flex:1;
@@ -180,13 +181,18 @@ $header-buttons-border: solid 1px $white-text-color;
     .header {
         padding: 20px;
         font-size: 2px;
-
+        z-index:9999;
+        position: relative;
+        // height: 150%;
+        
         .left-side {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
+            // display: flex;
+            // flex-wrap: nowrap;
+            // align-items: center;
+            // z-index:9999;
+            // position: relative;
             margin-left: 8px;
-    
+            // margin-bottom: 360em;
             .header-elements {
                 display: none;
             }

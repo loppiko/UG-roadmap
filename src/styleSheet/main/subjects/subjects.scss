@@ -309,3 +309,126 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
         }
     }
 }
+
+
+@media only screen and (max-width: 1400px) {
+    .subjects-page {
+
+        .subjects-main-introduction {
+            margin-top: $subjects-main-margin-top/2;
+            margin-left: $subjects-main-introduction-margin-left/2;
+
+            .subjects-main-introduction-title {
+                font-size: $subjects-main-introduction-title-font-size/2; 
+                padding-right: 0.5em;  
+            }
+
+            .subjects-main-introduction-title-underline {
+                width: 32em;
+                margin-right: 5em;
+            }
+
+            .subjects-main-introduction-description {
+                margin-top: $subjects-main-introduction-description-margin-top/2;
+                font-size: $subjects-main-introduction-description-font-size/2;
+                padding-right: 0.5em;
+            }
+        }
+
+        .subjects-content {
+            display: inline;
+            width: $main-content-width/2;
+            margin-top: $subjects-content-margin-top/2;
+
+            .subject-sem-name {
+                // width: 100%;
+                font-size: $subjects-sem-same-font-size/2;
+            }
+
+            .subject-path-starting {
+                display: none;
+                margin-right: $subjects-starting-path-margin-right/2;
+            }
+
+            .subject-frame {
+                right: 0;
+                bottom: 0;
+
+                .box {
+                    font-size: 0.5em;
+
+                    .subject-info {
+                        gap:$subjects-info-boxes-gap/2;
+
+                        .info-box {
+                            width: $subjects-info-box-width/2;
+                            height: $subjects-info-box-height/2;
+                            padding: $subjects-info-padding/2;
+                            box-shadow: $subjects-info-box-shadow;
+                            font-size: $subjects-info-box-content/2;
+                            font-weight: 900/2;
+
+                            span {
+                                font-size: $subjects-info-box-title/1.5;
+                            }
+                        }
+                    }
+
+                    .subject-box-content {
+                        margin-top: $subjects-box-content-margin-top/2;
+
+                        .subject-box {
+                            min-width: $subjects-subject-box-width/2;
+                            height: $subjects-subject-box-heigth/2;
+                            padding: $subjects-subject-padding/2;
+
+                            text-decoration: none;
+                            color: $black-text-color;
+                            border-radius: $subjects-info-border-radius;
+                            border: $subjects-subject-border;
+                            background: $subjects-subject-background-color;
+                            box-shadow: $subjects-subject-box-shadow;
+                            font-size: $subjects-subject-box-font-size/2; 
+                        }
+
+                        .skill-box {
+                            padding: $subjects-subject-skill-box-padding/2;
+                            border-radius: $subjects-subject-skill-box-border-radius;
+                            border: $subjects-subject-skill-box-border;
+                        }
+
+                        
+                    }
+                }
+
+                .skill-description {
+                    margin-bottom: $subjects-subject-decription-main-margin-bottom/2;
+                    font-size: $subjects-subject-decription-font-size/2;
+                    width: $subjects-subject-decription-width/2;
+
+                    .title {
+                        font-size: $subjects-subject-decription-title-font-size/2;
+                        margin-bottom: $subjects-subject-decription-title-margin-bottom/2;
+                    }
+                }
+
+                .subjects-path-right, .subjects-path-left {
+                    display: none;
+                }
+            }
+
+            .subject-path-ending-left {
+                display: none;
+            }
+            .subject-path-ending-right {
+                display: none;
+            }
+
+            .subject-next-sem-name {
+                // display: relative;
+                // padding-right: 1em;
+                font-size: $subjects-sem-same-font-size/2;
+            }
+        }
+    }
+}

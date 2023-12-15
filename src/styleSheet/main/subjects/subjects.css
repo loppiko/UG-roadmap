@@ -339,4 +339,98 @@ button {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 1400px) {
+  .subjects-page .subjects-main-introduction {
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+  }
+  .subjects-page .subjects-main-introduction .subjects-main-introduction-title {
+    font-size: 2.5rem;
+    padding-right: 0.5em;
+  }
+  .subjects-page .subjects-main-introduction .subjects-main-introduction-title-underline {
+    width: 32em;
+    margin-right: 5em;
+  }
+  .subjects-page .subjects-main-introduction .subjects-main-introduction-description {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    padding-right: 0.5em;
+  }
+  .subjects-page .subjects-content {
+    display: inline;
+    width: 540px;
+    margin-top: 3.5rem;
+  }
+  .subjects-page .subjects-content .subject-sem-name {
+    font-size: 2.5rem;
+  }
+  .subjects-page .subjects-content .subject-path-starting {
+    display: none;
+    margin-right: 175px;
+  }
+  .subjects-page .subjects-content .subject-frame {
+    right: 0;
+    bottom: 0;
+  }
+  .subjects-page .subjects-content .subject-frame .box {
+    font-size: 0.5em;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-info {
+    gap: 0.5rem;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-info .info-box {
+    width: min-content/2;
+    height: 40px;
+    padding: 12px 24px/2;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    font-size: 0.75rem;
+    font-weight: 900/2;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-info .info-box span {
+    font-size: 0.6666666667rem;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content {
+    margin-top: 1rem;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-box {
+    min-width: 125px;
+    height: 71px;
+    padding: 32px 40px/2;
+    text-decoration: none;
+    color: black;
+    border-radius: 24px;
+    border: 3px solid #062D73;
+    background: #F0F5FF;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
+    font-size: 1rem;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box {
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #062D73;
+  }
+  .subjects-page .subjects-content .subject-frame .skill-description {
+    margin-bottom: 110px;
+    font-size: 0.6rem;
+    width: 250px;
+  }
+  .subjects-page .subjects-content .subject-frame .skill-description .title {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .subjects-page .subjects-content .subject-frame .subjects-path-right, .subjects-page .subjects-content .subject-frame .subjects-path-left {
+    display: none;
+  }
+  .subjects-page .subjects-content .subject-path-ending-left {
+    display: none;
+  }
+  .subjects-page .subjects-content .subject-path-ending-right {
+    display: none;
+  }
+  .subjects-page .subjects-content .subject-next-sem-name {
+    font-size: 2.5rem;
+  }
 }/*# sourceMappingURL=subjects.css.map */

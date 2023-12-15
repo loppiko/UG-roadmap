@@ -89,8 +89,7 @@ button {
   left: 0;
   right: 0;
   background-color: #062D73;
-  height: 120%;
-  bottom: 50%;
+  height: 1000%;
 }
 .header .center-side .center-box .center-header-icons {
   display: flex;
@@ -147,11 +146,10 @@ button {
   .header {
     padding: 20px;
     font-size: 2px;
+    z-index: 9999;
+    position: relative;
   }
   .header .left-side {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
     margin-left: 8px;
   }
   .header .left-side .header-elements {

@@ -43,7 +43,7 @@ function Semester() {
                         <Link to="/roadmap-enter/semester-2" className="semester-button">2 Semester</Link>
                         <img src={Path2} alt="2-path" className="path-2"/>
                         <div className="semester-year-box">
-                            <img src={PointerIcon} alt="pointer"/>
+                            <img src={PointerIcon} alt="pointer" className="icon"/>
                             <span className="semester-year-name">Second semester</span>
                         </div>                        
                     </div>
@@ -56,7 +56,7 @@ function Semester() {
                         <Link to="/roadmap-enter/semester-4" className="semester-button">4 Semester</Link>
                         <img src={Path5} alt="5-path" className="path-5"/>
                         <div className="semester-year-box">
-                            <img src={ConsoleIcon} alt="concole"/>
+                            <img src={ConsoleIcon} alt="concole" className="icon"/>
                             <span className="semester-year-name">Third semester</span>
                         </div>             
                     </div>
