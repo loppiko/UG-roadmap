@@ -18,7 +18,6 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
 
 
 .component-subject-description {
-    transform: none !important;
     display: flex;
     position: absolute;
     z-index: 5;
@@ -32,8 +31,6 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
     }
 
     .component-subject-non-transparent{
-        transform: tranlateX(0px);
-
         width: calc(100% - $component-subject-description-transparent-width - $component-subject-description-transparent-border-left-width);
         height: 100vh;
 
@@ -102,7 +99,6 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
             background-color: $main-color-active-button;
         }
     }
-        transform: none !important;
 }   
 
 @media only screen and (max-width: 930px) {
@@ -145,5 +141,10 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
             }
         }
     }
+}
+
+.component-subject-description .component-subject-non-transparent
+{
+  transform: none !important;
 }
 

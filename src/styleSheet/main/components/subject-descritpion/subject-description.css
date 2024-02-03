@@ -3,19 +3,16 @@ button {
 }
 
 .component-subject-description {
-  transform: none !important;
   display: flex;
   position: absolute;
   z-index: 5;
   width: 100%;
   background-color: rgba(78, 78, 78, 0.49);
-  transform: none !important;
 }
 .component-subject-description .component-subject-transparent {
   width: 65%;
 }
 .component-subject-description .component-subject-non-transparent {
-  transform: tranlateX(0px);
   width: calc(35% - 3px);
   height: 100vh;
   position: sticky;
@@ -102,4 +99,7 @@ button {
   .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus {
     margin-top: 3rem;
   }
+}
+.component-subject-description .component-subject-non-transparent {
+  transform: none !important;
 }/*# sourceMappingURL=subject-description.css.map */
