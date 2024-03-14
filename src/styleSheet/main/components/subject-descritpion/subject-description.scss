@@ -44,6 +44,10 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
         color: $black-text-color;
         font-size: $component-subject-description-transparent-description-font-size;
 
+        .component-subject-non-transparent-exit-arrow {
+            display: hidden;
+        }
+
         .component-subject-non-transparent-title {
             color: $main-color;
             font-size: $component-subject-description-transparent-title-font-size;
@@ -101,7 +105,7 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
     }
 }   
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 1080px) {
     
     .component-subject-description {
         display: flex;
@@ -109,11 +113,20 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
         justify-content: space-around;
         width: auto;
 
-
+        .component-subject-transparent {
+            display: none;
+        }
+        
         .component-subject-non-transparent {
-            width: 70%;
+            width: 100%;
+            border: none;
             padding: 1.5rem;
             font-size: 1rem;
+
+            .component-subject-non-transparent-exit-arrow {
+                display: static;
+                width: 2rem;
+            }
 
             .component-subject-non-transparent-title {
                 margin-top: 2rem;
@@ -126,6 +139,8 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
                 font-size: 0.8rem;
                 line-height: 21px;
                 width: auto;
+                text-align: justify;
+                letter-spacing: 0.5px;
             }
 
             .component-subject-non-transparent-subject-description {

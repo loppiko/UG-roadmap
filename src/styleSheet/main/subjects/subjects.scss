@@ -446,7 +446,15 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                             left: 190px;
                             top: 200px;
                         }
+
+                        
                     }
+                }
+
+                .skill-box:hover {
+                    cursor: pointer;
+                    background-color: $main-color;
+                    color: $white-text-color
                 }
 
                 .skill-description {

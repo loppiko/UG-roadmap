@@ -3,6 +3,8 @@ import {motion} from "framer-motion";
 import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
 import { Link } from "react-router-dom";
 
+import ExitArrowIcon from "../media/icons/exit-arrow-icon.svg"
+
 
 // database
 import database from "../main.json";
@@ -30,6 +32,7 @@ function SubjectDescription({handleTransparentOnClick}) {
             animate="visible"
             transition={dataTransition}
             className="component-subject-non-transparent">
+                <img src={ExitArrowIcon} alt="exit-arrow" className="component-subject-non-transparent-exit-arrow" onClick={() => handleTransparentOnClick()}/>
                 <div className="component-subject-non-transparent-title">{currentSubject["subject-name"]}</div>
                 <div className="component-subject-non-transparent-description">{currentSubject["subject-description"]}</div>
                 <div className="component-subject-non-transparent-subject-language">

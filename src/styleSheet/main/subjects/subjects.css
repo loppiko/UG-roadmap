@@ -455,6 +455,11 @@ button {
     left: 190px;
     top: 200px;
   }
+  .subjects-page .subjects-content .subject-frame .skill-box:hover {
+    cursor: pointer;
+    background-color: #062D73;
+    color: white;
+  }
   .subjects-page .subjects-content .subject-frame .skill-description {
     display: none;
     align-self: center;
