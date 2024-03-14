@@ -308,6 +308,10 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             -webkit-text-fill-color: transparent;
         }
     }
+
+    .subjects-path-right-phone, .subjects-path-left-phone {
+        display: none;
+    }
 }
 
 
@@ -361,8 +365,8 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
 
 
                 .box {
-                    font-size: 0.5em;
-                    // margin: 0;
+                    font-size: 0.45em;
+                    margin: 0;
 
                     .subject-info {
                         gap: calc($subjects-info-boxes-gap/2);
@@ -371,11 +375,12 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         .info-box {
                             
                             // width: 100px;
-                            width: 40px;
-                            height: 40px;
+                            width: 35px;
+                            height: 35px;
                             padding: 10px;
                             box-shadow: $subjects-info-box-shadow;
-                            font-size: calc($subjects-info-box-content/2);
+                            border-radius: 15px;
+                            font-size: calc($subjects-info-box-content/1.75);
                             font-weight: bold;
 
                             span {
@@ -388,12 +393,12 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         display: flex;
                         flex-wrap: wrap;
                         gap: 0.5rem;
-                        // margin-top: $subjects-box-content-margin-top/2;
+                        margin-top: 2rem;
 
                         .subject-box {
                             min-width: 0;
                             height: calc($subjects-subject-box-heigth/2);
-                            width: 80px;
+                            width: 90px;
                             padding: $subjects-subject-padding/2;
                             margin-bottom: 1.5rem;
 
@@ -403,26 +408,49 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                             border: $subjects-subject-border;
                             background: $subjects-subject-background-color;
                             box-shadow: $subjects-subject-box-shadow;
-                            font-size: calc($subjects-subject-box-font-size/2); 
+                            font-size: calc($subjects-subject-box-font-size/1.5);
+                            border-radius: 22px; 
                         }
 
                         .skill-box {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+
+                            font-weight: bold;
                             margin-top: 0.5rem;
-                            // margin-inline: 1rem;
                             width: max-content;
-                            height: 20px;
-                            text-align: center;
-                            position: static;
-                            padding: calc($subjects-subject-skill-box-padding/2);
+                            position: absolute;
+                            padding: calc($subjects-subject-skill-box-padding/4);
+                            padding-top: 0.5rem;
+                            padding-bottom: 0.5rem;
                             border-radius: $subjects-subject-skill-box-border-radius;
                             border: $subjects-subject-skill-box-border;
+
+                            width: 58px;
                         }
 
-                        
+                        .skill-box:nth-of-type(1) {
+                            right: 190px;
+                            top: 80px;
+                        }
+                        .skill-box:nth-of-type(2) {
+                            left: 190px;
+                            top: 80px;
+                        }
+                        .skill-box:nth-of-type(3) {
+                            right: 190px;
+                            top: 200px;
+                        }
+                        .skill-box:nth-of-type(4) {
+                            left: 190px;
+                            top: 200px;
+                        }
                     }
                 }
 
                 .skill-description {
+                    display: none;
                     align-self: center;
                     max-width: 40%;
                     top: 20%;
@@ -440,6 +468,13 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
 
             .subject-path-ending-left, .subject-path-ending-right, .subjects-path-right, .subjects-path-left {
                 display: none;
+            }
+
+            .subjects-path-right-phone, .subjects-path-left-phone {
+                display: block;
+                position: absolute;
+                width: 40%;
+                top: 230px;
             }
 
 

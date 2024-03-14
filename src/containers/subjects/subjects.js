@@ -18,6 +18,9 @@ import LeftPath from "../../media/paths/subjects/left-path.svg";
 import EndingRightPath from "../../media/paths/subjects/ending-right-path.svg";
 import EndingLeftPath from "../../media/paths/subjects/ending-left-path.svg";
 
+import PhoneRightPath from "../../media/paths/subjects/phone/phone-right-path.svg"
+import PhoneLeftPath from "../../media/paths/subjects/phone/phone-left-path.svg"
+
 import SkillPath1 from "../../media/paths/subjects/skill-path-1.svg"
 import SkillPath2 from "../../media/paths/subjects/skill-path-2.svg"
 import SkillPath3 from "../../media/paths/subjects/skill-path-3.svg"
@@ -45,6 +48,12 @@ function Subjects() {
         if (index === arrayLength - 1) return
         else if (index % 2 === 0) return <img src = {RightPath} alt="right-path" className="subjects-path-right" />;
         else return <img src = {LeftPath} alt="left-path" className="subjects-path-left"/>;
+    }
+
+    function returnPhoneTurningPath(index, arrayLength) {
+        if (index === arrayLength - 1) return
+        else if (index % 2 === 0) return <img src = {PhoneRightPath} alt="phone-right-path" className="subjects-path-right-phone" />;
+        else return <img src = {PhoneLeftPath} alt="phone-left-path" className="subjects-path-left-phone"/>;
     }
 
     // Return lecture and practical components
@@ -177,6 +186,7 @@ function Subjects() {
                                 }) 
                             } 
                             { returnTurningPath(index, database["semesters"][semesterId].length) }
+                            { returnPhoneTurningPath(index, database["semesters"][semesterId].length) }
                         </div>
                     )})
                 }
