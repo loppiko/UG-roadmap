@@ -1,0 +1,117 @@
+button {
+  cursor: pointer;
+}
+
+.component-skill-description {
+  display: flex;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  background-color: rgba(78, 78, 78, 0.49);
+}
+.component-skill-description .component-skill-non-transparent {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-left: 3px solid #062D73;
+  padding: 4rem;
+  color: black;
+  font-size: 22px;
+}
+.component-skill-description .component-skill-non-transparent .component-skill-non-transparent-exit-arrow {
+  display: hidden;
+}
+.component-skill-description .component-skill-non-transparent .component-skill-non-transparent-title {
+  color: #062D73;
+  font-size: 60px;
+}
+.component-skill-description .component-skill-non-transparent .component-skill-non-transparent-description {
+  margin-top: 3rem;
+  line-height: 33px;
+  letter-spacing: 1.5px;
+}
+.component-skill-description .component-skill-non-transparent .component-skill-non-transparent-skill-language {
+  line-height: 33px;
+  letter-spacing: 1.5px;
+}
+.component-skill-description .component-skill-non-transparent .component-skill-non-transparent-skill-description-title {
+  margin-top: 3.5rem;
+  font-weight: bold;
+}
+.component-skill-description .component-skill-non-transparent .component-skill-non-transparent-skill-description-professor-site {
+  cursor: pointer;
+  color: #011946;
+  text-decoration: none;
+  font-weight: bold;
+}
+.component-skill-description .component-skill-non-transparent .component-skill-non-transparent-sylabus {
+  margin: auto;
+  margin-top: 4rem;
+  width: 75%;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 20px;
+  background: #062D73;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.component-skill-description .component-skill-non-transparent .component-skill-non-transparent-sylabus .component-skill-non-transparent-sylabus-link {
+  color: white;
+  text-decoration: none;
+}
+.component-skill-description .component-skill-non-transparent .component-skill-non-transparent-sylabus:hover {
+  cursor: pointer;
+  background-color: #011946;
+}
+
+@media only screen and (max-width: 1080px) {
+  .component-skill-description {
+    display: flex;
+    gap: 0;
+    justify-content: space-around;
+    width: auto;
+  }
+  .component-skill-description .component-skill-non-transparent {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  .component-skill-description .component-skill-non-transparent .component-skill-non-transparent-exit-arrow {
+    display: static;
+    width: 2rem;
+  }
+  .component-skill-description .component-skill-non-transparent .component-skill-non-transparent-title {
+    margin-top: 2rem;
+    font-size: 2.2rem;
+  }
+  .component-skill-description .component-skill-non-transparent .component-skill-non-transparent-subject-name {
+    margin-top: 0.5rem;
+    color: rgb(0, 106, 255);
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  .component-skill-description .component-skill-non-transparent .component-skill-non-transparent-description {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+    line-height: 21px;
+    width: auto;
+    text-align: justify;
+    letter-spacing: 0.5px;
+  }
+  .component-skill-description .component-skill-non-transparent .component-skill-non-transparent-skill-description {
+    font-size: 1.4rem;
+  }
+  .component-skill-description .component-skill-non-transparent .component-skill-non-transparent-skill-description-title {
+    margin-top: 1rem;
+  }
+  .component-skill-description .component-skill-non-transparent .component-skill-non-transparent-sylabus {
+    margin-top: 3rem;
+  }
+}
+.component-skill-description .component-skill-non-transparent {
+  transform: none !important;
+}/*# sourceMappingURL=skill-description.css.map */

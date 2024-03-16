@@ -61,6 +61,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
     .subjects-main-introduction {
         margin-top: $subjects-main-margin-top;
         margin-left: $subjects-main-introduction-margin-left;
+        margin-right: $subjects-main-introduction-margin-left;
         width: 100%;
 
         .subjects-main-introduction-title {
@@ -188,7 +189,9 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         border: $subjects-subject-skill-box-border;
                         background: $subjects-subject-skill-box-background;
                         box-shadow: $subjects-subject-skill-box-shadow; 
+                        color: $main-color;
                         text-align: center;
+                        text-decoration: none;
                     }
 
                     .subject-skill-path {
@@ -196,19 +199,19 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         z-index: -10;
                     }
 
-                    .skill-box:nth-of-type(1) {
+                    .skill-box:nth-of-type(2) {
                         right: 400px;
                         top: 150px;
                     }
-                    .skill-box:nth-of-type(2) {
+                    .skill-box:nth-of-type(3) {
                         left: 390px;
                         top: 160px;
                     }
-                    .skill-box:nth-of-type(3) {
+                    .skill-box:nth-of-type(4) {
                         right: 390px;
                         top: 350px;
                     }
-                    .skill-box:nth-of-type(4) {
+                    .skill-box:nth-of-type(5) {
                         left: 380px;
                         top: 312px;
                     }
@@ -308,6 +311,10 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             -webkit-text-fill-color: transparent;
         }
     }
+
+    .subjects-path-right-phone, .subjects-path-left-phone {
+        display: none;
+    }
 }
 
 
@@ -337,7 +344,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
         .subjects-content {
             margin-inline: 0.7rem;
             width: calc($main-content-width/2);
-            margin-top: $subjects-content-margin-top;
+            margin-top: calc($subjects-content-margin-top/2);
 
             .subject-sem-name {
                 // width: 100%;
@@ -361,8 +368,8 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
 
 
                 .box {
-                    font-size: 0.5em;
-                    // margin: 0;
+                    font-size: 0.45em;
+                    margin: 0;
 
                     .subject-info {
                         gap: calc($subjects-info-boxes-gap/2);
@@ -371,11 +378,12 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         .info-box {
                             
                             // width: 100px;
-                            width: 40px;
-                            height: 40px;
+                            width: 35px;
+                            height: 35px;
                             padding: 10px;
                             box-shadow: $subjects-info-box-shadow;
-                            font-size: calc($subjects-info-box-content/2);
+                            border-radius: 15px;
+                            font-size: calc($subjects-info-box-content/1.75);
                             font-weight: bold;
 
                             span {
@@ -388,12 +396,12 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         display: flex;
                         flex-wrap: wrap;
                         gap: 0.5rem;
-                        // margin-top: $subjects-box-content-margin-top/2;
+                        margin-top: 2rem;
 
                         .subject-box {
                             min-width: 0;
                             height: calc($subjects-subject-box-heigth/2);
-                            width: 80px;
+                            width: 90px;
                             padding: $subjects-subject-padding/2;
                             margin-bottom: 1.5rem;
 
@@ -403,26 +411,57 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                             border: $subjects-subject-border;
                             background: $subjects-subject-background-color;
                             box-shadow: $subjects-subject-box-shadow;
-                            font-size: calc($subjects-subject-box-font-size/2); 
+                            font-size: 1.2rem;
+                            border-radius: 22px; 
                         }
 
                         .skill-box {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+
+                            font-weight: bold;
                             margin-top: 0.5rem;
-                            // margin-inline: 1rem;
                             width: max-content;
-                            height: 20px;
-                            text-align: center;
-                            position: static;
-                            padding: calc($subjects-subject-skill-box-padding/2);
+                            position: absolute;
+                            padding: calc($subjects-subject-skill-box-padding/4);
+                            padding-top: 0.5rem;
+                            padding-bottom: 0.5rem;
                             border-radius: $subjects-subject-skill-box-border-radius;
                             border: $subjects-subject-skill-box-border;
+
+                            width: 58px;
+                        }
+
+                        .skill-box:nth-of-type(2) {
+                            right: 190px;
+                            top: 80px;
+                        }
+                        .skill-box:nth-of-type(3) {
+                            left: 190px;
+                            top: 80px;
+                        }
+                        .skill-box:nth-of-type(4) {
+                            right: 190px;
+                            top: 200px;
+                        }
+                        .skill-box:nth-of-type(5) {
+                            left: 190px;
+                            top: 200px;
                         }
 
                         
                     }
                 }
 
+                .skill-box:hover {
+                    cursor: pointer;
+                    background-color: $main-color;
+                    color: $white-text-color
+                }
+
                 .skill-description {
+                    display: none;
                     align-self: center;
                     max-width: 40%;
                     top: 20%;
@@ -442,9 +481,15 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                 display: none;
             }
 
+            .subjects-path-right-phone, .subjects-path-left-phone {
+                display: block;
+                position: absolute;
+                width: 9rem;
+                top: 230px;
+            }
+
 
             .subject-next-sem-name {
-                margin-top: 4rem;
                 font-size: calc($subjects-sem-same-font-size/2);
             }
         }

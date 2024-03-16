@@ -10,6 +10,7 @@ button {
 .subjects-page .subjects-main-introduction {
   margin-top: 4rem;
   margin-left: 3rem;
+  margin-right: 3rem;
   width: 100%;
 }
 .subjects-page .subjects-main-introduction .subjects-main-introduction-title {
@@ -116,25 +117,27 @@ button {
   border: 2px solid #062D73;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
+  color: #062D73;
   text-align: center;
+  text-decoration: none;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-skill-path {
   position: absolute;
   z-index: -10;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(1) {
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
   right: 400px;
   top: 150px;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
   left: 390px;
   top: 160px;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
   right: 390px;
   top: 350px;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(5) {
   left: 380px;
   top: 312px;
 }
@@ -340,6 +343,9 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.subjects-page .subjects-path-right-phone, .subjects-page .subjects-path-left-phone {
+  display: none;
+}
 
 @media only screen and (max-width: 1080px) {
   .subjects-page .subjects-main-introduction {
@@ -361,7 +367,7 @@ button {
   .subjects-page .subjects-content {
     margin-inline: 0.7rem;
     width: 540px;
-    margin-top: 7rem;
+    margin-top: 3.5rem;
   }
   .subjects-page .subjects-content .subject-sem-name {
     width: 100%;
@@ -381,17 +387,19 @@ button {
     margin-bottom: 3rem;
   }
   .subjects-page .subjects-content .subject-frame .box {
-    font-size: 0.5em;
+    font-size: 0.45em;
+    margin: 0;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-info {
     gap: 0.5rem;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-info .info-box {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     padding: 10px;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
-    font-size: 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8571428571rem;
     font-weight: bold;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-info .info-box span {
@@ -401,11 +409,12 @@ button {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-top: 2rem;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-box {
     min-width: 0;
     height: 71px;
-    width: 80px;
+    width: 90px;
     padding: 32px 40px/2;
     margin-bottom: 1.5rem;
     text-decoration: none;
@@ -414,20 +423,48 @@ button {
     border: 3px solid #062D73;
     background: #F0F5FF;
     box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
-    font-size: 1rem;
+    font-size: 1.2rem;
+    border-radius: 22px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: bold;
     margin-top: 0.5rem;
     width: -moz-max-content;
     width: max-content;
-    height: 20px;
-    text-align: center;
-    position: static;
-    padding: 8px;
+    position: absolute;
+    padding: 4px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border-radius: 5px;
     border: 2px solid #062D73;
+    width: 58px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
+    right: 190px;
+    top: 80px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
+    left: 190px;
+    top: 80px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
+    right: 190px;
+    top: 200px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(5) {
+    left: 190px;
+    top: 200px;
+  }
+  .subjects-page .subjects-content .subject-frame .skill-box:hover {
+    cursor: pointer;
+    background-color: #062D73;
+    color: white;
   }
   .subjects-page .subjects-content .subject-frame .skill-description {
+    display: none;
     align-self: center;
     max-width: 40%;
     top: 20%;
@@ -441,8 +478,13 @@ button {
   .subjects-page .subjects-content .subject-path-ending-left, .subjects-page .subjects-content .subject-path-ending-right, .subjects-page .subjects-content .subjects-path-right, .subjects-page .subjects-content .subjects-path-left {
     display: none;
   }
+  .subjects-page .subjects-content .subjects-path-right-phone, .subjects-page .subjects-content .subjects-path-left-phone {
+    display: block;
+    position: absolute;
+    width: 9rem;
+    top: 230px;
+  }
   .subjects-page .subjects-content .subject-next-sem-name {
-    margin-top: 4rem;
     font-size: 2.5rem;
   }
   .subject-skill-path {

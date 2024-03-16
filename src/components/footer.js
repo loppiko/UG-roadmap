@@ -1,7 +1,7 @@
 import React from "react";
 
 // media 
-import radioIcon from './../media/icons/radio-icon.svg';
+import mfiIcon from './../media/icons/mfi-icon.svg';
 import facebookIcon from './../media/icons/facebook-icon.svg';
 
 
@@ -25,7 +25,7 @@ function Footer() {
     return (
     <div className="footer">
         <div className="first-column">
-                <button className="footer-icon"><img src={radioIcon} alt="radioIcon"/></button>
+                <button className="footer-icon"><img src={mfiIcon} alt="mfiIcon"/></button>
             <div className="faculty">
                 <span>{database["footer"]["faculty"]}</span>
             </div>

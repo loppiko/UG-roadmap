@@ -23,6 +23,9 @@ button {
   color: black;
   font-size: 22px;
 }
+.component-subject-description .component-subject-non-transparent .component-subject-non-transparent-exit-arrow {
+  display: none;
+}
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-title {
   color: #062D73;
   font-size: 60px;
@@ -67,17 +70,25 @@ button {
   background-color: #011946;
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 1080px) {
   .component-subject-description {
     display: flex;
     gap: 0;
     justify-content: space-around;
     width: auto;
   }
+  .component-subject-description .component-subject-transparent {
+    display: none;
+  }
   .component-subject-description .component-subject-non-transparent {
-    width: 70%;
+    width: 100%;
+    border: none;
     padding: 1.5rem;
     font-size: 1rem;
+  }
+  .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-exit-arrow {
+    display: block;
+    width: 2rem;
   }
   .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-title {
     margin-top: 2rem;
@@ -89,6 +100,8 @@ button {
     font-size: 0.8rem;
     line-height: 21px;
     width: auto;
+    text-align: justify;
+    letter-spacing: 0.5px;
   }
   .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-subject-description {
     font-size: 1.4rem;

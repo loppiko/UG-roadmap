@@ -1,0 +1,162 @@
+@import "../../../consts/consts.scss";
+
+$component-skill-description-transparent-background: rgba(78, 78, 78, 0.49);
+$component-skill-description-transparent-width: 65%;
+$component-skill-description-transparent-border-left-width: 3px;
+$component-skill-description-transparent-border-left: $component-skill-description-transparent-border-left-width solid $main-color; 
+$component-skill-description-transparent-padding: 4rem; 
+$component-skill-description-transparent-title-font-size: 60px;
+$component-skill-description-transparent-description-font-size: 22px;
+$component-skill-description-transparent-description-margin-top: 3rem;
+$component-skill-description-transparent-description-letter-spacing: 1.5px;
+$component-skill-description-transparent-description-line-height: 33px;
+$component-skill-description-transparent-skill-language-margin-top: 3.5rem;
+$component-skill-non-transparent-sylabus-border-radius: 20px;
+$component-skill-non-transparent-sylabus-margin-top: 4rem;
+$component-skill-non-transparent-sylabus-letter-spacing: 2px;
+$component-skill-non-transparent-sylabus-padding: 1rem;
+
+
+.component-skill-description {
+    display: flex;
+    position: absolute;
+    z-index: 5;
+
+    width: 100%;
+
+    background-color: $component-skill-description-transparent-background;
+
+    .component-skill-non-transparent{
+        height: 100vh;
+        position: sticky;
+        top: 0;
+
+        background-color: $background-color;
+        border-left: $component-skill-description-transparent-border-left;
+        padding: $component-skill-description-transparent-padding;
+
+        color: $black-text-color;
+        font-size: $component-skill-description-transparent-description-font-size;
+
+        .component-skill-non-transparent-exit-arrow {
+            display: hidden;
+        }
+
+        .component-skill-non-transparent-title {
+            color: $main-color;
+            font-size: $component-skill-description-transparent-title-font-size;
+        }
+
+        .component-skill-non-transparent-description {
+            margin-top: $component-skill-description-transparent-description-margin-top;
+
+            line-height: $component-skill-description-transparent-description-line-height;
+            letter-spacing:
+            $component-skill-description-transparent-description-letter-spacing;
+        }
+
+        .component-skill-non-transparent-skill-language {
+            line-height: $component-skill-description-transparent-description-line-height;
+            letter-spacing:
+            $component-skill-description-transparent-description-letter-spacing;
+        }
+
+        .component-skill-non-transparent-skill-description-title {
+            margin-top: $component-skill-description-transparent-skill-language-margin-top;
+            font-weight: bold;
+        }
+
+        .component-skill-non-transparent-skill-description-professor-site {
+            cursor: pointer;
+            color:$main-color-active-button;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .component-skill-non-transparent-sylabus {
+            margin: auto;
+            margin-top: $component-skill-non-transparent-sylabus-margin-top;
+
+            width: 75%;
+            padding: $component-skill-non-transparent-sylabus-padding;
+            text-align: center;
+            border-radius: $component-skill-non-transparent-sylabus-border-radius;
+            background: $main-color; 
+            color: $white-text-color;
+            letter-spacing: $component-skill-non-transparent-sylabus-letter-spacing;
+            font-weight: bold;
+
+            .component-skill-non-transparent-sylabus-link {
+                color: $white-text-color;
+                text-decoration: none;
+            }
+        }
+
+        .component-skill-non-transparent-sylabus:hover {
+            cursor: pointer;
+            background-color: $main-color-active-button;
+        }
+    }
+}   
+
+@media only screen and (max-width: 1080px) {
+    
+    .component-skill-description {
+        display: flex;
+        gap: 0;
+        justify-content: space-around;
+        width: auto;
+        
+        .component-skill-non-transparent {
+            width: 100%;
+            border: none;
+            padding: 1.5rem;
+            font-size: 1rem;
+
+            .component-skill-non-transparent-exit-arrow {
+                display: static;
+                width: 2rem;
+            }
+
+            .component-skill-non-transparent-title {
+                margin-top: 2rem;
+                font-size: 2.2rem;
+            }
+
+            .component-skill-non-transparent-subject-name {
+                margin-top: 0.5rem;                
+                color: rgba(0, 106, 255);
+                font-weight: bold;
+                font-size: 0.8rem;
+            }
+
+            .component-skill-non-transparent-description {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                font-size: 0.8rem;
+                line-height: 21px;
+                width: auto;
+                text-align: justify;
+                letter-spacing: 0.5px;
+            }
+
+            .component-skill-non-transparent-skill-description {
+                font-size: 1.4rem;
+            }
+
+            .component-skill-non-transparent-skill-description-title {
+                margin-top: 1rem;
+            }
+
+            .component-skill-non-transparent-sylabus {
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+.component-skill-description .component-skill-non-transparent
+{
+  transform: none !important;
+}
+
