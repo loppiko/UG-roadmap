@@ -1,10 +1,11 @@
 import React from "react";
-import {useState } from "react";
+import {useState, useEffect} from "react";
 import {motion} from "framer-motion";
 
 // ---- components ----
 import NavBar from "../../components/nav-bar";
 import SubjectDescription from "../../components/subject-description";
+import SkillDescription from "../../components/skill-description"
 
 // database
 import database from "../../main.json";
@@ -39,9 +40,11 @@ function Subjects() {
     const { semesterId } = useParams();
     // const semesterNumber = parseInt(semesterId.split("-")[1]);
 
-    const [displaySubjectDescription, setIsVisable] = useState(false);
-    const handleSubjectOnClick = () => setIsVisable(true);
+    const [displaySubjectDescription, setSubjectIsVisable] = useState(false);
+    const handleSubjectOnClick = () => setSubjectIsVisable(true);
 
+    const [displaySkillComponent, setSkillIsVisable] = useState(false);
+    const handleSkillComponentOnClick = () => setSkillIsVisable(true);
 
     // Returning paths
     function returnTurningPath(index, arrayLength) {
@@ -92,30 +95,43 @@ function Subjects() {
         .map((subject) => {
             return subject["skills"].map((skill) => {
                 return {
-                    "skill": skill
+                    "subject-name": subject["subject-name"],
+                    "skill": skill,
                 }
             })
         })
         .flat()
-        .map(({skill}, index) => {
-            return {
-                "id": index,
-                skill
-            }
-        })
-
-
+        .map((obj, index) => {
+            return {...obj, "id": index}
+        });
+    
     const doesSkillMatchActiveId = (skillArray, idVisibleSkill, skill) => {
         const res = skillArray.find(elem => elem["id"] === idVisibleSkill)
         return (!res) ? false : _.isEqual(res["skill"], skill)
     }
-    
 
+    // Does we need to give diffrent version of SkillDescription and load the component?
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => { setScreenWidth(window.innerWidth)};
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const phoneSkillComponent = screenWidth <= 1080;
+
+    // Dekstop version handle skill onlick
     const handleSkillOnClick = (skillArray, activeSkill) => {
 
         skillArray.forEach((elem) => {
             if (_.isEqual(activeSkill, elem["skill"])) {
               setIdVisable(elem["id"]);
+              handleSkillComponentOnClick();
             }
           });
     }
@@ -129,7 +145,8 @@ function Subjects() {
 
     return (
         <div className="subjects-page">
-            {displaySubjectDescription && <SubjectDescription handleTransparentOnClick={() => setIsVisable(false)}/>}
+            {displaySubjectDescription && <SubjectDescription handleTransparentOnClick={() => setSubjectIsVisable(false)}/>}
+            {phoneSkillComponent && displaySkillComponent && SkillDescription(skillArray, () => setSkillIsVisable(false)) }
             <div className="subjects-main-introduction">
                 <div className="subjects-main-introduction-title">Practical informatics</div>
                 <img className="subjects-main-introduction-title-underline" src={Underline} alt="title-underline"/>
@@ -156,12 +173,12 @@ function Subjects() {
                                         onClick={ handleSubjectOnClick }>{ subject["subject-name"] }
                                     </Link>
                                     {
-                                    subject["skills"].map(skill => 
-                                        <motion.div 
-                                            key={"skill-box-" + skill["skill-name"]}
-                                            onClick={() => handleSkillOnClick(skillArray, skill)} 
-                                            className="skill-box">{ skill["skill-name"] }
-                                        </motion.div>
+                                    skillArray.map(elem => (elem["subject-name"] === subject["subject-name"]) && <Link 
+                                            key={"skill-box-" + elem["skill"]["skill-name"]}
+                                            onClick={() => handleSkillOnClick(skillArray, elem["skill"])}
+                                            to={`/roadmap-enter/${semesterId}/${subject["subject-name"].split(" ").join("-")}/${elem["skill"]["skill-name"].split(" ").join("-")}`}
+                                            className="skill-box">{ elem["skill"]["skill-name"] }
+                                        </Link>
                                     )
                                     }
                                     { displaySkillPaths && <img src={ SkillPath1 } alt="SkillPath1" className="subject-skill-path"/>}
@@ -172,7 +189,7 @@ function Subjects() {
                             </div>
                             { subject["skills"].map(skill => {
                                 return (
-                                    doesSkillMatchActiveId(skillArray, idVisibleSkill, skill) && <motion.div 
+                                    !phoneSkillComponent && doesSkillMatchActiveId(skillArray, idVisibleSkill, skill) && <motion.div 
                                         variants={dataVariants}
                                         initial="hidden" 
                                         animate="visible" 

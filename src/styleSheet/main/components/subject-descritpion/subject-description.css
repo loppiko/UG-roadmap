@@ -24,7 +24,7 @@ button {
   font-size: 22px;
 }
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-exit-arrow {
-  display: hidden;
+  display: none;
 }
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-title {
   color: #062D73;
@@ -87,7 +87,7 @@ button {
     font-size: 1rem;
   }
   .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-exit-arrow {
-    display: static;
+    display: block;
     width: 2rem;
   }
   .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-title {

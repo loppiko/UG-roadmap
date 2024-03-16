@@ -173,8 +173,7 @@ button {
 @media only screen and ((max-width: 810px)) {
   .footer {
     flex-direction: column;
-    height: 230vh;
-    padding-bottom: 4em;
+    height: 1700px;
   }
   .footer .first-column {
     width: auto;

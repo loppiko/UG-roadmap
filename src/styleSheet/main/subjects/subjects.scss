@@ -61,6 +61,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
     .subjects-main-introduction {
         margin-top: $subjects-main-margin-top;
         margin-left: $subjects-main-introduction-margin-left;
+        margin-right: $subjects-main-introduction-margin-left;
         width: 100%;
 
         .subjects-main-introduction-title {
@@ -188,7 +189,9 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         border: $subjects-subject-skill-box-border;
                         background: $subjects-subject-skill-box-background;
                         box-shadow: $subjects-subject-skill-box-shadow; 
+                        color: $main-color;
                         text-align: center;
+                        text-decoration: none;
                     }
 
                     .subject-skill-path {
@@ -196,19 +199,19 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         z-index: -10;
                     }
 
-                    .skill-box:nth-of-type(1) {
+                    .skill-box:nth-of-type(2) {
                         right: 400px;
                         top: 150px;
                     }
-                    .skill-box:nth-of-type(2) {
+                    .skill-box:nth-of-type(3) {
                         left: 390px;
                         top: 160px;
                     }
-                    .skill-box:nth-of-type(3) {
+                    .skill-box:nth-of-type(4) {
                         right: 390px;
                         top: 350px;
                     }
-                    .skill-box:nth-of-type(4) {
+                    .skill-box:nth-of-type(5) {
                         left: 380px;
                         top: 312px;
                     }
@@ -341,7 +344,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
         .subjects-content {
             margin-inline: 0.7rem;
             width: calc($main-content-width/2);
-            margin-top: $subjects-content-margin-top;
+            margin-top: calc($subjects-content-margin-top/2);
 
             .subject-sem-name {
                 // width: 100%;
@@ -408,7 +411,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                             border: $subjects-subject-border;
                             background: $subjects-subject-background-color;
                             box-shadow: $subjects-subject-box-shadow;
-                            font-size: calc($subjects-subject-box-font-size/1.5);
+                            font-size: 1.2rem;
                             border-radius: 22px; 
                         }
 
@@ -430,19 +433,19 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                             width: 58px;
                         }
 
-                        .skill-box:nth-of-type(1) {
-                            right: 190px;
-                            top: 80px;
-                        }
                         .skill-box:nth-of-type(2) {
-                            left: 190px;
+                            right: 190px;
                             top: 80px;
                         }
                         .skill-box:nth-of-type(3) {
+                            left: 190px;
+                            top: 80px;
+                        }
+                        .skill-box:nth-of-type(4) {
                             right: 190px;
                             top: 200px;
                         }
-                        .skill-box:nth-of-type(4) {
+                        .skill-box:nth-of-type(5) {
                             left: 190px;
                             top: 200px;
                         }
@@ -481,13 +484,12 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             .subjects-path-right-phone, .subjects-path-left-phone {
                 display: block;
                 position: absolute;
-                width: 40%;
+                width: 9rem;
                 top: 230px;
             }
 
 
             .subject-next-sem-name {
-                margin-top: 4rem;
                 font-size: calc($subjects-sem-same-font-size/2);
             }
         }

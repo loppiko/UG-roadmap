@@ -10,6 +10,7 @@ button {
 .subjects-page .subjects-main-introduction {
   margin-top: 4rem;
   margin-left: 3rem;
+  margin-right: 3rem;
   width: 100%;
 }
 .subjects-page .subjects-main-introduction .subjects-main-introduction-title {
@@ -116,25 +117,27 @@ button {
   border: 2px solid #062D73;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
+  color: #062D73;
   text-align: center;
+  text-decoration: none;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-skill-path {
   position: absolute;
   z-index: -10;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(1) {
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
   right: 400px;
   top: 150px;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
   left: 390px;
   top: 160px;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
   right: 390px;
   top: 350px;
 }
-.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
+.subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(5) {
   left: 380px;
   top: 312px;
 }
@@ -364,7 +367,7 @@ button {
   .subjects-page .subjects-content {
     margin-inline: 0.7rem;
     width: 540px;
-    margin-top: 7rem;
+    margin-top: 3.5rem;
   }
   .subjects-page .subjects-content .subject-sem-name {
     width: 100%;
@@ -420,7 +423,7 @@ button {
     border: 3px solid #062D73;
     background: #F0F5FF;
     box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
-    font-size: 1.3333333333rem;
+    font-size: 1.2rem;
     border-radius: 22px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box {
@@ -439,19 +442,19 @@ button {
     border: 2px solid #062D73;
     width: 58px;
   }
-  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(1) {
-    right: 190px;
-    top: 80px;
-  }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
-    left: 190px;
+    right: 190px;
     top: 80px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
+    left: 190px;
+    top: 80px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
     right: 190px;
     top: 200px;
   }
-  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(5) {
     left: 190px;
     top: 200px;
   }
@@ -478,11 +481,10 @@ button {
   .subjects-page .subjects-content .subjects-path-right-phone, .subjects-page .subjects-content .subjects-path-left-phone {
     display: block;
     position: absolute;
-    width: 40%;
+    width: 9rem;
     top: 230px;
   }
   .subjects-page .subjects-content .subject-next-sem-name {
-    margin-top: 4rem;
     font-size: 2.5rem;
   }
   .subject-skill-path {
