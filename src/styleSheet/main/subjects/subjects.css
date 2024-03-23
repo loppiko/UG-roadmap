@@ -391,10 +391,11 @@ button {
   }
   .subjects-page .subjects-content .subject-frame .box .subject-info {
     gap: 0.5rem;
+    max-width: 166px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-info .info-box {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     padding: 10px;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -443,19 +444,19 @@ button {
     width: 68px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
-    right: 185px;
+    right: 178px;
     top: 80px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
-    left: 185px;
+    left: 178px;
     top: 80px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
-    right: 185px;
+    right: 178px;
     top: 200px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(5) {
-    left: 185px;
+    left: 178px;
     top: 200px;
   }
   .subjects-page .subjects-content .subject-frame .skill-box:hover {
