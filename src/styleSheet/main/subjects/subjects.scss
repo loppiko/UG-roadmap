@@ -368,7 +368,6 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
 
 
                 .box {
-                    font-size: 0.45em;
                     margin: 0;
 
                     .subject-info {
@@ -401,7 +400,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         .subject-box {
                             min-width: 0;
                             height: calc($subjects-subject-box-heigth/2);
-                            width: 90px;
+                            width: 85px;
                             padding: $subjects-subject-padding/2;
                             margin-bottom: 1.5rem;
 
@@ -411,7 +410,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                             border: $subjects-subject-border;
                             background: $subjects-subject-background-color;
                             box-shadow: $subjects-subject-box-shadow;
-                            font-size: 1.2rem;
+                            font-size: 1.15rem;
                             border-radius: 22px; 
                         }
 
@@ -420,6 +419,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                             flex-wrap: wrap;
                             justify-content: center;
 
+                            font-size: 0.55rem;
                             font-weight: bold;
                             margin-top: 0.5rem;
                             width: max-content;
@@ -430,7 +430,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                             border-radius: $subjects-subject-skill-box-border-radius;
                             border: $subjects-subject-skill-box-border;
 
-                            width: 58px;
+                            width: 68px;
                         }
 
                         .skill-box:nth-of-type(2) {
