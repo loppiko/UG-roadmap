@@ -78,8 +78,6 @@ $component-skill-non-transparent-sylabus-padding: 1rem;
             margin-top: $component-skill-non-transparent-sylabus-margin-top;
 
             width: 75%;
-            padding: $component-skill-non-transparent-sylabus-padding;
-            text-align: center;
             border-radius: $component-skill-non-transparent-sylabus-border-radius;
             background: $main-color; 
             color: $white-text-color;
@@ -87,6 +85,11 @@ $component-skill-non-transparent-sylabus-padding: 1rem;
             font-weight: bold;
 
             .component-skill-non-transparent-sylabus-link {
+                display: block;
+                height: 100%;
+                padding: $component-skill-non-transparent-sylabus-padding;
+
+                text-align: center;
                 color: $white-text-color;
                 text-decoration: none;
             }

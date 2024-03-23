@@ -1,5 +1,6 @@
 import React from "react";
 import {useState, useEffect} from "react";
+import { useParams, Link } from "react-router-dom";
 import {motion} from "framer-motion";
 
 // ---- components ----
@@ -27,9 +28,6 @@ import SkillPath2 from "../../media/paths/subjects/skill-path-2.svg"
 import SkillPath3 from "../../media/paths/subjects/skill-path-3.svg"
 import SkillPath4 from "../../media/paths/subjects/skill-path-4.svg"
 
-import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
-import { Link } from "react-router-dom";
-
 function Subjects() {
     // lodash
     const _ = require('lodash');
@@ -37,7 +35,7 @@ function Subjects() {
     // Display skill Paths
     const displaySkillPaths = true;
 
-    const { semesterId } = useParams();
+    const {semesterId, subjectName, skillId} = useParams();
     // const semesterNumber = parseInt(semesterId.split("-")[1]);
 
     const [displaySubjectDescription, setSubjectIsVisable] = useState(false);
@@ -92,11 +90,12 @@ function Subjects() {
     const [idVisibleSkill, setIdVisable] = useState(null);
 
     const skillArray = database["semesters"][semesterId]
-        .map((subject) => {
+        .map((subject, skillId) => {
             return subject["skills"].map((skill) => {
                 return {
                     "subject-name": subject["subject-name"],
                     "skill": skill,
+                    "subject-id": skillId
                 }
             })
         })
@@ -114,13 +113,9 @@ function Subjects() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     useEffect(() => {
-        const handleResize = () => { setScreenWidth(window.innerWidth)};
-
+        const handleResize = () => {setScreenWidth(window.innerWidth)};
         window.addEventListener('resize', handleResize);
-
-        return () => {
-        window.removeEventListener('resize', handleResize);
-        };
+        return () => {window.removeEventListener('resize', handleResize)};
     }, []);
 
     const phoneSkillComponent = screenWidth <= 1080;
@@ -146,7 +141,7 @@ function Subjects() {
     return (
         <div className="subjects-page">
             {displaySubjectDescription && <SubjectDescription handleTransparentOnClick={() => setSubjectIsVisable(false)}/>}
-            {phoneSkillComponent && displaySkillComponent && SkillDescription(skillArray, () => setSkillIsVisable(false)) }
+            {phoneSkillComponent && displaySkillComponent && SkillDescription(skillArray, () => setSkillIsVisable(false), {semesterId, subjectName, skillId}) }
             <div className="subjects-main-introduction">
                 <div className="subjects-main-introduction-title">Practical informatics</div>
                 <img className="subjects-main-introduction-title-underline" src={Underline} alt="title-underline"/>

@@ -49,8 +49,6 @@ button {
   margin: auto;
   margin-top: 4rem;
   width: 75%;
-  padding: 1rem;
-  text-align: center;
   border-radius: 20px;
   background: #062D73;
   color: white;
@@ -58,6 +56,10 @@ button {
   font-weight: bold;
 }
 .component-skill-description .component-skill-non-transparent .component-skill-non-transparent-sylabus .component-skill-non-transparent-sylabus-link {
+  display: block;
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
   color: white;
   text-decoration: none;
 }
