@@ -1,6 +1,5 @@
 import React from "react";
 import {motion} from "framer-motion";
-import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
 
 import ExitArrowIcon from "../media/icons/exit-arrow-icon.svg"
 import { Link } from "react-router-dom";
@@ -8,17 +7,22 @@ import { Link } from "react-router-dom";
 
 // 112 - footer size
 
-function SkillDescription(skillArray, handleExitArrowOnClick) {
-    let {semesterId, subjectName, skillId} = useParams();
+function SkillDescription(skillArray, handleExitArrowOnClick, {semesterId, subjectName, skillId}) {
 
-    const currentSkill = skillArray.find(elem => elem["skill"]["skill-name"].split(" ").join("-") === skillId && subjectName === elem["subject-name"].split(" ").join("-"))
-
+    let currentSkill = skillArray.find(elem => elem["skill"]["skill-name"].split(" ").join("-") === skillId && subjectName === elem["subject-name"].split(" ").join("-"))
+    let currentSkillSet = skillArray.filter(elem => elem["subject-id"] === currentSkill["subject-id"])
     
     const dataTransition = {duration:0.5, delay:0.25}
 
     const dataVariants = {
         hidden: {opacity:0, x:25},
         visible:{opacity:1, y:0},
+    }
+
+    const handleNextSkill = (currentSkill, currentSkillSet) => {
+        const nextSkill = (currentSkillSet.find(elem => currentSkill["id"] + 1 === elem["id"]))
+        if (nextSkill) return `/roadmap-enter/${semesterId}/${subjectName}/${nextSkill["skill"]["skill-name"].split(" ").join("-")}`;
+        else return `/roadmap-enter/${semesterId}/${subjectName}/${currentSkillSet[0]["skill"]["skill-name"].split(" ").join("-")}`;
     }
 
     return (
@@ -40,7 +44,7 @@ function SkillDescription(skillArray, handleExitArrowOnClick) {
                     onHoverStart={e => {}}
                     onHoverEnd={e => {}}
                     className="component-skill-non-transparent-sylabus">
-                    <div className="component-skill-non-transparent-sylabus-link" >Nothing there now</div>
+                    <Link to={handleNextSkill(currentSkill, currentSkillSet)} className="component-skill-non-transparent-sylabus-link" >Next Skill</Link>
                 </motion.div>
             </motion.div>
         </div>

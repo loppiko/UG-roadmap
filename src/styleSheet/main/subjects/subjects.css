@@ -387,7 +387,6 @@ button {
     margin-bottom: 3rem;
   }
   .subjects-page .subjects-content .subject-frame .box {
-    font-size: 0.45em;
     margin: 0;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-info {
@@ -414,7 +413,7 @@ button {
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-box {
     min-width: 0;
     height: 71px;
-    width: 90px;
+    width: 85px;
     padding: 32px 40px/2;
     margin-bottom: 1.5rem;
     text-decoration: none;
@@ -423,13 +422,14 @@ button {
     border: 3px solid #062D73;
     background: #F0F5FF;
     box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     border-radius: 22px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-size: 0.55rem;
     font-weight: bold;
     margin-top: 0.5rem;
     width: -moz-max-content;
@@ -440,7 +440,7 @@ button {
     padding-bottom: 0.5rem;
     border-radius: 5px;
     border: 2px solid #062D73;
-    width: 58px;
+    width: 68px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
     right: 190px;

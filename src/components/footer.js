@@ -11,15 +11,15 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     const informationAbout = database["footer"]["information about"].map( (information ) => {
-        return <Link to={information.link} className="footer-information-about-inscriptions-link">{information.inscription}</Link>
+        return <Link to={information.link} key={`footer-information-about${information.inscription}`} className="footer-information-about-inscriptions-link">{information.inscription}</Link>
     });
 
     const informationFor = database["footer"]["information for"].map( (information ) => {
-        return <Link to={information.link} className="footer-information-for-inscriptions-link">{information.inscription}</Link>
+        return <Link to={information.link} key={`footer-information-for-${information.inscription}`} className="footer-information-for-inscriptions-link">{information.inscription}</Link>
     })
 
     const other = database["footer"]["other"].map( (information ) => {
-        return <Link to={information.link} className="footer-other-inscriptions-link">{information.inscription}</Link>
+        return <Link to={information.link} key={`footer-information-other${information.inscription}`} className="footer-other-inscriptions-link">{information.inscription}</Link>
     })
 
     return (
