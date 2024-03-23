@@ -413,7 +413,7 @@ button {
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-box {
     min-width: 0;
     height: 71px;
-    width: 85px;
+    width: 80px;
     padding: 32px 40px/2;
     margin-bottom: 1.5rem;
     text-decoration: none;
@@ -422,7 +422,7 @@ button {
     border: 3px solid #062D73;
     background: #F0F5FF;
     box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     border-radius: 22px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box {
@@ -443,19 +443,19 @@ button {
     width: 68px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
-    right: 190px;
+    right: 185px;
     top: 80px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
-    left: 190px;
+    left: 185px;
     top: 80px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
-    right: 190px;
+    right: 185px;
     top: 200px;
   }
   .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(5) {
-    left: 190px;
+    left: 185px;
     top: 200px;
   }
   .subjects-page .subjects-content .subject-frame .skill-box:hover {
@@ -481,8 +481,8 @@ button {
   .subjects-page .subjects-content .subjects-path-right-phone, .subjects-page .subjects-content .subjects-path-left-phone {
     display: block;
     position: absolute;
-    width: 9rem;
-    top: 230px;
+    width: 8.5rem;
+    top: 232px;
   }
   .subjects-page .subjects-content .subject-next-sem-name {
     font-size: 2.5rem;

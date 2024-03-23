@@ -400,7 +400,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         .subject-box {
                             min-width: 0;
                             height: calc($subjects-subject-box-heigth/2);
-                            width: 85px;
+                            width: 80px;
                             padding: $subjects-subject-padding/2;
                             margin-bottom: 1.5rem;
 
@@ -410,7 +410,7 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                             border: $subjects-subject-border;
                             background: $subjects-subject-background-color;
                             box-shadow: $subjects-subject-box-shadow;
-                            font-size: 1.15rem;
+                            font-size: 1.1rem;
                             border-radius: 22px; 
                         }
 
@@ -434,19 +434,19 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         }
 
                         .skill-box:nth-of-type(2) {
-                            right: 190px;
+                            right: 185px;
                             top: 80px;
                         }
                         .skill-box:nth-of-type(3) {
-                            left: 190px;
+                            left: 185px;
                             top: 80px;
                         }
                         .skill-box:nth-of-type(4) {
-                            right: 190px;
+                            right: 185px;
                             top: 200px;
                         }
                         .skill-box:nth-of-type(5) {
-                            left: 190px;
+                            left: 185px;
                             top: 200px;
                         }
 
@@ -484,8 +484,8 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
             .subjects-path-right-phone, .subjects-path-left-phone {
                 display: block;
                 position: absolute;
-                width: 9rem;
-                top: 230px;
+                width: 8.5rem;
+                top: 232px;
             }
 
 
