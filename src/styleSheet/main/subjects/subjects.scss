@@ -372,13 +372,13 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
 
                     .subject-info {
                         gap: calc($subjects-info-boxes-gap/2);
-                        
+                        max-width: 166px;
 
                         .info-box {
                             
                             // width: 100px;
-                            width: 35px;
-                            height: 35px;
+                            width: 32px;
+                            height: 32px;
                             padding: 10px;
                             box-shadow: $subjects-info-box-shadow;
                             border-radius: 15px;
@@ -434,19 +434,19 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         }
 
                         .skill-box:nth-of-type(2) {
-                            right: 185px;
+                            right: 178px;
                             top: 80px;
                         }
                         .skill-box:nth-of-type(3) {
-                            left: 185px;
+                            left: 178px;
                             top: 80px;
                         }
                         .skill-box:nth-of-type(4) {
-                            right: 185px;
+                            right: 178px;
                             top: 200px;
                         }
                         .skill-box:nth-of-type(5) {
-                            left: 185px;
+                            left: 178px;
                             top: 200px;
                         }
 
