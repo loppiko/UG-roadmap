@@ -1,0 +1,6 @@
+{
+    "server_url": "8080/",
+    "client_id": "flask-client",
+    "realm_name": "react-demo",
+    "secret_key": "4HblqQmpQMZIIEBim242DMZ5NX5FLibd"
+}

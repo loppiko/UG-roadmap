@@ -3,6 +3,11 @@
 #local files
 front-end/src/temp.html
 back-end/node_modules
+flask-app/bin
+flask-app/include
+flask-app/lib
+flask-app/lib64
+flask-app/share
 
 # dependencies
 /node_modules

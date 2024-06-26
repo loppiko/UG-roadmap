@@ -1,12 +1,12 @@
 import React from "react";
 
 // media 
-import mfiIcon from './../media/icons/mfi-icon.svg';
-import facebookIcon from './../media/icons/facebook-icon.svg';
+import mfiIcon from '../media/icons/mfi-icon.svg';
+import facebookIcon from '../media/icons/facebook-icon.svg';
 
 
 // database
-import database from "./../main.json";
+import database from "../main.json";
 import { Link } from "react-router-dom";
 
 function Footer() {
