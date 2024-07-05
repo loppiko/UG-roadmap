@@ -170,7 +170,7 @@ button {
   text-decoration: underline;
 }
 
-@media only screen and ((max-width: 810px)) {
+@media only screen and (max-width: 810px) {
   .footer {
     flex-direction: column;
     height: 1700px;
