@@ -118,7 +118,7 @@ function Subjects() {
         return () => {window.removeEventListener('resize', handleResize)};
     }, []);
 
-    const phoneSkillComponent = screenWidth <= 1080;
+    const phoneSkillComponent = screenWidth <= 999;
 
     // Dekstop version handle skill onlick
     const handleSkillOnClick = (skillArray, activeSkill) => {

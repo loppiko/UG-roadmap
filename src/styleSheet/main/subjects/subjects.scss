@@ -276,7 +276,6 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
                         margin-right: 0;
                     }
                     .skill-description {
-                        left: 0;
                         bottom: 35px;
                     }
                 } @else {
@@ -318,7 +317,149 @@ $subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79
 }
 
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1500px) and (min-width: 1001px) {
+    .subjects-page {
+
+
+        .subjects-main-introduction-title {
+            font-size: 3.5rem !important;
+        }
+
+        .subjects-content {
+            width: 710px;
+            margin-top: calc($subjects-main-margin-top);
+
+            
+
+            .subject-path-starting {
+                width: 40%;
+                margin-right: 190px;
+            }
+
+            .subject-frame {
+                .box {
+                    width: 275px;
+
+                    .subject-info {
+
+                        .info-box {
+                            height: 75px;
+                            padding: 6px 12px;
+
+                            font-size: 1.2rem;
+                        }
+                    }
+                    
+                    .subject-box-content {
+                        width: 275px;
+    
+                        .subject-box {
+                            padding: 13px 16px;
+                            max-width: 275px;
+
+                            font-size: calc($subjects-subject-box-font-size/1.2);
+                        }
+
+                        .skill-box {
+                            display: block;
+                            padding: 8px;
+                            min-width: 90px;
+                            font-size: 14px;
+                        }
+
+
+                        .skill-box:nth-of-type(2) {
+                            right: 300px;
+                            top: 90px;
+                        }
+                        .skill-box:nth-of-type(3) {
+                            left: 300px;
+                            top: 90px;
+                        }
+                        .skill-box:nth-of-type(4) {
+                            right: 300px;
+                            top: 270px;
+                        }
+                        .skill-box:nth-of-type(5) {
+                            left: 300px;
+                            top: 280px;
+                        }
+    
+                        .subject-skill-path:nth-of-type(1) {
+                            right: 230px;
+                            top: 122px;
+                        }
+                        .subject-skill-path:nth-of-type(2) {
+                            left: 245px;
+                            top: 130px;
+                        }
+                        .subject-skill-path:nth-of-type(3) {
+                            right: 245px;
+                            top: 260px;
+                        }
+                        .subject-skill-path:nth-of-type(4) {
+                            left: 250px;
+                            top: 266px;
+                        }
+                    }
+                    
+                }
+
+                .skill-description {
+                    font-size: 1rem;
+                    width: 375px;
+                    margin-bottom: 140px;
+
+                    .title {
+                        text-align: left;
+                    }
+                }
+
+                .subjects-path-right {
+                    width: 70%;
+                    margin-left: 120px;
+                }
+
+                .subjects-path-left {
+                    width: 70%;
+                    margin-left: 120px;
+                }
+
+                
+                
+            }
+
+            @for $frame-number from 1 through $subjects-sem-number-of-frames-to-iterate + 1 {
+                .subject-frame:nth-of-type(#{$frame-number}) {
+                    @if $frame-number % 2 == 0 {
+                        .skill-description {
+                            right: 450px;
+                        }
+                    } @else {
+                        .skill-description {
+                            left: 450px;
+                        }
+                    }
+                }
+            }
+
+            .subject-path-ending-right {
+                width: 42%;
+                margin-right: 230px;
+            }
+
+            .subject-path-ending-left {
+                width: 42%;
+                margin-left: 230px;
+            }
+        }
+        
+    }
+}
+
+
+
+@media only screen and (max-width: 1000px) {
     .subjects-page {
         // width: min-content;
         .subjects-main-introduction {

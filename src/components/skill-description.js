@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function SkillDescription(skillArray, handleExitArrowOnClick, {semesterId, subjectName, skillId}) {
 
     let currentSkill = skillArray.find(elem => elem["skill"]["skill-name"].split(" ").join("-") === skillId && subjectName === elem["subject-name"].split(" ").join("-"))
-    let currentSkillSet = skillArray.filter(elem => elem["subject-id"] === currentSkill["subject-id"])
+    let currentSkillSet = (currentSkill) ? skillArray.filter(elem => elem["subject-id"] === currentSkill["subject-id"]) : null;
     
     const dataTransition = {duration:0.5, delay:0.25}
 
@@ -24,6 +24,8 @@ function SkillDescription(skillArray, handleExitArrowOnClick, {semesterId, subje
         if (nextSkill) return `/roadmap-enter/${semesterId}/${subjectName}/${nextSkill["skill"]["skill-name"].split(" ").join("-")}`;
         else return `/roadmap-enter/${semesterId}/${subjectName}/${currentSkillSet[0]["skill"]["skill-name"].split(" ").join("-")}`;
     }
+
+    if (!currentSkill) return null;
 
     return (
         <div className="component-skill-description" style={{height: `${document.documentElement.scrollHeight - 112}px`}}>  

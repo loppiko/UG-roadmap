@@ -191,7 +191,6 @@ button {
   margin-right: 0;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(2) .skill-description {
-  left: 0;
   bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(3) .box {
@@ -205,7 +204,6 @@ button {
   margin-right: 0;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(4) .skill-description {
-  left: 0;
   bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(5) .box {
@@ -219,7 +217,6 @@ button {
   margin-right: 0;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(6) .skill-description {
-  left: 0;
   bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(7) .box {
@@ -233,7 +230,6 @@ button {
   margin-right: 0;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(8) .skill-description {
-  left: 0;
   bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(9) .box {
@@ -247,7 +243,6 @@ button {
   margin-right: 0;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(10) .skill-description {
-  left: 0;
   bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(11) .box {
@@ -261,7 +256,6 @@ button {
   margin-right: 0;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(12) .skill-description {
-  left: 0;
   bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(13) .box {
@@ -275,7 +269,6 @@ button {
   margin-right: 0;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(14) .skill-description {
-  left: 0;
   bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(15) .box {
@@ -289,7 +282,6 @@ button {
   margin-right: 0;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(16) .skill-description {
-  left: 0;
   bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(17) .box {
@@ -303,7 +295,6 @@ button {
   margin-right: 0;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(18) .skill-description {
-  left: 0;
   bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(19) .box {
@@ -317,7 +308,6 @@ button {
   margin-right: 0;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(20) .skill-description {
-  left: 0;
   bottom: 35px;
 }
 .subjects-page .subjects-content .subject-frame:nth-of-type(21) .box {
@@ -347,7 +337,161 @@ button {
   display: none;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1500px) and (min-width: 1001px) {
+  .subjects-page .subjects-main-introduction-title {
+    font-size: 3.5rem !important;
+  }
+  .subjects-page .subjects-content {
+    width: 710px;
+    margin-top: 4rem;
+  }
+  .subjects-page .subjects-content .subject-path-starting {
+    width: 40%;
+    margin-right: 190px;
+  }
+  .subjects-page .subjects-content .subject-frame .box {
+    width: 275px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-info .info-box {
+    height: 75px;
+    padding: 6px 12px;
+    font-size: 1.2rem;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content {
+    width: 275px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-box {
+    padding: 13px 16px;
+    max-width: 275px;
+    font-size: 1.6666666667rem;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box {
+    display: block;
+    padding: 8px;
+    min-width: 90px;
+    font-size: 14px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(2) {
+    right: 300px;
+    top: 90px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(3) {
+    left: 300px;
+    top: 90px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(4) {
+    right: 300px;
+    top: 270px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .skill-box:nth-of-type(5) {
+    left: 300px;
+    top: 280px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-skill-path:nth-of-type(1) {
+    right: 230px;
+    top: 122px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-skill-path:nth-of-type(2) {
+    left: 245px;
+    top: 130px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-skill-path:nth-of-type(3) {
+    right: 245px;
+    top: 260px;
+  }
+  .subjects-page .subjects-content .subject-frame .box .subject-box-content .subject-skill-path:nth-of-type(4) {
+    left: 250px;
+    top: 266px;
+  }
+  .subjects-page .subjects-content .subject-frame .skill-description {
+    font-size: 1rem;
+    width: 375px;
+    margin-bottom: 140px;
+  }
+  .subjects-page .subjects-content .subject-frame .skill-description .title {
+    text-align: left;
+  }
+  .subjects-page .subjects-content .subject-frame .subjects-path-right {
+    width: 70%;
+    margin-left: 120px;
+  }
+  .subjects-page .subjects-content .subject-frame .subjects-path-left {
+    width: 70%;
+    margin-left: 120px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(1) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(2) .skill-description {
+    right: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(3) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(4) .skill-description {
+    right: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(5) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(6) .skill-description {
+    right: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(7) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(8) .skill-description {
+    right: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(9) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(10) .skill-description {
+    right: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(11) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(12) .skill-description {
+    right: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(13) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(14) .skill-description {
+    right: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(15) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(16) .skill-description {
+    right: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(17) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(18) .skill-description {
+    right: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(19) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(20) .skill-description {
+    right: 450px;
+  }
+  .subjects-page .subjects-content .subject-frame:nth-of-type(21) .skill-description {
+    left: 450px;
+  }
+  .subjects-page .subjects-content .subject-path-ending-right {
+    width: 42%;
+    margin-right: 230px;
+  }
+  .subjects-page .subjects-content .subject-path-ending-left {
+    width: 42%;
+    margin-left: 230px;
+  }
+}
+@media only screen and (max-width: 1000px) {
   .subjects-page .subjects-main-introduction {
     margin-top: 2rem;
     margin-left: 1.5rem;
