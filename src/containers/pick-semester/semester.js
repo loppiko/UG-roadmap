@@ -1,7 +1,4 @@
-import React from "react";
-
-// ---- components ----
-import NavBar from "../../components/nav-bar";
+import {React, useState, useEffect} from "react";
 
 // React routers
 import { Outlet, Link } from "react-router-dom";
@@ -16,24 +13,39 @@ import Path6 from "../../media/paths/semester/6-path.svg";
 import Path7 from "../../media/paths/semester/7-path.svg";
 import Path8 from "../../media/paths/semester/8-path.svg";
 import Path9 from "../../media/paths/semester/9-path.svg";
+import MobilePath from "../../media/paths/semester/mobile-path.svg";
 
 import BookIcon from "../../media/icons/semester/book.svg"
 import ConsoleIcon from "../../media/icons/semester/console.svg"
 import MergeIcon from "../../media/icons/semester/merge.svg"
 import PointerIcon from "../../media/icons/semester/pointer.svg"
+import BackArrow from "../../media/icons/semester/back-arrow.svg"
 
 function Semester() {
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {setScreenWidth(window.innerWidth)};
+        window.addEventListener('resize', handleResize);
+        return () => {window.removeEventListener('resize', handleResize)};
+    }, []);
+
+    let displayMobile = screenWidth <= 1000;
+
     return (
         <div className="pick-semester">
-            <NavBar/>
             <div className="semester-content">
-                <div className="semester-title">
-                    <span>Pick a semester</span>
+                <div className="semester-entry">
+                    <Link to="/" className="semester-back-button">
+                        <img src={BackArrow} className="semester-back-arrow" alt="back-arrow"/>
+                    </Link>
+                    <div className="semester-title">Pick a semester</div>
+                    <div className="semester-description">Choose a semester that matches your curiosity</div>
                 </div>
                 <div className="semester-section">
                     <div className="semester-box-1">
                         <div className="semester-year-box-1">
-                            <img src={BookIcon} alt="book"/>
+                            <img src={BookIcon} className="icon" alt="book"/>
                             <span className="semester-year-name">First year</span>
                         </div>
                         <Link to={`/roadmap-enter/semester-1`} className="semester-button">1 Semester</Link>
@@ -41,6 +53,7 @@ function Semester() {
                     </div>
                     <div className="semester-box-2">
                         <Link to="/roadmap-enter/semester-2" className="semester-button">2 Semester</Link>
+                        {displayMobile && <img src={MobilePath} alt="mobile-path" className="mobile-path"/>}
                         <img src={Path2} alt="2-path" className="path-2"/>
                         <div className="semester-year-box-2">
                             <img src={PointerIcon} alt="pointer" className="icon"/>
@@ -54,6 +67,7 @@ function Semester() {
                     </div>
                     <div className="semester-box-4">
                         <Link to="/roadmap-enter/semester-4" className="semester-button">4 Semester</Link>
+                        {displayMobile && <img src={MobilePath} alt="mobile-path" className="mobile-path"/>}
                         <img src={Path5} alt="5-path" className="path-5"/>
                         <div className="semester-year-box-3">
                             <img src={ConsoleIcon} alt="concole" className="icon"/>
@@ -67,6 +81,7 @@ function Semester() {
                     </div>
                     <div className="semester-box-6">
                         <Link to="/roadmap-enter/semester-6" className="semester-button">6 Semester</Link>
+                        {displayMobile && <img src={MobilePath} alt="mobile-path" className="mobile-path"/>}
                         <img src={Path8} alt="8-path" className="path-8"/>
                         <div className="semester-year-box-4">
                             <img src={MergeIcon} alt="merge"/>

@@ -1,4 +1,9 @@
 body {
   margin: 0;
   font-family: "Montserrat";
+}
+
+body.no-scroll {
+  overflow: hidden;
+  touch-action: none;
 }/*# sourceMappingURL=index.css.map */

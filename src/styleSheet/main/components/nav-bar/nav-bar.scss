@@ -4,7 +4,7 @@ $nav-bar-background-color: #062D731F;
 
 
 // ---- parameters ----
-$nav-bar-padding-left: 3rem;
+$nav-bar-padding-inline: 3rem;
 $nav-bar-padding-top: 2rem;
 $nav-bar-buttons-gap: 2rem;
 $nav-bar-height: 4rem;
@@ -13,7 +13,7 @@ $nav-bar-button-up-down-padding: 0.5rem;
 $nav-bar-button-side-padding: 3rem;
 $nav-bar-border-bottom: 1px solid $main-color;
 $nav-bar-buttons-margin-right: 4rem;
-// $nav-bar-bottom-margin: 5rem;
+$nav-bar-back-arrow-hover-color: #3f3f3f1f;;
 
 .nav-bar{
     display: flex;
@@ -23,19 +23,44 @@ $nav-bar-buttons-margin-right: 4rem;
 
     width: 100%;
     height: $nav-bar-height;
-    padding-left: $nav-bar-padding-left;
+    padding-inline: $nav-bar-padding-inline;
     padding-top: $nav-bar-padding-top;
     gap: $nav-bar-buttons-gap;
     // background-color: $nav-bar-background-color;
     // border-bottom: $nav-bar-border-bottom;
 
+    .nav-bar-left-side {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+    }
 
-    .main-page-button, .previous-site-button, .next-site-button {        
+    .previous-site-button {
+        display: flex;
+        justify-content: center;
+
+        height: 100%;
+        width: 70px;
+
+        padding: 0.2rem;
+        padding-inline: 0.3rem;
+        border-radius: 10px;
+        border: $main-color 3px solid;
+
+        img {
+            width: 40px;
+        }
+    }
+
+    .main-page-button, .next-site-button {        
+        display: flex;
+        align-items: center;
+
+        height: 100%;
         border: none;
         
-        margin-right: $nav-bar-buttons-margin-right;
         text-decoration: none;
-        border-radius: $main-border-radius;
+        border-radius: 12px;
         padding: $nav-bar-button-up-down-padding;
         padding-left: $nav-bar-button-side-padding;
         padding-right: $nav-bar-button-side-padding;
@@ -44,24 +69,18 @@ $nav-bar-buttons-margin-right: 4rem;
         font-size: $nav-bar-font-size;
     }
 
-    .main-page-button:hover, .previous-site-button:hover, .next-site-button:hover {
+    .main-page-button:hover, .next-site-button:hover {
         background-color: $main-color-active-button;
     }
 
-    // margin-bottom: $nav-bar-bottom-margin;
+    .previous-site-button:hover {
+        background-color: $nav-bar-back-arrow-hover-color;
+    }
+
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1000px) {
     .nav-bar {
         display: none;
-        // padding-left: 1em;
-        // width: 30em;
-        // .main-page-button, .previous-site-button, .next-site-button {
-        //     font-size: 0.7em;
-        //     padding-left: 1.7em;
-        //     padding-right: 1.7em;
-        //     margin-right: 2.5em;
-        //     border-radius: 12px;
-        // }
     }
 }
