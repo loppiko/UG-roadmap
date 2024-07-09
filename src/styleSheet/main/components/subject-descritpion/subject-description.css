@@ -10,10 +10,10 @@ button {
   background-color: rgba(78, 78, 78, 0.49);
 }
 .component-subject-description .component-subject-transparent {
-  width: 55%;
+  width: 65%;
 }
 .component-subject-description .component-subject-non-transparent {
-  width: calc(45% - 3px);
+  width: calc(35% - 3px);
   height: 100vh;
   position: sticky;
   top: 0;
@@ -70,9 +70,9 @@ button {
   background-color: #011946;
 }
 
-@media only screen and (((max-width: 1500px) and (min-width: 1001px)) or (max-height: 1000px)) {
+@media only screen and (((max-width: 1500px) and (min-width: 1001px)) or (max-height: 1100px)) {
   .component-subject-description .component-subject-non-transparent {
-    width: calc(55% - 3px);
+    width: calc(50% - 3px);
     padding: 2.5rem;
     font-size: 18px !important;
   }
@@ -91,7 +91,7 @@ button {
     width: 60%;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and ((max-width: 1000px) or (max-height: 850px)) {
   .component-subject-description {
     display: flex;
     gap: 0;
