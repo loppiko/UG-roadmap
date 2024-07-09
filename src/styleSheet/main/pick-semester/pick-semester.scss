@@ -235,7 +235,7 @@ $semester-year-name-font-size: 30px;
             width: 650px;
 
             margin-top: 4rem;
-            margin-inline: 1rem;
+            // margin-inline: 1rem;
 
             .semester-entry {
                 width: 100%;
@@ -316,7 +316,7 @@ $semester-year-name-font-size: 30px;
                 .mobile-path {
                     position: absolute;
                     bottom: -50px;
-                    left: -65px;
+                    left: -60px;
                 }
             }
 
@@ -328,5 +328,33 @@ $semester-year-name-font-size: 30px;
                 text-align: center;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .semester-section {
+        column-gap: 3rem !important;
+    }
+
+    .semester-year-box-1 {
+        right: -110px !important;
+    }
+
+    .semester-year-box-2, .semester-year-box-3 {
+        left: -70px !important;
+    }
+
+    .semester-year-box-4 {
+        left: -140px !important;
+    }
+
+    .mobile-path {
+        left: -45px !important;
+    }
+
+   
+
+    .semester-back-button {
+        top: 100px;
     }
 }

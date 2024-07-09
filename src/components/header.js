@@ -29,6 +29,7 @@ function Header() {
     const handleButtonClick = () => {
         setBoxOpen(!isBoxOpen);
       };
+
     
     return (
     <div className="header">
@@ -63,8 +64,9 @@ function Header() {
                     </div>
                     <div className="center-header-elements">
                     { 
-                      header["header-inscryptions"].map(button => <Link className="center-header-button" to={ button["link"] } key={"center-header-button-" + button["name"]}>{ button["name"] }</Link>) 
+                      header["header-inscryptions"].map(button => <Link className="center-header-button" to={ button["link"] } key={"center-header-button-" + button["name"]}>{ button["name"] }</Link>)
                     }
+                    { <Link className="center-header-button" to="/roadmap-enter" onClick={handleButtonClick}>Change semester</Link> }
                     </div>
                 </div>
       )}
