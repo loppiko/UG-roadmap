@@ -108,31 +108,30 @@ $header-buttons-border: solid 1px $white-text-color;
         .center-box {
             display: none;
             position: absolute;
-            top: 44em;
+            
+            top: 88px;
             left: 0;
             right: 0;
             background-color: $main-color;
-            // height: 120%;
-            height: 1000%;
-            // bottom: 50%;
+
+
+            height: 100vh;
+            
             .center-header-icons {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
                 display: flex;
-                flex:1;
-                height: 20em;
-                
-                
+                                
                 .center-header-icon {
                     display: flex;
                     justify-content: center;
 
-                    padding-left: 1rem;
-                    padding-right: 1rem;
+                    padding-inline: 1rem;
                     background-color: transparent;
                     border: none;
                     border-right: $header-buttons-border;
                     width: 100%;
-                    flex-direction: row;
-                    font-size: 0.5rem;
+                    
                     img {
                         height: min-content;
                     }
@@ -149,11 +148,11 @@ $header-buttons-border: solid 1px $white-text-color;
 
             .center-header-elements {
                 display: flex;
-                margin-left: $header-elements-margin;
+
                 gap: 5em;
-                // width: 100%;
                 flex-direction: column;
-                margin-left: 5em;
+                margin-left: 0.8rem;
+                
 
                 .center-header-button {
                     background-color: transparent;
@@ -181,18 +180,12 @@ $header-buttons-border: solid 1px $white-text-color;
     .header {
         padding: 20px;
         font-size: 2px;
-        z-index:9999;
+        z-index: 10;
         position: relative;
-        // height: 150%;
         
         .left-side {
-            // display: flex;
-            // flex-wrap: nowrap;
-            // align-items: center;
-            // z-index:9999;
-            // position: relative;
+
             margin-left: 8px;
-            // margin-bottom: 360em;
             .header-elements {
                 display: none;
             }

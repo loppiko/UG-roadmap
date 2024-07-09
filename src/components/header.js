@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 // React router
 import { Link } from "react-router-dom";
@@ -27,9 +27,26 @@ function Header() {
     const [isBoxOpen, setBoxOpen] = useState(false);
 
     const handleButtonClick = () => {
+        if (!isBoxOpen) document.body.classList.add('no-scroll');
+        else document.body.classList.remove('no-scroll');
         setBoxOpen(!isBoxOpen);
       };
 
+
+    // Handle resizing window, to prevent scroll from blocking with active header on mobile version
+    useEffect(() => {
+
+        const handleResize = () => {
+            if (window.innerWidth >= 1000) {
+              document.body.classList.remove('no-scroll');
+              setBoxOpen(false);
+            };
+        };
+    
+        window.addEventListener('resize', handleResize);
+    
+        handleResize();
+      }, []);
     
     return (
     <div className="header">
