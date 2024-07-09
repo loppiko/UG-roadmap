@@ -1,8 +1,5 @@
 import {React, useState, useEffect} from "react";
 
-// ---- components ----
-import NavBar from "../../components/nav-bar";
-
 // React routers
 import { Outlet, Link } from "react-router-dom";
 
@@ -22,6 +19,7 @@ import BookIcon from "../../media/icons/semester/book.svg"
 import ConsoleIcon from "../../media/icons/semester/console.svg"
 import MergeIcon from "../../media/icons/semester/merge.svg"
 import PointerIcon from "../../media/icons/semester/pointer.svg"
+import BackArrow from "../../media/icons/semester/back-arrow.svg"
 
 function Semester() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -34,13 +32,13 @@ function Semester() {
 
     let displayMobile = screenWidth <= 1000;
 
-    console.log(displayMobile);
-
     return (
         <div className="pick-semester">
-            <NavBar/>
             <div className="semester-content">
-                <div className="semester-entry-text">
+                <div className="semester-entry">
+                    <Link to="/" className="semester-back-button">
+                        <img src={BackArrow} className="semester-back-arrow" alt="back-arrow"/>
+                    </Link>
                     <div className="semester-title">Pick a semester</div>
                     <div className="semester-description">Choose a semester that matches your curiosity</div>
                 </div>

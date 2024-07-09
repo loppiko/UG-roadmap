@@ -11,16 +11,21 @@ button {
 .pick-semester .semester-content {
   width: 1080px;
 }
-.pick-semester .semester-content .semester-entry-text {
+.pick-semester .semester-content .semester-entry {
+  position: relative;
   font-size: 4rem;
   color: #062D73;
   margin-top: 5rem;
   width: 100%;
 }
-.pick-semester .semester-content .semester-entry-text .semester-description {
+.pick-semester .semester-content .semester-entry .semester-description {
   margin-top: 0.5rem;
   color: #909090;
   font-size: 1.6rem;
+}
+.pick-semester .semester-content .semester-entry .semester-back-button {
+  position: absolute;
+  right: 0;
 }
 .pick-semester .semester-content .semester-section {
   display: flex;
@@ -308,13 +313,16 @@ button {
     margin-top: 4rem;
     margin-inline: 1rem;
   }
-  .pick-semester .semester-content .semester-entry-text {
+  .pick-semester .semester-content .semester-entry {
     width: 100%;
     font-size: 2.3em;
     margin-top: 0;
   }
-  .pick-semester .semester-content .semester-entry-text .semester-description {
+  .pick-semester .semester-content .semester-entry .semester-description {
     font-size: 1.2rem;
+  }
+  .pick-semester .semester-content .semester-entry .semester-back-arrow {
+    width: 40px;
   }
   .pick-semester .semester-content .semester-section {
     display: grid;

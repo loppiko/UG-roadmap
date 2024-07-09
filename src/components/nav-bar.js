@@ -3,6 +3,8 @@ import React from "react";
 // React Router
 import { Outlet, Link } from "react-router-dom";
 import { useLocation , useParams} from "react-router-dom";
+import BackArrow from './../media/icons/semester/back-arrow.svg';
+
 
 import database from "../main.json"
 
@@ -31,11 +33,13 @@ function NavBar()
     return (
         <div className="nav-bar">
             <div className="nav-bar-left-side">
-                { semesterId &&<Link to={ newLocation } className="previous-site-button"> {`Change semester`}</Link> }
+                { semesterId && <Link to={ newLocation } className="previous-site-button"> 
+                    <img src={BackArrow} alt="back-arrow" className="nav-bar-back-arror"/>
+                </Link> }
                 <Link to="/" className="main-page-button">Main page</Link>
             </div>
             <div className="nav-bar-right-side">
-                {semesterId && <Link to={ nextSem() } className="next-site-button">Next semester</Link>}
+                {semesterId && <Link to={ nextSem() } className="next-site-button">Next</Link>}
             </div>
             <Outlet/>
         </div>
