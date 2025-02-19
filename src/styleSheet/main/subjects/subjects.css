@@ -48,13 +48,11 @@ button {
 .subjects-page .subjects-content .subject-frame .box {
   position: relative;
   margin: auto;
-  width: -moz-min-content;
   width: min-content;
 }
 .subjects-page .subjects-content .subject-frame .box .subject-info {
   display: flex;
   gap: 1rem;
-  width: -moz-min-content;
   width: min-content;
   margin: auto;
 }
@@ -63,7 +61,6 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: -moz-min-content;
   width: min-content;
   height: 80px;
   padding: 12px 24px;
@@ -108,9 +105,7 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
-  width: -moz-min-content;
   width: min-content;
-  height: -moz-min-content;
   height: min-content;
   padding: 16px;
   border-radius: 5px;
@@ -577,7 +572,6 @@ button {
     font-size: 0.55rem;
     font-weight: bold;
     margin-top: 0.5rem;
-    width: -moz-max-content;
     width: max-content;
     position: absolute;
     padding: 4px;
@@ -635,4 +629,6 @@ button {
   .subject-skill-path {
     display: none;
   }
-}/*# sourceMappingURL=subjects.css.map */
+}
+
+/*# sourceMappingURL=subjects.css.map */

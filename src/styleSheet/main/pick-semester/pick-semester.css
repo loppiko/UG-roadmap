@@ -44,9 +44,7 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-min-content;
   height: min-content;
 }
 .pick-semester .semester-content .semester-section .semester-box-2 {
@@ -61,9 +59,7 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-min-content;
   height: min-content;
 }
 .pick-semester .semester-content .semester-section .semester-box-3 {
@@ -78,9 +74,7 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-min-content;
   height: min-content;
 }
 .pick-semester .semester-content .semester-section .semester-box-4 {
@@ -95,9 +89,7 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-min-content;
   height: min-content;
 }
 .pick-semester .semester-content .semester-section .semester-box-5 {
@@ -112,9 +104,7 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-min-content;
   height: min-content;
 }
 .pick-semester .semester-content .semester-section .semester-box-6 {
@@ -129,9 +119,7 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-min-content;
   height: min-content;
 }
 .pick-semester .semester-content .semester-section .semester-box-7 {
@@ -146,9 +134,7 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-min-content;
   height: min-content;
 }
 .pick-semester .semester-content .semester-section .semester-box-8 {
@@ -163,9 +149,7 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-min-content;
   height: min-content;
 }
 .pick-semester .semester-content .semester-section .semester-box-9 {
@@ -180,9 +164,7 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-min-content;
   height: min-content;
 }
 .pick-semester .semester-content .semester-section .semester-box-1 .path-1 {
@@ -510,8 +492,7 @@ button {
 }
 @media only screen and (max-width: 450px) {
   .semester-section {
-    -moz-column-gap: 3rem !important;
-         column-gap: 3rem !important;
+    column-gap: 3rem !important;
   }
   .semester-year-box-1 {
     right: -110px !important;
@@ -528,4 +509,6 @@ button {
   .semester-back-button {
     top: 100px;
   }
-}/*# sourceMappingURL=pick-semester.css.map */
+}
+
+/*# sourceMappingURL=pick-semester.css.map */
