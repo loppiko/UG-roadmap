@@ -40,7 +40,7 @@ function Header() {
             if (window.innerWidth >= 1000) {
               document.body.classList.remove('no-scroll');
               setBoxOpen(false);
-            };
+            }
         };
     
         window.addEventListener('resize', handleResize);

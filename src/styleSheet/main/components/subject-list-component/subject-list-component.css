@@ -1,0 +1,83 @@
+.subject-list-component .subject-list-component-semesterName {
+  font-size: 30px;
+  text-align: center;
+  color: #909090;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.subject-list-component .subject-list-component-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 2rem;
+}
+.subject-list-component .subject-list-component-box:not(.active) {
+  background-color: #f8fafc;
+  color: #1e3a8a;
+  border: 1px solid #1e3a8a;
+}
+.subject-list-component .subject-list-component-box:not(.active) .subject-list-component-skills {
+  color: #1e40af;
+}
+.subject-list-component .subject-list-component-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  background-color: #1e3a8a;
+  color: #ffffff;
+}
+.subject-list-component .subject-list-component-box:hover .subject-list-component-title {
+  color: #ffffff;
+}
+.subject-list-component .subject-list-component-box:hover .subject-list-component-skills {
+  color: #d1d5db;
+}
+.subject-list-component .subject-list-component-box:hover .subject-list-component-right-part span {
+  color: #ffffff;
+}
+.subject-list-component .subject-list-component-box:hover .subject-list-component-lec-prof-box,
+.subject-list-component .subject-list-component-box:hover .subject-list-component-lab-prof-box {
+  border: 1px solid #ffffff !important;
+}
+.subject-list-component .subject-list-component-box .subject-list-component-left-part {
+  display: flex;
+  flex-direction: column;
+}
+.subject-list-component .subject-list-component-box .subject-list-component-left-part .subject-list-component-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.subject-list-component .subject-list-component-box .subject-list-component-left-part .subject-list-component-skills {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+.subject-list-component .subject-list-component-box .subject-list-component-right-part {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.subject-list-component .subject-list-component-box .subject-list-component-right-part .subject-list-component-lec-prof-box,
+.subject-list-component .subject-list-component-box .subject-list-component-right-part .subject-list-component-lab-prof-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #1e3a8a;
+  background-color: transparent;
+  color: #1e3a8a;
+}
+.subject-list-component .subject-list-component-box .subject-list-component-right-part .subject-list-component-lec-prof-box span:first-of-type,
+.subject-list-component .subject-list-component-box .subject-list-component-right-part .subject-list-component-lab-prof-box span:first-of-type {
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+.subject-list-component .subject-list-component-box .subject-list-component-right-part .subject-list-component-lec-prof-box span:last-of-type,
+.subject-list-component .subject-list-component-box .subject-list-component-right-part .subject-list-component-lab-prof-box span:last-of-type {
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=subject-list-component.css.map */

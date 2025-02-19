@@ -50,8 +50,7 @@ button {
   font-weight: bold;
 }
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus {
-  margin: auto;
-  margin-top: 4rem;
+  margin: 4rem auto auto;
   width: 75%;
   padding: 1rem;
   text-align: center;
@@ -136,4 +135,6 @@ button {
 }
 .component-subject-description .component-subject-non-transparent {
   transform: none !important;
-}/*# sourceMappingURL=subject-description.css.map */
+}
+
+/*# sourceMappingURL=subject-description.css.map */

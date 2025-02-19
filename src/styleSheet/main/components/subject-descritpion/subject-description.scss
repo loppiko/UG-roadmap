@@ -80,8 +80,7 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
         }
 
         .component-subject-non-transparent-sylabus {
-            margin: auto;
-            margin-top: $component-subject-non-transparent-sylabus-margin-top;
+            margin: $component-subject-non-transparent-sylabus-margin-top auto auto;
 
             width: 75%;
             padding: $component-subject-non-transparent-sylabus-padding;

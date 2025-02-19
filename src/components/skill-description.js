@@ -43,8 +43,8 @@ function SkillDescription(skillArray, handleExitArrowOnClick, {semesterId, subje
                 <div className="component-skill-non-transparent-description">{`${currentSkill["skill"]["description"]}`}</div>
                 <motion.div 
                     whileHover={{ scale: 1.1 }}
-                    onHoverStart={e => {}}
-                    onHoverEnd={e => {}}
+                    onHoverStart={_ => {}}
+                    onHoverEnd={_ => {}}
                     className="component-skill-non-transparent-sylabus">
                     <Link to={handleNextSkill(currentSkill, currentSkillSet)} className="component-skill-non-transparent-sylabus-link" >Next Skill</Link>
                 </motion.div>
