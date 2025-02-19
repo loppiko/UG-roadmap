@@ -69,3 +69,4 @@ packages/react-devtools-timeline/dist
 .sass-cache/
 *.sass.map
 *.scss.map
+*.env
