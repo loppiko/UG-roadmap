@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react";
 import SubjectListComponent from "../../components/subject-list-component";
 import _ from "lodash";
+import SubjectEdit from "../../components/subject-edit/subject-edit";
+import {apiGetRequest} from "../../internal/api/api-communication";
 
 function SubjectsList() {
     const [listOfSubjects, setListOfSubjects] = useState([]);
+    const [editData, setEditData] = useState({visible: false, subject: null});
 
     // TODO add active filter () -> list.filter.map
 
     async function downloadSubjects() {
         try {
-            const response = await fetch('http://localhost:8080/semester/subjects');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
+            const data = await apiGetRequest("semester/subjects");
             let lastSemesterNumber = 0;
 
             const processedSubjects = data.map((subject, index) => {
@@ -43,6 +42,7 @@ function SubjectsList() {
 
     return (
         <div className="subject-list-container">
+            {editData.visible && <SubjectEdit handleEditExit={() => setEditData({visible: false, subject: null}) } subject={editData.subject} />}
             <div className="subject-list-container-upper-part">
                 <div className="subject-list-container-title">List of subjects</div>
                 <div className="subject-list-container-user-logo">Logo</div>
@@ -51,13 +51,10 @@ function SubjectsList() {
                 <div className="subject-list-container-box-list-header">List Header</div>
                 {listOfSubjects && listOfSubjects.map((subject) => (
                     <SubjectListComponent
+                        onClick={() => setEditData({ visible: true, subject: subject })}
+                        subject={subject}
                         key={subject.key}
-                        subjectTitle={subject["subject-name"]}
-                        lecProf={subject["professor-lecture"]}
-                        labProf={subject["professor-laboratories"]}
-                        skillList={subject["skills"]}
-                        displaySemesterName={subject["displaySemesterName"]}
-                        semesterNumber={subject["semester"]}
+                        displaySemesterName={subject.displaySemesterName}
                     />
                 ))}
             </div>

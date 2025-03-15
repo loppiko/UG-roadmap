@@ -29,6 +29,7 @@ function Login() {
 
                 login(response.accessToken);
             } catch (error) {
+                console.log(error.toString());
                 setError(error);
             } finally {
                 setLoading(false);
@@ -38,7 +39,7 @@ function Login() {
         initAndLogin();
     }, [login, navigate, token]);
 
-    if (error) {
+    if (!loading && error) {
         return <div>Error: {error.message || "Unable to initialize or login"}</div>;
     }
 

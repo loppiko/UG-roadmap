@@ -1,37 +1,33 @@
-// Correctly define the SubjectListComponent function with destructuring
 function SubjectListComponent({
-                                  subjectTitle,
-                                  lecProf,
-                                  labProf,
-                                  skillList,
-                                  semesterNumber,
+                                  onClick,
+                                  subject,
                                   displaySemesterName = false
                               }) {
 
-    let skillListTitles = skillList && skillList.length
-        ? skillList.map((skill, index) => (
-            `${skill["skill-name"]}${index + 1 !== skillList.length ? ', ' : ''}`
+    let skillListTitles = subject["skills"] && subject["skills"].length
+        ? subject["skills"].map((skill, index) => (
+            `${skill["skill-name"]}${index + 1 !== subject["skills"].length ? ', ' : ''}`
         )).join("")
         : "";
 
     return (
-        <div className="subject-list-component">
-            {displaySemesterName && <div className="subject-list-component-semesterName">{"semester " + semesterNumber}</div>}
+        <div className="subject-list-component" key={subject.key} onClick={onClick}>
+            {displaySemesterName && <div className="subject-list-component-semesterName">{"semester " + subject["semester"]}</div>}
             <div className="subject-list-component-box">
                 <div className="subject-list-component-left-part">
-                    <div className="subject-list-component-title">{subjectTitle}</div>
+                    <div className="subject-list-component-title">{subject["subject-name"]}</div>
                     <div className="subject-list-component-skills">
                         {"Skills: " + skillListTitles}
                     </div>
                 </div>
                 <div className="subject-list-component-right-part">
-                    {lecProf.length > 0 && <div className="subject-list-component-lec-prof-box">
+                    {subject["professor-lecture"].length > 0 && <div className="subject-list-component-lec-prof-box">
                         <span>Lec.</span>
-                        <span>{lecProf}</span>
+                        <span>{subject["professor-lecture"]}</span>
                     </div>}
-                    {labProf.length > 0 && <div className="subject-list-component-lab-prof-box">
+                    {subject["professor-laboratories"].length > 0 && <div className="subject-list-component-lab-prof-box">
                         <span>Lab.</span>
-                        <span>{labProf}</span>
+                        <span>{subject["professor-laboratories"]}</span>
                     </div>}
                 </div>
             </div>

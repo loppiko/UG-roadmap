@@ -84,7 +84,7 @@ function Subjects() {
         const index = parseInt(semesterId.split("-")[1]) + shift;
         if (index <= numberArray.length && index > 0) return `/roadmap-enter/semester-${index}`;
         else return `/roadmap-enter/${semesterId}`;
-    } 
+    }
 
     // Animations
     const [idVisibleSkill, setIdVisable] = useState(null);
