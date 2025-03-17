@@ -1,15 +1,20 @@
-import axios from "axios";
+import axios from 'axios'
 
-const apiEndpoint = process.env.REACT_APP_API_ENDPOINT;
+const apiEndpoint = process.env.REACT_APP_API_ENDPOINT
 
-export async function apiGetRequest(endpoint) {
-    const currentUrl = apiEndpoint + endpoint;
+/**
+ * @param {string} endpoint
+ * @returns {Promise<any>}
+ */
 
-    const response = await axios.get(currentUrl)
+export async function apiGetRequest (endpoint) {
+  const currentUrl = apiEndpoint + endpoint
 
-    if (response.status !== 200) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
+  const response = await axios.get(currentUrl)
 
-    return response.data;
+  if (response.status !== 200) {
+    throw new Error(`HTTP error! status: ${response.status}`)
+  }
+
+  return response.data
 }

@@ -1,17 +1,21 @@
-import {Box, TextField} from "@mui/material";
+import React from 'react'
+import { Box, TextField } from '@mui/material'
 
-function SubjectEditDescription(subject) {
-    console.log(Object.keys(subject["subject"]))
+/**
+ * @param {Subject} subject
+ * @returns {JSX.Element}
+ */
 
-    return (
+function SubjectEditDescription (subject) {
+  return (
         <Box
             component="form"
             className="subject-edit-component-description"
             noValidate
             autoComplete="off"
         >
-            <TextField id="outlined-basic" variant="outlined" defaultValue={subject["subject-description"]} />
+            <TextField id="outlined-basic" variant="outlined" defaultValue={subject.subjectDescription} />
         </Box>)
 }
 
-export default SubjectEditDescription;
+export default SubjectEditDescription
