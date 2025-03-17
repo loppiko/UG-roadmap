@@ -1,3 +1,135 @@
+@import "../../../consts/consts.scss";
+
 .subject-edit {
-  //background-color: #1e3a8a;
+  position: fixed;
+  width: 800px;
+  height: 600px;
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  margin-top: 50px;
+  z-index: 5;
+
+  .subject-edit-upper-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+
+    &-left-side {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      font-weight: bold;
+      color: $main-color;
+
+      .subject-edit-upper-panel-title {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+    }
+
+    &-right-side {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      &-save {
+        background: transparent;
+        border: 2px solid $main-color;
+        padding: 5px 15px;
+        border-radius: 5px;
+        color: $main-color;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+          background: $main-color;
+          color: white;
+        }
+      }
+
+      &-exit {
+        color: darkred;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        text-align: center;
+        height: min-content;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+
+  .subject-edit-tabs {
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 5px;
+
+    .MuiTabs-scroller {
+      display: flex;
+      gap: 20px;
+    }
+
+    .MuiTabs-flexContainer {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .MuiTab-root {
+      font-size: 16px;
+      font-weight: bold;
+      font-family: $main-font;
+      border-bottom: 2px solid #ccc;
+      min-width: 220px;
+    }
+  }
+
+  .subject-edit-content {
+    padding: 20px;
+
+    .subject-edit-description {
+      .subject-edit-component-description-textfield {
+        font-size: 18px;
+      }
+    }
+
+    .subject-edit-skills {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+
+      .subject-edit-skill-edit {
+        width: 40%;
+        border: 1px solid $main-color;
+      }
+
+      .subject-edit-add-box {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+
+        .subject-edit-addButton {
+          width: 100px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .subject-edit-other {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
 }

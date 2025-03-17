@@ -34,12 +34,12 @@ function SubjectEdit ({ handleEditExit, subject }) {
         <div className="subject-edit" ref={subjectEditReference}>
             <div className="subject-edit-upper-panel">
                 <div className="subject-edit-upper-panel-left-side">
-                    <div className="subject-edit-upper-panel-title">{subject.subjectName}</div>
-                    <div className="subject-edit-upper-panel-title">{`Semester ${subject.semester}`}</div>
+                    <div className="subject-edit-upper-panel-title">{subject.name}</div>
+                    <div className="subject-edit-upper-panel-semester">{`Semester ${subject.semester}`}</div>
                 </div>
                 <div className="subject-edit-upper-panel-right-side">
                     <div className="subject-edit-upper-panel-right-side-save">Save</div>
-                    <div className="subject-edit-upper-panel-right-side-exit">Exit</div>
+                    <div className="subject-edit-upper-panel-right-side-exit" onClick={handleEditExit}>Exit</div>
                 </div>
             </div>
             <TabList value={activeTab} onChange={(_, value) => setActiveTab(value)} className="subject-edit-tabs">
@@ -47,10 +47,11 @@ function SubjectEdit ({ handleEditExit, subject }) {
                 <Tab className="subject-edit-tabs-skills" label={'Skills'}></Tab>
                 <Tab className="subject-edit-tabs-other" label={'Other'}></Tab>
             </TabList>
-            {(activeTab === 0) && <SubjectEditDescription subject={subject} />}
-            {(activeTab === 1) && <SubjectEditSkills />}
-            {(activeTab === 2) && <SubjectEditOther />}
-            <div className="subject-edit"></div>
+            <div className="subject-edit-content">
+                {(activeTab === 0) && <SubjectEditDescription subject={subject} />}
+                {(activeTab === 1) && <SubjectEditSkills subject={subject}/>}
+                {(activeTab === 2) && <SubjectEditOther subject={subject}/>}
+            </div>
         </div>
   )
 }

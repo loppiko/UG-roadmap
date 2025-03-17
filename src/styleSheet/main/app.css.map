@@ -1,1 +1,1 @@
-{"version":3,"sources":["../consts/consts.scss","app.css","app.scss"],"names":[],"mappings":"AAuBA;EACI,eAAA;ACtBJ;;ACCI;EACI,aAAA;EACA,mBAAA;EACA,uBAAA;EAEA,YAAA;EACA,iBAAA;EACA,YFLW;EEMX,iBAAA;ADCR","file":"app.css"}
+{"version":3,"sourceRoot":"","sources":["../consts/consts.scss","app.scss"],"names":[],"mappings":"AAuBA;EACI;;;ACrBA;EACI;EACA;EACA;EAEA;EACA;EACA,ODLW;ECMX","file":"app.css"}

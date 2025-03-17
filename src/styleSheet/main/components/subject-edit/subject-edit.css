@@ -1,3 +1,116 @@
+button {
+  cursor: pointer;
+}
 
+.subject-edit {
+  position: fixed;
+  width: 800px;
+  height: 600px;
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+  z-index: 5;
+}
+.subject-edit .subject-edit-upper-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.subject-edit .subject-edit-upper-panel-left-side {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: bold;
+  color: #062D73;
+}
+.subject-edit .subject-edit-upper-panel-left-side .subject-edit-upper-panel-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.subject-edit .subject-edit-upper-panel-right-side {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.subject-edit .subject-edit-upper-panel-right-side-save {
+  background: transparent;
+  border: 2px solid #062D73;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: #062D73;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.subject-edit .subject-edit-upper-panel-right-side-save:hover {
+  background: #062D73;
+  color: white;
+}
+.subject-edit .subject-edit-upper-panel-right-side-exit {
+  color: darkred;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+  height: min-content;
+}
+.subject-edit .subject-edit-upper-panel-right-side-exit:hover {
+  color: red;
+}
+.subject-edit .subject-edit-tabs {
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+.subject-edit .subject-edit-tabs .MuiTabs-scroller {
+  display: flex;
+  gap: 20px;
+}
+.subject-edit .subject-edit-tabs .MuiTabs-flexContainer {
+  width: 100%;
+  justify-content: space-between;
+}
+.subject-edit .subject-edit-tabs .MuiTab-root {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Montserrat";
+  border-bottom: 2px solid #ccc;
+  min-width: 220px;
+}
+.subject-edit .subject-edit-content {
+  padding: 20px;
+}
+.subject-edit .subject-edit-content .subject-edit-description .subject-edit-component-description-textfield {
+  font-size: 18px;
+}
+.subject-edit .subject-edit-content .subject-edit-skills {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.subject-edit .subject-edit-content .subject-edit-skills .subject-edit-skill-edit {
+  width: 40%;
+  border: 1px solid #062D73;
+}
+.subject-edit .subject-edit-content .subject-edit-skills .subject-edit-add-box {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.subject-edit .subject-edit-content .subject-edit-skills .subject-edit-add-box .subject-edit-addButton {
+  width: 100px;
+  cursor: pointer;
+}
+.subject-edit .subject-edit-content .subject-edit-other {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 /*# sourceMappingURL=subject-edit.css.map */

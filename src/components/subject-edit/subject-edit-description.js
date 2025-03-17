@@ -1,21 +1,29 @@
 import React from 'react'
-import { Box, TextField } from '@mui/material'
+import Textarea from '@mui/joy/Textarea'
+import PropTypes from 'prop-types'
 
 /**
  * @param {Subject} subject
  * @returns {JSX.Element}
  */
 
-function SubjectEditDescription (subject) {
+function SubjectEditDescription ({ subject }) {
   return (
-        <Box
-            component="form"
-            className="subject-edit-component-description"
-            noValidate
-            autoComplete="off"
-        >
-            <TextField id="outlined-basic" variant="outlined" defaultValue={subject.subjectDescription} />
-        </Box>)
+      <div className="subject-edit-description">
+          <Textarea
+              id="outlined-basic"
+              variant="outlined"
+              defaultValue={subject.description}
+              className="subject-edit-component-description-textfield"
+              minRows={10}
+              maxRows={14}
+          />
+      </div>
+  )
+}
+
+SubjectEditDescription.propTypes = {
+  subject: PropTypes.object.isRequired
 }
 
 export default SubjectEditDescription
