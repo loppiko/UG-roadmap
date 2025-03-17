@@ -1,38 +1,48 @@
-function SubjectListComponent({
-                                  onClick,
-                                  subject,
-                                  displaySemesterName = false
-                              }) {
+import React from 'react'
+import PropTypes from 'prop-types'
 
-    let skillListTitles = subject["skills"] && subject["skills"].length
-        ? subject["skills"].map((skill, index) => (
-            `${skill["skill-name"]}${index + 1 !== subject["skills"].length ? ', ' : ''}`
-        )).join("")
-        : "";
+/**
+ * @param {Function} onClick
+ * @param {SubjectView} subject
+ * @param {number} subjectIndex
+ */
 
-    return (
-        <div className="subject-list-component" key={subject.key} onClick={onClick}>
-            {displaySemesterName && <div className="subject-list-component-semesterName">{"semester " + subject["semester"]}</div>}
+function SubjectListComponent ({ onClick, subject, subjectIndex }) {
+  const skillListTitles = subject.skills && subject.skills.length
+    ? subject.skills.map((skill, index) => (
+            `${skill.name}${index + 1 !== subject.skills.length ? ', ' : ''}`
+    )).join('')
+    : ''
+
+  return (
+        <div className="subject-list-component" key={`${subject.name}-${subjectIndex}`} onClick={onClick}>
+            {subject.displaySemesterName && <div className="subject-list-component-semesterName">{'semester ' + subject.semester}</div>}
             <div className="subject-list-component-box">
                 <div className="subject-list-component-left-part">
-                    <div className="subject-list-component-title">{subject["subject-name"]}</div>
+                    <div className="subject-list-component-title">{subject.name}</div>
                     <div className="subject-list-component-skills">
-                        {"Skills: " + skillListTitles}
+                        {'Skills: ' + skillListTitles}
                     </div>
                 </div>
                 <div className="subject-list-component-right-part">
-                    {subject["professor-lecture"].length > 0 && <div className="subject-list-component-lec-prof-box">
+                    {subject.professorLecture && <div className="subject-list-component-lec-prof-box">
                         <span>Lec.</span>
-                        <span>{subject["professor-lecture"]}</span>
+                        <span>{subject.professorLecture}</span>
                     </div>}
-                    {subject["professor-laboratories"].length > 0 && <div className="subject-list-component-lab-prof-box">
+                    {subject.professorLaboratories && <div className="subject-list-component-lab-prof-box">
                         <span>Lab.</span>
-                        <span>{subject["professor-laboratories"]}</span>
+                        <span>{subject.professorLaboratories}</span>
                     </div>}
                 </div>
             </div>
         </div>
-    );
+  )
 }
 
-export default SubjectListComponent;
+SubjectListComponent.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  subject: PropTypes.object.isRequired,
+  subjectIndex: PropTypes.number.isRequired
+}
+
+export default SubjectListComponent
