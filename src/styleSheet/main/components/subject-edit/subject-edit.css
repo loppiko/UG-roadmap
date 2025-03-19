@@ -13,7 +13,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 50px;
   z-index: 5;
 }
 .subject-edit .subject-edit-upper-panel {
@@ -95,11 +94,28 @@ button {
   gap: 40px;
 }
 .subject-edit .subject-edit-content .subject-edit-skills .subject-edit-skill-edit {
-  width: 40%;
-  border: 1px solid #062D73;
+  width: 45%;
+  border-radius: 5px;
+}
+.subject-edit .subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel {
+  display: flex;
+  justify-content: space-between;
+}
+.subject-edit .subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel .subject-edit-skill-edit-upper-panel-title {
+  font-weight: bold;
+  background-color: transparent;
+  color: #062D73;
+}
+.subject-edit .subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel .subject-edit-trash-icon {
+  margin-right: 10px;
+  cursor: pointer;
+  filter: brightness(50%);
+}
+.subject-edit .subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel .subject-edit-trash-icon:hover {
+  filter: brightness(85%);
 }
 .subject-edit .subject-edit-content .subject-edit-skills .subject-edit-add-box {
-  width: 40%;
+  width: 45%;
   display: flex;
   justify-content: center;
 }

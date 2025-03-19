@@ -16,15 +16,11 @@ function SubjectsList () {
 
   async function downloadSubjects () {
     try {
-      /**
-       * @type {Subject[]}
-       */
+      /** @type {Subject[]} */
       const data = await apiGetRequest('semester/subjects')
       let lastSemesterNumber = 0
 
-      /**
-       * @type {SubjectView[]}
-       */
+      /** @type {SubjectView[]} */
       const processedSubjects = data.map((subject, index) => {
         const displaySemesterName = lastSemesterNumber !== subject.semester
 
@@ -62,7 +58,7 @@ function SubjectsList () {
                     <SubjectListComponent
                         onClick={() => setEditData({ visible: true, subject })}
                         subject={subject}
-                        index={index}
+                        subjectIndex={index}
                         key={`${subject.name}-${index}`}
                     />
                 ))}

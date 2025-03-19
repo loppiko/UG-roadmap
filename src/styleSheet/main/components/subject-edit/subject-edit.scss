@@ -12,7 +12,7 @@
   flex-direction: column;
   gap: 15px;
 
-  margin-top: 50px;
+  //margin-top: 20px;
   z-index: 5;
 
   .subject-edit-upper-panel {
@@ -110,12 +110,33 @@
       gap: 40px;
 
       .subject-edit-skill-edit {
-        width: 40%;
-        border: 1px solid $main-color;
+        width: 45%;
+        //border: 1px solid $main-color;
+        border-radius: 5px;
+
+        .subject-edit-skill-edit-upper-panel {
+          display: flex;
+          justify-content: space-between;
+
+          .subject-edit-skill-edit-upper-panel-title {
+            font-weight: bold;
+            background-color: transparent;
+            color: $main-color;
+          }
+
+          .subject-edit-trash-icon {
+            margin-right: 10px;
+            cursor: pointer;
+            filter: brightness(50%);
+          }
+          .subject-edit-trash-icon:hover {
+            filter: brightness(85%);
+          }
+        }
       }
 
       .subject-edit-add-box {
-        width: 40%;
+        width: 45%;
         display: flex;
         justify-content: center;
 

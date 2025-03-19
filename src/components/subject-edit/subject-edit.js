@@ -15,6 +15,22 @@ import PropTypes from 'prop-types'
 function SubjectEdit ({ handleEditExit, subject }) {
   const subjectEditReference = useRef(null)
   const [activeTab, setActiveTab] = useState(0)
+  const [editedSubject, setEditedSubject] = useState(/** @type {Subject} */ subject)
+
+  /**
+   * @param {[boolean, Any]} validatedData - [Validation successful?, data]
+   * @param {string} key
+   */
+  const editSubject = (validatedData, key) => {
+    const [validated, value] = validatedData
+
+    if (!validated) return
+
+    setEditedSubject(prevSubject => ({
+      ...prevSubject,
+      [key]: value
+    }))
+  }
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -30,6 +46,10 @@ function SubjectEdit ({ handleEditExit, subject }) {
     }
   })
 
+  const handleSave = () => {
+    console.log(editedSubject)
+  }
+
   return (
         <div className="subject-edit" ref={subjectEditReference}>
             <div className="subject-edit-upper-panel">
@@ -38,7 +58,7 @@ function SubjectEdit ({ handleEditExit, subject }) {
                     <div className="subject-edit-upper-panel-semester">{`Semester ${subject.semester}`}</div>
                 </div>
                 <div className="subject-edit-upper-panel-right-side">
-                    <div className="subject-edit-upper-panel-right-side-save">Save</div>
+                    <div className="subject-edit-upper-panel-right-side-save" onClick={handleSave}>Save</div>
                     <div className="subject-edit-upper-panel-right-side-exit" onClick={handleEditExit}>Exit</div>
                 </div>
             </div>
@@ -48,9 +68,9 @@ function SubjectEdit ({ handleEditExit, subject }) {
                 <Tab className="subject-edit-tabs-other" label={'Other'}></Tab>
             </TabList>
             <div className="subject-edit-content">
-                {(activeTab === 0) && <SubjectEditDescription subject={subject} />}
-                {(activeTab === 1) && <SubjectEditSkills subject={subject}/>}
-                {(activeTab === 2) && <SubjectEditOther subject={subject}/>}
+                {(activeTab === 0) && <SubjectEditDescription subject={subject} editSubject={editSubject}/>}
+                {(activeTab === 1) && <SubjectEditSkills subject={subject} editSubject={editSubject} editedSkillArray={editedSubject.skills}/>}
+                {(activeTab === 2) && <SubjectEditOther subject={subject} editSubject={editSubject}/>}
             </div>
         </div>
   )
