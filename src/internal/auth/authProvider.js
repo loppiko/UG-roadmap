@@ -42,4 +42,17 @@ AuthProvider.propTypes = {
   children: PropTypes.node.isRequired
 }
 
+/**
+ * @returns {string}
+ */
+export const getAccessToken = () => {
+  const token = localStorage.getItem('access_token')
+
+  if (token) {
+    return token
+  } else {
+    throw new Error('User is not authenticated')
+  }
+}
+
 export const useAuth = () => useContext(AuthContext)
