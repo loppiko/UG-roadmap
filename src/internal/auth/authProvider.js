@@ -16,9 +16,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const token = localStorage.getItem('access_token')
-    if (token) {
-      setUser({ token })
-    }
+    if (token) setUser({ token })
   }, [])
 
   const login = (token) => {

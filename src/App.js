@@ -1,7 +1,5 @@
 // React Router
 import React, { Route, Routes } from 'react-router-dom'
-// Axios
-// import Axios from "axios";
 
 // Components
 import Header from './components/header.js'
@@ -26,8 +24,35 @@ import './styleSheet/main/components/subject-edit/subject-edit.css'
 import './styleSheet/main/pick-semester/pick-semester.css'
 import './styleSheet/main/subjects/subjects.css'
 import './styleSheet/main/subject-list/subject-list.css'
+import { useEffect, useState } from 'react'
+import { initializeMsal } from './internal/msal'
+import { useAuth } from './internal/auth/authProvider'
 
 function App () {
+  const [msalReady, setMsalReady] = useState(false)
+  const { login } = useAuth()
+
+  useEffect(() => {
+    const initializeAndHandleRedirect = async () => {
+      try {
+        const msalInstance = await initializeMsal()
+        const response = await msalInstance.handleRedirectPromise()
+
+        if (response) {
+          if (response.accessToken) {
+            login(response.accessToken)
+          }
+        }
+      } catch (error) {
+        console.error('Błąd podczas obsługi przekierowania:', error)
+      } finally {
+        setMsalReady(true)
+      }
+    }
+
+    initializeAndHandleRedirect()
+  }, [login])
+
   return (
     <div className="App">
         <Header/>
@@ -36,7 +61,7 @@ function App () {
             <Route path="roadmap-enter" element={<Semester/>} />
             <Route path="roadmap-enter/semester/:semesterId" element={<Subjects/>} />
             <Route path="subject-list" element={<ProtectedRoute><SubjectsList/></ProtectedRoute>} />
-            <Route path="login" element={<Login/>} />
+            <Route path="login" element={(msalReady) ? <Login /> : <div>Loading...</div>} />
         </Routes>
         <Footer/>
     </div>
