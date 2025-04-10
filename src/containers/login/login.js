@@ -1,7 +1,7 @@
-import { initializeMsal } from '../../internal/msal'
 import React, { useEffect, useState } from 'react'
 import { useAuth } from '../../internal/auth/authProvider'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { msalInstance } from '../../internal/msal'
 
 const loginRequest = {
   scopes: ['api://79ebd25b-6b35-41e7-9f3d-88af9b58232e/.default']
@@ -13,39 +13,24 @@ const loginRequest = {
 
 function Login () {
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const { login } = useAuth()
+  const [error, setError] = useState(false)
+  const { login, user } = useAuth()
   const navigate = useNavigate()
-  const token = localStorage.getItem('access_token')
 
   useEffect(() => {
-    if (token !== null) {
-      navigate('/subject-list')
-      return
-    }
+    if (!user) {
+      msalInstance.loginRedirect(loginRequest)
+        .then(() => navigate('/subject-list'))
+        .catch((error) => {
+          if (error.errorCode !== 'interaction_in_progress') {
+            setError(error)
+            setLoading(false)
+          }
+        })
+    } else navigate('/subject-list')
+  }, [login, navigate])
 
-    const initAndLogin = async () => {
-      try {
-        const msalInstance = await initializeMsal()
-        const response = await msalInstance.loginPopup(loginRequest)
-
-        login(response.accessToken)
-      } catch (error) {
-        console.log(error.toString())
-        setError(error)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    initAndLogin()
-  }, [login, navigate, token])
-
-  if (!loading && error) {
-    return <div>Error: {error.message || 'Unable to initialize or login'}</div>
-  }
-
-  return (loading) ? <div>Loading...</div> : <Navigate to="/subject-list"/>
+  return (loading) ? <div>Interaction currently in process...</div> : <div>Error: {error.message || 'Unable to initialize or login'}</div>
 }
 
 export default Login

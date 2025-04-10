@@ -16,9 +16,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const token = localStorage.getItem('access_token')
-    if (token) {
-      setUser({ token })
-    }
+    if (token) setUser({ token })
   }, [])
 
   const login = (token) => {
@@ -40,6 +38,19 @@ export const AuthProvider = ({ children }) => {
 
 AuthProvider.propTypes = {
   children: PropTypes.node.isRequired
+}
+
+/**
+ * @returns {string}
+ */
+export const getAccessToken = () => {
+  const token = localStorage.getItem('access_token')
+
+  if (token) {
+    return token
+  } else {
+    throw new Error('User is not authenticated')
+  }
 }
 
 export const useAuth = () => useContext(AuthContext)

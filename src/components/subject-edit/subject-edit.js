@@ -5,6 +5,7 @@ import SubjectEditDescription from './subject-edit-description'
 import SubjectEditSkills from './subject-edit-skills'
 import SubjectEditOther from './subject-edit-other'
 import PropTypes from 'prop-types'
+import { apiPutRequest } from '../../internal/api/api-communication'
 
 /**
  * @param {Function} handleEditExit
@@ -46,7 +47,13 @@ function SubjectEdit ({ handleEditExit, subject }) {
     }
   })
 
-  const handleSave = () => {
+  async function handleSave () {
+    try {
+      await apiPutRequest(`/semester/${subject.semester}/subject`, editedSubject)
+    } catch (error) {
+      console.log(error)
+      alert(`Failed to alter subject: ${error.message}`)
+    }
     console.log(editedSubject)
   }
 
