@@ -1,11 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import TabList from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import SubjectEditDescription from './subject-edit-description'
 import SubjectEditSkills from './subject-edit-skills'
 import SubjectEditOther from './subject-edit-other'
 import PropTypes from 'prop-types'
-import { apiPutRequest } from '../../internal/api/api-communication'
+import { apiPostRequest, apiPutRequest } from '../../../internal/api/api-communication'
+import { validateSubject } from '../../../internal/types/subject'
+import { FormControl, TextField } from '@mui/material'
 
 /**
  * @param {Function} handleEditExit
@@ -17,6 +19,7 @@ function SubjectEdit ({ handleEditExit, subject }) {
   const subjectEditReference = useRef(null)
   const [activeTab, setActiveTab] = useState(0)
   const [editedSubject, setEditedSubject] = useState(/** @type {Subject} */ subject)
+  const [subjectNameError, setSubjectNameError] = useState('')
 
   /**
    * @param {[boolean, Any]} validatedData - [Validation successful?, data]
@@ -33,25 +36,49 @@ function SubjectEdit ({ handleEditExit, subject }) {
     }))
   }
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (subjectEditReference.current && !subjectEditReference.current.contains(event.target)) {
-        handleEditExit()
-      }
+  /**
+   * @param {string} name
+   * @returns {boolean}
+   */
+  const validateSubjectName = (name) => {
+    if (!name) {
+      setSubjectNameError('Subject name cannot be empty')
+      return false
     }
+    setSubjectNameError('')
+    return true
+  }
 
-    document.addEventListener('mousedown', handleClickOutside)
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  })
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (subjectEditReference.current && !subjectEditReference.current.contains(event.target)) {
+  //       handleEditExit()
+  //     }
+  //   }
+  //
+  //   document.addEventListener('mousedown', handleClickOutside)
+  //
+  //   return () => {
+  //     document.removeEventListener('mousedown', handleClickOutside)
+  //   }
+  // })
 
   async function handleSave () {
     try {
-      await apiPutRequest(`/semester/${subject.semester}/subject`, editedSubject)
+      const [isValid, message] = validateSubject(editedSubject)
+
+      if (!isValid) {
+        alert(message)
+        return
+      }
+
+      if (subject.id === null || subject.id === undefined || subject.id === '') {
+        await apiPostRequest(`semester/${editedSubject.semester}/subject`, editedSubject)
+      } else {
+        await apiPutRequest(`semester/${subject.semester}/subject`, editedSubject)
+      }
     } catch (error) {
-      console.log(error)
+      console.error(error)
       alert(`Failed to alter subject: ${error.message}`)
     }
     console.log(editedSubject)
@@ -61,7 +88,16 @@ function SubjectEdit ({ handleEditExit, subject }) {
         <div className="subject-edit" ref={subjectEditReference}>
             <div className="subject-edit-upper-panel">
                 <div className="subject-edit-upper-panel-left-side">
-                    <div className="subject-edit-upper-panel-title">{subject.name}</div>
+                <FormControl>
+                    <TextField
+                        variant="standard"
+                        error={!!subjectNameError}
+                        defaultValue={(editedSubject.name) ? editedSubject.name : ''}
+                        placeholder={'Subject name'}
+                        label={subjectNameError}
+                        onChange={(e) => editSubject([validateSubjectName(e.target.value), e.target.value], 'name')}
+                    />
+                </FormControl>
                     <div className="subject-edit-upper-panel-semester">{`Semester ${subject.semester}`}</div>
                 </div>
                 <div className="subject-edit-upper-panel-right-side">
@@ -76,7 +112,7 @@ function SubjectEdit ({ handleEditExit, subject }) {
             </TabList>
             <div className="subject-edit-content">
                 {(activeTab === 0) && <SubjectEditDescription subject={subject} editSubject={editSubject}/>}
-                {(activeTab === 1) && <SubjectEditSkills subject={subject} editSubject={editSubject} editedSkillArray={editedSubject.skills}/>}
+                {(activeTab === 1) && <SubjectEditSkills editSubject={editSubject} editedSkillArray={editedSubject.skills}/>}
                 {(activeTab === 2) && <SubjectEditOther subject={subject} editSubject={editSubject}/>}
             </div>
         </div>

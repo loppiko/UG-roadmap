@@ -14,3 +14,20 @@ export async function initializeMsal () {
   await msalInstance.initialize()
   return msalInstance
 }
+
+/**
+ * @param {string} token
+ * @returns {boolean}
+ */
+export function isTokenExpired (token) {
+  try {
+    const payloadBase64 = token.split('.')[1]
+    const decodedPayload = JSON.parse(atob(payloadBase64))
+    const now = Math.floor(Date.now() / 1000)
+
+    return decodedPayload.exp && decodedPayload.exp < now
+  } catch (e) {
+    console.warn('Invalid token:', e)
+    return true
+  }
+}

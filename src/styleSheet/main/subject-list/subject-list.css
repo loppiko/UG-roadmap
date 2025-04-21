@@ -22,8 +22,14 @@ button {
   font-weight: bold;
 }
 .subject-list-container .subject-list-container-box .subject-list-container-box-list-header {
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid #062D73;
   margin-bottom: 2rem;
+}
+.subject-list-container .subject-list-container-box .subject-list-container-box-list-header .subject-list-container-box-list-header-add-button {
+  width: 3rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=subject-list.css.map */

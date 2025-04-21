@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import SubjectListComponent from '../../components/subject-list-component'
+import SubjectListComponent from './subject-list-component'
 import _ from 'lodash'
-import SubjectEdit from '../../components/subject-edit/subject-edit'
+import SubjectEdit from './subject-edit/subject-edit'
 import { apiGetRequest } from '../../internal/api/api-communication'
+import AddButton from '../../media/icons/add-icon.svg'
+import { createEmptySubject } from '../../internal/types/subject'
 
 /**
  * @returns {JSX.Element}
@@ -11,7 +13,6 @@ import { apiGetRequest } from '../../internal/api/api-communication'
 function SubjectsList () {
   const [listOfSubjects, setListOfSubjects] = useState(/** @type {SubjectView[]} */[])
   const [editData, setEditData] = useState({ visible: false, subject: null })
-
   // TODO add active filter () -> list.filter.map
 
   async function downloadSubjects () {
@@ -53,7 +54,17 @@ function SubjectsList () {
                 <div className="subject-list-container-user-logo">Logo</div>
             </div>
             <div className="subject-list-container-box">
-                <div className="subject-list-container-box-list-header">List Header</div>
+                <div className="subject-list-container-box-list-header">
+                    <div className="subject-list-container-box-list-header-filter">List Header</div>
+                    <div className="subject-list-container-box-list-header-add">
+                        <img
+                            src={AddButton}
+                            className="subject-list-container-box-list-header-add-button"
+                            alt="add button"
+                            onClick={() => setEditData({ visible: true, subject: createEmptySubject() })}
+                        />
+                    </div>
+                </div>
                 {listOfSubjects && listOfSubjects.map((subject, index) => (
                     <SubjectListComponent
                         onClick={() => setEditData({ visible: true, subject })}

@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import { isTokenExpired } from '../msal'
 
 const AuthContext = createContext({
   user: null,
@@ -16,7 +17,13 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const token = localStorage.getItem('access_token')
-    if (token) setUser({ token })
+
+    if (token && !isTokenExpired(token)) {
+      setUser({ token })
+    } else {
+      localStorage.removeItem('access_token')
+      setUser(null)
+    }
   }, [])
 
   const login = (token) => {
