@@ -4,233 +4,198 @@
 $footer-height: 7rem;
 $footer-margin-top: 4.5rem;
 
-
 .footer {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  text-align: left;
+  padding: 4em;
+  gap: 7em;
+  background-color: $main-color;
+  color: $white-text-color;
+  .first-column {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content:space-between;
-    justify-content: center;
-    text-align: left;
-    margin-top: 5rem;
-    width: 100%;
-    background-color: $main-color;
-    color: $white-text-color;
-    height: 43em;
-    .first-column {
+    flex-direction: column;
+    min-width: 14em;
+    .footer-icon {
+      background-color: transparent;
+      border: none;
+      width: 3em;
+      img {
+        width: 65px;
+        height: 65px;
+      }
+    }
+    .faculty {
+      font-weight: 600;
+      font-size: 1.1em;
+      padding-top: 1.5em;
+    }
+    .adress-mail-telephone {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4em;
+      span {
+        margin-top: 1em;
+        font-size: 0.8em;
+      }
+    }
+
+    .facebook {
+      display: flex;
+      flex-direction: column;
+      .faculty-facebook {
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding-left: 1.5em;
-        padding-right: 5em;
-        .footer-icon {
-            padding-left: 1rem;
-            padding-right: 1rem;
-            background-color: transparent;
-            border: none;
-            margin-top: 7em;
-            width: 4em;
-            img {
-                width: 50px;
-                height: 50px;
-            }
+        align-items: center;
+
+        .faculty-facebook-icon {
+          background-color: transparent;
+          border: none;
+          img {
+            width: 25px;
+            height: 25px;
+          }
         }
-        .faculty {
-            font-weight:600;
-            font-size: 1.1em;
-            padding-top: 1.5em;
-            
+        .footer-faculty-facebook-icon-link {
+          color: $white-text-color;
+          text-decoration: none;
+          font-size: 0.8em;
+          padding-left: 0.5em;
         }
-        .adress-mail-telephone {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 4em;
-            span {
-                margin-top: 1.5em;
-                font-size: 0.8em;
-                
-            }
-            
+        .footer-faculty-facebook-icon-link:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+      .office-facebook {
+        display: flex;
+        align-items: center;
+
+        .office-facebook-icon {
+          background-color: transparent;
+          border: none;
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+        .footer-office-facebook-icon-link {
+          color: $white-text-color;
+          text-decoration: none;
+          font-size: 0.8em;
+          padding-left: 0.5em;
         }
 
-        .facebook {
-            display: flex;
-            flex-direction: column;
-            .faculty-facebook {
-                display: flex;
-                align-items: center;
-                
-                .faculty-facebook-icon {
-                    padding-right: 4rem;
-                    background-color: transparent;
-                    border: none;
-                    width: 4em;
-                    img {
-                        width: 35px;
-                        height: 35px;
-                    }
-                }
-                .footer-faculty-facebook-icon-link {
-                    color: $white-text-color;
-                    text-decoration: none;
-                    font-size: 0.8em;
-                }
-                .footer-faculty-facebook-icon-link:hover {
-                    cursor: pointer;
-                    text-decoration: underline;
-                }
-            }
-
-            .office-facebook {
-                display: flex;
-                align-items: center;
-                
-                .office-facebook-icon {
-                    padding-right: 4rem;
-                    background-color: transparent;
-                    border: none;
-                    width: 4em;
-                    img {
-                        width: 35px;
-                        height: 35px;
-                    }
-                }
-                .footer-office-facebook-icon-link {
-                    color: $white-text-color;
-                    text-decoration: none;
-                    font-size: 0.8em;
-                }
-
-                .footer-office-facebook-icon-link:hover {
-                    cursor: pointer;
-                    text-decoration: underline;
-                }
-            }
+        .footer-office-facebook-icon-link:hover {
+          cursor: pointer;
+          text-decoration: underline;
         }
+      }
+    }
+  }
+  .information-about {
+    display: inline;
+    .information-about-inscription {
+      font-size: 1.1em;
+      font-weight: bold;
+      padding-bottom: 0.5em;
+    }
+    .information-about-inscriptions {
+      display: flex;
+      flex-direction: column;
+      .footer-information-about-inscriptions-link {
+        color: $white-text-color;
+        text-decoration: none;
+        font-size: 0.8em;
+        padding-top: 0.7em;
+        min-width: 12em;
+      }
+      .footer-information-about-inscriptions-link:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .information-for {
+    display: inline;
+    .information-for-inscription {
+      font-size: 1.1em;
+      font-weight: bold;
+      padding-bottom: 0.5em;
+    }
+    .information-for-inscriptions {
+      display: flex;
+      flex-direction: column;
+      .footer-information-for-inscriptions-link {
+        color: $white-text-color;
+        text-decoration: none;
+        font-size: 0.8em;
+        padding-top: 0.7em;
+        min-width: 9em;
+      }
+      .footer-information-for-inscriptions-link:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .other {
+    display: inline;
+    .other-inscription {
+      font-size: 1.1em;
+      font-weight: bold;
+      padding-bottom: 0.5em;
+    }
+    .other-inscriptions {
+      display: flex;
+      flex-direction: column;
+      .footer-other-inscriptions-link {
+        color: $white-text-color;
+        text-decoration: none;
+        font-size: 0.8em;
+        padding-top: 0.7em;
+        min-width: 8em;
+      }
+      .footer-other-inscriptions-link:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media only screen and ((min-width: 700px) and (max-width: 1000px)) {
+  .footer {
+    padding-right: 1em;
+    padding-left: 1em;
+    gap: 2em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .footer {
+    gap: 1em;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .footer {
+    flex-direction: column;
+    .first-column {
+      width: auto;
+      padding-bottom: 2em;
+      .footer-icon {
+        margin-top: 0em;
+      }
     }
     .information-about {
-        display: inline;
-        margin-top: 6em;
-        padding-right: 7em;
-        .information-about-inscription {
-            font-size: 1.1em;
-            font-weight: bold;
-            padding-bottom: 0.5em;
-        }
-        .information-about-inscriptions {
-            display: flex;
-            flex-direction: column;
-            .footer-information-about-inscriptions-link {
-                color: $white-text-color;
-                text-decoration: none;
-                font-size: 0.8em;
-                padding-top: 0.7em;
-            }
-            .footer-information-about-inscriptions-link:hover{
-                cursor: pointer;
-                text-decoration: underline;
-            }
-        }
-        
+      padding-bottom: 2em;
     }
-
     .information-for {
-        display: inline;
-        margin-top: 6em;
-        padding-right: 7em;
-        .information-for-inscription {
-            font-size: 1.1em;
-            font-weight: bold;
-            padding-bottom: 0.5em;
-        }
-        .information-for-inscriptions {
-            display: flex;
-            flex-direction: column;
-            .footer-information-for-inscriptions-link {
-                color: $white-text-color;
-                text-decoration: none;
-                font-size: 0.8em;
-                padding-top: 0.7em;
-            }
-            .footer-information-for-inscriptions-link:hover{
-                cursor: pointer;
-                text-decoration: underline;
-            }
-            
-        }
+      padding-bottom: 2em;
     }
-
-    .other {
-        display: inline;
-        padding-right: 6em;
-        margin-top: 6em;
-        .other-inscription {
-            font-size: 1.1em;
-            font-weight: bold;
-            padding-bottom: 0.5em;
-        }
-        .other-inscriptions {
-            display: flex;
-            flex-direction: column;
-            .footer-other-inscriptions-link {
-                color: $white-text-color;
-                text-decoration: none;
-                font-size: 0.8em;
-                padding-top: 0.7em;
-            }
-            .footer-other-inscriptions-link:hover{
-                cursor: pointer;
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 810px) {
-    .footer {
-        // width: 50%;
-        flex-direction: column;
-        height: 1700px;
-        .first-column {
-            width: auto;
-            padding-inline: 1rem;
-            .footer-icon {
-                margin-top: 0em;
-            }
-        }
-        .information-about {
-            padding-left: 2em;
-        }
-        .information-for {
-            padding-left: 2em;
-        }
-        .other {
-            padding-left: 2em;
-        }
-    }
-}
-
-
-
-@media only screen and ((min-width: 420px) and (max-height: 800px)) {
-    .footer {
-        flex-direction: column;
-        height: 430vh;
-        padding-left: 2em;
-        padding-bottom: 4em;
-        .first-column {
-            padding-left: 0em;
-            .footer-icon {
-                margin-top: 0em;
-            }
-        }
-        .information-about {
-            padding-left: 2em;
-        }
-        .information-for {
-            padding-left: 2em;
-        }
-        .other {
-            padding-left: 2em;
-        }
-    }
+  }
 }
