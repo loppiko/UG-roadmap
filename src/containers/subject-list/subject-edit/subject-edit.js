@@ -5,18 +5,21 @@ import SubjectEditDescription from './subject-edit-description'
 import SubjectEditSkills from './subject-edit-skills'
 import SubjectEditOther from './subject-edit-other'
 import PropTypes from 'prop-types'
-import { apiPostRequest, apiPutRequest } from '../../../internal/api/api-communication'
+import { apiDeleteRequest, apiPostRequest, apiPutRequest } from '../../../internal/api/api-communication'
 import { validateSubject } from '../../../internal/types/subject'
 import { FormControl, TextField } from '@mui/material'
+import DeleteModal from '../../../components/delete-modal'
 
 /**
  * @param {Function} handleEditExit
  * @param {Subject} subject
+ * @param {Function} refreshSubjects
  * @returns {JSX.Element}
  */
 
-function SubjectEdit ({ handleEditExit, subject }) {
+function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
   const subjectEditReference = useRef(null)
+  const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [activeTab, setActiveTab] = useState(0)
   const [editedSubject, setEditedSubject] = useState(/** @type {Subject} */ subject)
   const [subjectNameError, setSubjectNameError] = useState('')
@@ -77,6 +80,9 @@ function SubjectEdit ({ handleEditExit, subject }) {
       } else {
         await apiPutRequest(`semester/${subject.semester}/subject`, editedSubject)
       }
+
+      refreshSubjects()
+      handleEditExit()
     } catch (error) {
       console.error(error)
       alert(`Failed to alter subject: ${error.message}`)
@@ -84,8 +90,26 @@ function SubjectEdit ({ handleEditExit, subject }) {
     console.log(editedSubject)
   }
 
+  async function handleDeleteSubject () {
+    try {
+      await apiDeleteRequest(`semester/${subject.semester}/subject`, subject.id)
+      handleEditExit()
+      refreshSubjects()
+    } catch (error) {
+      console.error(error)
+      alert(`Failed to delete subject: ${error.message}`)
+    }
+  }
+
   return (
-        <div className="subject-edit" ref={subjectEditReference}>
+        <div className="subject-edit-background">
+            <div className="subject-edit" ref={subjectEditReference}>
+            {(showDeleteModal) && <DeleteModal
+                title={'Delete Subject'}
+                message={`Are you sure to delete subject: ${subject.name}`}
+                handleExit={() => setShowDeleteModal(false)}
+                deleteCallback={handleDeleteSubject}
+            />}
             <div className="subject-edit-upper-panel">
                 <div className="subject-edit-upper-panel-left-side">
                 <FormControl>
@@ -101,6 +125,7 @@ function SubjectEdit ({ handleEditExit, subject }) {
                     <div className="subject-edit-upper-panel-semester">{`Semester ${subject.semester}`}</div>
                 </div>
                 <div className="subject-edit-upper-panel-right-side">
+                    {(subject.id) && (<div className="subject-edit-upper-panel-right-side-delete" onClick={() => setShowDeleteModal(true)}>Delete</div>)}
                     <div className="subject-edit-upper-panel-right-side-save" onClick={handleSave}>Save</div>
                     <div className="subject-edit-upper-panel-right-side-exit" onClick={handleEditExit}>Exit</div>
                 </div>
@@ -116,12 +141,15 @@ function SubjectEdit ({ handleEditExit, subject }) {
                 {(activeTab === 2) && <SubjectEditOther subject={subject} editSubject={editSubject}/>}
             </div>
         </div>
+        </div>
+
   )
 }
 
 SubjectEdit.propTypes = {
   handleEditExit: PropTypes.func.isRequired,
-  subject: PropTypes.object.isRequired
+  subject: PropTypes.object.isRequired,
+  refreshSubjects: PropTypes.func.isRequired
 }
 
 export default SubjectEdit

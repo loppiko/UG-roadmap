@@ -39,6 +39,7 @@ function SubjectsList () {
       setListOfSubjects(sortedSubjects)
     } catch (error) {
       console.error('Failed to fetch subjects:', error)
+      alert(`Failed to fetch subjects: ${error}`)
     }
   }
 
@@ -48,7 +49,7 @@ function SubjectsList () {
 
   return (
         <div className="subject-list-container">
-            {editData.visible && <SubjectEdit handleEditExit={() => setEditData({ visible: false, subject: null }) } subject={editData.subject} />}
+            {editData.visible && <SubjectEdit handleEditExit={() => setEditData({ visible: false, subject: null }) } subject={editData.subject} refreshSubjects={downloadSubjects} />}
             <div className="subject-list-container-upper-part">
                 <div className="subject-list-container-title">List of subjects</div>
                 <div className="subject-list-container-user-logo">Logo</div>
@@ -70,6 +71,7 @@ function SubjectsList () {
                         onClick={() => setEditData({ visible: true, subject })}
                         subject={subject}
                         subjectIndex={index}
+                        refreshSubjects={downloadSubjects}
                         key={`${subject.name}-${index}`}
                     />
                 ))}

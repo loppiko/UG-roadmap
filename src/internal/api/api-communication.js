@@ -73,3 +73,30 @@ export async function apiPostRequest (endpoint, subject) {
     throw new Error(`HTTP error! status: ${response.status}`)
   }
 }
+
+/**
+ * @param {string} endpoint
+ * @param {string} subjectId
+ * @returns {Promise<void>}
+ */
+export async function apiDeleteRequest (endpoint, subjectId) {
+  const currentUrl = apiEndpoint + endpoint
+  const token = getAccessToken()
+
+  assert(subjectId !== undefined && subjectId !== '', 'Require subject id when making DELETE request')
+  assert(currentUrl[currentUrl.length - 1] !== '/', 'Last url character cannot include \'/\' sign')
+  const deleteUrl = currentUrl + `/${subjectId}`
+
+  const response = await axios.delete(
+    deleteUrl,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  )
+
+  if (response.status !== 200) {
+    throw new Error(`Delete request failed: ${response.status}`)
+  }
+}
