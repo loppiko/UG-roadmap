@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { isTokenExpired } from '../msal'
+import { Roles } from './const'
+import { jwtDecode } from 'jwt-decode'
 
 const AuthContext = createContext({
   user: null,
@@ -58,6 +60,17 @@ export const getAccessToken = () => {
   } else {
     throw new Error('User is not authenticated')
   }
+}
+
+export function isAdmin () {
+  const accessToken = getAccessToken()
+  const decodedToken = jwtDecode(accessToken)
+  const roles = decodedToken.roles
+  return roles.includes(Roles.ADMIN)
+}
+
+export function canAssignTeachers () {
+  return isAdmin()
 }
 
 export const useAuth = () => useContext(AuthContext)

@@ -47,7 +47,7 @@ function Subjects () {
    */
   async function downloadSemesterSubjects (semesterId) {
     try {
-      const data = await apiGetRequest(`semester/${semesterId}`)
+      const data = await apiGetRequest(`semester/${semesterId}`, false)
       setListOfSubjects(data)
     } catch (error) {
       console.error('Failed to fetch subjects:', error)

@@ -1,0 +1,171 @@
+.teacher-view {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  margin: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
+
+  .teacher-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .teacher-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .teacher-name {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .teacher-type {
+      font-size: 11px;
+      opacity: 0.8;
+      font-weight: 400;
+    }
+  }
+
+  .teacher-remove {
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+  }
+
+  // Różne warianty kolorów dla różnych typów
+  &.lecture {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  &.laboratory {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+
+  &.both {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  }
+
+  // Kontener dla nauczycieli
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0;
+
+    &.empty {
+      color: #666;
+      font-style: italic;
+      padding: 16px;
+      text-align: center;
+      background: #f5f5f5;
+      border-radius: 8px;
+      border: 2px dashed #ddd;
+    }
+  }
+
+  // Lista nauczycieli
+  &-list {
+    .teacher-view-container {
+      margin-bottom: 16px;
+
+      .teacher-section-title {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Responsywność
+@media (max-width: 768px) {
+  .teacher-view {
+    font-size: 12px;
+    padding: 6px 12px;
+
+    .teacher-avatar {
+      width: 20px;
+      height: 20px;
+      font-size: 10px;
+    }
+
+    .teacher-info {
+      .teacher-name {
+        font-size: 12px;
+      }
+
+      .teacher-type {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+// Animacje
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.teacher-view {
+  animation: fadeInUp 0.3s ease-out;
+}

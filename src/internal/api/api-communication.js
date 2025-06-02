@@ -1,21 +1,27 @@
 import axios from 'axios'
 import { getAccessToken } from '../auth/authProvider'
-import { assert } from '../shared/tools'
+import { assert } from '../tools'
+import appConfig from '../config'
 
-const apiEndpoint = process.env.REACT_APP_API_ENDPOINT
+const apiEndpoint = appConfig.apiEndpoint
 
 /**
  * @param {string} endpoint
+ * @param {boolean} requireAuth
  * @returns {Promise<any>}
  */
-
-export async function apiGetRequest (endpoint) {
+export async function apiGetRequest (endpoint, requireAuth) {
   const currentUrl = apiEndpoint + endpoint
+  const headerConfig = {}
+  if (requireAuth) {
+    const token = getAccessToken()
+    headerConfig.headers = { Authorization: `Bearer ${token}` }
+  }
 
-  const response = await axios.get(currentUrl)
+  const response = (requireAuth) ? await axios.get(currentUrl, headerConfig) : await axios.get(currentUrl)
 
   if (response.status !== 200) {
-    throw new Error(`HTTP error! status: ${response.status}`)
+    throw new Error(`HTTP error! status: ${response.status}. ${response.data}`)
   }
 
   return response.data
@@ -57,12 +63,13 @@ export async function apiPostRequest (endpoint, subject) {
   const currentUrl = apiEndpoint + endpoint
   const token = getAccessToken()
 
-  assert(subject.id === undefined || subject.id === null || subject.id === '', 'During POST request subject should not have id')
+  console.log('apiPostRequest')
 
-  const response = await axios.post(
+  const response = await fetch(
     currentUrl,
-    subject,
     {
+      method: 'POST',
+      body: JSON.stringify(subject),
       headers: {
         Authorization: `Bearer ${token}`
       }

@@ -27,11 +27,11 @@ function SubjectDescription ({ handleTransparentOnClick, subject }) {
         <div className="component-subject-description" style={{ height: `${document.documentElement.scrollHeight - 112}px` }}>
             <div className="component-subject-transparent" onClick={handleTransparentOnClick}></div>
             <motion.div
-            variants={dataVariants}
-            initial="hidden"
-            animate="visible"
-            transition={dataTransition}
-            className="component-subject-non-transparent">
+                variants={dataVariants}
+                initial="hidden"
+                animate="visible"
+                transition={dataTransition}
+                className="component-subject-non-transparent">
                 <img src={ExitArrowIcon} alt="exit-arrow" className="component-subject-non-transparent-exit-arrow" onClick={() => handleTransparentOnClick()}/>
                 <div className="component-subject-non-transparent-title">{subject.name}</div>
                 <div className="component-subject-non-transparent-description">{subject.description}</div>
@@ -43,12 +43,12 @@ function SubjectDescription ({ handleTransparentOnClick, subject }) {
                 <div className="component-subject-non-transparent-subject-description-title">Lecture leading professor:</div>
                 <Link to="https://old.mfi.ug.edu.pl/pracownik/51540/mateusz_miotk" className="component-subject-non-transparent-subject-description-professor-site">{subject.professorLecture}</Link>
                 <motion.div
-                whileHover={{ scale: 1.1 }}
-                onHoverStart={_ => {}}
-                onHoverEnd={_ => {}}
-                className="component-subject-non-transparent-sylabus">
+                    whileHover={{ scale: 1.1 }}
+                    onHoverStart={_ => {}}
+                    onHoverEnd={_ => {}}
+                    className="component-subject-non-transparent-sylabus">
                     <Link to={subject.link} className="component-subject-non-transparent-sylabus-link" >Link to sylabus</Link>
-                    </motion.div>
+                </motion.div>
             </motion.div>
         </div>
   )

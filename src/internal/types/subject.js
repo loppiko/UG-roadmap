@@ -9,10 +9,12 @@
  * @property {Skill[]} skills
  * @property {string} description
  * @property {string} language
- * @property {string} professorLecture
- * @property {string} professorLaboratories
+ * @property {Teacher[] | undefined} teachers
  * @property {string} link
  */
+
+import { isAdmin } from '../auth/authProvider'
+import { assert } from '../tools'
 
 /**
  * @typedef {Subject & object} SubjectView
@@ -22,7 +24,7 @@
 /**
  * @returns {Subject}
  */
-export function createEmptySubject () {
+function createEmptyUserSubject () {
   return {
     name: '',
     id: '',
@@ -33,10 +35,21 @@ export function createEmptySubject () {
     skills: [],
     description: '',
     language: '',
-    professorLecture: '',
-    professorLaboratories: '',
     link: ''
   }
+}
+
+function createEmptyAdminSubject () {
+  assert(isAdmin(), 'User roles does not allow to create empty subject with teachers key')
+  return {
+    ...createEmptySubject(),
+    teachers: []
+  }
+}
+
+export function createEmptySubject () {
+  if (isAdmin()) return createEmptyAdminSubject()
+  return createEmptyUserSubject()
 }
 
 /**

@@ -56,6 +56,7 @@ button {
   cursor: pointer;
   transition: 0.3s ease;
   text-align: center;
+  height: -moz-min-content;
   height: min-content;
 }
 .subject-edit .subject-edit-upper-panel-right-side-exit:hover {
@@ -127,6 +128,4 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-/*# sourceMappingURL=subject-edit.css.map */
+}/*# sourceMappingURL=subject-edit.css.map */

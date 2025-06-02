@@ -1,0 +1,88 @@
+button {
+  cursor: pointer;
+}
+
+.delete-modal-background {
+  font: "Montserrat";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.delete-modal-background .delete-modal {
+  padding: 32px;
+  border-radius: 12px;
+  background-clip: padding-box;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 400px;
+}
+.delete-modal-background .delete-modal .delete-modal-upper {
+  display: flex;
+  gap: 16px;
+}
+.delete-modal-background .delete-modal .delete-modal-upper-left {
+  flex-shrink: 0;
+}
+.delete-modal-background .delete-modal .delete-modal-upper-left-icon {
+  width: 48px;
+  height: 48px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.delete-modal-background .delete-modal .delete-modal-upper-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.delete-modal-background .delete-modal .delete-modal-upper-right-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+.delete-modal-background .delete-modal .delete-modal-upper-right-message {
+  font-size: 16px;
+  color: #666;
+}
+.delete-modal-background .delete-modal .delete-modal-lower {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.delete-modal-background .delete-modal .delete-modal-lower .delete-modal-cancel-button,
+.delete-modal-background .delete-modal .delete-modal-lower .delete-modal-delete-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+.delete-modal-background .delete-modal .delete-modal-lower .delete-modal-cancel-button {
+  background: #e0e0e0;
+  color: #333;
+  font-weight: bold;
+}
+.delete-modal-background .delete-modal .delete-modal-lower .delete-modal-cancel-button:hover {
+  background: #d5d5d5;
+}
+.delete-modal-background .delete-modal .delete-modal-lower .delete-modal-delete-button {
+  background: #ff5c5c;
+  color: #fff;
+  font-weight: bold;
+}
+.delete-modal-background .delete-modal .delete-modal-lower .delete-modal-delete-button:hover {
+  background: #e04e4e;
+}/*# sourceMappingURL=delete-modal.css.map */

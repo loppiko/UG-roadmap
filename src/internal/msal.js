@@ -1,10 +1,11 @@
 import { PublicClientApplication } from '@azure/msal-browser'
+import appConfig from './config'
 
 const msalConfig = {
   auth: {
-    clientId: process.env.REACT_APP_CLIENT_ID,
-    authority: `https://login.microsoftonline.com/${process.env.REACT_APP_TENANT_ID}/v2.0`,
-    redirectUri: process.env.REACT_APP_REDIRECT_URL
+    clientId: appConfig.clientId,
+    authority: `https://login.microsoftonline.com/${appConfig.tenantId}/v2.0`,
+    redirectUri: appConfig.redirectUri
   }
 }
 

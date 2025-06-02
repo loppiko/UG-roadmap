@@ -49,46 +49,46 @@ function Header () {
   }, [])
 
   return (
-    <div className="header">
-        <div className="left-side">
-            <Link className="logo" to={ header['UG-logo-link'] }>
-                <img src={logoUG} alt="UG logo"/>
-            </Link>
-            <div className="header-elements">
-                { header['header-inscryptions'].map(button => <Link className="header-button" to={ button.link } key={'header-button-' + button.name}>{ button.name }</Link>) }
-            </div>
-        </div>
-        <div className="right-side">
-            <div className="header-icons">
-              { rightIcons.map(iconObject =>
-                <Link className="right-header-icon" to={ header['icons-links'][iconObject.link] } key={'right-header-icon-' + iconObject.name}>
-                  <img src={iconObject.path} alt={iconObject.name}/>
-                </Link>)
-              }
-            </div>
-        </div>
-        <div className="center-side">
-            <button className="header-one-icon" onClick={handleButtonClick}><img src={menuIcon} alt="menuIcon"/></button>
-            {isBoxOpen && (
-                <div className="center-box">
-                    <div className="center-header-icons">
-                      {
-                        rightIcons.map(iconObject =>
-                        <Link className="center-header-icon" to={ header['icons-links'][iconObject.link] } key={'center-header-icon-' + iconObject.name}>
-                          <img src={iconObject.path} alt={iconObject.name}/>
-                        </Link>)
-                      }
-                    </div>
-                    <div className="center-header-elements">
-                    {
-                      header['header-inscryptions'].map(button => <Link className="center-header-button" to={ button.link } key={'center-header-button-' + button.name}>{ button.name }</Link>)
-                    }
-                    { <Link className="center-header-button" to="/roadmap-enter" onClick={handleButtonClick}>Change semester</Link> }
-                    </div>
+        <div className="header">
+            <div className="left-side">
+                <Link className="logo" to={ header['UG-logo-link'] }>
+                    <img src={logoUG} alt="UG logo"/>
+                </Link>
+                <div className="header-elements">
+                    { header['header-inscryptions'].map(button => <Link className="header-button" to={ button.link } key={'header-button-' + button.name}>{ button.name }</Link>) }
                 </div>
-            )}
+            </div>
+            <div className="right-side">
+                <div className="header-icons">
+                    { rightIcons.map(iconObject =>
+                        <Link className="right-header-icon" to={ header['icons-links'][iconObject.link] } key={'right-header-icon-' + iconObject.name}>
+                            <img src={iconObject.path} alt={iconObject.name}/>
+                        </Link>)
+                    }
+                </div>
+            </div>
+            <div className="center-side">
+                <button className="header-one-icon" onClick={handleButtonClick}><img src={menuIcon} alt="menuIcon"/></button>
+                {isBoxOpen && (
+                    <div className="center-box">
+                        <div className="center-header-icons">
+                            {
+                                rightIcons.map(iconObject =>
+                                    <Link className="center-header-icon" to={ header['icons-links'][iconObject.link] } key={'center-header-icon-' + iconObject.name}>
+                                        <img src={iconObject.path} alt={iconObject.name}/>
+                                    </Link>)
+                            }
+                        </div>
+                        <div className="center-header-elements">
+                            {
+                                header['header-inscryptions'].map(button => <Link className="center-header-button" to={ button.link } key={'center-header-button-' + button.name}>{ button.name }</Link>)
+                            }
+                            { <Link className="center-header-button" to="/roadmap-enter" onClick={handleButtonClick}>Change semester</Link> }
+                        </div>
+                    </div>
+                )}
+            </div>
         </div>
-    </div>
   )
 }
 
