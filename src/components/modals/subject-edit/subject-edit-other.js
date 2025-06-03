@@ -5,6 +5,8 @@ import { TextField, InputAdornment, OutlinedInput, FormControl, FormHelperText, 
 import { AVAILABLE_SEMESTERS } from '../../../internal/types/subject'
 import { canAssignTeachers, isAdmin } from '../../../internal/auth/authProvider'
 import TeacherAssignModal from '../teacher-assign/teacherAssignModal'
+import SelectedTeacherBox from '../teacher-assign/selectedTeacherBox'
+import { SubjectType } from '../../../internal/types/teacher'
 
 /**
  * @param {Subject} subject
@@ -19,12 +21,14 @@ function SubjectEditOther ({ subject, editSubject, refreshSubjects }) {
   const [ectsError, setEctsError] = useState('')
   const [isMoveSubjectModalOpen, setIsMoveSubjectModalOpen] = useState(false)
   const [currentSemester, setCurrentSemester] = useState(subject.semester)
+  const [selectedTeachers, setSelectedTeachers] = useState(subject.teachers)
   const [showAssignTeachersModal, setShowAssignTeachersModal] = useState(false)
   const allowToChangeTeachers = isAdmin()
 
   const isNew = subject.id === undefined || subject.id === null || subject.id === ''
 
-  console.log(isMoveSubjectModalOpen, showAssignTeachersModal)
+  console.log(isMoveSubjectModalOpen, showAssignTeachersModal, refreshSubjects)
+  console.log('selectedTeachers', selectedTeachers, subject.teachers, subject)
 
   /**
    * @param {string} value
@@ -62,6 +66,14 @@ function SubjectEditOther ({ subject, editSubject, refreshSubjects }) {
     return [true, number]
   }
 
+  /** @param {Array[AssignedTeacher]} selectedTeachers */
+  const handleAssignTeachers = (selectedTeachers) => {
+    editSubject([selectedTeachers.length > 0, selectedTeachers], 'teachers')
+    if (selectedTeachers.length > 0) {
+      setSelectedTeachers(selectedTeachers)
+    }
+  }
+
   const changeSemesterComponent = isNew
     ? (
             <FormControl>
@@ -84,17 +96,24 @@ function SubjectEditOther ({ subject, editSubject, refreshSubjects }) {
                 canAssignTeachers() &&
                 showAssignTeachersModal &&
                 <TeacherAssignModal
-                    subject={subject}
+                    subjectName={subject.name}
+                    teachersList={selectedTeachers}
                     onClose={() => setShowAssignTeachersModal(false)}
-                    refreshSubjects={refreshSubjects}
+                    handleAssignTeachers={handleAssignTeachers}
                 />
             }
             <div className="subject-edit-other-left-side">
                 <div className="subject-edit-other-lecture">
-                    <div className="subject-edit-other-lecture-title">Lecture professors:</div>
+                    <SelectedTeacherBox
+                        title="Lecture Teachers: "
+                        teachers={selectedTeachers.filter(teacher => teacher.subjectType === SubjectType.LECTURE)}
+                    />
                 </div>
                 <div className="subject-edit-other-lab">
-                    <div className="subject-edit-other-lecture-title">Laboratories professors:</div>
+                    <SelectedTeacherBox
+                        title="Laboratory Teachers: "
+                        teachers={selectedTeachers.filter(teacher => teacher.subjectType === SubjectType.LABORATORY)}
+                    />
                 </div>
                 <div className="subject-edit-other-lab">
                     <div className="subject-edit-other-lecture-title"></div>

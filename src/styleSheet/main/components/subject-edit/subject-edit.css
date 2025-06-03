@@ -128,4 +128,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.subject-edit .subject-edit-content .subject-edit-other .subject-edit-other-left-side {
+  width: 50%;
 }/*# sourceMappingURL=subject-edit.css.map */

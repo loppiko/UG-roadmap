@@ -66,7 +66,7 @@ export function isAdmin () {
   const accessToken = getAccessToken()
   const decodedToken = jwtDecode(accessToken)
   const roles = decodedToken.roles
-  return roles.includes(Roles.ADMIN)
+  return (roles && roles.includes(Roles.ADMIN)) || false
 }
 
 export function canAssignTeachers () {

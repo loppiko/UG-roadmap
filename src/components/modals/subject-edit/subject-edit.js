@@ -14,10 +14,11 @@ import SaveButton from '../../buttons/saveButton'
 /**
  * @param {Function} handleEditExit
  * @param {Subject} subject
+ * @param {Function} refreshSubjects
  * @returns {JSX.Element}
  */
 
-function SubjectEdit ({ handleEditExit, subject }) {
+function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
   const subjectEditReference = useRef(null)
   const [activeTab, setActiveTab] = useState(0)
   const [editedSubject, setEditedSubject] = useState(/** @type {Subject} */ subject)
@@ -28,17 +29,27 @@ function SubjectEdit ({ handleEditExit, subject }) {
 
   /**
    * @param {[boolean, Any]} validatedData - [Validation successful?, data]
-   * @param {string} key
+   * @param {keyof Subject} key
    */
   const editSubject = (validatedData, key) => {
     const [validated, value] = validatedData
 
+    if (key === 'teachers') {
+      console.log('editSubject', value)
+    }
+
     if (!validated) return
+
+    if (key === 'teachers') {
+      console.log('editSubject', value)
+    }
 
     setEditedSubject(prevSubject => ({
       ...prevSubject,
       [key]: value
     }))
+
+    console.log('editedSubject', editedSubject.teachers)
   }
 
   /**
@@ -68,6 +79,8 @@ function SubjectEdit ({ handleEditExit, subject }) {
       } else {
         await apiPutRequest(`semester/${subject.semester}/subject`, editedSubject)
       }
+
+      handleEditExit()
     } catch (error) {
       console.error(error)
       alert(`Failed to alter subject: ${error.message}`)
@@ -110,9 +123,9 @@ function SubjectEdit ({ handleEditExit, subject }) {
                     <Tab className="subject-edit-tabs-other" label={'Other'}></Tab>
                 </TabList>
                 <div className="subject-edit-content">
-                    {(activeTab === 0) && <SubjectEditDescription subject={subject} editSubject={editSubject}/>}
+                    {(activeTab === 0) && <SubjectEditDescription subject={editedSubject} editSubject={editSubject}/>}
                     {(activeTab === 1) && <SubjectEditSkills editSubject={editSubject} editedSkillArray={editedSubject.skills}/>}
-                    {(activeTab === 2) && <SubjectEditOther subject={subject} editSubject={editSubject}/>}
+                    {(activeTab === 2) && <SubjectEditOther subject={editedSubject} editSubject={editSubject} refreshSubjects={refreshSubjects}/>}
                 </div>
             </div>
         </div>
@@ -122,7 +135,8 @@ function SubjectEdit ({ handleEditExit, subject }) {
 
 SubjectEdit.propTypes = {
   handleEditExit: PropTypes.func.isRequired,
-  subject: PropTypes.object.isRequired
+  subject: PropTypes.object.isRequired,
+  refreshSubjects: PropTypes.func.isRequired
 }
 
 export default SubjectEdit

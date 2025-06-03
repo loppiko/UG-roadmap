@@ -68,7 +68,7 @@ export function UseSubjects () {
 
   useEffect(() => {
     setSubjectData()
-  }, [setSubjectData])
+  }, [])
 
   return {
     /** @type {SubjectView[]} */

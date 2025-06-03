@@ -151,6 +151,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
+      .subject-edit-other-left-side {
+        width: 50%;
+      }
     }
   }
 }

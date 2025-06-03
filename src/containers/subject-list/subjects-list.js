@@ -32,7 +32,14 @@ function SubjectsList () {
 
   return (
         <div className="subject-list-container">
-            {editData.visible && <SubjectEdit handleEditExit={() => setEditData({ visible: false, subject: null }) } subject={editData.subject} refreshSubjects={handleRefresh} />}
+            {
+                editData.visible &&
+                <SubjectEdit
+                    handleEditExit={() => setEditData({ visible: false, subject: null }) }
+                    subject={editData.subject}
+                    refreshSubjects={handleRefresh}
+                />
+            }
             <div className="subject-list-container-upper-part">
                 <div className="subject-list-container-title">List of subjects</div>
                 <div className="subject-list-container-user-logo">Logo</div>

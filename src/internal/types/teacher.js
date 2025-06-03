@@ -11,6 +11,11 @@
  * @property {'Laboratory' | 'Lecture'} subjectType
  */
 
+export const SubjectType = {
+  LECTURE: 'Lecture',
+  LABORATORY: 'Laboratory'
+}
+
 /**
  * @param {Teacher} teacher
  * @param {'Laboratory' | 'Lecture'} subjectType
@@ -19,7 +24,7 @@
 export function teacherToAssignedTeacher (teacher, subjectType) {
   return {
     ...teacher,
-    subjectType: 'Laboratory'
+    subjectType
   }
 }
 

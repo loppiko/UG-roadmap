@@ -3,22 +3,33 @@ import { Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField, T
 import { useTeachers } from '../../../internal/api/calls/teachers'
 import TeacherAssignRow from './teacherAssignRow'
 import PropTypes from 'prop-types'
+import { SubjectType, teacherToAssignedTeacher } from '../../../internal/types/teacher'
+import SelectedTeacherBox from './selectedTeacherBox'
 
-function TeacherAssignModal ({ subject, onClose, refreshSubjects }) {
+/**
+ * @param {object} param
+ * @param {string} param.subjectName
+ * @param {AssignedTeacher[]} param.teachersList
+ * @param {Function} param.onClose
+ * @param {Function} param.handleAssignTeachers
+ * @returns {JSX.Element}
+ */
+function TeacherAssignModal ({ subjectName, teachersList, onClose, handleAssignTeachers }) {
   const { data: teachers, isLoading, error } = useTeachers()
   const [searchTerm, setSearchTerm] = useState('')
-  const [selectedTeachers, setSelectedTeachers] = useState([])
+  const [selectedTeachers, setSelectedTeachers] = useState(teachersList || [])
 
   const filteredTeachers = teachers.filter(teacher =>
     teacher.givenName.toLowerCase().includes(searchTerm.toLowerCase()) ||
     teacher.surname.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
+  /**
+   * @param {Teacher} teacher
+   * @param {'Laboratory' | 'Lecture'} subjectType
+   */
   const handleTeacherSelect = (teacher, subjectType) => {
-    const assignedTeacher = {
-      ...teacher,
-      subjectType
-    }
+    const assignedTeacher = teacherToAssignedTeacher(teacher, subjectType)
 
     const existingIndex = selectedTeachers.findIndex(
       t => t.id === teacher.id && t.subjectType === subjectType
@@ -34,11 +45,11 @@ function TeacherAssignModal ({ subject, onClose, refreshSubjects }) {
   const handleSave = async () => {
     try {
       console.log('Saving assigned teachers:', selectedTeachers)
-
-      refreshSubjects()
+      handleAssignTeachers(selectedTeachers)
       onClose()
     } catch (error) {
       console.error('Error assigning teachers:', error)
+      alert(`Error assigning teachers: ${error.message}`)
     }
   }
 
@@ -68,7 +79,7 @@ function TeacherAssignModal ({ subject, onClose, refreshSubjects }) {
   return (
     <Dialog open onClose={onClose} maxWidth="md" fullWidth>
       <DialogTitle>
-        Assign Teachers to {subject.name}
+        Assign Teachers to {subjectName}
       </DialogTitle>
 
       <DialogContent>
@@ -83,16 +94,8 @@ function TeacherAssignModal ({ subject, onClose, refreshSubjects }) {
           />
         </Box>
 
-        {selectedTeachers.length > 0 && (
-          <Box sx={{ mb: 2 }}>
-            <Typography variant="h6">Selected Teachers:</Typography>
-            {selectedTeachers.map((teacher, index) => (
-              <Typography key={index} variant="body2">
-                {teacher.givenName} {teacher.surname} - {teacher.subjectType}
-              </Typography>
-            ))}
-          </Box>
-        )}
+        <SelectedTeacherBox title="Laboratory Teachers: " teachers={selectedTeachers.filter(teacher => teacher.subjectType === SubjectType.LABORATORY)} />
+        <SelectedTeacherBox title="Lecture Teachers: " teachers={selectedTeachers.filter(teacher => teacher.subjectType === SubjectType.LECTURE)} />
 
         <TableContainer component={Paper} sx={{ maxHeight: 400 }}>
           <Table stickyHeader>
@@ -144,9 +147,10 @@ function TeacherAssignModal ({ subject, onClose, refreshSubjects }) {
 }
 
 TeacherAssignModal.propTypes = {
-  subject: PropTypes.object.isRequired,
+  subjectName: PropTypes.string.isRequired,
+  teachersList: PropTypes.array.isRequired,
   onClose: PropTypes.func.isRequired,
-  refreshSubjects: PropTypes.func.isRequired
+  handleAssignTeachers: PropTypes.func.isRequired
 }
 
 export default TeacherAssignModal
