@@ -62,14 +62,14 @@ export const getAccessToken = () => {
   }
 }
 
-export function isAdmin () {
+export const isAdmin = () => {
   const accessToken = getAccessToken()
   const decodedToken = jwtDecode(accessToken)
   const roles = decodedToken.roles
-  return (roles && roles.includes(Roles.ADMIN)) || false
+  return (roles && roles instanceof Array) ? roles.includes(Roles.ADMIN) : false
 }
 
-export function canAssignTeachers () {
+export const canAssignTeachers = () => {
   return isAdmin()
 }
 

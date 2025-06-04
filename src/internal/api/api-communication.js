@@ -63,8 +63,6 @@ export async function apiPostRequest (endpoint, subject) {
   const currentUrl = apiEndpoint + endpoint
   const token = getAccessToken()
 
-  console.log('apiPostRequest')
-
   const response = await fetch(
     currentUrl,
     {
@@ -77,6 +75,25 @@ export async function apiPostRequest (endpoint, subject) {
   )
 
   if (response.status !== 201) {
+    throw new Error(`HTTP error! status: ${response.status}`)
+  }
+}
+
+/**
+ * @param {string} endpoint
+ * @returns {Promise<void>}
+ */
+export async function apiDeleteRequest (endpoint) {
+  const currentUrl = apiEndpoint + endpoint
+  const token = getAccessToken()
+
+  const response = await axios.delete(currentUrl, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  })
+
+  if (response.status !== 200) {
     throw new Error(`HTTP error! status: ${response.status}`)
   }
 }

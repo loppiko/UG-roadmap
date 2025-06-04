@@ -44,7 +44,6 @@ function TeacherAssignModal ({ subjectName, teachersList, onClose, handleAssignT
 
   const handleSave = async () => {
     try {
-      console.log('Saving assigned teachers:', selectedTeachers)
       handleAssignTeachers(selectedTeachers)
       onClose()
     } catch (error) {

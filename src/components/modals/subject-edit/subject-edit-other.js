@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { TextField, InputAdornment, OutlinedInput, FormControl, FormHelperText, Button, Select, MenuItem } from '@mui/material'
-// import MoveSubjectModal from '../../../components/modals/move-subject-modal'
+import { TextField, InputAdornment, OutlinedInput, FormControl, FormHelperText, Button, Select, MenuItem, Alert } from '@mui/material'
+import MoveSubjectModal from '../move-subject/moveSubjectModal'
 import { AVAILABLE_SEMESTERS } from '../../../internal/types/subject'
-import { canAssignTeachers, isAdmin } from '../../../internal/auth/authProvider'
 import TeacherAssignModal from '../teacher-assign/teacherAssignModal'
 import SelectedTeacherBox from '../teacher-assign/selectedTeacherBox'
 import { SubjectType } from '../../../internal/types/teacher'
+import { canAssignTeachers } from '../../../internal/auth/authProvider'
 
 /**
  * @param {Subject} subject
@@ -23,12 +23,8 @@ function SubjectEditOther ({ subject, editSubject, refreshSubjects }) {
   const [currentSemester, setCurrentSemester] = useState(subject.semester)
   const [selectedTeachers, setSelectedTeachers] = useState(subject.teachers)
   const [showAssignTeachersModal, setShowAssignTeachersModal] = useState(false)
-  const allowToChangeTeachers = isAdmin()
 
   const isNew = subject.id === undefined || subject.id === null || subject.id === ''
-
-  console.log(isMoveSubjectModalOpen, showAssignTeachersModal, refreshSubjects)
-  console.log('selectedTeachers', selectedTeachers, subject.teachers, subject)
 
   /**
    * @param {string} value
@@ -91,7 +87,7 @@ function SubjectEditOther ({ subject, editSubject, refreshSubjects }) {
 
   return (
         <div className="subject-edit-other">
-            {/* {isMoveSubjectModalOpen && <MoveSubjectModal subject={subject} onClose={() => setIsMoveSubjectModalOpen(false)} afterMove={() => refreshSubjects()} />} */}
+            {isMoveSubjectModalOpen && <MoveSubjectModal subject={subject} onClose={() => setIsMoveSubjectModalOpen(false)} afterMove={() => refreshSubjects()} />}
             {
                 canAssignTeachers() &&
                 showAssignTeachersModal &&
@@ -103,6 +99,7 @@ function SubjectEditOther ({ subject, editSubject, refreshSubjects }) {
                 />
             }
             <div className="subject-edit-other-left-side">
+                {canAssignTeachers() && <Alert severity="info" sx={{ marginBottom: '20px' }}>Remember that only assigned teachers can modify subject</Alert>}
                 <div className="subject-edit-other-lecture">
                     <SelectedTeacherBox
                         title="Lecture Teachers: "
@@ -115,20 +112,17 @@ function SubjectEditOther ({ subject, editSubject, refreshSubjects }) {
                         teachers={selectedTeachers.filter(teacher => teacher.subjectType === SubjectType.LABORATORY)}
                     />
                 </div>
-                <div className="subject-edit-other-lab">
-                    <div className="subject-edit-other-lecture-title"></div>
+                <div className="subject-edit-other-down-section">
                     {changeSemesterComponent}
-                </div>
-                {allowToChangeTeachers && (
-                    <div className="subject-edit-other-assign-teachers">
+                    {canAssignTeachers() && (
                         <Button
                             variant="contained"
                             onClick={() => setShowAssignTeachersModal(true)}
                         >
                             Assign Teachers
                         </Button>
-                    </div>
-                )}
+                    )}
+                </div>
             </div>
             <div className="subject-edit-other-right-side">
                 <div className="subject-edit-other-right-up">

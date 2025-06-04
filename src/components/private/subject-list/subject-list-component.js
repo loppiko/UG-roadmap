@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import SubjectTeacherBox from './subject-teacher-box'
+import { SubjectType } from '../../../internal/types/teacher'
 
 /**
  * @param {Function} onClick
@@ -25,14 +27,14 @@ function SubjectListComponent ({ onClick, subject, subjectIndex }) {
                     </div>
                 </div>
                 <div className="subject-list-component-right-part">
-                    {subject.professorLecture && <div className="subject-list-component-lec-prof-box">
-                        <span>Lec.</span>
-                        <span>{subject.professorLecture}</span>
-                    </div>}
-                    {subject.professorLaboratories && <div className="subject-list-component-lab-prof-box">
-                        <span>Lab.</span>
-                        <span>{subject.professorLaboratories}</span>
-                    </div>}
+                    <SubjectTeacherBox
+                        teachers={subject.teachers.filter(teacher => teacher.subjectType === SubjectType.LECTURE) || []}
+                        title={'Lec: '}
+                    />
+                    <SubjectTeacherBox
+                        teachers={subject.teachers.filter(teacher => teacher.subjectType === SubjectType.LABORATORY) || []}
+                        title={'Lab: '}
+                    />
                 </div>
             </div>
         </div>

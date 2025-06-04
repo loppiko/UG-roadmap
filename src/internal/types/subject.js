@@ -13,44 +13,10 @@
  * @property {string} link
  */
 
-import { isAdmin } from '../auth/authProvider'
-import { assert } from '../tools'
-
 /**
  * @typedef {Subject & object} SubjectView
  * @property {boolean} displaySemesterName
  */
-
-/**
- * @returns {Subject}
- */
-function createEmptyUserSubject () {
-  return {
-    name: '',
-    id: '',
-    ECTS: 0,
-    semester: 1,
-    lectureHours: 0,
-    laboratoryHours: 0,
-    skills: [],
-    description: '',
-    language: '',
-    link: ''
-  }
-}
-
-function createEmptyAdminSubject () {
-  assert(isAdmin(), 'User roles does not allow to create empty subject with teachers key')
-  return {
-    ...createEmptySubject(),
-    teachers: []
-  }
-}
-
-export function createEmptySubject () {
-  if (isAdmin()) return createEmptyAdminSubject()
-  return createEmptyUserSubject()
-}
 
 /**
  * @param {Subject} subject

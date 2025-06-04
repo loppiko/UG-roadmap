@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 
 function SaveButton ({ callback }) {
   return (
-    <Button variant="outlined" color="success" onClick={callback}>
+    <Button variant="outlined" color="primary" onClick={callback}>
       Save
     </Button>
   )

@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import SubjectListComponent from '../../components/private/subject-list/subject-list-component'
-import AddButton from '../../media/icons/add-icon.svg'
-import { createEmptySubject } from '../../internal/types/subject'
 import { UseSubjects } from '../../internal/api/calls/subject'
 import SubjectEdit from '../../components/modals/subject-edit/subject-edit'
+import { Button, CircularProgress } from '@mui/material'
 
 /**
  * @returns {JSX.Element}
  */
 
 function SubjectsList () {
-  const { subjects, isLoading, error, refetchSubjects } = UseSubjects()
+  const { subjects, isLoading, error, refetchSubjects, emptySubject } = UseSubjects()
   const [editData, setEditData] = useState({ visible: false, subject: null })
 
   function handleRefresh () {
@@ -19,16 +18,6 @@ function SubjectsList () {
   }
 
   if (error) alert(`Error: ${error}`)
-
-  if (isLoading) {
-    return (
-            <div className="subject-list-container">
-                <div className="subject-list-container-upper-part">
-                    <div className="subject-list-container-title">Loading subjects</div>
-                </div>
-            </div>
-    )
-  }
 
   return (
         <div className="subject-list-container">
@@ -48,23 +37,28 @@ function SubjectsList () {
                 <div className="subject-list-container-box-list-header">
                     <div className="subject-list-container-box-list-header-filter">List Header</div>
                     <div className="subject-list-container-box-list-header-add">
-                        <img
-                            src={AddButton}
-                            className="subject-list-container-box-list-header-add-button"
-                            alt="add button"
-                            onClick={() => setEditData({ visible: true, subject: createEmptySubject() })}
-                        />
+                        <Button
+                            onClick={() => setEditData({ visible: true, subject: emptySubject })}
+                            variant="contained"
+                            color="primary"
+                        >
+                            Add subject
+                        </Button>
                     </div>
                 </div>
-                {subjects && subjects.map((subject, index) => (
-                    <SubjectListComponent
-                        onClick={() => setEditData({ visible: true, subject })}
-                        subject={subject}
-                        subjectIndex={index}
-                        refreshSubjects={refetchSubjects}
-                        key={`${subject.name}-${index}`}
-                    />
-                ))}
+                {
+                    isLoading
+                      ? <CircularProgress />
+                      : subjects && subjects.map((subject, index) => (
+                        <SubjectListComponent
+                            onClick={() => setEditData({ visible: true, subject })}
+                            subject={subject}
+                            subjectIndex={index}
+                            refreshSubjects={refetchSubjects}
+                            key={`${subject.name}-${index}`}
+                        />
+                      ))
+                }
             </div>
         </div>
   )

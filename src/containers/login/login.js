@@ -18,8 +18,6 @@ function Login () {
   const { login, user } = useAuth()
   const navigate = useNavigate()
 
-  console.log(loginRequest)
-
   useEffect(() => {
     if (!user) {
       msalInstance.loginRedirect(loginRequest)

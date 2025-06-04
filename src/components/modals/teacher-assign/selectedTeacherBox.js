@@ -1,7 +1,14 @@
 import React from 'react'
-import { Box, Typography, Chip, Avatar } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import PropTypes from 'prop-types'
+import TeacherChip from './teacherChip'
 
+/**
+ * @param {object} props
+ * @param {string} props.title
+ * @param {AssignedTeacher[]} props.teachers
+ * @returns {JSX.Element}
+ */
 function SelectedTeacherBox ({ title, teachers }) {
   return (
     <Box sx={{ mb: 2, display: 'flex', flexDirection: 'column', gap: 1 }}>
@@ -10,13 +17,10 @@ function SelectedTeacherBox ({ title, teachers }) {
       {teachers.length > 0
         ? (
             teachers.map((teacher, index) => (
-            <Chip
-            key={index}
-          color="primary"
-          variant="outlined"
-          label={`${teacher.givenName} ${teacher.surname}`}
-          avatar={<Avatar>{teacher.givenName.charAt(0)}</Avatar>}
-        />
+              <TeacherChip
+                key={index}
+                teacher={teacher}
+              />
             ))
           )
         : (

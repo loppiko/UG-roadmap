@@ -4,6 +4,9 @@ button {
 
 .subject-edit {
   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 800px;
   height: 600px;
   background: white;
@@ -131,4 +134,11 @@ button {
 }
 .subject-edit .subject-edit-content .subject-edit-other .subject-edit-other-left-side {
   width: 50%;
+}
+.subject-edit .subject-edit-content .subject-edit-other .subject-edit-other-left-side .subject-edit-other-down-section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }/*# sourceMappingURL=subject-edit.css.map */

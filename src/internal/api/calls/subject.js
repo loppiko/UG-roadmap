@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { apiGetRequest, apiPostRequest } from '../api-communication'
+import { isAdmin } from '../../auth/authProvider'
 
 /**
  * @returns {Promise<{success: boolean, data?: SubjectView[], error?: Error}>}
@@ -37,7 +38,6 @@ async function makeRequestToDownloadAllSubjects () {
  */
 async function makeRequestToMoveSubject (subject, newSemester) {
   try {
-    console.log('makeRequestToMoveSubject')
     await apiPostRequest(`semester/${subject.semester}/subject/${subject.id}/move-to/${newSemester}`, {})
     return { success: true }
   } catch (error) {
@@ -70,12 +70,18 @@ export function UseSubjects () {
     setSubjectData()
   }, [])
 
+  function createEmptySubject () {
+    if (isAdmin()) return createEmptyAdminSubject()
+    return createEmptyUserSubject()
+  }
+
   return {
     /** @type {SubjectView[]} */
     subjects,
     isLoading,
     error,
-    refetchSubjects: setSubjectData
+    refetchSubjects: setSubjectData,
+    emptySubject: createEmptySubject()
   }
 }
 
@@ -100,5 +106,27 @@ export function UseMoveSubject () {
     moveSubject,
     isLoading,
     error
+  }
+}
+
+function createEmptyUserSubject () {
+  return {
+    name: '',
+    id: '',
+    ECTS: 0,
+    semester: 1,
+    lectureHours: 0,
+    laboratoryHours: 0,
+    skills: [],
+    description: '',
+    language: '',
+    link: ''
+  }
+}
+
+function createEmptyAdminSubject () {
+  return {
+    ...createEmptyUserSubject(),
+    teachers: []
   }
 }

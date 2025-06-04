@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { apiGetRequest } from '../api-communication'
 import { assert } from '../../tools'
-import { isAdmin } from '../../auth/authProvider'
+import { canAssignTeachers } from '../../auth/authProvider'
 
 /**
  * @returns {{data: Teacher[], isLoading: boolean, error: Error | null}}
@@ -11,7 +11,7 @@ export function useTeachers () {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  assert(isAdmin(), 'User roles does not allow to use teachers API')
+  assert(canAssignTeachers(), 'User roles does not allow to use teachers API')
 
   useEffect(() => {
     const fetchData = async () => {

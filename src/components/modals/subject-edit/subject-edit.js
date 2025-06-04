@@ -5,11 +5,12 @@ import SubjectEditDescription from './subject-edit-description'
 import SubjectEditSkills from './subject-edit-skills'
 import SubjectEditOther from './subject-edit-other'
 import PropTypes from 'prop-types'
-import { apiPostRequest, apiPutRequest } from '../../../internal/api/api-communication'
+import { apiDeleteRequest, apiPostRequest, apiPutRequest } from '../../../internal/api/api-communication'
 import { validateSubject } from '../../../internal/types/subject'
 import { FormControl, TextField } from '@mui/material'
 import DeleteButton from '../../buttons/deleteButton'
 import SaveButton from '../../buttons/saveButton'
+import DeleteSubjectModal from '../delete-subject/deleteSubjectModal'
 
 /**
  * @param {Function} handleEditExit
@@ -34,22 +35,12 @@ function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
   const editSubject = (validatedData, key) => {
     const [validated, value] = validatedData
 
-    if (key === 'teachers') {
-      console.log('editSubject', value)
-    }
-
     if (!validated) return
-
-    if (key === 'teachers') {
-      console.log('editSubject', value)
-    }
 
     setEditedSubject(prevSubject => ({
       ...prevSubject,
       [key]: value
     }))
-
-    console.log('editedSubject', editedSubject.teachers)
   }
 
   /**
@@ -63,6 +54,16 @@ function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
     }
     setSubjectNameError('')
     return true
+  }
+
+  async function handleDelete () {
+    try {
+      await apiDeleteRequest(`semester/${subject.semester}/subject`, editedSubject)
+      refreshSubjects()
+    } catch (error) {
+      console.error(error)
+      alert(`Failed to delete subject: ${error.message}`)
+    }
   }
 
   async function handleSave () {
@@ -80,23 +81,25 @@ function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
         await apiPutRequest(`semester/${subject.semester}/subject`, editedSubject)
       }
 
+      refreshSubjects()
       handleEditExit()
     } catch (error) {
       console.error(error)
       alert(`Failed to alter subject: ${error.message}`)
     }
-    console.log(editedSubject)
   }
 
   return (
         <div className="subject-edit-background">
             <div className="subject-edit" ref={subjectEditReference}>
-                {/* {(showDeleteModal) && <DeleteModal
-                    title={'Delete Subject'}
-                    message={`Are you sure to delete subject: ${subject.name}`}
-                    handleExit={() => setShowDeleteModal(false)}
-                    deleteCallback={handleDeleteSubject}
-                />} */}
+                {
+                  (showDeleteModal) &&
+                  <DeleteSubjectModal
+                    subjectName={subject.name}
+                    onClose={() => setShowDeleteModal(false)}
+                    onDelete={handleDelete}
+                  />
+                }
                 <div className="subject-edit-upper-panel">
                     <div className="subject-edit-upper-panel-left-side">
                         <FormControl>
