@@ -1,68 +1,90 @@
-import { useEffect, useState } from "react";
-import SubjectListComponent from "../../components/subject-list-component";
-import _ from "lodash";
+import React, { useState } from 'react'
+import SubjectListComponent from '../../components/private/subject-list/subject-list-component'
+import { useSubjects } from '../../internal/api/calls/subject'
+import SubjectEdit from '../../components/modals/subject-edit/subject-edit'
+import { Button, CircularProgress } from '@mui/material'
+import { NotificationsProvider, useNotifications } from '@toolpad/core'
+import { createNotificationProps, Severity } from '../../internal/notifications/notifyTools'
 
-function SubjectsList() {
-    const [listOfSubjects, setListOfSubjects] = useState([]);
+/**
+ * @returns {JSX.Element}
+ */
 
-    // TODO add active filter () -> list.filter.map
+function SubjectsList () {
+  const { subjects, isLoading, error, refetchSubjects, emptySubject } = useSubjects()
+  const [isSubjectEditVisible, setIsSubjectEditVisible] = useState(false)
+  const [subjectToEdit, setSubjectToEdit] = useState(null)
+  const notifications = useNotifications()
 
-    async function downloadSubjects() {
-        try {
-            const response = await fetch('http://localhost:8080/semester/subjects');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-            let lastSemesterNumber = 0;
+  function handleEditExit () {
+    setSubjectToEdit(null)
+    setIsSubjectEditVisible(false)
+  }
 
-            const processedSubjects = data.map((subject, index) => {
-                const displaySemesterName = lastSemesterNumber !== subject["semester"];
+  function handleEditAction () {
+    setSubjectToEdit(null)
+    setIsSubjectEditVisible(false)
+    refetchSubjects()
+  }
 
-                if (displaySemesterName) {
-                    lastSemesterNumber = subject["semester"];
-                }
+  /**
+   * @param {Subject} subject
+   */
+  function handleEditSubject (subject) {
+    setSubjectToEdit(subject)
+    setIsSubjectEditVisible(true)
+  }
 
-                return {
-                    ...subject,
-                    displaySemesterName,
-                    key: `subject-list-item-${index}`
-                };
-            });
+  if (error) {
+    notifications.show(`Error: ${error.message}`, createNotificationProps(Severity.ERROR))
+  }
 
-            const sortedSubjects = _.sortBy(processedSubjects, ['semester']);
-            setListOfSubjects(sortedSubjects);
-        } catch (error) {
-            console.error('Failed to fetch subjects:', error);
-        }
-    }
-
-    useEffect(() => {
-        downloadSubjects();
-    }, []);
-
-    return (
+  return (
         <div className="subject-list-container">
+            <NotificationsProvider>
+            {
+                isSubjectEditVisible &&
+                subjectToEdit &&
+                <SubjectEdit
+                    handleEditExit={handleEditExit}
+                    subject={subjectToEdit}
+                    handleEditAction={handleEditAction}
+                />
+            }
             <div className="subject-list-container-upper-part">
                 <div className="subject-list-container-title">List of subjects</div>
                 <div className="subject-list-container-user-logo">Logo</div>
             </div>
             <div className="subject-list-container-box">
-                <div className="subject-list-container-box-list-header">List Header</div>
-                {listOfSubjects && listOfSubjects.map((subject) => (
-                    <SubjectListComponent
-                        key={subject.key}
-                        subjectTitle={subject["subject-name"]}
-                        lecProf={subject["professor-lecture"]}
-                        labProf={subject["professor-laboratories"]}
-                        skillList={subject["skills"]}
-                        displaySemesterName={subject["displaySemesterName"]}
-                        semesterNumber={subject["semester"]}
-                    />
-                ))}
+                <div className="subject-list-container-box-list-header">
+                    <div className="subject-list-container-box-list-header-filter">List Header</div>
+                    <div className="subject-list-container-box-list-header-add">
+                        <Button
+                            onClick={() => handleEditSubject(emptySubject)}
+                            variant="contained"
+                            color="primary"
+                        >
+                            Add subject
+                        </Button>
+                    </div>
+                </div>
+                {
+                    isLoading
+                      ? <CircularProgress />
+                      : subjects && subjects.map((subject, index) => (
+                        <SubjectListComponent
+                            onClick={() => handleEditSubject(subject)}
+                            subject={subject}
+                            subjectIndex={index}
+                            refreshSubjects={refetchSubjects}
+                            key={`${subject.name}-${index}`}
+                        />
+                      ))
+                }
             </div>
+            </NotificationsProvider>
         </div>
-    );
+  )
 }
 
-export default SubjectsList;
+export default SubjectsList
