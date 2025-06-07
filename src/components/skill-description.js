@@ -38,11 +38,11 @@ function SkillDescription ({ skill, handleExitArrowOnClick }) {
   return (
         <div className="component-skill-description" style={{ height: `${document.documentElement.scrollHeight - 112}px` }}>
             <motion.div
-            variants={dataVariants}
-            initial="hidden"
-            animate="visible"
-            transition={dataTransition}
-            className="component-skill-non-transparent">
+                variants={dataVariants}
+                initial="hidden"
+                animate="visible"
+                transition={dataTransition}
+                className="component-skill-non-transparent">
                 <Link onClick={() => handleExitArrowOnClick(false)} alt="exit-arrow" className="component-skill-non-transparent-exit-arrow">
                     <img src={`${ExitArrowIcon}`} alt="exitArrowIcon"></img>
                 </Link>

@@ -37,7 +37,7 @@ function Semester () {
   const displayMobile = screenWidth <= 1000
 
   return (
-       <div className="pick-semester">
+        <div className="pick-semester">
             <div className="semester-content">
                 <div className="semester-entry">
                     <Link to="/" className="semester-back-button">

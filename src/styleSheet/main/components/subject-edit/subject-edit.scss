@@ -1,7 +1,10 @@
 @import "../../../consts/consts.scss";
 
-.subject-edit {
+.subject-edit-background {
   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 800px;
   height: 600px;
   background: white;
@@ -11,146 +14,173 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  z-index: 10;
 
-  //margin-top: 20px;
-  z-index: 5;
-
-  .subject-edit-upper-panel {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-
-    &-left-side {
+    .subject-edit-upper-panel {
       display: flex;
-      flex-direction: column;
-      font-size: 18px;
-      font-weight: bold;
-      color: $main-color;
-
-      .subject-edit-upper-panel-title {
-        font-size: 30px;
-        margin-bottom: 10px;
-      }
-
-    }
-
-    &-right-side {
-      display: flex;
-      gap: 20px;
+      justify-content: space-between;
       align-items: center;
+      padding-bottom: 10px;
 
-      &-save {
-        background: transparent;
-        border: 2px solid $main-color;
-        padding: 5px 15px;
-        border-radius: 5px;
-        color: $main-color;
-        cursor: pointer;
-        transition: 0.3s ease;
-
-        &:hover {
-          background: $main-color;
-          color: white;
-        }
-      }
-
-      &-exit {
-        color: darkred;
-        font-size: 20px;
-        cursor: pointer;
-        transition: 0.3s ease;
-        text-align: center;
-        height: min-content;
-
-        &:hover {
-          color: red;
-        }
-      }
-    }
-  }
-
-  .subject-edit-tabs {
-    width: 100%;
-    margin-top: 20px;
-    padding-bottom: 5px;
-
-    .MuiTabs-scroller {
-      display: flex;
-      gap: 20px;
-    }
-
-    .MuiTabs-flexContainer {
-      width: 100%;
-      justify-content: space-between;
-    }
-
-    .MuiTab-root {
-      font-size: 16px;
-      font-weight: bold;
-      font-family: $main-font;
-      border-bottom: 2px solid #ccc;
-      min-width: 220px;
-    }
-  }
-
-  .subject-edit-content {
-    padding: 20px;
-
-    .subject-edit-description {
-      .subject-edit-component-description-textfield {
-        font-size: 18px;
-      }
-    }
-
-    .subject-edit-skills {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 40px;
-
-      .subject-edit-skill-edit {
-        width: 45%;
-        //border: 1px solid $main-color;
-        border-radius: 5px;
-
-        .subject-edit-skill-edit-upper-panel {
-          display: flex;
-          justify-content: space-between;
-
-          .subject-edit-skill-edit-upper-panel-title {
-            font-weight: bold;
-            background-color: transparent;
-            color: $main-color;
-          }
-
-          .subject-edit-trash-icon {
-            margin-right: 10px;
-            cursor: pointer;
-            filter: brightness(50%);
-          }
-          .subject-edit-trash-icon:hover {
-            filter: brightness(85%);
-          }
-        }
-      }
-
-      .subject-edit-add-box {
-        width: 45%;
+      &-left-side {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: bold;
+        color: $main-color;
 
-        .subject-edit-addButton {
-          width: 100px;
+        .subject-edit-upper-panel-title {
+          font-size: 30px;
+          margin-bottom: 10px;
+        }
+
+      }
+
+      &-right-side {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        &-delete {
+          background-color: transparent;
+          border: 2px solid darkred;
+          padding: 5px 15px;
+          color: $main-color;
+          border-radius: 5px;
+          font-weight: bold;
           cursor: pointer;
+          transition: 0.3s ease;
+
+          &:hover {
+            background-color: darkred;
+            color: white;
+          }
+        }
+
+        &-save {
+          background: transparent;
+          border: 2px solid $main-color;
+          padding: 5px 15px;
+          border-radius: 5px;
+          color: $main-color;
+          cursor: pointer;
+          transition: 0.3s ease;
+          font-weight: bold;
+
+          &:hover {
+            background: $main-color;
+            color: white;
+          }
+        }
+
+        &-exit {
+          color: darkred;
+          font-size: 20px;
+          cursor: pointer;
+          transition: 0.3s ease;
+          text-align: center;
+          height: min-content;
+
+          &:hover {
+            color: red;
+          }
         }
       }
     }
+
+    .subject-edit-tabs {
+      width: 100%;
+      margin-top: 20px;
+      padding-bottom: 5px;
+
+      .MuiTabs-scroller {
+        display: flex;
+        gap: 20px;
+      }
+
+      .MuiTabs-flexContainer {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .MuiTab-root {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: $main-font;
+        border-bottom: 2px solid #ccc;
+        min-width: 220px;
+      }
+    }
+
+    .subject-edit-content {
+      padding: 20px;
+
+      .subject-edit-description {
+        .subject-edit-component-description-textfield {
+          font-size: 18px;
+        }
+      }
+
+      .subject-edit-skills {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        .subject-edit-skill-edit {
+          width: 45%;
+          //border: 1px solid $main-color;
+          border-radius: 5px;
+
+          .subject-edit-skill-edit-upper-panel {
+            display: flex;
+            justify-content: space-between;
+
+            .subject-edit-skill-edit-upper-panel-title {
+              font-weight: bold;
+              background-color: transparent;
+              color: $main-color;
+            }
+
+            .subject-edit-trash-icon {
+              margin-right: 10px;
+              cursor: pointer;
+              filter: brightness(50%);
+            }
+            .subject-edit-trash-icon:hover {
+              filter: brightness(85%);
+            }
+          }
+        }
+
+        .subject-edit-add-box {
+          width: 45%;
+          display: flex;
+          justify-content: center;
+
+          .subject-edit-addButton {
+            width: 100px;
+            cursor: pointer;
+          }
+        }
+      }
 
     .subject-edit-other {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
+      .subject-edit-other-left-side {
+        width: 50%;
+
+        .subject-edit-other-down-section {
+          margin-top: 2rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+      }
     }
   }
 }

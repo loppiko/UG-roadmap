@@ -6,6 +6,8 @@ import ExitArrowIcon from '../media/icons/exit-arrow-icon.svg'
 
 // database
 import PropTypes from 'prop-types'
+import SubjectTeacherBox from './private/subject-list/subject-teacher-box'
+import { SubjectType } from '../internal/types/teacher'
 
 // 112 - footer size
 
@@ -27,11 +29,11 @@ function SubjectDescription ({ handleTransparentOnClick, subject }) {
         <div className="component-subject-description" style={{ height: `${document.documentElement.scrollHeight - 112}px` }}>
             <div className="component-subject-transparent" onClick={handleTransparentOnClick}></div>
             <motion.div
-            variants={dataVariants}
-            initial="hidden"
-            animate="visible"
-            transition={dataTransition}
-            className="component-subject-non-transparent">
+                variants={dataVariants}
+                initial="hidden"
+                animate="visible"
+                transition={dataTransition}
+                className="component-subject-non-transparent">
                 <img src={ExitArrowIcon} alt="exit-arrow" className="component-subject-non-transparent-exit-arrow" onClick={() => handleTransparentOnClick()}/>
                 <div className="component-subject-non-transparent-title">{subject.name}</div>
                 <div className="component-subject-non-transparent-description">{subject.description}</div>
@@ -39,16 +41,27 @@ function SubjectDescription ({ handleTransparentOnClick, subject }) {
                     <div className="component-subject-non-transparent-subject-description-title">Language of lecture:</div>
                     {subject.language}
                 </div>
-                <div className="component-subject-non-transparent-subject-professor"></div>
-                <div className="component-subject-non-transparent-subject-description-title">Lecture leading professor:</div>
-                <Link to="https://old.mfi.ug.edu.pl/pracownik/51540/mateusz_miotk" className="component-subject-non-transparent-subject-description-professor-site">{subject.professorLecture}</Link>
+                <SubjectTeacherBox
+                    title="Lecture professors:"
+                    teachers={subject.teachers.filter(teacher => teacher.subjectType === SubjectType.LECTURE)}
+                    size="medium"
+                    displayOneLine={false}
+                    showReducedNumberOfTeachers={false}
+                />
+                <SubjectTeacherBox
+                    title="Laboratory professors:"
+                    teachers={subject.teachers.filter(teacher => teacher.subjectType === SubjectType.LABORATORY)}
+                    size="medium"
+                    displayOneLine={false}
+                    showReducedNumberOfTeachers={false}
+                />
                 <motion.div
-                whileHover={{ scale: 1.1 }}
-                onHoverStart={_ => {}}
-                onHoverEnd={_ => {}}
-                className="component-subject-non-transparent-sylabus">
+                    whileHover={{ scale: 1.1 }}
+                    onHoverStart={_ => {}}
+                    onHoverEnd={_ => {}}
+                    className="component-subject-non-transparent-sylabus">
                     <Link to={subject.link} className="component-subject-non-transparent-sylabus-link" >Link to sylabus</Link>
-                    </motion.div>
+                </motion.div>
             </motion.div>
         </div>
   )

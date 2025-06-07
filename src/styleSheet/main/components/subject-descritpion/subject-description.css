@@ -49,6 +49,18 @@ button {
   text-decoration: none;
   font-weight: bold;
 }
+.component-subject-description .component-subject-non-transparent .subject-teacher-box {
+  margin-top: 3.5rem;
+}
+.component-subject-description .component-subject-non-transparent .subject-teacher-box .MuiTypography-h5 {
+  color: black;
+  font-family: "Montserrat" !important;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  line-height: 33px;
+  margin-bottom: 0;
+}
 .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus {
   margin: 4rem auto auto;
   width: 75%;
@@ -132,9 +144,14 @@ button {
   .component-subject-description .component-subject-non-transparent .component-subject-non-transparent-sylabus {
     margin-top: 3rem;
   }
+  .component-subject-description .component-subject-non-transparent .subject-teacher-box {
+    margin-top: 1.5rem;
+  }
+  .component-subject-description .component-subject-non-transparent .subject-teacher-box .MuiTypography-h5 {
+    font-size: 1rem !important;
+    line-height: 1.4;
+  }
 }
 .component-subject-description .component-subject-non-transparent {
   transform: none !important;
-}
-
-/*# sourceMappingURL=subject-description.css.map */
+}/*# sourceMappingURL=subject-description.css.map */

@@ -1,68 +1,88 @@
-import React, { useEffect, useState } from 'react'
-import SubjectListComponent from '../../components/subject-list-component'
-import _ from 'lodash'
-import SubjectEdit from '../../components/subject-edit/subject-edit'
-import { apiGetRequest } from '../../internal/api/api-communication'
+import React, { useState } from 'react'
+import SubjectListComponent from '../../components/private/subject-list/subject-list-component'
+import { useSubjects } from '../../internal/api/calls/subject'
+import SubjectEdit from '../../components/modals/subject-edit/subject-edit'
+import { Button, CircularProgress } from '@mui/material'
+import { NotificationsProvider, useNotifications } from '@toolpad/core'
+import { createNotificationProps, Severity } from '../../internal/notifications/notifyTools'
 
 /**
  * @returns {JSX.Element}
  */
 
 function SubjectsList () {
-  const [listOfSubjects, setListOfSubjects] = useState(/** @type {SubjectView[]} */[])
-  const [editData, setEditData] = useState({ visible: false, subject: null })
+  const { subjects, isLoading, error, refetchSubjects, emptySubject } = useSubjects()
+  const [isSubjectEditVisible, setIsSubjectEditVisible] = useState(false)
+  const [subjectToEdit, setSubjectToEdit] = useState(null)
+  const notifications = useNotifications()
 
-  // TODO add active filter () -> list.filter.map
-
-  async function downloadSubjects () {
-    try {
-      /** @type {Subject[]} */
-      const data = await apiGetRequest('semester/subjects')
-      let lastSemesterNumber = 0
-
-      /** @type {SubjectView[]} */
-      const processedSubjects = data.map((subject, index) => {
-        const displaySemesterName = lastSemesterNumber !== subject.semester
-
-        if (displaySemesterName) {
-          lastSemesterNumber = subject.semester
-        }
-
-        return {
-          ...subject,
-          displaySemesterName
-        }
-      })
-
-      const sortedSubjects = _.sortBy(processedSubjects, ['semester'])
-      setListOfSubjects(sortedSubjects)
-    } catch (error) {
-      console.error('Failed to fetch subjects:', error)
-    }
+  function handleEditExit () {
+    setSubjectToEdit(null)
+    setIsSubjectEditVisible(false)
   }
 
-  useEffect(() => {
-    downloadSubjects()
-  }, [])
+  function handleEditAction () {
+    setSubjectToEdit(null)
+    setIsSubjectEditVisible(false)
+    refetchSubjects()
+  }
+
+  /**
+   * @param {Subject} subject
+   */
+  function handleEditSubject (subject) {
+    setSubjectToEdit(subject)
+    setIsSubjectEditVisible(true)
+  }
+
+  if (error) {
+    notifications.show(`Error: ${error.message}`, createNotificationProps(Severity.ERROR))
+  }
 
   return (
         <div className="subject-list-container">
-            {editData.visible && <SubjectEdit handleEditExit={() => setEditData({ visible: false, subject: null }) } subject={editData.subject} />}
+            <NotificationsProvider>
+            {
+                isSubjectEditVisible &&
+                subjectToEdit &&
+                <SubjectEdit
+                    handleEditExit={handleEditExit}
+                    subject={subjectToEdit}
+                    handleEditAction={handleEditAction}
+                />
+            }
             <div className="subject-list-container-upper-part">
                 <div className="subject-list-container-title">List of subjects</div>
                 <div className="subject-list-container-user-logo">Logo</div>
             </div>
             <div className="subject-list-container-box">
-                <div className="subject-list-container-box-list-header">List Header</div>
-                {listOfSubjects && listOfSubjects.map((subject, index) => (
-                    <SubjectListComponent
-                        onClick={() => setEditData({ visible: true, subject })}
-                        subject={subject}
-                        subjectIndex={index}
-                        key={`${subject.name}-${index}`}
-                    />
-                ))}
+                <div className="subject-list-container-box-list-header">
+                    <div className="subject-list-container-box-list-header-filter">List Header</div>
+                    <div className="subject-list-container-box-list-header-add">
+                        <Button
+                            onClick={() => handleEditSubject(emptySubject)}
+                            variant="contained"
+                            color="primary"
+                        >
+                            Add subject
+                        </Button>
+                    </div>
+                </div>
+                {
+                    isLoading
+                      ? <CircularProgress />
+                      : subjects && subjects.map((subject, index) => (
+                        <SubjectListComponent
+                            onClick={() => handleEditSubject(subject)}
+                            subject={subject}
+                            subjectIndex={index}
+                            refreshSubjects={refetchSubjects}
+                            key={`${subject.name}-${index}`}
+                        />
+                      ))
+                }
             </div>
+            </NotificationsProvider>
         </div>
   )
 }
