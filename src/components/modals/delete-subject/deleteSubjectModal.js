@@ -11,10 +11,6 @@ import DeleteButton from '../../buttons/deleteButton'
  * @returns {JSX.Element}
  */
 function DeleteSubjectModal ({ onClose, onDelete, isLoading = false }) {
-  const handleDelete = () => {
-    onDelete()
-  }
-
   return (
     <Dialog open onClose={onClose} maxWidth="sm" fullWidth>
       <DialogTitle sx={{ color: '#800000', fontWeight: 'bold' }}>
@@ -38,7 +34,7 @@ function DeleteSubjectModal ({ onClose, onDelete, isLoading = false }) {
         </Button>
 
         <DeleteButton
-          callback={handleDelete}
+          callback={onDelete}
           disabled={isLoading}
         />
       </DialogActions>

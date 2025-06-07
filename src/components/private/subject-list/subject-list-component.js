@@ -28,12 +28,18 @@ function SubjectListComponent ({ onClick, subject, subjectIndex }) {
                 </div>
                 <div className="subject-list-component-right-part">
                     <SubjectTeacherBox
-                        teachers={subject.teachers.filter(teacher => teacher.subjectType === SubjectType.LECTURE) || []}
+                        teachers={(subject.teachers) ? subject.teachers.filter(teacher => teacher.subjectType === SubjectType.LECTURE) : []}
                         title={'Lec: '}
+                        size="small"
+                        displayOneLine={true}
+                        showReducedNumberOfTeachers={true}
                     />
                     <SubjectTeacherBox
-                        teachers={subject.teachers.filter(teacher => teacher.subjectType === SubjectType.LABORATORY) || []}
+                        teachers={(subject.teachers) ? subject.teachers.filter(teacher => teacher.subjectType === SubjectType.LABORATORY) : []}
                         title={'Lab: '}
+                        size="small"
+                        displayOneLine={true}
+                        showReducedNumberOfTeachers={true}
                     />
                 </div>
             </div>

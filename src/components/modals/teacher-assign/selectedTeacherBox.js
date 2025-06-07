@@ -18,7 +18,7 @@ function SelectedTeacherBox ({ title, teachers }) {
         ? (
             teachers.map((teacher, index) => (
               <TeacherChip
-                key={index}
+                key={`teacher-chip-${teacher.id}-${index}`}
                 teacher={teacher}
               />
             ))

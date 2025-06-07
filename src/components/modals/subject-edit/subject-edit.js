@@ -11,6 +11,7 @@ import { FormControl, TextField } from '@mui/material'
 import DeleteButton from '../../buttons/deleteButton'
 import SaveButton from '../../buttons/saveButton'
 import DeleteSubjectModal from '../delete-subject/deleteSubjectModal'
+import { assert } from '../../../internal/tools'
 
 /**
  * @param {Function} handleEditExit
@@ -58,7 +59,8 @@ function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
 
   async function handleDelete () {
     try {
-      await apiDeleteRequest(`semester/${subject.semester}/subject`, editedSubject)
+      assert(subject.id !== null && subject.id !== undefined && subject.id !== '', 'Subject ID is required')
+      await apiDeleteRequest(`semester/${subject.semester}/subject/${subject.id}`, editedSubject)
       refreshSubjects()
     } catch (error) {
       console.error(error)

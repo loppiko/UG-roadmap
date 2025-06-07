@@ -79,6 +79,20 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
             font-weight: bold;
         }
 
+        .subject-teacher-box {
+            margin-top: $component-subject-description-transparent-subject-language-margin-top;
+            
+            .MuiTypography-h5 {
+                color: $black-text-color;
+                font-family: $main-font !important;
+                font-weight: 600;
+                font-size: $component-subject-description-transparent-description-font-size;
+                letter-spacing: $component-subject-description-transparent-description-letter-spacing;
+                line-height: $component-subject-description-transparent-description-line-height;
+                margin-bottom: 0;
+            }
+        }
+
         .component-subject-non-transparent-sylabus {
             margin: $component-subject-non-transparent-sylabus-margin-top auto auto;
 
@@ -185,6 +199,16 @@ $component-subject-non-transparent-sylabus-padding: 1rem;
 
             .component-subject-non-transparent-sylabus {
                 margin-top: 3rem;
+            }
+
+            // Subject Teacher Box mobile styling
+            .subject-teacher-box {
+                margin-top: 1.5rem;
+                
+                .MuiTypography-h5 {
+                    font-size: 1rem !important;
+                    line-height: 1.4;
+                }
             }
         }
     }

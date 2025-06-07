@@ -145,7 +145,7 @@ function Subjects () {
                 {
                     listOfSubjects.map((subject, index) => {
                       return (
-                        <div className="subject-frame" key={ subject.name }>
+                        <div className="subject-frame" key={`subject-frame-${subject.name}-${index}`}>
                             <div className="box">
                                 <div className="subject-info">
                                     <div className="info-box"><span>ECTS</span>{subject.ECTS}</div>
@@ -163,7 +163,7 @@ function Subjects () {
                                       const skillView = { ...skill, subject }
 
                                       return (<Link
-                                              key={'skill-box-' + skill.name}
+                                              key={`skill-box-${index}-${skillIndex}`}
                                               onClick={() => setActiveSkill(skillView)}
                                               className="skill-box">{skill.name}
                                           </Link>)
