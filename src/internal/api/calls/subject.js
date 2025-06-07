@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { apiGetRequest, apiPostRequest } from '../api-communication'
 import { isAdmin } from '../../auth/authProvider'
 
@@ -46,7 +46,7 @@ async function makeRequestToMoveSubject (subject, newSemester) {
   }
 }
 
-export function UseSubjects () {
+export function useSubjects () {
   const [subjects, setSubjects] = useState(/** @type {SubjectView[]} */[])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -70,10 +70,10 @@ export function UseSubjects () {
     setSubjectData()
   }, [])
 
-  function createEmptySubject () {
+  const emptySubject = useMemo(() => {
     if (isAdmin()) return createEmptyAdminSubject()
     return createEmptyUserSubject()
-  }
+  }, [])
 
   return {
     /** @type {SubjectView[]} */
@@ -81,7 +81,7 @@ export function UseSubjects () {
     isLoading,
     error,
     refetchSubjects: setSubjectData,
-    emptySubject: createEmptySubject()
+    emptySubject
   }
 }
 

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import TabList from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import SubjectEditDescription from './subject-edit-description'
@@ -16,18 +16,20 @@ import { assert } from '../../../internal/tools'
 /**
  * @param {Function} handleEditExit
  * @param {Subject} subject
- * @param {Function} refreshSubjects
+ * @param {Function} handleEditAction
  * @returns {JSX.Element}
  */
 
-function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
+function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
   const subjectEditReference = useRef(null)
   const [activeTab, setActiveTab] = useState(0)
-  const [editedSubject, setEditedSubject] = useState(/** @type {Subject} */ subject)
+  const [editedSubject, setEditedSubject] = useState(/** @type {Subject | null} */ null)
   const [subjectNameError, setSubjectNameError] = useState('')
   const [showDeleteModal, setShowDeleteModal] = useState(false)
 
-  console.log(showDeleteModal)
+  useEffect(() => {
+    setEditedSubject(subject)
+  }, [subject])
 
   /**
    * @param {[boolean, Any]} validatedData - [Validation successful?, data]
@@ -61,7 +63,7 @@ function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
     try {
       assert(subject.id !== null && subject.id !== undefined && subject.id !== '', 'Subject ID is required')
       await apiDeleteRequest(`semester/${subject.semester}/subject/${subject.id}`, editedSubject)
-      refreshSubjects()
+      handleEditAction()
     } catch (error) {
       console.error(error)
       alert(`Failed to delete subject: ${error.message}`)
@@ -83,13 +85,14 @@ function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
         await apiPutRequest(`semester/${subject.semester}/subject`, editedSubject)
       }
 
-      refreshSubjects()
-      handleEditExit()
+      handleEditAction()
     } catch (error) {
       console.error(error)
       alert(`Failed to alter subject: ${error.message}`)
     }
   }
+
+  if (!editedSubject) return null
 
   return (
         <div className="subject-edit-background">
@@ -112,6 +115,27 @@ function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
                                 placeholder={'Subject name'}
                                 label={subjectNameError}
                                 onChange={(e) => editSubject([validateSubjectName(e.target.value), e.target.value], 'name')}
+                                sx={{
+                                  '& .MuiInputBase-input': {
+                                    fontSize: '1.75rem',
+                                    fontWeight: 'bold',
+                                    color: '#062D73',
+                                    fontFamily: 'Montserrat'
+                                  },
+                                  '& .MuiInput-underline:before': {
+                                    borderBottom: 'none'
+                                  },
+                                  '& .MuiInput-underline:hover:before': {
+                                    borderBottom: 'none'
+                                  },
+                                  '& .MuiFormLabel-root': {
+                                    color: '#d32f2f',
+                                    fontSize: '0.875rem'
+                                  },
+                                  '& .MuiFormLabel-root.Mui-focused': {
+                                    color: '#d32f2f'
+                                  }
+                                }}
                             />
                         </FormControl>
                         <div className="subject-edit-upper-panel-semester">{`Semester ${subject.semester}`}</div>
@@ -130,7 +154,7 @@ function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
                 <div className="subject-edit-content">
                     {(activeTab === 0) && <SubjectEditDescription subject={editedSubject} editSubject={editSubject}/>}
                     {(activeTab === 1) && <SubjectEditSkills editSubject={editSubject} editedSkillArray={editedSubject.skills}/>}
-                    {(activeTab === 2) && <SubjectEditOther subject={editedSubject} editSubject={editSubject} refreshSubjects={refreshSubjects}/>}
+                    {(activeTab === 2) && <SubjectEditOther subject={editedSubject} editSubject={editSubject} refreshSubjects={handleEditAction}/>}
                 </div>
             </div>
         </div>
@@ -141,7 +165,7 @@ function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
 SubjectEdit.propTypes = {
   handleEditExit: PropTypes.func.isRequired,
   subject: PropTypes.object.isRequired,
-  refreshSubjects: PropTypes.func.isRequired
+  handleEditAction: PropTypes.func.isRequired
 }
 
 export default SubjectEdit

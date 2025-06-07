@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import SubjectListComponent from '../../components/private/subject-list/subject-list-component'
-import { UseSubjects } from '../../internal/api/calls/subject'
+import { useSubjects } from '../../internal/api/calls/subject'
 import SubjectEdit from '../../components/modals/subject-edit/subject-edit'
 import { Button, CircularProgress } from '@mui/material'
 
@@ -9,24 +9,40 @@ import { Button, CircularProgress } from '@mui/material'
  */
 
 function SubjectsList () {
-  const { subjects, isLoading, error, refetchSubjects, emptySubject } = UseSubjects()
-  const [editData, setEditData] = useState({ visible: false, subject: null })
+  const { subjects, isLoading, refetchSubjects, emptySubject } = useSubjects()
+  const [isSubjectEditVisible, setIsSubjectEditVisible] = useState(false)
+  const [subjectToEdit, setSubjectToEdit] = useState(null)
 
-  function handleRefresh () {
-    setEditData({ visible: false, subject: null })
+  function handleEditExit () {
+    setSubjectToEdit(null)
+    setIsSubjectEditVisible(false)
+  }
+
+  function handleEditAction () {
+    setSubjectToEdit(null)
+    setIsSubjectEditVisible(false)
     refetchSubjects()
   }
 
-  if (error) alert(`Error: ${error}`)
+  /**
+   * @param {Subject} subject
+   */
+  function handleEditSubject (subject) {
+    setSubjectToEdit(subject)
+    setIsSubjectEditVisible(true)
+  }
+
+  //   if (error) alert(`Error: ${error}`)
 
   return (
         <div className="subject-list-container">
             {
-                editData.visible &&
+                isSubjectEditVisible &&
+                subjectToEdit &&
                 <SubjectEdit
-                    handleEditExit={() => setEditData({ visible: false, subject: null }) }
-                    subject={editData.subject}
-                    refreshSubjects={handleRefresh}
+                    handleEditExit={handleEditExit}
+                    subject={subjectToEdit}
+                    handleEditAction={handleEditAction}
                 />
             }
             <div className="subject-list-container-upper-part">
@@ -38,7 +54,7 @@ function SubjectsList () {
                     <div className="subject-list-container-box-list-header-filter">List Header</div>
                     <div className="subject-list-container-box-list-header-add">
                         <Button
-                            onClick={() => setEditData({ visible: true, subject: emptySubject })}
+                            onClick={() => handleEditSubject(emptySubject)}
                             variant="contained"
                             color="primary"
                         >
@@ -51,7 +67,7 @@ function SubjectsList () {
                       ? <CircularProgress />
                       : subjects && subjects.map((subject, index) => (
                         <SubjectListComponent
-                            onClick={() => setEditData({ visible: true, subject })}
+                            onClick={() => handleEditSubject(subject)}
                             subject={subject}
                             subjectIndex={index}
                             refreshSubjects={refetchSubjects}

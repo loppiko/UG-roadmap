@@ -4,13 +4,12 @@
  * @property {string} id
  * @property {number} ECTS
  * @property {number} semester
- * @property {number} lectureHours
+ * @property {number} letureHours
  * @property {number} laboratoryHours
  * @property {Skill[]} skills
  * @property {string} description
  * @property {string} language
  * @property {AssignedTeacher[] | undefined} teachers
- * @property {string} link
  */
 
 /**

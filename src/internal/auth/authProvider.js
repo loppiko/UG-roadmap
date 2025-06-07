@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { isTokenExpired } from '../msal'
 import { Roles } from './const'
@@ -28,20 +28,20 @@ export const AuthProvider = ({ children }) => {
     }
   }, [])
 
-  const login = (token) => {
+  const login = useCallback((token) => {
     localStorage.setItem('access_token', token)
     setUser({ token })
-  }
+  }, [])
 
-  const logout = () => {
+  const logout = useCallback(() => {
     localStorage.removeItem('access_token')
     setUser(null)
-  }
+  }, [])
 
   return (
-        <AuthContext.Provider value={{ user, login, logout }}>
-            {children}
-        </AuthContext.Provider>
+    <AuthContext.Provider value={{ user, login, logout }}>
+      {children}
+    </AuthContext.Provider>
   )
 }
 
