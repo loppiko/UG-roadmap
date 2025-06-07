@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import addIcon from '../../../media/icons/add-icon.svg'
 import trashIcon from '../../../media/icons/trash-icon.svg'
 import { FormControl } from '@mui/material'
+import { useNotifications } from '@toolpad/core'
+import { createNotificationProps, Severity } from '../../../internal/notifications/notifyTools'
 
 /**
  * @param {Function} editSubject
@@ -14,6 +16,7 @@ import { FormControl } from '@mui/material'
 function SubjectEditSkills ({ editSubject, editedSkillArray }) {
   const [skillTitleErrorIds, setSkillTitleErrorIds] = useState(/** @type {number[]} */[])
   const [skillDescriptionErrorIds, setSkillDescriptionErrorIds] = useState(/** @type {number[]} */[])
+  const notifications = useNotifications()
 
   /**
    * @param {string} value
@@ -41,8 +44,7 @@ function SubjectEditSkills ({ editSubject, editedSkillArray }) {
    */
   const handleSkillDelete = (indexToDelete) => {
     if (editedSkillArray.length <= 3) {
-      // TODO: write notifications
-      alert('Subject cannot have less number of skills than 3.')
+      notifications.show('Subject cannot have less number of skills than 3.', createNotificationProps(Severity.WARNING))
       return null
     }
 

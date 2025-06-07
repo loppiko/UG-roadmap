@@ -3,15 +3,18 @@ import SubjectListComponent from '../../components/private/subject-list/subject-
 import { useSubjects } from '../../internal/api/calls/subject'
 import SubjectEdit from '../../components/modals/subject-edit/subject-edit'
 import { Button, CircularProgress } from '@mui/material'
+import { NotificationsProvider, useNotifications } from '@toolpad/core'
+import { createNotificationProps, Severity } from '../../internal/notifications/notifyTools'
 
 /**
  * @returns {JSX.Element}
  */
 
 function SubjectsList () {
-  const { subjects, isLoading, refetchSubjects, emptySubject } = useSubjects()
+  const { subjects, isLoading, error, refetchSubjects, emptySubject } = useSubjects()
   const [isSubjectEditVisible, setIsSubjectEditVisible] = useState(false)
   const [subjectToEdit, setSubjectToEdit] = useState(null)
+  const notifications = useNotifications()
 
   function handleEditExit () {
     setSubjectToEdit(null)
@@ -32,10 +35,13 @@ function SubjectsList () {
     setIsSubjectEditVisible(true)
   }
 
-  //   if (error) alert(`Error: ${error}`)
+  if (error) {
+    notifications.show(`Error: ${error.message}`, createNotificationProps(Severity.ERROR))
+  }
 
   return (
         <div className="subject-list-container">
+            <NotificationsProvider>
             {
                 isSubjectEditVisible &&
                 subjectToEdit &&
@@ -76,6 +82,7 @@ function SubjectsList () {
                       ))
                 }
             </div>
+            </NotificationsProvider>
         </div>
   )
 }

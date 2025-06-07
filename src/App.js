@@ -55,15 +55,15 @@ function App () {
 
   return (
     <div className="App">
-        <Header/>
-        <Routes>
-            <Route path="/" element={<MainSite/>} />
-            <Route path="roadmap-enter" element={<Semester/>} />
-            <Route path="roadmap-enter/semester/:semesterId" element={<Subjects/>} />
-            <Route path="subject-list" element={<ProtectedRoute><SubjectsList/></ProtectedRoute>} />
-            <Route path="login" element={(msalReady) ? <Login /> : <div>Loading...</div>} />
-        </Routes>
-        <Footer/>
+          <Header/>
+          <Routes>
+              <Route path="/" element={<MainSite/>} />
+              <Route path="roadmap-enter" element={<Semester/>} />
+              <Route path="roadmap-enter/semester/:semesterId" element={<Subjects/>} />
+              <Route path="subject-list" element={<ProtectedRoute><SubjectsList/></ProtectedRoute>} />
+              <Route path="login" element={(msalReady) ? <Login /> : <div>Loading...</div>} />
+          </Routes>
+          <Footer/>
     </div>
   )
 }

@@ -12,11 +12,13 @@ import {
   Box,
   Alert,
   CircularProgress,
-  Grid2
+  Grid
 } from '@mui/material'
 import PropTypes from 'prop-types'
 import { AVAILABLE_SEMESTERS } from '../../../internal/types/subject'
 import { UseMoveSubject } from '../../../internal/api/calls/subject'
+import { useNotifications } from '@toolpad/core'
+import { createNotificationProps, Severity } from '../../../internal/notifications/notifyTools'
 
 /**
  * @param {object} props
@@ -28,6 +30,7 @@ import { UseMoveSubject } from '../../../internal/api/calls/subject'
 function MoveSubjectModal ({ subject, onClose, afterMove }) {
   const [selectedSemester, setSelectedSemester] = useState(subject.semester)
   const { moveSubject, isLoading, error } = UseMoveSubject()
+  const notifications = useNotifications()
 
   const handleSemesterChange = (event) => {
     setSelectedSemester(parseInt(event.target.value, 10))
@@ -35,7 +38,7 @@ function MoveSubjectModal ({ subject, onClose, afterMove }) {
 
   const handleMove = async () => {
     if (selectedSemester === subject.semester) {
-      alert('Subject is already in this semester')
+      notifications.show('Subject is already in this semester', createNotificationProps(Severity.ERROR))
       return
     }
 
@@ -45,10 +48,11 @@ function MoveSubjectModal ({ subject, onClose, afterMove }) {
       if (!error) {
         afterMove()
         onClose()
+        notifications.show('Subject moved successfully', createNotificationProps(Severity.SUCCESS))
       }
     } catch (err) {
       console.error('Error moving subject:', err)
-      alert(`Failed to move subject: ${err.message}`)
+      notifications.show(`Failed to move subject: ${err.message}`, createNotificationProps(Severity.ERROR))
     }
   }
 
@@ -67,9 +71,9 @@ function MoveSubjectModal ({ subject, onClose, afterMove }) {
               onChange={handleSemesterChange}
               sx={{ mt: 2 }}
             >
-              <Grid2 container spacing={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Grid container spacing={4} sx={{ display: 'flex', justifyContent: 'center' }}>
                 {AVAILABLE_SEMESTERS.map((semester) => (
-                  <Grid2 item xs={6} key={`semester-${semester}`}>
+                  <Grid key={`semester-${semester}`}>
                     <FormControlLabel
                       value={semester}
                       control={<Radio />}
@@ -86,9 +90,9 @@ function MoveSubjectModal ({ subject, onClose, afterMove }) {
                         width: '100%'
                       }}
                     />
-                  </Grid2>
+                  </Grid>
                 ))}
-              </Grid2>
+              </Grid>
             </RadioGroup>
           </FormControl>
 

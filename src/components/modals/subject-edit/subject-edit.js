@@ -12,6 +12,8 @@ import DeleteButton from '../../buttons/deleteButton'
 import SaveButton from '../../buttons/saveButton'
 import DeleteSubjectModal from '../delete-subject/deleteSubjectModal'
 import { assert } from '../../../internal/tools'
+import { useNotifications } from '@toolpad/core'
+import { createNotificationProps, Severity } from '../../../internal/notifications/notifyTools'
 
 /**
  * @param {Function} handleEditExit
@@ -26,6 +28,7 @@ function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
   const [editedSubject, setEditedSubject] = useState(/** @type {Subject | null} */ null)
   const [subjectNameError, setSubjectNameError] = useState('')
   const [showDeleteModal, setShowDeleteModal] = useState(false)
+  const notifications = useNotifications()
 
   useEffect(() => {
     setEditedSubject(subject)
@@ -64,9 +67,10 @@ function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
       assert(subject.id !== null && subject.id !== undefined && subject.id !== '', 'Subject ID is required')
       await apiDeleteRequest(`semester/${subject.semester}/subject/${subject.id}`, editedSubject)
       handleEditAction()
+      notifications.show('Subject deleted successfully', createNotificationProps(Severity.SUCCESS))
     } catch (error) {
       console.error(error)
-      alert(`Failed to delete subject: ${error.message}`)
+      notifications.show(`Failed to delete subject: ${error.message}`, createNotificationProps(Severity.ERROR))
     }
   }
 
@@ -75,7 +79,7 @@ function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
       const [isValid, message] = validateSubject(editedSubject)
 
       if (!isValid) {
-        alert(message)
+        notifications.show(message, createNotificationProps(Severity.WARNING))
         return
       }
 
@@ -86,9 +90,10 @@ function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
       }
 
       handleEditAction()
+      notifications.show('Subject saved successfully', createNotificationProps(Severity.SUCCESS))
     } catch (error) {
       console.error(error)
-      alert(`Failed to alter subject: ${error.message}`)
+      notifications.show(`Failed to alter subject: ${error.message}`, createNotificationProps(Severity.ERROR))
     }
   }
 
