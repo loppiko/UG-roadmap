@@ -5,7 +5,6 @@ button {
 .subject-edit-upper-panel {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-bottom: 10px;
 }
 .subject-edit-upper-panel-left-side {
@@ -21,8 +20,11 @@ button {
 }
 .subject-edit-upper-panel-right-side {
   display: flex;
-  gap: 20px;
+  gap: 0 20px;
   align-items: center;
+  height: -moz-min-content;
+  height: min-content;
+  margin-top: 5px;
 }
 .subject-edit-upper-panel-right-side-delete {
   background-color: transparent;

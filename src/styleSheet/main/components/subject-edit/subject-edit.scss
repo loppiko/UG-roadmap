@@ -3,7 +3,6 @@
 .subject-edit-upper-panel {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-bottom: 10px;
 
   &-left-side {
@@ -22,8 +21,10 @@
 
   &-right-side {
     display: flex;
-    gap: 20px;
+    gap: 0 20px;
     align-items: center;
+    height: min-content;
+    margin-top: 5px;
 
     &-delete {
       background-color: transparent;
