@@ -115,7 +115,7 @@ function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
               width: '800px',
               height: '600px',
               bgcolor: 'white',
-              borderRadius: '12px',
+              borderRadius: '8px',
               padding: '40px',
               boxShadow: '0px 8px 32px rgba(0, 0, 0, 0.3)',
               display: 'flex',
