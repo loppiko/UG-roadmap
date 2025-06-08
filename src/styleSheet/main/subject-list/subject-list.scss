@@ -5,8 +5,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1080px;
   margin: 0 auto;
+  width: 1080px;
 
   .subject-list-container-upper-part {
     display: flex;
@@ -24,6 +24,7 @@
   }
 
   .subject-list-container-box {
+    width: 1080px;
     .subject-list-container-box-list-header {
       display: flex;
       justify-content: space-between;

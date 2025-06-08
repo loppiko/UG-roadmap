@@ -7,7 +7,7 @@ import SubjectEditOther from './subject-edit-other'
 import PropTypes from 'prop-types'
 import { apiDeleteRequest, apiPostRequest, apiPutRequest } from '../../../internal/api/api-communication'
 import { validateSubject } from '../../../internal/types/subject'
-import { FormControl, TextField } from '@mui/material'
+import { FormControl, Modal, TextField, Box } from '@mui/material'
 import DeleteButton from '../../buttons/deleteButton'
 import SaveButton from '../../buttons/saveButton'
 import DeleteSubjectModal from '../delete-subject/deleteSubjectModal'
@@ -100,8 +100,34 @@ function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
   if (!editedSubject) return null
 
   return (
-        <div className="subject-edit-background">
-            <div className="subject-edit" ref={subjectEditReference}>
+        <Modal
+          open={true}
+          onClose={handleEditExit}
+          ref={subjectEditReference}
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <Box
+            sx={{
+              width: '800px',
+              height: '600px',
+              bgcolor: 'white',
+              borderRadius: '12px',
+              padding: '40px',
+              boxShadow: '0px 8px 32px rgba(0, 0, 0, 0.3)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '24px',
+              outline: 'none',
+              position: 'relative',
+              overflow: 'auto'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div>
                 {
                   (showDeleteModal) &&
                   <DeleteSubjectModal
@@ -162,8 +188,8 @@ function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
                     {(activeTab === 2) && <SubjectEditOther subject={editedSubject} editSubject={editSubject} refreshSubjects={handleEditAction}/>}
                 </div>
             </div>
-        </div>
-
+          </Box>
+        </Modal>
   )
 }
 

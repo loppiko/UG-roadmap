@@ -97,3 +97,30 @@ export async function apiDeleteRequest (endpoint) {
     throw new Error(`HTTP error! status: ${response.status}`)
   }
 }
+
+/**
+ * @param {string} endpoint
+ * @param {FormData} formData
+ * @param {boolean} expectedJson
+ * @returns {Promise<Record<string, any> | void>}
+ */
+export async function apiPostFormRequest (endpoint, formData, expectedJson = false) {
+  const currentUrl = apiEndpoint + endpoint
+  const token = getAccessToken()
+
+  const response = await fetch(currentUrl, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  })
+
+  if (response.status !== 201 && response.status !== 200) {
+    throw new Error(`HTTP error! status: ${response.status}`)
+  }
+
+  if (expectedJson) {
+    return await response.json()
+  }
+}

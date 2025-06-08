@@ -4,7 +4,7 @@ import { useTeachers } from '../../../internal/api/calls/teachers'
 import TeacherAssignRow from './teacherAssignRow'
 import PropTypes from 'prop-types'
 import { SubjectType, teacherToAssignedTeacher } from '../../../internal/types/teacher'
-import SelectedTeacherBox from './selectedTeacherBox'
+import SubjectTeacherBox from '../../private/subject-list/subject-teacher-box'
 
 /**
  * @param {object} param
@@ -93,8 +93,10 @@ function TeacherAssignModal ({ subjectName, teachersList, onClose, handleAssignT
           />
         </Box>
 
-        <SelectedTeacherBox title="Laboratory Teachers: " teachers={selectedTeachers.filter(teacher => teacher.subjectType === SubjectType.LABORATORY)} />
-        <SelectedTeacherBox title="Lecture Teachers: " teachers={selectedTeachers.filter(teacher => teacher.subjectType === SubjectType.LECTURE)} />
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mb: 2 }}>
+          <SubjectTeacherBox teachers={selectedTeachers.filter(teacher => teacher.subjectType === SubjectType.LABORATORY)} title="Laboratory Teachers: " size="small" displayOneLine />
+          <SubjectTeacherBox teachers={selectedTeachers.filter(teacher => teacher.subjectType === SubjectType.LECTURE)} title="Lecture Teachers: " size="small" displayOneLine />
+        </Box>
 
         <TableContainer component={Paper} sx={{ maxHeight: 400 }}>
           <Table stickyHeader>
