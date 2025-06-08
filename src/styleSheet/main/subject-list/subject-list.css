@@ -27,10 +27,11 @@ button {
 .subject-list-container .subject-list-container-box .subject-list-container-box-list-header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #062D73;
+  border-bottom: 2px solid rgb(198, 198, 198);
   margin-bottom: 2rem;
 }
-.subject-list-container .subject-list-container-box .subject-list-container-box-list-header .subject-list-container-box-list-header-add-button {
-  width: 3rem;
-  cursor: pointer;
+.subject-list-container .subject-list-container-box .subject-list-container-box-list-header .subject-list-container-box-list-header-add {
+  display: flex;
+  gap: 0 2rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=subject-list.css.map */

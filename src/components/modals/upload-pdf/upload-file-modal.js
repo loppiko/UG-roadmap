@@ -146,7 +146,7 @@ function UploadFileModal ({ open, onClose, onUpload, title = 'Upload PDF File' }
     }
 
       <DialogActions sx={{ padding: 3, paddingTop: 1 }}>
-        <Button onClick={handleClose} disabled={uploading}>
+        <Button onClick={handleClose} disabled={uploading} variant="outlined" color="primary">
           Cancel
         </Button>
       </DialogActions>

@@ -7,7 +7,8 @@ import { useNotifications } from '@toolpad/core'
 import { createNotificationProps, Severity } from '../../internal/notifications/notifyTools'
 import UploadFileModal from '../../components/modals/upload-pdf/upload-file-modal'
 import { usePdfFileUpload } from '../../internal/api/calls/uploadFile'
-
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome'
 /**
  * @returns {JSX.Element}
  */
@@ -90,18 +91,20 @@ function SubjectsList () {
                     <div className="subject-list-container-box-list-header-filter">List Header</div>
                     <div className="subject-list-container-box-list-header-add">
                         <Button
+                            onClick={() => handleEditSubject(emptySubject)}
+                            variant="outlined"
+                            color="primary"
+                            startIcon={<AddCircleOutlineIcon />}
+                        >
+                            Add subject
+                        </Button>
+                        <Button
                             onClick={() => setUploadFileModalOpen(true)}
                             variant="contained"
                             color="primary"
+                            startIcon={<AutoAwesomeIcon />}
                         >
                             Upload file
-                        </Button>
-                        <Button
-                            onClick={() => handleEditSubject(emptySubject)}
-                            variant="contained"
-                            color="primary"
-                        >
-                            Add subject
                         </Button>
                     </div>
                 </div>

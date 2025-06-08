@@ -125,10 +125,7 @@ button {
   width: 45%;
   display: flex;
   justify-content: center;
-}
-.subject-edit-content .subject-edit-skills .subject-edit-add-box .subject-edit-addButton {
-  width: 100px;
-  cursor: pointer;
+  align-items: center;
 }
 .subject-edit-content .subject-edit-other {
   display: flex;
