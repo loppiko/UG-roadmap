@@ -2,13 +2,17 @@ import React, { useEffect, useState } from 'react'
 import SubjectListComponent from '../../components/private/subject-list/subject-list-component'
 import { useSubjects } from '../../internal/api/calls/subject'
 import SubjectEdit from '../../components/modals/subject-edit/subject-edit'
-import { Button, CircularProgress, TextField, Typography } from '@mui/material'
+import { Avatar, Button, CircularProgress, IconButton, ListItemIcon, Menu, MenuItem, TextField, Typography } from '@mui/material'
 import { useNotifications } from '@toolpad/core'
 import { createNotificationProps, Severity } from '../../internal/notifications/notifyTools'
 import UploadFileModal from '../../components/modals/upload-pdf/upload-file-modal'
 import { usePdfFileUpload } from '../../internal/api/calls/uploadFile'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome'
+import { getUserName, useAuth } from '../../internal/auth/authProvider'
+import { useNavigate } from 'react-router-dom'
+import ROUTES from '../../internal/consts/routes'
+import { Home, Logout } from '@mui/icons-material'
 /**
  * @returns {JSX.Element}
  */
@@ -21,6 +25,10 @@ function SubjectsList () {
   const [uploadFileModalOpen, setUploadFileModalOpen] = useState(false)
   const { uploadFile } = usePdfFileUpload()
   const [filteredSubjects, setFilteredSubjects] = useState(/** @type {Subject[]} */([]))
+  const navigate = useNavigate()
+  const [anchorElevated, setAnchorElevated] = useState(null)
+  const isAvatarMenuOpen = !!anchorElevated
+  const { logout } = useAuth()
 
   let lastFilter = ''
 
@@ -111,7 +119,40 @@ function SubjectsList () {
             }
             <div className="subject-list-container-upper-part">
                 <div className="subject-list-container-title">List of subjects</div>
-                <div className="subject-list-container-user-logo">Logo</div>
+                <div className="subject-list-container-user-logo">
+                <IconButton
+                  onClick={(event) => setAnchorElevated(event.currentTarget)}
+                  size="small"
+                  sx={{ ml: 2 }}
+                  aria-controls={isAvatarMenuOpen ? 'account-menu' : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={isAvatarMenuOpen ? 'true' : undefined}
+                >
+                  <Avatar sx={{ width: 32, height: 32 }}>{getUserName().charAt(0).toUpperCase() || ''}</Avatar>
+                </IconButton>
+                <Menu
+                  anchorEl={anchorElevated}
+                  id="account-menu"
+                  open={isAvatarMenuOpen}
+                  onClose={() => setAnchorElevated(null)}
+                  onClick={() => setAnchorElevated(null)}
+                  transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                  anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                >
+                  <MenuItem onClick={() => navigate(ROUTES.ROOT)}>
+                    <ListItemIcon>
+                      <Home fontSize="small" sx={{ color: '#062D73' }} />
+                    </ListItemIcon>
+                    Go to main page
+                  </MenuItem>
+                  <MenuItem onClick={() => logout()}>
+                    <ListItemIcon>
+                      <Logout fontSize="small" sx={{ color: '#062D73' }} />
+                    </ListItemIcon>
+                    Logout
+                  </MenuItem>
+                </Menu>
+                </div>
             </div>
             <div className="subject-list-container-box">
                 <div className="subject-list-container-box-list-header">

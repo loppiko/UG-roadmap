@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react'
 import PropTypes from 'prop-types'
-import { isTokenExpired } from '../msal'
+import { isTokenExpired, msalInstance } from '../msal'
 import { Roles } from './const'
 import { jwtDecode } from 'jwt-decode'
 
@@ -33,7 +33,14 @@ export const AuthProvider = ({ children }) => {
     setUser({ token })
   }, [])
 
-  const logout = useCallback(() => {
+  const logout = useCallback(async () => {
+    try {
+      await msalInstance.logoutRedirect({
+        postLogoutRedirectUri: window.location.origin + '/'
+      })
+    } catch (error) {
+      console.error('Error logging out:', error)
+    }
     localStorage.removeItem('access_token')
     setUser(null)
   }, [])
@@ -62,11 +69,23 @@ export const getAccessToken = () => {
   }
 }
 
+/**
+ * @returns {boolean}
+ */
 export const isAdmin = () => {
   const accessToken = getAccessToken()
   const decodedToken = jwtDecode(accessToken)
   const roles = decodedToken.roles
   return (roles && roles instanceof Array) ? roles.includes(Roles.ADMIN) : false
+}
+
+/**
+ * @returns {string}
+ */
+export const getUserName = () => {
+  const accessToken = getAccessToken()
+  const decodedToken = jwtDecode(accessToken)
+  return decodedToken.given_name || ''
 }
 
 export const canAssignTeachers = () => {
