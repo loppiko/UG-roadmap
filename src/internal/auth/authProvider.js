@@ -89,6 +89,10 @@ export const getUserName = () => {
 }
 
 export const canAssignTeachers = () => {
+  return true
+}
+
+export const canDeleteSubjects = () => {
   return isAdmin()
 }
 

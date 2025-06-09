@@ -14,6 +14,7 @@ import DeleteSubjectModal from '../delete-subject/deleteSubjectModal'
 import { assert } from '../../../internal/tools'
 import { useNotifications } from '@toolpad/core'
 import { createNotificationProps, Severity } from '../../../internal/notifications/notifyTools'
+import { canDeleteSubjects } from '../../../internal/auth/authProvider'
 
 /**
  * @param {Function} handleEditExit
@@ -130,6 +131,7 @@ function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
             <div>
                 {
                   (showDeleteModal) &&
+                  (canDeleteSubjects()) &&
                   <DeleteSubjectModal
                     subjectName={subject.name}
                     onClose={() => setShowDeleteModal(false)}
@@ -172,7 +174,7 @@ function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
                         <div className="subject-edit-upper-panel-semester">{`Semester ${subject.semester}`}</div>
                     </div>
                     <div className="subject-edit-upper-panel-right-side">
-                        {(subject.id) && (<DeleteButton callback={() => setShowDeleteModal(true)}/>)}
+                        {(subject.id) && (canDeleteSubjects()) && (<DeleteButton callback={() => setShowDeleteModal(true)}/>)}
                         <SaveButton callback={handleSave}/>
                         <div className="subject-edit-upper-panel-right-side-exit" onClick={handleEditExit}>Exit</div>
                     </div>

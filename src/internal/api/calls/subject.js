@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { apiGetRequest, apiPostRequest } from '../api-communication'
-import { isAdmin } from '../../auth/authProvider'
+import { canAssignTeachers } from '../../auth/authProvider'
 
 /**
  * @returns {Promise<{success: boolean, data?: SubjectView[], error?: Error}>}
@@ -71,7 +71,7 @@ export function useSubjects () {
   }, [])
 
   const emptySubject = useMemo(() => {
-    if (isAdmin()) return createEmptyAdminSubject()
+    if (canAssignTeachers()) return createEmptyAdminSubject()
     return createEmptyUserSubject()
   }, [])
 
