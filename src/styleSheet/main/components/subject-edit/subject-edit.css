@@ -2,45 +2,31 @@ button {
   cursor: pointer;
 }
 
-.subject-edit-background {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 800px;
-  height: 600px;
-  background: white;
-  border-radius: 8px;
-  padding: 30px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 10;
-}
-.subject-edit-background .subject-edit-upper-panel {
+.subject-edit-upper-panel {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-bottom: 10px;
 }
-.subject-edit-background .subject-edit-upper-panel-left-side {
+.subject-edit-upper-panel-left-side {
   display: flex;
   flex-direction: column;
   font-size: 18px;
   font-weight: bold;
   color: #062D73;
 }
-.subject-edit-background .subject-edit-upper-panel-left-side .subject-edit-upper-panel-title {
+.subject-edit-upper-panel-left-side .subject-edit-upper-panel-title {
   font-size: 30px;
   margin-bottom: 10px;
 }
-.subject-edit-background .subject-edit-upper-panel-right-side {
+.subject-edit-upper-panel-right-side {
   display: flex;
-  gap: 20px;
+  gap: 0 20px;
   align-items: center;
+  height: -moz-min-content;
+  height: min-content;
+  margin-top: 5px;
 }
-.subject-edit-background .subject-edit-upper-panel-right-side-delete {
+.subject-edit-upper-panel-right-side-delete {
   background-color: transparent;
   border: 2px solid darkred;
   padding: 5px 15px;
@@ -50,11 +36,11 @@ button {
   cursor: pointer;
   transition: 0.3s ease;
 }
-.subject-edit-background .subject-edit-upper-panel-right-side-delete:hover {
+.subject-edit-upper-panel-right-side-delete:hover {
   background-color: darkred;
   color: white;
 }
-.subject-edit-background .subject-edit-upper-panel-right-side-save {
+.subject-edit-upper-panel-right-side-save {
   background: transparent;
   border: 2px solid #062D73;
   padding: 5px 15px;
@@ -64,11 +50,11 @@ button {
   transition: 0.3s ease;
   font-weight: bold;
 }
-.subject-edit-background .subject-edit-upper-panel-right-side-save:hover {
+.subject-edit-upper-panel-right-side-save:hover {
   background: #062D73;
   color: white;
 }
-.subject-edit-background .subject-edit-upper-panel-right-side-exit {
+.subject-edit-upper-panel-right-side-exit {
   color: darkred;
   font-size: 20px;
   cursor: pointer;
@@ -77,80 +63,79 @@ button {
   height: -moz-min-content;
   height: min-content;
 }
-.subject-edit-background .subject-edit-upper-panel-right-side-exit:hover {
+.subject-edit-upper-panel-right-side-exit:hover {
   color: red;
 }
-.subject-edit-background .subject-edit-tabs {
+
+.subject-edit-tabs {
   width: 100%;
   margin-top: 20px;
   padding-bottom: 5px;
 }
-.subject-edit-background .subject-edit-tabs .MuiTabs-scroller {
+.subject-edit-tabs .MuiTabs-scroller {
   display: flex;
   gap: 20px;
 }
-.subject-edit-background .subject-edit-tabs .MuiTabs-flexContainer {
+.subject-edit-tabs .MuiTabs-flexContainer {
   width: 100%;
   justify-content: space-between;
 }
-.subject-edit-background .subject-edit-tabs .MuiTab-root {
+.subject-edit-tabs .MuiTab-root {
   font-size: 16px;
   font-weight: bold;
   font-family: "Montserrat";
   border-bottom: 2px solid #ccc;
   min-width: 220px;
 }
-.subject-edit-background .subject-edit-content {
+
+.subject-edit-content {
   padding: 20px;
 }
-.subject-edit-background .subject-edit-content .subject-edit-description .subject-edit-component-description-textfield {
+.subject-edit-content .subject-edit-description .subject-edit-component-description-textfield {
   font-size: 18px;
 }
-.subject-edit-background .subject-edit-content .subject-edit-skills {
+.subject-edit-content .subject-edit-skills {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
 }
-.subject-edit-background .subject-edit-content .subject-edit-skills .subject-edit-skill-edit {
+.subject-edit-content .subject-edit-skills .subject-edit-skill-edit {
   width: 45%;
   border-radius: 5px;
 }
-.subject-edit-background .subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel {
+.subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel {
   display: flex;
   justify-content: space-between;
 }
-.subject-edit-background .subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel .subject-edit-skill-edit-upper-panel-title {
+.subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel .subject-edit-skill-edit-upper-panel-title {
   font-weight: bold;
   background-color: transparent;
   color: #062D73;
 }
-.subject-edit-background .subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel .subject-edit-trash-icon {
+.subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel .subject-edit-trash-icon {
   margin-right: 10px;
   cursor: pointer;
   filter: brightness(50%);
 }
-.subject-edit-background .subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel .subject-edit-trash-icon:hover {
+.subject-edit-content .subject-edit-skills .subject-edit-skill-edit .subject-edit-skill-edit-upper-panel .subject-edit-trash-icon:hover {
   filter: brightness(85%);
 }
-.subject-edit-background .subject-edit-content .subject-edit-skills .subject-edit-add-box {
+.subject-edit-content .subject-edit-skills .subject-edit-add-box {
   width: 45%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.subject-edit-background .subject-edit-content .subject-edit-skills .subject-edit-add-box .subject-edit-addButton {
-  width: 100px;
-  cursor: pointer;
-}
-.subject-edit-background .subject-edit-content .subject-edit-other {
+.subject-edit-content .subject-edit-other {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.subject-edit-background .subject-edit-content .subject-edit-other .subject-edit-other-left-side {
+.subject-edit-content .subject-edit-other .subject-edit-other-left-side {
   width: 50%;
 }
-.subject-edit-background .subject-edit-content .subject-edit-other .subject-edit-other-left-side .subject-edit-other-down-section {
+.subject-edit-content .subject-edit-other .subject-edit-other-left-side .subject-edit-other-down-section {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;

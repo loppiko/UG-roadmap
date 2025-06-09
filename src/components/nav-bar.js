@@ -3,28 +3,26 @@ import React from 'react'
 // React Router
 import { Outlet, Link, useLocation, useParams } from 'react-router-dom'
 import BackArrow from './../media/icons/semester/back-arrow.svg'
-
-import database from '../main.json'
+import { AVAILABLE_SEMESTERS } from '../internal/types/subject'
+import ROUTES from '../internal/consts/routes'
 
 /**
  * @returns {JSX.Element}
  */
 
 function NavBar () {
-  const { semesterId, subjectName } = useParams()
+  const { semesterId } = useParams()
 
-  let newLocation = ''
-  const countSemesters = Object.keys(database.semesters).length
+  const countSemesters = AVAILABLE_SEMESTERS.length
   const currLocation = useLocation().pathname
-
-  if (currLocation === `/roadmap-enter/${(semesterId) || ''}${(subjectName) ? '/' + subjectName : ''}`) newLocation = '/roadmap-enter'
+  const newLocation = (currLocation === ROUTES.ROADMAP_ENTER_SEMESTER) ? ROUTES.ROOT : ROUTES.ROADMAP_ENTER
 
   const nextSem = () => {
     if (semesterId) {
-      const res = parseInt(semesterId.split('-')[1]) + 1
-      if (res <= countSemesters) return `/roadmap-enter/semester-${res}`
-      else return currLocation
-    } else return currLocation
+      const res = Number(semesterId)
+      if (Number.isNaN(res)) console.error('Semester ID is not a number. Got: ', semesterId)
+      if (res + 1 <= countSemesters) return `/roadmap-enter/semester/${res + 1}`
+    } return currLocation
   }
 
   return (
@@ -33,7 +31,7 @@ function NavBar () {
                 { semesterId && <Link to={ newLocation } className="previous-site-button">
                     <img src={BackArrow} alt="back-arrow" className="nav-bar-back-arror"/>
                 </Link> }
-                <Link to="/" className="main-page-button">Main page</Link>
+                <Link to={ROUTES.ROOT} className="main-page-button">Main page</Link>
             </div>
             <div className="nav-bar-right-side">
                 {semesterId && <Link to={ nextSem() } className="next-site-button">Next</Link>}

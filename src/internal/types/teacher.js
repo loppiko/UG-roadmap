@@ -11,10 +11,10 @@
  * @property {'Laboratory' | 'Lecture'} subjectType
  */
 
-export const SubjectType = {
+export const SubjectType = Object.freeze({
   LECTURE: 'Lecture',
   LABORATORY: 'Laboratory'
-}
+})
 
 /**
  * @param {Teacher} teacher

@@ -6,8 +6,8 @@ button {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1080px;
   margin: 0 auto;
+  width: 1080px;
 }
 .subject-list-container .subject-list-container-upper-part {
   display: flex;
@@ -21,13 +21,17 @@ button {
   color: #062D73;
   font-weight: bold;
 }
+.subject-list-container .subject-list-container-box {
+  width: 1080px;
+}
 .subject-list-container .subject-list-container-box .subject-list-container-box-list-header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #062D73;
+  border-bottom: 2px solid rgb(198, 198, 198);
   margin-bottom: 2rem;
 }
-.subject-list-container .subject-list-container-box .subject-list-container-box-list-header .subject-list-container-box-list-header-add-button {
-  width: 3rem;
-  cursor: pointer;
+.subject-list-container .subject-list-container-box .subject-list-container-box-list-header .subject-list-container-box-list-header-add {
+  display: flex;
+  gap: 0 2rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=subject-list.css.map */

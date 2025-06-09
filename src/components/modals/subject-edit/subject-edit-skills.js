@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Textarea from '@mui/joy/Textarea'
 import PropTypes from 'prop-types'
-import addIcon from '../../../media/icons/add-icon.svg'
 import trashIcon from '../../../media/icons/trash-icon.svg'
-import { FormControl } from '@mui/material'
+import { FormControl, IconButton } from '@mui/material'
 import { useNotifications } from '@toolpad/core'
 import { createNotificationProps, Severity } from '../../../internal/notifications/notifyTools'
+import AddBoxIcon from '@mui/icons-material/AddBox'
 
 /**
  * @param {Function} editSubject
@@ -100,7 +100,9 @@ function SubjectEditSkills ({ editSubject, editedSkillArray }) {
                 </div>
             ))}
             {editedSkillArray.length < 4 && (<div className="subject-edit-add-box">
-                <img className="subject-edit-addButton" src={addIcon} onClick={handleSkillAdd} alt="addIcon"/>
+                <IconButton className="subject-edit-addButton" onClick={handleSkillAdd} alt="addIcon" sx={{ height: 'min-content', width: 'min-content' }}>
+                  <AddBoxIcon sx={{ height: '80px', width: '80px', color: '#1976d2' }} />
+                </IconButton>
             </div>)}
         </div>
   )

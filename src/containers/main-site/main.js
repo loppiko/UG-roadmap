@@ -6,6 +6,7 @@ import { Outlet, Link } from 'react-router-dom'
 
 // database
 import database from '../../main.json'
+import ROUTES from '../../internal/consts/routes'
 
 /**
  * @returns {JSX.Element}
@@ -43,7 +44,7 @@ function MainSite () {
                     onHoverStart={e => {}}
                     onHoverEnd={e => {}}
                 >
-                    <Link to="roadmap-enter" className="roadmap-button">Roadmap of the subject</Link>
+                    <Link to={ROUTES.ROADMAP_ENTER} className="roadmap-button">Roadmap of the subject</Link>
                 </motion.div>
             </div>
 

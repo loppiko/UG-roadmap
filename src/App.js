@@ -28,6 +28,7 @@ import './styleSheet/main/subject-list/subject-list.css'
 import { useEffect, useState } from 'react'
 import { initializeMsal } from './internal/msal'
 import { useAuth } from './internal/auth/authProvider'
+import { NotificationsProvider } from '@toolpad/core'
 
 function App () {
   const [msalReady, setMsalReady] = useState(false)
@@ -61,7 +62,7 @@ function App () {
               <Route path="/" element={<MainSite/>} />
               <Route path="roadmap-enter" element={<Semester/>} />
               <Route path="roadmap-enter/semester/:semesterId" element={<Subjects/>} />
-              <Route path="subject-list" element={<ProtectedRoute><SubjectsList/></ProtectedRoute>} />
+              <Route path="subject-list" element={<ProtectedRoute><NotificationsProvider><SubjectsList/></NotificationsProvider></ProtectedRoute>} />
               <Route path="login" element={(msalReady) ? <Login /> : <div>Loading...</div>} />
           </Routes>
           <Footer/>
