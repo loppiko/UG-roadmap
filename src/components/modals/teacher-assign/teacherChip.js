@@ -14,6 +14,7 @@ function TeacherChip ({ teacher }) {
       variant="outlined"
       label={`${teacher.givenName} ${teacher.surname}`}
       avatar={<Avatar>{teacher.givenName.charAt(0)}</Avatar>}
+      onClick={() => {}}
     />
   )
 }

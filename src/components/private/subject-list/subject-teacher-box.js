@@ -40,6 +40,7 @@ function SubjectTeacherBox ({ teachers, title, size, displayOneLine, showReduced
           label={`+${teachers.length - 2} more`}
           variant="outlined"
           size="small"
+          onClick={() => {}}
           sx={{
             color: '#636363'
           }}
