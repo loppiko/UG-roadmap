@@ -114,7 +114,7 @@ function SubjectEdit ({ handleEditExit, subject, handleEditAction }) {
           <Box
             sx={{
               width: '800px',
-              height: '600px',
+              height: '620px',
               bgcolor: 'white',
               borderRadius: '8px',
               padding: '40px',

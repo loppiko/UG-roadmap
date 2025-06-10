@@ -124,8 +124,8 @@ function SubjectEditOther ({ subject, editSubject, refreshSubjects }) {
                     )}
                 </div>
             </div>
-            <div className="subject-edit-other-right-side">
-                <div className="subject-edit-other-right-up">
+            <div className="subject-edit-other-right-side" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <div className="subject-edit-other-right-up" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     <div className="subject-edit-other-right-up-lecture">
                         <div className="subject-edit-other-right-up-lecture-title">Lecture hours:</div>
                         <FormControl variant="outlined">
