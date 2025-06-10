@@ -9,6 +9,7 @@
  * @property {Skill[]} skills
  * @property {string} description
  * @property {string} language
+ * @property {string} link
  * @property {AssignedTeacher[] | undefined} teachers
  */
 

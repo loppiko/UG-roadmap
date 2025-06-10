@@ -165,6 +165,16 @@ function SubjectEditOther ({ subject, editSubject, refreshSubjects }) {
                             <FormHelperText>{ectsError}</FormHelperText>
                         </FormControl>
                     </div>
+                    <div className="subject-edit-other-right-up-lab">
+                        <div className="subject-edit-other-right-up-lab-title">Sylabus link</div>
+                        <FormControl variant="outlined">
+                            <OutlinedInput
+                                id="outlined-adornment-weight"
+                                defaultValue={subject.link}
+                                onChange={(e) => editSubject([true, e.target.value], 'link')}
+                            />
+                        </FormControl>
+                    </div>
                 </div>
                 <div className="subject-eidt-other-right-down">
                     <div className="subject-edit-other-right-down-languages">

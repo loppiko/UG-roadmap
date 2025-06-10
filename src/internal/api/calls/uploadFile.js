@@ -21,7 +21,6 @@ export function usePdfFileUpload () {
     const response = await apiPostFormRequest('generateObjectFromPdf', formData, true)
     setIsLoading(false)
 
-    console.log(response)
     return response
   }
 

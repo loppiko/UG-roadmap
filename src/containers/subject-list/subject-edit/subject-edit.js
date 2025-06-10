@@ -87,7 +87,6 @@ function SubjectEdit ({ handleEditExit, subject, refreshSubjects }) {
       console.error(error)
       alert(`Failed to alter subject: ${error.message}`)
     }
-    console.log(editedSubject)
   }
 
   async function handleDeleteSubject () {

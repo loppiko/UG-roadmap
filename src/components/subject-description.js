@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 
 import ExitArrowIcon from '../media/icons/exit-arrow-icon.svg'
 
@@ -59,8 +58,9 @@ function SubjectDescription ({ handleTransparentOnClick, subject }) {
                     whileHover={{ scale: 1.1 }}
                     onHoverStart={_ => {}}
                     onHoverEnd={_ => {}}
+                    onClick={() => (subject.link ? window.open(subject.link, '_blank') : {})}
                     className="component-subject-non-transparent-sylabus">
-                    <Link to={subject.link} className="component-subject-non-transparent-sylabus-link" >Link to sylabus</Link>
+                      Link To sylabus
                 </motion.div>
             </motion.div>
         </div>
